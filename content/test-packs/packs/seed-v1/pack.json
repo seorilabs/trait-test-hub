@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "packId": "seed-v1",
+  "version": 1,
+  "titleKo": "초기 테스트팩",
+  "generatedAt": "2026-06-07T04:49:27.469Z",
+  "tests": [
+    {
+      "testId": "dpti",
+      "version": 1,
+      "path": "/test-packs/packs/seed-v1/tests/dpti.json",
+      "stats": {
+        "aggregateKey": "dpti",
+        "versionKey": "dpti@1",
+        "resultDimension": "result_code",
+        "eventDimension": "test_completed"
+      }
+    },
+    {
+      "testId": "daily-rhythm-test",
+      "version": 1,
+      "path": "/test-packs/packs/seed-v1/tests/daily-rhythm-test.json",
+      "stats": {
+        "aggregateKey": "daily-rhythm-test",
+        "versionKey": "daily-rhythm-test@1",
+        "resultDimension": "result_code",
+        "eventDimension": "test_completed"
+      }
+    }
+  ]
+}

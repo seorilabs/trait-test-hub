@@ -1,0 +1,23 @@
+{
+  "appId": "trait-test-hub",
+  "appName": "trait-test-hub",
+  "appNameStatus": "확정 필요",
+  "displayName": {
+    "ko-KR": "성향 테스트 허브",
+    "en-US": "Trait Hub"
+  },
+  "subtitle": "매일 새 성향 테스트",
+  "category": "확정 필요",
+  "featureUrls": [
+    "intoss://trait-test-hub/",
+    "intoss://trait-test-hub/test",
+    "intoss://trait-test-hub/result"
+  ],
+  "customerSupportEmail": "cs@seorilabs.com",
+  "tdsRequired": true,
+  "releaseAssets": {
+    "logo600": "확정 필요",
+    "thumbnail1932x828": "확정 필요",
+    "screenshots636x1048": "확정 필요"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "@seorilabs/trait-test-ait",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AppsInToss Granite React Native target",
+  "scripts": {
+    "check": "node ../../scripts/check-target-placeholder.mjs ait",
+    "build": "node ../../scripts/check-target-placeholder.mjs ait --strict --artifact ait-package"
+  }
+}

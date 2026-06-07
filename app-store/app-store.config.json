@@ -1,0 +1,21 @@
+{
+  "appId": "trait-test-hub",
+  "bundleId": "확정 필요",
+  "sku": "trait-test-hub",
+  "primaryLocale": "ko-KR",
+  "name": {
+    "ko-KR": "성향 테스트 허브",
+    "en-US": "Trait Hub"
+  },
+  "subtitle": {
+    "ko-KR": "매일 새 성향 테스트",
+    "en-US": "Daily trait tests"
+  },
+  "description": "확정 필요",
+  "category": "Lifestyle 후보",
+  "supportUrl": "https://seorilabs.com/support 후보",
+  "marketingUrl": "확정 필요",
+  "privacyPolicyUrl": "확정 필요",
+  "privacyLabels": "확정 필요",
+  "reviewNotes": "확정 필요"
+}

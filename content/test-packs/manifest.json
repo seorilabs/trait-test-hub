@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "manifestId": "trait-test-hub-main",
+  "generatedAt": "2026-06-07T04:49:27.469Z",
+  "defaultLocale": "ko-KR",
+  "contentBasePath": "/test-packs/",
+  "firebaseHostingPath": "/test-packs/manifest.json",
+  "retention": {
+    "mode": "append",
+    "keepRecent": 500
+  },
+  "filters": {
+    "sortOptions": [
+      {
+        "id": "featured",
+        "labelKo": "추천"
+      },
+      {
+        "id": "newest",
+        "labelKo": "최신"
+      },
+      {
+        "id": "popular",
+        "labelKo": "인기"
+      },
+      {
+        "id": "shortest",
+        "labelKo": "짧은 테스트"
+      }
+    ],
+    "categories": [
+      {
+        "id": "work",
+        "labelKo": "업무/개발",
+        "descriptionKo": "일과 협업 상황에서 드러나는 성향 테스트"
+      },
+      {
+        "id": "routine",
+        "labelKo": "일상",
+        "descriptionKo": "일상 루틴과 휴식 리듬을 가볍게 확인하는 테스트"
+      }
+    ],
+    "tags": [
+      {
+        "id": "developer",
+        "labelKo": "개발자"
+      },
+      {
+        "id": "collaboration",
+        "labelKo": "협업"
+      },
+      {
+        "id": "career",
+        "labelKo": "커리어"
+      },
+      {
+        "id": "routine",
+        "labelKo": "루틴"
+      },
+      {
+        "id": "daily",
+        "labelKo": "일상"
+      }
+    ]
+  },
+  "packs": [
+    {
+      "packId": "seed-v1",
+      "version": 1,
+      "titleKo": "초기 테스트팩",
+      "path": "/test-packs/packs/seed-v1/pack.json",
+      "testCount": 2,
+      "publishedAt": "2026-06-07T04:49:27.469Z"
+    }
+  ],
+  "tests": [
+    {
+      "testId": "dpti",
+      "version": 1,
+      "status": "published",
+      "titleKo": "DPTI 개발자 성향 테스트",
+      "summaryKo": "16문항으로 16개 결과 중 하나를 확인합니다.",
+      "category": "work",
+      "tags": [
+        "developer",
+        "collaboration",
+        "career"
+      ],
+      "locale": "ko-KR",
+      "packId": "seed-v1",
+      "path": "/test-packs/packs/seed-v1/tests/dpti.json",
+      "stats": {
+        "aggregateKey": "dpti",
+        "versionKey": "dpti@1",
+        "resultDimension": "result_code",
+        "eventDimension": "test_completed"
+      },
+      "publishedAt": "2026-06-07T04:49:27.469Z",
+      "updatedAt": "2026-06-07T04:49:27.469Z",
+      "questionCount": 16,
+      "resultCount": 16,
+      "estimatedMinutes": "3-5분",
+      "featuredOrder": 1,
+      "popularityScore": 100
+    },
+    {
+      "testId": "daily-rhythm-test",
+      "version": 1,
+      "status": "published",
+      "titleKo": "오늘의 리듬 테스트",
+      "summaryKo": "3문항으로 3개 결과 중 하나를 확인합니다.",
+      "category": "routine",
+      "tags": [
+        "routine",
+        "daily"
+      ],
+      "locale": "ko-KR",
+      "packId": "seed-v1",
+      "path": "/test-packs/packs/seed-v1/tests/daily-rhythm-test.json",
+      "stats": {
+        "aggregateKey": "daily-rhythm-test",
+        "versionKey": "daily-rhythm-test@1",
+        "resultDimension": "result_code",
+        "eventDimension": "test_completed"
+      },
+      "publishedAt": "2026-06-07T04:49:27.469Z",
+      "updatedAt": "2026-06-07T04:49:27.469Z",
+      "questionCount": 3,
+      "resultCount": 3,
+      "estimatedMinutes": "1-3분",
+      "featuredOrder": 2,
+      "popularityScore": 60
+    }
+  ]
+}

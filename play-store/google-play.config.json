@@ -1,0 +1,19 @@
+{
+  "appId": "trait-test-hub",
+  "packageName": "com.seorilabs.traithub",
+  "defaultLocale": "ko-KR",
+  "title": {
+    "ko-KR": "성향 테스트 허브",
+    "en-US": "Trait Hub"
+  },
+  "shortDescription": {
+    "ko-KR": "매일 새 성향 테스트와 익명 결과 분포",
+    "en-US": "Daily trait tests and anonymous result stats"
+  },
+  "fullDescription": "확정 필요",
+  "category": "LIFESTYLE 후보",
+  "contactEmail": "cs@seorilabs.com",
+  "dataSafety": "확정 필요",
+  "contentRating": "확정 필요",
+  "initialTrack": "internal"
+}

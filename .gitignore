@@ -1,0 +1,34 @@
+.DS_Store
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+build/
+pages-dist/
+coverage/
+tmp/
+*.tsbuildinfo
+
+# React Native / native outputs
+android/.gradle/
+android/app/build/
+ios/Pods/
+ios/build/
+
+# AppsInToss / Granite
+.granite/
+.swc/
+*.ait
+
+# Firebase / secrets
+.firebase/
+.runtimeconfig.json
+service-account*.json
+google-services.json
+GoogleService-Info.plist
+
+# Local env
+.env
+.env.*
+!.env.example

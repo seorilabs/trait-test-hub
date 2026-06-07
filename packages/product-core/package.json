@@ -1,0 +1,14 @@
+{
+  "name": "@seorilabs/trait-test-core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "성향 테스트 허브의 순수 테스트/채점 로직",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "check": "node --test",
+    "test": "node --test"
+  }
+}

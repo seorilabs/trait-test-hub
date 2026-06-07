@@ -1,0 +1,27 @@
+{
+  "name": "trait-test-hub",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.3.0",
+  "description": "성향 테스트 허브 멀티마켓 앱 repo",
+  "scripts": {
+    "dev:preview": "node scripts/serve-preview.mjs",
+    "generate:test-packs": "node scripts/generate-test-packs.mjs",
+    "validate:test-packs": "node scripts/validate-test-packs.mjs",
+    "validate:test-packs:source": "node scripts/validate-test-packs.mjs --assetRoot=content/test-packs",
+    "quality:test-packs": "node scripts/audit-test-pack-quality.mjs --assetRoot=content/test-packs && node scripts/audit-test-pack-quality.mjs --assetRoot=public/test-packs",
+    "check:content": "pnpm validate:test-packs:source && pnpm validate:test-packs && pnpm quality:test-packs",
+    "publish:test-pack-draft": "node scripts/publish-test-pack-draft.mjs",
+    "build:pages": "node scripts/build-pages.mjs",
+    "check": "pnpm check:core && pnpm check:content && pnpm check:preview && pnpm check:release",
+    "check:core": "pnpm --dir packages/product-core check",
+    "check:preview": "node scripts/check-preview.mjs",
+    "check:mobile": "pnpm --dir apps/mobile check",
+    "check:ait": "pnpm --dir apps/ait check",
+    "check:release": "node scripts/check-release-blockers.mjs",
+    "check:release:strict": "node scripts/check-release-blockers.mjs --strict",
+    "build:android": "pnpm --dir apps/mobile build:android",
+    "build:ios": "pnpm --dir apps/mobile build:ios",
+    "build:ait": "pnpm --dir apps/ait build"
+  }
+}

@@ -1,0 +1,35 @@
+name: 새 테스트 제안
+description: Trait Test Hub에 추가할 새 성향 테스트를 제안합니다.
+title: "테스트 제안: "
+labels:
+  - test-pack
+  - idea
+body:
+  - type: input
+    id: title
+    attributes:
+      label: 테스트 제목
+      placeholder: 예) 주말 회복 리듬 테스트
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 테스트 의도
+      description: 사용자가 어떤 가벼운 자기이해를 얻는 테스트인지 적어 주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: axes
+    attributes:
+      label: 성향 축 후보
+      description: 기존 심리검사 구조를 그대로 쓰지 않는 2~4개 축을 적어 주세요.
+    validations:
+      required: false
+  - type: textarea
+    id: safety
+    attributes:
+      label: 안전/권리 리스크 확인
+      description: 민감 주제, 브랜드, 캐릭터, 실존 인물, 의료/법률/금융 판단과 관련이 없는지 적어 주세요.
+    validations:
+      required: true

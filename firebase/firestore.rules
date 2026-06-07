@@ -1,0 +1,19 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /public_tests/{testId} {
+      allow read: if resource.data.status == "published";
+      allow write: if false;
+    }
+
+    match /test_stats/{testId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

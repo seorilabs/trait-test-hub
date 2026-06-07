@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="600" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="600" fill="#F7F8FA"/>
+  <rect x="56" y="48" width="1088" height="504" fill="#FFFFFF"/>
+
+  <g transform="translate(104 94)">
+    <rect x="0" y="0" width="76" height="76" fill="#FFFFFF"/>
+    <rect x="0" y="0" width="34" height="34" fill="#3182F6"/>
+    <rect x="42" y="0" width="34" height="34" fill="#00A8A8"/>
+    <rect x="0" y="42" width="34" height="34" fill="#F59F00"/>
+    <rect x="42" y="42" width="34" height="34" fill="#40C057"/>
+    <text x="17" y="24" text-anchor="middle" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', Arial, sans-serif" font-size="18" font-weight="900">D</text>
+    <text x="59" y="24" text-anchor="middle" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', Arial, sans-serif" font-size="18" font-weight="900">P</text>
+    <text x="17" y="66" text-anchor="middle" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', Arial, sans-serif" font-size="18" font-weight="900">T</text>
+    <text x="59" y="66" text-anchor="middle" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', Arial, sans-serif" font-size="18" font-weight="900">I</text>
+  </g>
+
+  <text x="104" y="226" fill="#191F28" font-family="-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', Arial, sans-serif" font-size="58" font-weight="900">DPTI</text>
+  <text x="104" y="276" fill="#333D4B" font-family="-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', Arial, sans-serif" font-size="25" font-weight="800">16문항으로 알아보는 개발자 성향 테스트</text>
+  <text x="104" y="316" fill="#6B7684" font-family="-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', Arial, sans-serif" font-size="20" font-weight="700">작업 방식과 협업 스타일을 가볍게 확인해요</text>
+
+  <g transform="translate(104 358)">
+    <rect x="0" y="0" width="82" height="38" fill="#E8F3FF"/>
+    <text x="41" y="25" text-anchor="middle" fill="#1B64DA" font-family="-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', Arial, sans-serif" font-size="16" font-weight="800">16문항</text>
+    <rect x="94" y="0" width="96" height="38" fill="#E6FCF5"/>
+    <text x="142" y="25" text-anchor="middle" fill="#007A7A" font-family="-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', Arial, sans-serif" font-size="16" font-weight="800">16개 유형</text>
+    <rect x="202" y="0" width="96" height="38" fill="#EBFBEE"/>
+    <text x="250" y="25" text-anchor="middle" fill="#2B8A3E" font-family="-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', Arial, sans-serif" font-size="16" font-weight="800">공유 가능</text>
+  </g>
+
+  <g transform="translate(104 428)">
+    <rect x="0" y="0" width="102" height="38" fill="#F2F4F6"/>
+    <text x="51" y="25" text-anchor="middle" fill="#4E5968" font-family="-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', Arial, sans-serif" font-size="16" font-weight="800">독립/협업</text>
+    <rect x="114" y="0" width="102" height="38" fill="#F2F4F6"/>
+    <text x="165" y="25" text-anchor="middle" fill="#4E5968" font-family="-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', Arial, sans-serif" font-size="16" font-weight="800">창의/실용</text>
+    <rect x="228" y="0" width="102" height="38" fill="#F2F4F6"/>
+    <text x="279" y="25" text-anchor="middle" fill="#4E5968" font-family="-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', Arial, sans-serif" font-size="16" font-weight="800">논리/공감</text>
+    <rect x="342" y="0" width="102" height="38" fill="#F2F4F6"/>
+    <text x="393" y="25" text-anchor="middle" fill="#4E5968" font-family="-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', Arial, sans-serif" font-size="16" font-weight="800">계획/유연</text>
+  </g>
+
+  <g transform="translate(610 86)">
+    <rect x="0" y="0" width="456" height="428" fill="#F2F4F6"/>
+    <rect x="32" y="32" width="392" height="364" fill="#FFFFFF"/>
+    <rect x="60" y="58" width="88" height="34" fill="#E8F3FF"/>
+    <text x="104" y="81" text-anchor="middle" fill="#1B64DA" font-family="-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', Arial, sans-serif" font-size="16" font-weight="900">내 결과</text>
+
+    <defs>
+      <clipPath id="type-image-clip-tplf">
+        <rect x="248" y="58" width="126" height="126"/>
+      </clipPath>
+    </defs>
+    <rect x="248" y="58" width="126" height="126" fill="#F7F8FA"/>
+    <image href="../type/tplf.png" x="248" y="58" width="126" height="126" preserveAspectRatio="xMidYMid slice" clip-path="url(#type-image-clip-tplf)"/>
+
+    <text x="60" y="160" fill="#191F28" font-family="-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', Arial, sans-serif" font-size="62" font-weight="900">TPLF</text>
+    <text x="60" y="212" fill="#191F28" font-family="-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', Arial, sans-serif" font-size="27" font-weight="900">협동적 버그 해결사</text>
+    <text x="60" y="256" fill="#4E5968" font-family="-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', Arial, sans-serif" font-size="20" font-weight="700">팀과 함께 현장의 문제를 빠르게</text>
+<text x="60" y="283" fill="#4E5968" font-family="-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', Arial, sans-serif" font-size="20" font-weight="700">좁혀 해결하는 타입.</text>
+
+    <g transform="translate(60 288)">
+      
+      <text x="0" y="16" fill="#6B7684" font-family="-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', Arial, sans-serif" font-size="15" font-weight="800">알고리즘</text>
+      <text x="314" y="16" text-anchor="end" fill="#191F28" font-family="-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', Arial, sans-serif" font-size="15" font-weight="900">80</text>
+      <rect x="0" y="24" width="314" height="8" fill="#F2F4F6"/>
+      <rect x="0" y="24" width="251" height="8" fill="#3182F6"/>
+      <text x="0" y="50" fill="#6B7684" font-family="-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', Arial, sans-serif" font-size="15" font-weight="800">언어 숙련</text>
+      <text x="314" y="50" text-anchor="end" fill="#191F28" font-family="-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', Arial, sans-serif" font-size="15" font-weight="900">75</text>
+      <rect x="0" y="58" width="314" height="8" fill="#F2F4F6"/>
+      <rect x="0" y="58" width="236" height="8" fill="#00A8A8"/>
+      <text x="0" y="84" fill="#6B7684" font-family="-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', Arial, sans-serif" font-size="15" font-weight="800">문제 해결</text>
+      <text x="314" y="84" text-anchor="end" fill="#191F28" font-family="-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', Arial, sans-serif" font-size="15" font-weight="900">90</text>
+      <rect x="0" y="92" width="314" height="8" fill="#F2F4F6"/>
+      <rect x="0" y="92" width="283" height="8" fill="#F59F00"/>
+    </g>
+  </g>
+</svg>

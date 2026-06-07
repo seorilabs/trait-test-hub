@@ -1,0 +1,9 @@
+{
+  "name": "@seorilabs/trait-test-preview",
+  "version": "0.1.0",
+  "private": true,
+  "description": "브라우저에서 확인하는 성향 테스트 허브 preview",
+  "scripts": {
+    "check": "node ../../scripts/check-preview.mjs"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "parameters": {
+    "trait_hub_today_test_id": {
+      "defaultValue": {
+        "value": "daily-rhythm-test"
+      },
+      "description": "홈 상단에 노출할 오늘의 테스트 ID"
+    },
+    "trait_hub_content_generation_enabled": {
+      "defaultValue": {
+        "value": "false"
+      },
+      "description": "LLM draft 생성 자동화 feature flag"
+    },
+    "trait_hub_ads_enabled": {
+      "defaultValue": {
+        "value": "false"
+      },
+      "description": "결과 화면 광고 feature flag"
+    },
+    "trait_hub_emergency_disable": {
+      "defaultValue": {
+        "value": "false"
+      },
+      "description": "콘텐츠/API 긴급 비활성화 flag"
+    }
+  }
+}
