@@ -24,6 +24,7 @@ flowchart LR
 - `content/test-packs/packs/generated-v1/tests/<testId>.json`: source payload
 - `content/test-packs/manifest.json`: manifest entry, category/tag metadata
 - `content/test-packs/packs/generated-v1/pack.json`: pack index
+- `content/test-packs/packs/generated-v1/assets/<testId>/`: 결과 이미지 원본
 - `public/test-packs/**`: source와 동기화된 publish 산출물
 
 기존 공개 테스트의 `testId` 의미를 바꾸면 안 됩니다. 기존 테스트 수정이 필요하면 새 `version` 정책을 별도로 세운 뒤 진행합니다.
@@ -66,12 +67,41 @@ flowchart LR
 `pnpm check:content`가 통과해야 PR 후보가 됩니다.
 
 - manifest와 payload의 `testId`, `version`, `packId`, stats key가 일치한다.
+- 자동 생성 테스트는 최소 10문항이어야 한다.
+- 자동 생성 테스트는 최소 4개 결과를 가져야 한다.
+- 자동 생성 테스트의 각 문항은 최소 3개 선택지를 가져야 한다.
 - 질문 ID, 결과 code, axis ID가 중복되지 않는다.
 - 모든 option score는 존재하는 axis만 참조하고 숫자여야 한다.
 - 일반 vector scoring 테스트는 모든 결과 vector가 모든 axis 값을 가진다.
 - `axis-letter-majority` 테스트는 axis별 2개 letter, tie breaker, 모든 결과 조합을 갖춘다.
 - 가능한 답변 조합을 점검할 수 있는 규모라면 모든 결과가 최소 1회 이상 도달 가능해야 한다.
+- 자동 생성 테스트의 결과는 DPTI 수준의 상세 필드를 가져야 한다.
+  - `summaryKo`: 목록/결과 상단용 요약
+  - `descriptionKo`: 결과 본문 설명
+  - `strengthsKo`: 3개 이상
+  - `watchoutsKo`: 2개 이상
+  - `collaborationKo`: 관계/업무/일상 적용 조언
+  - `shareIntroKo`: 공유 카드 문구
+  - `imagePath`: 결과 대표 이미지
+  - `shareImagePath`: 공유용 이미지
+- 자동 생성 결과 이미지는 PNG/JPG/WebP 파일이어야 하며 `/test-packs/packs/generated-v1/assets/<testId>/` 아래에 있어야 한다.
 - `TODO`, `placeholder`, `임시`, `lorem` 같은 placeholder 문구가 없어야 한다.
+
+## 이미지 저장소 정책
+
+초기 자동화는 결과 이미지를 repo에 포함하고 GitHub Pages로 서빙합니다.
+
+```text
+content/test-packs/packs/generated-v1/assets/<testId>/<resultCode>.png
+public/test-packs/packs/generated-v1/assets/<testId>/<resultCode>.png
+runtime path: /test-packs/packs/generated-v1/assets/<testId>/<resultCode>.png
+```
+
+이 방식을 기본값으로 두는 이유는 PR에서 이미지와 문구를 함께 리뷰할 수 있고, `pnpm check:content`가 파일 존재 여부를 검증할 수 있기 때문입니다.
+
+Firebase Storage는 사용자가 업로드하는 이미지, 운영자가 콘솔에서 교체하는 이미지, repo에 넣기 어려운 대량 이미지가 필요해질 때 전환합니다. 이때도 공개 읽기 범위, Storage Rules, App Check, 비용 알림을 먼저 확정해야 합니다.
+
+vzyx 정적 호스팅은 내부 QA나 임시 대량 파일 테스트에는 쓸 수 있지만, 공개 자동화의 기본 이미지 저장소로 쓰지 않습니다. GitHub Pages 배포와 별도 운영 경로가 생기면 PR 검증과 실제 노출 파일이 갈라지기 때문입니다.
 
 ## 금지/주의 주제
 

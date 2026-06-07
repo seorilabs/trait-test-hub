@@ -7,11 +7,12 @@
 | 역할 | 경로 | 메모 |
 | --- | --- | --- |
 | source JSON | `content/test-packs/` | 사람이 수정하는 테스트팩 원본 |
-| publish JSON | `public/test-packs/` | Firebase Hosting에 그대로 올릴 산출물 |
+| publish JSON | `public/test-packs/` | GitHub Pages 또는 Firebase Hosting에 그대로 올릴 산출물 |
 | manifest | `public/test-packs/manifest.json` | 앱이 가장 먼저 읽는 파일 |
 | test payload | `public/test-packs/packs/<packId>/tests/<testId>.json` | 선택한 테스트만 lazy load |
+| generated image assets | `public/test-packs/packs/generated-v1/assets/<testId>/` | 자동 생성 테스트 결과 이미지 |
 
-앱 runtime은 `/test-packs/manifest.json`을 읽습니다. Firebase Hosting에서는 `public/test-packs` 내용을 `/test-packs` 아래로 배포하면 됩니다.
+앱 runtime은 `/test-packs/manifest.json`을 읽습니다. GitHub Pages와 Firebase Hosting 모두 `public/test-packs` 내용을 `/test-packs` 아래로 배포하면 됩니다.
 
 ## Manifest
 
@@ -63,14 +64,22 @@ pnpm check:content
 
 자세한 자동 생성/PR 체계는 [docs/content-automation.md](content-automation.md)를 봅니다.
 
-## Firebase Hosting 운영 방향
+자동 생성 테스트는 기존 seed보다 높은 품질 gate를 적용합니다.
+
+- 최소 10문항
+- 최소 4개 결과
+- 문항별 최소 3개 선택지
+- 결과별 상세 설명, 강점 3개 이상, 주의점 2개 이상, 적용 조언, 공유 문구
+- 결과별 대표 이미지와 공유 이미지
+
+## 정적 호스팅 운영 방향
 
 ```mermaid
 flowchart LR
   Draft["LLM draft / reviewer"] --> Source["content/test-packs"]
   Source --> Validate["validate:test-packs"]
   Validate --> Public["public/test-packs"]
-  Public --> Hosting["Firebase Hosting /test-packs"]
+  Public --> Hosting["GitHub Pages or Firebase Hosting /test-packs"]
   Hosting --> App["mobile / AIT app"]
   App --> Manifest["manifest.json"]
   Manifest --> Payload["selected test JSON"]

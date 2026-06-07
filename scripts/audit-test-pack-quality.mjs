@@ -59,6 +59,9 @@ for (const entry of manifest.tests) {
   auditTextQuality(test);
   auditScoringShape(test);
   auditReachability(test);
+  if (requiresAutomationQualityGate(entry)) {
+    auditAutomationQualityGate(entry, test);
+  }
 }
 
 if (warnings.length > 0) {
@@ -255,6 +258,95 @@ function auditReachability(test) {
       errors.push(`Unreachable result in ${test.id}: ${code}`);
     }
   }
+}
+
+function auditAutomationQualityGate(entry, test) {
+  if (test.questions.length < 10) {
+    errors.push(`Generated tests must have at least 10 questions: ${test.id} has ${test.questions.length}`);
+  }
+  if (test.results.length < 4) {
+    errors.push(`Generated tests must have at least 4 results: ${test.id} has ${test.results.length}`);
+  }
+
+  for (const question of test.questions) {
+    if (question.options.length < 3) {
+      errors.push(`Generated test questions must have at least 3 options: ${test.id}.${question.id}`);
+    }
+  }
+
+  for (const result of test.results) {
+    auditDetailedResult(entry, test, result);
+  }
+}
+
+function auditDetailedResult(entry, test, result) {
+  requireText(result.summaryKo, `${test.id}.${result.code}.summaryKo`, 24);
+  requireText(result.descriptionKo, `${test.id}.${result.code}.descriptionKo`, 70);
+  requireText(result.collaborationKo, `${test.id}.${result.code}.collaborationKo`, 50);
+  requireText(result.shareIntroKo, `${test.id}.${result.code}.shareIntroKo`, 18);
+  requireTextList(result.strengthsKo, `${test.id}.${result.code}.strengthsKo`, 3, 12);
+  requireTextList(result.watchoutsKo, `${test.id}.${result.code}.watchoutsKo`, 2, 16);
+  requireResultImage(entry, result.imagePath, `${test.id}.${result.code}.imagePath`);
+  requireResultImage(entry, result.shareImagePath, `${test.id}.${result.code}.shareImagePath`);
+}
+
+function requireTextList(value, label, minItems, minLength) {
+  if (!Array.isArray(value) || value.length < minItems) {
+    errors.push(`Text list must have at least ${minItems} items: ${label}`);
+    return;
+  }
+  value.forEach((item, index) => requireText(item, `${label}[${index}]`, minLength));
+}
+
+function requireResultImage(entry, runtimePath, label) {
+  if (typeof runtimePath !== 'string' || runtimePath.trim() === '') {
+    errors.push(`Result image path is required: ${label}`);
+    return;
+  }
+  if (!/\.(png|jpe?g|webp)$/i.test(runtimePath)) {
+    errors.push(`Result image must be PNG, JPG, JPEG, or WebP: ${label}`);
+  }
+  if (!runtimePath.startsWith(`/test-packs/packs/${entry.packId}/assets/`)) {
+    errors.push(`Generated result images must live under /test-packs/packs/${entry.packId}/assets/: ${label}`);
+    return;
+  }
+
+  const localPath = join(root, runtimePath.replace(/^\/test-packs\//, `${assetRoot}/`));
+  if (!existsSync(localPath)) {
+    errors.push(`Missing result image asset: ${label} -> ${runtimePath}`);
+    return;
+  }
+
+  const bytes = readFileSync(localPath);
+  if (bytes.length < 2048) {
+    errors.push(`Result image asset is too small: ${label} -> ${runtimePath}`);
+    return;
+  }
+  if (!hasKnownImageSignature(bytes)) {
+    errors.push(`Result image asset is not a valid PNG, JPG, JPEG, or WebP file: ${label} -> ${runtimePath}`);
+  }
+}
+
+function requiresAutomationQualityGate(entry) {
+  return String(entry.packId ?? '').startsWith('generated-');
+}
+
+function hasKnownImageSignature(bytes) {
+  if (bytes.length < 12) {
+    return false;
+  }
+  const isPng = bytes[0] === 0x89 && bytes[1] === 0x50 && bytes[2] === 0x4e && bytes[3] === 0x47;
+  const isJpeg = bytes[0] === 0xff && bytes[1] === 0xd8 && bytes[2] === 0xff;
+  const isWebp =
+    bytes[0] === 0x52 &&
+    bytes[1] === 0x49 &&
+    bytes[2] === 0x46 &&
+    bytes[3] === 0x46 &&
+    bytes[8] === 0x57 &&
+    bytes[9] === 0x45 &&
+    bytes[10] === 0x42 &&
+    bytes[11] === 0x50;
+  return isPng || isJpeg || isWebp;
 }
 
 function walkAnswers(test, index, answers, visit) {

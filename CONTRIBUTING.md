@@ -17,6 +17,9 @@ pnpm check
 ## 콘텐츠 기준
 
 - 테스트는 가벼운 자기이해, 취향, 일상, 업무 성향에 한정합니다.
+- 자동 생성 테스트는 최소 10문항, 최소 4개 결과, 문항별 최소 3개 선택지를 갖춰야 합니다.
+- 결과는 DPTI처럼 상세해야 하며 `descriptionKo`, `strengthsKo`, `watchoutsKo`, `collaborationKo`, `shareIntroKo`, `imagePath`, `shareImagePath`를 포함해야 합니다.
+- 결과 이미지는 `/test-packs/packs/generated-v1/assets/<testId>/` 아래의 PNG/JPG/WebP 파일로 함께 제출합니다.
 - 의학/정신건강 진단, 법률/금융 판단, 정치 성향 판정은 제외합니다.
 - MBTI, DISC, Big Five 등 기존 검사명과 유형 구조를 그대로 쓰지 않습니다.
 - 실존 인물, 브랜드, 저작권 캐릭터, 민감 집단을 유형화하지 않습니다.
