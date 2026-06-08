@@ -37,7 +37,7 @@ const generatedAt = new Date().toISOString();
 try {
   assertNoExistingTestId({ root, testId: test.id });
 } catch (error) {
-  fail(error.message);
+  fail(errorMessage(error));
 }
 
 if (!Array.isArray(metadata.tags) || metadata.tags.length === 0) {
@@ -69,7 +69,7 @@ try {
     generatedAt,
   });
 } catch (error) {
-  fail(error.message);
+  fail(errorMessage(error));
 }
 
 console.log(`published draft ${test.id}@${test.version} to ${packId}`);
@@ -95,4 +95,8 @@ function getArg(name) {
 function fail(message) {
   console.error(message);
   process.exit(1);
+}
+
+function errorMessage(error) {
+  return error instanceof Error ? error.message : String(error);
 }

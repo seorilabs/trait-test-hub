@@ -7,7 +7,7 @@ import {
   rmSync,
   writeFileSync,
 } from 'node:fs';
-import { dirname, join } from 'node:path';
+import { dirname, join, relative, resolve } from 'node:path';
 import {
   buildStatsKeys,
   validateManifest,
@@ -24,17 +24,19 @@ export function buildTestPackOutput({
     throw new Error('outputRoot is required');
   }
 
+  const safeOutputRoot = resolveSafeOutputRoot({ root, sourceRoot, outputRoot });
   const baseManifest = validateManifest(readJson(join(sourceRoot, 'manifest.json')));
   const manifest = cloneJson(baseManifest);
   const sourcePacksRoot = join(sourceRoot, 'packs');
-  const outputPacksRoot = join(outputRoot, 'packs');
+  const outputPacksRoot = join(safeOutputRoot, 'packs');
 
-  rmSync(outputRoot, { recursive: true, force: true });
-  mkdirSync(outputRoot, { recursive: true });
+  rmSync(safeOutputRoot, { recursive: true, force: true });
+  mkdirSync(safeOutputRoot, { recursive: true });
   cpSync(sourcePacksRoot, outputPacksRoot, { recursive: true });
   removeRuntimeIgnoredEntryDirs(outputPacksRoot);
 
-  const existingTestIds = new Set(manifest.tests.map((entry) => entry.testId));
+  const baseTestIds = new Set(manifest.tests.map((entry) => entry.testId));
+  const generatedTestIds = new Set();
   const generatedEntries = readGeneratedEntries(sourceRoot);
   const baseFeaturedOrder = manifest.tests.reduce(
     (max, entry) => Math.max(max, entry.featuredOrder ?? 0),
@@ -43,10 +45,13 @@ export function buildTestPackOutput({
 
   generatedEntries.forEach(({ packId, metadata, payload }, index) => {
     const test = validateTraitTest(payload.test);
-    if (existingTestIds.has(test.id)) {
+    if (baseTestIds.has(test.id)) {
       throw new Error(`testId already exists in base manifest: ${test.id}`);
     }
-    existingTestIds.add(test.id);
+    if (generatedTestIds.has(test.id)) {
+      throw new Error(`duplicate generated entry testId: ${test.id}`);
+    }
+    generatedTestIds.add(test.id);
     ensureFilterMetadata(manifest, test, metadata);
     manifest.tests.push(
       buildManifestEntry({
@@ -64,8 +69,8 @@ export function buildTestPackOutput({
   manifest.generatedAt = generatedAt;
   validateManifest(manifest);
 
-  writeJson(join(outputRoot, 'manifest.json'), manifest);
-  writePackIndexes({ outputRoot, manifest, generatedAt });
+  writeJson(join(safeOutputRoot, 'manifest.json'), manifest);
+  writePackIndexes({ outputRoot: safeOutputRoot, manifest, generatedAt });
   return manifest;
 }
 
@@ -288,6 +293,31 @@ function removeRuntimeIgnoredEntryDirs(outputPacksRoot) {
   for (const packId of safeReadDir(outputPacksRoot)) {
     rmSync(join(outputPacksRoot, packId, 'entries'), { recursive: true, force: true });
   }
+}
+
+function resolveSafeOutputRoot({ root, sourceRoot, outputRoot }) {
+  const rootResolved = resolve(root);
+  const sourceResolved = resolve(root, sourceRoot);
+  const outputResolved = resolve(root, outputRoot);
+  const rootRelative = relative(rootResolved, outputResolved);
+  if (
+    rootRelative === '' ||
+    rootRelative.startsWith('..') ||
+    rootRelative.startsWith('/') ||
+    rootRelative.startsWith('\\')
+  ) {
+    throw new Error(`outputRoot must be a subdirectory of repo root: ${outputRoot}`);
+  }
+
+  const sourceRelative = relative(sourceResolved, outputResolved);
+  if (
+    sourceRelative === '' ||
+    (!sourceRelative.startsWith('..') && !sourceRelative.startsWith('/') && !sourceRelative.startsWith('\\'))
+  ) {
+    throw new Error(`outputRoot must not be inside sourceRoot: ${outputRoot}`);
+  }
+
+  return outputResolved;
 }
 
 function safeReadDir(path) {
