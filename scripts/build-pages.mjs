@@ -1,5 +1,6 @@
 import { cpSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { buildTestPackOutput } from './lib/test-pack-output.mjs';
 
 const root = process.cwd();
 const distRoot = join(root, 'pages-dist');
@@ -10,7 +11,12 @@ mkdirSync(distRoot, { recursive: true });
 cpSync(join(root, 'apps'), join(distRoot, 'apps'), { recursive: true });
 cpSync(join(root, 'packages'), join(distRoot, 'packages'), { recursive: true });
 cpSync(join(root, 'public'), join(distRoot, 'public'), { recursive: true });
-cpSync(join(root, 'public', 'test-packs'), join(distRoot, 'test-packs'), { recursive: true });
+rmSync(join(distRoot, 'public', 'test-packs'), { recursive: true, force: true });
+buildTestPackOutput({
+  root,
+  outputRoot: join(distRoot, 'test-packs'),
+});
+cpSync(join(distRoot, 'test-packs'), join(distRoot, 'public', 'test-packs'), { recursive: true });
 cpSync(join(root, 'apps', 'preview', 'index.html'), join(distRoot, 'index.html'));
 
 writeFileSync(join(distRoot, 'CNAME'), 'traithub.vzyx.xyz\n');

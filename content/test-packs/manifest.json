@@ -60,14 +60,6 @@
       {
         "id": "daily",
         "labelKo": "일상"
-      },
-      {
-        "id": "space",
-        "labelKo": "공간"
-      },
-      {
-        "id": "organizing",
-        "labelKo": "정리"
       }
     ]
   },
@@ -79,14 +71,6 @@
       "path": "/test-packs/packs/seed-v1/pack.json",
       "testCount": 2,
       "publishedAt": "2026-06-07T04:49:27.469Z"
-    },
-    {
-      "packId": "generated-v1",
-      "version": 1,
-      "titleKo": "자동 생성 테스트팩",
-      "path": "/test-packs/packs/generated-v1/pack.json",
-      "testCount": 1,
-      "publishedAt": "2026-06-08T10:18:29.048Z"
     }
   ],
   "tests": [
@@ -146,36 +130,6 @@
       "estimatedMinutes": "1-3분",
       "featuredOrder": 2,
       "popularityScore": 60
-    },
-    {
-      "testId": "space-organizing-style",
-      "version": 1,
-      "status": "published",
-      "titleKo": "내 공간 정리 스타일 테스트",
-      "summaryKo": "내 공간을 어떤 기준으로 정리하면 편한지 11문항으로 확인합니다.",
-      "category": "routine",
-      "tags": [
-        "routine",
-        "daily",
-        "space",
-        "organizing"
-      ],
-      "locale": "ko-KR",
-      "packId": "generated-v1",
-      "path": "/test-packs/packs/generated-v1/tests/space-organizing-style.json",
-      "stats": {
-        "aggregateKey": "space-organizing-style",
-        "versionKey": "space-organizing-style@1",
-        "resultDimension": "result_code",
-        "eventDimension": "test_completed"
-      },
-      "publishedAt": "2026-06-08T10:18:29.048Z",
-      "updatedAt": "2026-06-08T10:18:29.048Z",
-      "questionCount": 11,
-      "resultCount": 4,
-      "estimatedMinutes": "3-5분",
-      "featuredOrder": 3,
-      "popularityScore": 50
     }
   ]
 }

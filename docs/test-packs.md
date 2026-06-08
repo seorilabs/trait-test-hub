@@ -10,9 +10,12 @@
 | publish JSON | `public/test-packs/` | GitHub Pages 또는 Firebase Hosting에 그대로 올릴 산출물 |
 | manifest | `public/test-packs/manifest.json` | 앱이 가장 먼저 읽는 파일 |
 | test payload | `public/test-packs/packs/<packId>/tests/<testId>.json` | 선택한 테스트만 lazy load |
-| generated image assets | `public/test-packs/packs/generated-v1/assets/<testId>/` | 자동 생성 테스트 결과 이미지 |
+| generated entry | `content/test-packs/packs/generated-v1/entries/<testId>.json` | 자동 생성 테스트의 manifest metadata 원본 |
+| generated image assets | `content/test-packs/packs/generated-v1/assets/<testId>/` | 자동 생성 테스트 결과 이미지 원본 |
 
 앱 runtime은 `/test-packs/manifest.json`을 읽습니다. GitHub Pages와 Firebase Hosting 모두 `public/test-packs` 내용을 `/test-packs` 아래로 배포하면 됩니다.
+
+repo에서 사람이 관리하는 원본은 `content/test-packs`입니다. 자동 생성 테스트는 shared manifest를 직접 수정하지 않고, 테스트별 `entries/<testId>.json`, `tests/<testId>.json`, `assets/<testId>/`만 추가합니다. `public/test-packs`와 pack index는 build/check 단계에서 컴파일됩니다.
 
 ## Manifest
 
@@ -39,23 +42,31 @@
 
 ## 새 테스트 추가 절차
 
-1. `content/test-packs/packs/<packId>/tests/<testId>.json`을 추가합니다.
-2. `content/test-packs/manifest.json`의 `tests`와 필요하면 `filters`에 metadata를 추가합니다.
-3. `pnpm validate:test-packs -- --assetRoot=content/test-packs`로 source를 검증합니다.
-4. `public/test-packs`에 반영합니다.
-5. `pnpm validate:test-packs`로 publish 산출물을 검증합니다.
+1. `content/test-packs/drafts/<testId>.json` draft를 만듭니다.
+2. `pnpm publish:test-pack-draft -- --draft=content/test-packs/drafts/<testId>.json`를 실행합니다.
+3. publish 결과로 생긴 테스트별 파일만 PR에 포함합니다.
+4. `pnpm check:content`로 컴파일된 임시 산출물을 검증합니다.
+5. `pnpm check`로 전체 gate를 확인합니다.
+
+자동 생성 테스트 PR에는 아래 공유 산출물을 포함하지 않습니다.
+
+- `content/test-packs/manifest.json`
+- `content/test-packs/packs/<packId>/pack.json`
+- `public/test-packs/**`
 
 현재는 seed 생성 스크립트가 있습니다.
 
 ```bash
 pnpm generate:test-packs
+pnpm compile:test-packs
+pnpm sync:test-packs
 pnpm validate:test-packs
 pnpm check:content
 ```
 
-주의: `pnpm generate:test-packs`는 현재 seed용 `content/test-packs/manifest.json`, `content/test-packs/packs`, `public/test-packs`를 재생성합니다. draft 폴더는 보존하지만, 운영 단계의 generated 테스트 publish에는 사용하지 않습니다.
+주의: `pnpm generate:test-packs`는 seed pack과 base manifest를 재생성합니다. generated 테스트의 tests/entries/assets는 보존하지만, 운영 단계의 generated 테스트 publish에는 사용하지 않습니다.
 
-자동 생성 테스트는 `generate:test-packs`를 쓰지 않습니다. draft를 만든 뒤 append-safe publish 스크립트를 사용합니다.
+자동 생성 테스트는 `generate:test-packs`를 쓰지 않습니다. draft를 만든 뒤 conflict-free publish 스크립트를 사용합니다.
 
 ```bash
 pnpm publish:test-pack-draft -- --draft=content/test-packs/drafts/<testId>.json
@@ -77,9 +88,10 @@ pnpm check:content
 ```mermaid
 flowchart LR
   Draft["LLM draft / reviewer"] --> Source["content/test-packs"]
-  Source --> Validate["validate:test-packs"]
-  Validate --> Public["public/test-packs"]
-  Public --> Hosting["GitHub Pages or Firebase Hosting /test-packs"]
+  Source --> Entry["per-test entries/tests/assets"]
+  Entry --> Compile["compile:test-packs"]
+  Compile --> Validate["check:content"]
+  Compile --> Hosting["GitHub Pages or Firebase Hosting /test-packs"]
   Hosting --> App["mobile / AIT app"]
   App --> Manifest["manifest.json"]
   Manifest --> Payload["selected test JSON"]

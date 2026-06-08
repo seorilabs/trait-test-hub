@@ -1,10 +1,17 @@
 import { createServer } from 'node:http';
 import { createReadStream, statSync } from 'node:fs';
 import { extname, join, normalize } from 'node:path';
+import { buildTestPackOutput } from './lib/test-pack-output.mjs';
 
 const root = process.cwd();
 const preferredPort = Number(process.env.PORT ?? 4173);
 const host = process.env.HOST ?? '127.0.0.1';
+const previewTestPackRoot = join(root, 'tmp/test-packs-preview');
+
+buildTestPackOutput({
+  root,
+  outputRoot: previewTestPackRoot,
+});
 
 const mimeTypes = {
   '.html': 'text/html; charset=utf-8',
@@ -21,7 +28,7 @@ function filePathForUrl(url) {
     return join(root, 'apps/preview/index.html');
   }
   if (cleanPath.startsWith('/test-packs/')) {
-    return join(root, 'public', cleanPath);
+    return join(previewTestPackRoot, cleanPath.replace(/^\/test-packs\/?/, ''));
   }
   return join(root, cleanPath);
 }
