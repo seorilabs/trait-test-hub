@@ -1,6 +1,7 @@
 import { mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { buildStatsKeys, traitTests, validateManifest, validateTraitTest } from '../packages/product-core/src/index.js';
+import { buildTestPackOutput } from './lib/test-pack-output.mjs';
 
 const root = process.cwd();
 const packId = 'seed-v1';
@@ -8,7 +9,6 @@ const generatedAt = new Date().toISOString();
 const sourceRoot = join(root, 'content/test-packs');
 const publicRoot = join(root, 'public/test-packs');
 const sourcePackRoot = join(sourceRoot, 'packs', packId);
-const publicPackRoot = join(publicRoot, 'packs', packId);
 
 const categoryLabels = {
   routine: '일상',
@@ -27,10 +27,9 @@ const tagLabels = {
 };
 
 rmSync(join(sourceRoot, 'manifest.json'), { force: true });
-rmSync(join(sourceRoot, 'packs'), { recursive: true, force: true });
+rmSync(sourcePackRoot, { recursive: true, force: true });
 rmSync(publicRoot, { recursive: true, force: true });
 mkdirSync(join(sourcePackRoot, 'tests'), { recursive: true });
-mkdirSync(join(publicPackRoot, 'tests'), { recursive: true });
 
 const testEntries = traitTests.map((test, index) => {
   validateTraitTest(test);
@@ -67,7 +66,6 @@ const testEntries = traitTests.map((test, index) => {
     test,
   };
   writeJson(join(sourcePackRoot, 'tests', `${test.id}.json`), payload);
-  writeJson(join(publicPackRoot, 'tests', `${test.id}.json`), payload);
   return entry;
 });
 
@@ -130,9 +128,13 @@ const pack = {
 };
 
 writeJson(join(sourceRoot, 'manifest.json'), manifest);
-writeJson(join(publicRoot, 'manifest.json'), manifest);
 writeJson(join(sourcePackRoot, 'pack.json'), pack);
-writeJson(join(publicPackRoot, 'pack.json'), pack);
+
+buildTestPackOutput({
+  root,
+  outputRoot: publicRoot,
+  generatedAt,
+});
 
 console.log(`Generated ${testEntries.length} test pack entries`);
 

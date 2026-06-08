@@ -62,9 +62,13 @@ adb shell am start -a android.intent.action.VIEW -d http://10.0.2.2:4174/apps/pr
 
 ```bash
 pnpm generate:test-packs
+pnpm compile:test-packs
+pnpm sync:test-packs
 pnpm validate:test-packs
 pnpm check:content
 ```
+
+자동 생성 테스트 PR은 테스트별 draft, entry, payload, image asset만 추가합니다. manifest, pack index, public 산출물은 check/build 단계에서 컴파일됩니다.
 
 자세한 구조는 [docs/test-packs.md](docs/test-packs.md)를 봅니다.
 자동 생성 테스트를 PR로 보내는 체계는 [docs/content-automation.md](docs/content-automation.md)를 봅니다.
