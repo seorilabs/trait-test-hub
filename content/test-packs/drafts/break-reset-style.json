@@ -1,0 +1,538 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "metadata": {
+    "summaryKo": "짧은 쉬는 시간에 나를 다시 가볍게 만드는 방식을 확인합니다.",
+    "tags": [
+      "routine",
+      "daily",
+      "rest"
+    ],
+    "categoryLabelKo": "일상",
+    "categoryDescriptionKo": "일상 루틴과 휴식 리듬을 가볍게 확인하는 테스트",
+    "tagLabelsKo": {
+      "rest": "휴식"
+    },
+    "estimatedMinutes": "3-5분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "popularityScore": 50
+  },
+  "test": {
+    "id": "break-reset-style",
+    "version": 1,
+    "status": "published",
+    "titleKo": "쉬는 시간 리셋 방식 테스트",
+    "category": "routine",
+    "summaryKo": "짧은 쉬는 시간에 나를 다시 가볍게 만드는 방식을 확인합니다.",
+    "axes": [
+      {
+        "id": "stimulus",
+        "labelKo": "자극 선호"
+      },
+      {
+        "id": "structure",
+        "labelKo": "정돈감"
+      },
+      {
+        "id": "connection",
+        "labelKo": "연결감"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q01",
+        "textKo": "잠깐 쉬어도 된다는 빈 시간이 생기면 먼저 끌리는 것은?",
+        "options": [
+          {
+            "code": "quiet",
+            "textKo": "조용한 자리에서 숨을 고른다",
+            "scores": {
+              "stimulus": -2,
+              "structure": 2,
+              "connection": -1
+            }
+          },
+          {
+            "code": "move",
+            "textKo": "물이나 커피를 챙기며 몸을 움직인다",
+            "scores": {
+              "stimulus": 2,
+              "structure": 1,
+              "connection": -1
+            }
+          },
+          {
+            "code": "chat",
+            "textKo": "가까운 사람에게 짧게 안부를 묻는다",
+            "scores": {
+              "stimulus": 1,
+              "structure": -1,
+              "connection": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q02",
+        "textKo": "머릿속이 복잡할 때 가장 편한 첫 동작은?",
+        "options": [
+          {
+            "code": "list",
+            "textKo": "작은 메모로 다음 한 가지를 적는다",
+            "scores": {
+              "stimulus": -1,
+              "structure": 2,
+              "connection": -1
+            }
+          },
+          {
+            "code": "walk",
+            "textKo": "자리에서 일어나 짧게 걷는다",
+            "scores": {
+              "stimulus": 2,
+              "structure": 0,
+              "connection": -1
+            }
+          },
+          {
+            "code": "wander",
+            "textKo": "눈에 들어온 흥미로운 것을 잠깐 본다",
+            "scores": {
+              "stimulus": 1,
+              "structure": -2,
+              "connection": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "q03",
+        "textKo": "쉬는 장소를 고를 수 있다면 더 마음이 가는 곳은?",
+        "options": [
+          {
+            "code": "corner",
+            "textKo": "소리가 적은 구석자리",
+            "scores": {
+              "stimulus": -2,
+              "structure": 2,
+              "connection": -1
+            }
+          },
+          {
+            "code": "outside",
+            "textKo": "바람이 닿는 바깥쪽 공간",
+            "scores": {
+              "stimulus": 2,
+              "structure": 0,
+              "connection": -1
+            }
+          },
+          {
+            "code": "lounge",
+            "textKo": "사람들이 오가는 편한 공간",
+            "scores": {
+              "stimulus": 1,
+              "structure": -1,
+              "connection": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q04",
+        "textKo": "쉬고 다시 돌아올 때 도움이 되는 마무리는?",
+        "options": [
+          {
+            "code": "check",
+            "textKo": "해야 할 일을 한 줄로 다시 본다",
+            "scores": {
+              "stimulus": -1,
+              "structure": 2,
+              "connection": -1
+            }
+          },
+          {
+            "code": "stretch",
+            "textKo": "어깨와 손목을 가볍게 푼다",
+            "scores": {
+              "stimulus": 2,
+              "structure": 1,
+              "connection": -1
+            }
+          },
+          {
+            "code": "reply",
+            "textKo": "밀린 짧은 답장을 하나 보낸다",
+            "scores": {
+              "stimulus": 0,
+              "structure": -1,
+              "connection": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q05",
+        "textKo": "오후에 살짝 처질 때 자연스럽게 하는 행동은?",
+        "options": [
+          {
+            "code": "mute",
+            "textKo": "알림을 잠깐 끄고 조용히 쉰다",
+            "scores": {
+              "stimulus": -2,
+              "structure": 2,
+              "connection": -1
+            }
+          },
+          {
+            "code": "scene",
+            "textKo": "창가나 다른 자리로 시야를 바꾼다",
+            "scores": {
+              "stimulus": 2,
+              "structure": 0,
+              "connection": -1
+            }
+          },
+          {
+            "code": "joke",
+            "textKo": "가벼운 농담이나 근황을 나눈다",
+            "scores": {
+              "stimulus": 1,
+              "structure": -1,
+              "connection": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q06",
+        "textKo": "아무 계획 없는 휴일 오전에는 어떤 시작이 편한가요?",
+        "options": [
+          {
+            "code": "ritual",
+            "textKo": "익숙한 순서대로 천천히 시작한다",
+            "scores": {
+              "stimulus": -1,
+              "structure": 2,
+              "connection": -1
+            }
+          },
+          {
+            "code": "outing",
+            "textKo": "가까운 곳에 짧게 다녀온다",
+            "scores": {
+              "stimulus": 2,
+              "structure": 0,
+              "connection": 0
+            }
+          },
+          {
+            "code": "curious",
+            "textKo": "그날 눈에 띈 것부터 따라가 본다",
+            "scores": {
+              "stimulus": 1,
+              "structure": -2,
+              "connection": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "q07",
+        "textKo": "집중이 끊긴 뒤 다시 시작하려면 무엇이 필요할까요?",
+        "options": [
+          {
+            "code": "next",
+            "textKo": "다음 행동을 아주 작게 정한다",
+            "scores": {
+              "stimulus": -1,
+              "structure": 2,
+              "connection": -1
+            }
+          },
+          {
+            "code": "posture",
+            "textKo": "자세를 바꾸고 손을 움직인다",
+            "scores": {
+              "stimulus": 2,
+              "structure": 1,
+              "connection": -1
+            }
+          },
+          {
+            "code": "ask",
+            "textKo": "누군가 지금 뭐 하는지 물어본다",
+            "scores": {
+              "stimulus": 1,
+              "structure": -1,
+              "connection": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q08",
+        "textKo": "잠깐 볼 콘텐츠를 고른다면 더 손이 가는 쪽은?",
+        "options": [
+          {
+            "code": "ambient",
+            "textKo": "잔잔한 음악이나 풍경 영상",
+            "scores": {
+              "stimulus": -2,
+              "structure": 1,
+              "connection": -1
+            }
+          },
+          {
+            "code": "random",
+            "textKo": "짧고 엉뚱한 추천 콘텐츠",
+            "scores": {
+              "stimulus": 2,
+              "structure": -2,
+              "connection": 0
+            }
+          },
+          {
+            "code": "update",
+            "textKo": "친구나 지인의 소소한 근황",
+            "scores": {
+              "stimulus": 1,
+              "structure": -1,
+              "connection": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q09",
+        "textKo": "일정 사이 5분이 비면 가장 먼저 하고 싶은 것은?",
+        "options": [
+          {
+            "code": "notes",
+            "textKo": "방금 한 일을 짧게 정리한다",
+            "scores": {
+              "stimulus": -1,
+              "structure": 2,
+              "connection": -1
+            }
+          },
+          {
+            "code": "stairs",
+            "textKo": "계단이나 복도를 살짝 움직인다",
+            "scores": {
+              "stimulus": 2,
+              "structure": 0,
+              "connection": -1
+            }
+          },
+          {
+            "code": "debrief",
+            "textKo": "옆 사람과 짧게 소감을 나눈다",
+            "scores": {
+              "stimulus": 1,
+              "structure": -1,
+              "connection": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q10",
+        "textKo": "기분 전환용 작은 물건을 고른다면?",
+        "options": [
+          {
+            "code": "drink",
+            "textKo": "따뜻한 음료나 컵",
+            "scores": {
+              "stimulus": -1,
+              "structure": 2,
+              "connection": -1
+            }
+          },
+          {
+            "code": "object",
+            "textKo": "만지작거릴 수 있는 작은 소품",
+            "scores": {
+              "stimulus": 2,
+              "structure": -1,
+              "connection": 0
+            }
+          },
+          {
+            "code": "snack",
+            "textKo": "같이 나눌 수 있는 간식",
+            "scores": {
+              "stimulus": 1,
+              "structure": -1,
+              "connection": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q11",
+        "textKo": "약속 전 시간이 조금 남았을 때 편한 방식은?",
+        "options": [
+          {
+            "code": "settle",
+            "textKo": "일찍 도착해 주변을 익힌다",
+            "scores": {
+              "stimulus": -1,
+              "structure": 2,
+              "connection": -1
+            }
+          },
+          {
+            "code": "nearby",
+            "textKo": "근처를 천천히 둘러본다",
+            "scores": {
+              "stimulus": 2,
+              "structure": 0,
+              "connection": -1
+            }
+          },
+          {
+            "code": "message",
+            "textKo": "도착했다고 짧게 메시지를 보낸다",
+            "scores": {
+              "stimulus": 0,
+              "structure": -1,
+              "connection": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q12",
+        "textKo": "하루 끝에 나를 가볍게 만드는 마무리는?",
+        "options": [
+          {
+            "code": "tidy",
+            "textKo": "눈앞의 한 곳만 정돈한다",
+            "scores": {
+              "stimulus": -1,
+              "structure": 2,
+              "connection": -1
+            }
+          },
+          {
+            "code": "light",
+            "textKo": "가벼운 스트레칭이나 산책을 한다",
+            "scores": {
+              "stimulus": 2,
+              "structure": 0,
+              "connection": -1
+            }
+          },
+          {
+            "code": "spark",
+            "textKo": "재미있던 장면이나 아이디어를 저장한다",
+            "scores": {
+              "stimulus": 2,
+              "structure": -2,
+              "connection": 0
+            }
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "code": "quiet-anchor",
+        "titleKo": "고요한 앵커형",
+        "summaryKo": "소음을 줄이고 작은 순서를 붙잡을 때 가장 빠르게 다시 안정되는 편입니다.",
+        "descriptionKo": "고요한 앵커형은 쉬는 시간을 크게 벌리기보다 주변 자극을 낮추고, 다음 행동을 작게 정리하면서 리듬을 되찾는 편입니다. 빈 시간이 생기면 말이나 화면을 더하기보다 숨을 고르고, 메모 한 줄이나 익숙한 순서로 마음의 위치를 다시 잡습니다. 휴식이 끝난 뒤에도 어디서부터 돌아가면 되는지 비교적 분명하게 느끼는 타입입니다.",
+        "strengthsKo": [
+          "짧은 시간에도 주변을 정돈해 다시 시작할 발판을 잘 만듭니다.",
+          "자극이 많은 상황에서도 필요한 것과 미뤄도 되는 것을 차분히 나눕니다.",
+          "작은 루틴을 반복해서 컨디션의 흔들림을 크게 키우지 않는 편입니다."
+        ],
+        "watchoutsKo": [
+          "조용한 시간이 확보되지 않으면 쉬고 있어도 쉰 느낌이 덜할 수 있습니다.",
+          "정리할 시간이 부족한 날에는 전환 자체를 미루다가 더 무거워질 수 있습니다."
+        ],
+        "collaborationKo": "함께 일하거나 생활할 때는 갑작스러운 대화보다 짧은 정리 시간을 먼저 주면 강점이 잘 살아납니다. 회의나 약속 뒤에 바로 다음 일을 밀어 넣기보다 메모를 남길 틈을 두면 안정적으로 흐름을 이어갑니다.",
+        "shareIntroKo": "나는 쉬는 시간에도 작은 기준점을 잡아야 다시 가벼워지는 고요한 앵커형입니다.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/break-reset-style/quiet-anchor.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/break-reset-style/quiet-anchor-share.png",
+        "vector": {
+          "stimulus": -16,
+          "structure": 20,
+          "connection": -10
+        }
+      },
+      {
+        "code": "light-mover",
+        "titleKo": "가벼운 움직임형",
+        "summaryKo": "몸과 시야를 살짝 바꾸면 생각도 같이 풀리며 다시 속도를 찾는 편입니다.",
+        "descriptionKo": "가벼운 움직임형은 쉬는 시간을 가만히 멈추는 순간보다 공기, 거리, 자세를 바꾸는 짧은 이동으로 느끼는 편입니다. 자리에서 일어나 물을 마시거나 창가를 보고, 손목을 풀거나 주변을 한 바퀴 도는 식의 작은 움직임이 다시 시작하는 신호가 됩니다. 복잡한 계획보다 몸의 감각이 먼저 바뀌어야 생각도 자연스럽게 따라오는 타입입니다.",
+        "strengthsKo": [
+          "짧은 전환만으로도 처진 흐름을 빠르게 끌어올립니다.",
+          "공간이나 자세 변화에서 새 단서를 잘 얻어 막힌 기분을 풀어냅니다.",
+          "긴 휴식이 어려운 날에도 작은 움직임으로 리듬을 끊지 않고 유지합니다."
+        ],
+        "watchoutsKo": [
+          "움직일 수 없는 환경에서는 답답함이 빨리 쌓일 수 있습니다.",
+          "전환의 속도가 빨라 주변 사람이 아직 쉬는 중이라는 신호를 놓칠 수 있습니다."
+        ],
+        "collaborationKo": "같이 움직이는 짧은 심부름이나 산책형 대화에서 에너지가 잘 맞습니다. 다만 상대가 조용히 쉬고 싶어 하는 순간에는 먼저 물어보고, 돌아온 뒤 핵심만 정리하면 좋은 리듬을 만들 수 있습니다.",
+        "shareIntroKo": "나는 몸과 시야를 살짝 바꿔야 다시 생각이 풀리는 가벼운 움직임형입니다.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/break-reset-style/light-mover.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/break-reset-style/light-mover-share.png",
+        "vector": {
+          "stimulus": 22,
+          "structure": 6,
+          "connection": -9
+        }
+      },
+      {
+        "code": "warm-connector",
+        "titleKo": "따뜻한 연결형",
+        "summaryKo": "짧은 안부와 가벼운 반응 속에서 기분이 풀리고 다시 이어지는 편입니다.",
+        "descriptionKo": "따뜻한 연결형은 쉬는 시간을 혼자 완전히 닫아두기보다 사람의 반응을 통해 부드럽게 환기하는 편입니다. 짧은 메시지, 소소한 농담, 방금 있었던 일에 대한 한마디가 생각의 매듭을 느슨하게 만듭니다. 큰 대화가 아니어도 누군가와 연결되어 있다는 감각이 생기면 다시 해야 할 일로 돌아가는 발걸음이 가벼워지는 타입입니다.",
+        "strengthsKo": [
+          "짧은 대화만으로도 주변 분위기를 부드럽게 바꾸는 힘이 있습니다.",
+          "혼자 끌어안기보다 가볍게 나누며 감정의 무게를 줄입니다.",
+          "팀이나 모임 안에서 휴식과 복귀의 온도를 자연스럽게 맞춥니다."
+        ],
+        "watchoutsKo": [
+          "상대가 집중 중일 때는 연결 시도가 방해처럼 느껴질 수 있습니다.",
+          "대화가 길어지면 쉬는 시간이 다음 할 일을 밀어내는 방향으로 흐를 수 있습니다."
+        ],
+        "collaborationKo": "짧은 체크인, 간단한 소감 공유, 같이 먹는 간식처럼 부담 없는 접점에서 장점이 잘 드러납니다. 대화 전에 상대의 상태를 한 번 확인하고 시간을 정해두면 따뜻함과 실행력을 함께 지킬 수 있습니다.",
+        "shareIntroKo": "나는 짧은 안부와 반응 속에서 다시 이어지는 힘을 얻는 따뜻한 연결형입니다.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/break-reset-style/warm-connector.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/break-reset-style/warm-connector-share.png",
+        "vector": {
+          "stimulus": 8,
+          "structure": -10,
+          "connection": 22
+        }
+      },
+      {
+        "code": "playful-drifter",
+        "titleKo": "느슨한 전환형",
+        "summaryKo": "정해진 순서보다 우연히 눈에 들어온 재미가 생각을 환기해 주는 편입니다.",
+        "descriptionKo": "느슨한 전환형은 쉬는 시간을 작은 탐험처럼 쓰는 편입니다. 꼭 정해둔 루틴을 따르기보다 오늘 눈에 들어온 장면, 짧은 콘텐츠, 낯선 아이디어를 따라가며 머릿속 공기를 바꿉니다. 방향이 완전히 없어 보이더라도 그 안에서 예상 밖의 재미를 발견하고, 다시 돌아왔을 때 이전과 다른 각도로 일을 바라볼 수 있는 타입입니다.",
+        "strengthsKo": [
+          "우연한 자극에서 기분 전환과 새 관점을 빠르게 얻습니다.",
+          "일상이 반복될 때도 작은 재미를 찾아 흐름을 산뜻하게 바꿉니다.",
+          "정해진 답이 없는 상황에서 가볍게 시도해 보는 힘이 있습니다."
+        ],
+        "watchoutsKo": [
+          "흥미로운 것이 이어지면 쉬는 시간이 생각보다 길어질 수 있습니다.",
+          "정리 없이 바로 복귀하면 방금 떠오른 아이디어가 흩어질 수 있습니다."
+        ],
+        "collaborationKo": "아이디어가 필요한 순간이나 분위기를 전환해야 할 때 좋은 단서를 많이 가져옵니다. 다만 함께 움직일 때는 탐색 시간을 짧게 정하고, 끝나기 전에 한 줄만 남기면 느슨함이 생산적인 환기로 이어집니다.",
+        "shareIntroKo": "나는 우연한 재미를 따라가며 머릿속 공기를 바꾸는 느슨한 전환형입니다.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/break-reset-style/playful-drifter.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/break-reset-style/playful-drifter-share.png",
+        "vector": {
+          "stimulus": 16,
+          "structure": -20,
+          "connection": 0
+        }
+      }
+    ]
+  }
+}

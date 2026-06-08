@@ -3,7 +3,7 @@
   "packId": "generated-v1",
   "version": 1,
   "titleKo": "자동 생성 테스트팩",
-  "generatedAt": "2026-06-08T10:18:29.048Z",
+  "generatedAt": "2026-06-08T14:04:11.207Z",
   "tests": [
     {
       "testId": "space-organizing-style",
@@ -12,6 +12,17 @@
       "stats": {
         "aggregateKey": "space-organizing-style",
         "versionKey": "space-organizing-style@1",
+        "resultDimension": "result_code",
+        "eventDimension": "test_completed"
+      }
+    },
+    {
+      "testId": "break-reset-style",
+      "version": 1,
+      "path": "/test-packs/packs/generated-v1/tests/break-reset-style.json",
+      "stats": {
+        "aggregateKey": "break-reset-style",
+        "versionKey": "break-reset-style@1",
         "resultDimension": "result_code",
         "eventDimension": "test_completed"
       }
