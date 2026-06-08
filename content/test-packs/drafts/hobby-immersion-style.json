@@ -1,0 +1,496 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "metadata": {
+    "summaryKo": "취미를 깊게 파고드는지, 함께 나누며 키우는지 11문항으로 확인합니다.",
+    "tags": [
+      "routine",
+      "daily",
+      "hobby",
+      "leisure"
+    ],
+    "categoryLabelKo": "일상",
+    "tagLabelsKo": {
+      "hobby": "취미",
+      "leisure": "여가"
+    },
+    "estimatedMinutes": "3-5분",
+    "packTitleKo": "자동 생성 테스트팩"
+  },
+  "test": {
+    "id": "hobby-immersion-style",
+    "version": 1,
+    "status": "published",
+    "titleKo": "취미 몰입 방식 테스트",
+    "category": "routine",
+    "axes": [
+      {
+        "id": "depth",
+        "labelKo": "깊이 파고들기"
+      },
+      {
+        "id": "sharing",
+        "labelKo": "함께 나누기"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q01",
+        "textKo": "새 취미가 눈에 들어왔을 때 가장 먼저 해보고 싶은 일은?",
+        "options": [
+          {
+            "code": "craft",
+            "textKo": "기본 도구와 과정을 차근차근 익힌다",
+            "descriptionKo": "처음부터 손에 익는 감각을 쌓고 싶어 합니다.",
+            "scores": {
+              "depth": 2,
+              "sharing": -1
+            }
+          },
+          {
+            "code": "share",
+            "textKo": "같이 시작할 사람이나 모임을 찾는다",
+            "descriptionKo": "반응을 주고받으며 시작하면 더 오래 갑니다.",
+            "scores": {
+              "depth": 1,
+              "sharing": 2
+            }
+          },
+          {
+            "code": "sample",
+            "textKo": "가볍게 체험판부터 여러 개 해본다",
+            "descriptionKo": "한 가지를 고정하기 전에 넓게 맛보는 편입니다.",
+            "scores": {
+              "depth": -2,
+              "sharing": -1
+            }
+          }
+        ]
+      },
+      {
+        "id": "q02",
+        "textKo": "취미 시간이 갑자기 한 시간 생기면 더 끌리는 선택은?",
+        "options": [
+          {
+            "code": "practice",
+            "textKo": "지난번에 막힌 부분을 다시 연습한다",
+            "descriptionKo": "작은 진전이 쌓이는 시간이 만족스럽습니다.",
+            "scores": {
+              "depth": 2,
+              "sharing": -1
+            }
+          },
+          {
+            "code": "message",
+            "textKo": "친구에게 같이 할 만한 것을 제안한다",
+            "descriptionKo": "혼자보다 같이 움직일 때 취미가 살아납니다.",
+            "scores": {
+              "depth": 1,
+              "sharing": 2
+            }
+          },
+          {
+            "code": "browse",
+            "textKo": "새로운 영상이나 샘플을 둘러본다",
+            "descriptionKo": "지금 당장 가볍게 바꿔볼 선택지가 편합니다.",
+            "scores": {
+              "depth": -2,
+              "sharing": -1
+            }
+          }
+        ]
+      },
+      {
+        "id": "q03",
+        "textKo": "취미용 물건을 고를 때 마음이 가는 기준은?",
+        "options": [
+          {
+            "code": "reliable",
+            "textKo": "오래 쓰며 손에 익힐 수 있는 기본형",
+            "descriptionKo": "반복해서 써도 흔들리지 않는 도구를 선호합니다.",
+            "scores": {
+              "depth": 2,
+              "sharing": -1
+            }
+          },
+          {
+            "code": "friendly",
+            "textKo": "다른 사람과 같이 쓰기 쉬운 구성",
+            "descriptionKo": "취미 경험을 나눌 수 있는지가 중요합니다.",
+            "scores": {
+              "depth": 1,
+              "sharing": 2
+            }
+          },
+          {
+            "code": "tiny",
+            "textKo": "부담 없이 바꿔볼 수 있는 작은 세트",
+            "descriptionKo": "가볍게 시작하고 가볍게 접을 수 있으면 편합니다.",
+            "scores": {
+              "depth": -2,
+              "sharing": -1
+            }
+          }
+        ]
+      },
+      {
+        "id": "q04",
+        "textKo": "취미가 재미있다고 느끼는 순간은 언제에 가까운가요?",
+        "options": [
+          {
+            "code": "improve",
+            "textKo": "전보다 조금 더 정교하게 해냈을 때",
+            "descriptionKo": "내 손의 기준이 올라가는 느낌을 좋아합니다.",
+            "scores": {
+              "depth": 2,
+              "sharing": -1
+            }
+          },
+          {
+            "code": "laugh",
+            "textKo": "같이 한 사람들이 반응하며 웃을 때",
+            "descriptionKo": "즐거움이 서로 번지는 장면에서 에너지를 얻습니다.",
+            "scores": {
+              "depth": 1,
+              "sharing": 2
+            }
+          },
+          {
+            "code": "fresh",
+            "textKo": "예상 못 한 새 조합을 발견했을 때",
+            "descriptionKo": "낯선 선택지가 열리는 순간이 오래 기억납니다.",
+            "scores": {
+              "depth": -2,
+              "sharing": -1
+            }
+          }
+        ]
+      },
+      {
+        "id": "q05",
+        "textKo": "취미 기록을 남긴다면 가장 자연스러운 방식은?",
+        "options": [
+          {
+            "code": "log",
+            "textKo": "연습 과정과 시행착오를 짧게 적는다",
+            "descriptionKo": "다음에 더 잘하기 위한 단서를 남깁니다.",
+            "scores": {
+              "depth": 2,
+              "sharing": -1
+            }
+          },
+          {
+            "code": "post",
+            "textKo": "사진이나 후기를 공유하며 대화를 연다",
+            "descriptionKo": "기록이 사람들과 이어지는 계기가 됩니다.",
+            "scores": {
+              "depth": 1,
+              "sharing": 2
+            }
+          },
+          {
+            "code": "bookmark",
+            "textKo": "마음에 드는 것만 모아두고 넘긴다",
+            "descriptionKo": "정리보다 다음 선택지를 발견하는 데 더 끌립니다.",
+            "scores": {
+              "depth": -2,
+              "sharing": -1
+            }
+          }
+        ]
+      },
+      {
+        "id": "q06",
+        "textKo": "취미 모임에 참여한다면 편한 역할은?",
+        "options": [
+          {
+            "code": "steady",
+            "textKo": "조용히 꾸준히 해보고 필요한 것만 묻는다",
+            "descriptionKo": "내 속도를 지키면서 깊이를 쌓는 편입니다.",
+            "scores": {
+              "depth": 2,
+              "sharing": -1
+            }
+          },
+          {
+            "code": "host",
+            "textKo": "초보자도 끼기 쉽게 분위기를 만든다",
+            "descriptionKo": "사람들이 편하게 들어오면 취미도 오래 갑니다.",
+            "scores": {
+              "depth": 1,
+              "sharing": 2
+            }
+          },
+          {
+            "code": "guest",
+            "textKo": "오늘 끌리는 코너만 가볍게 둘러본다",
+            "descriptionKo": "정해진 역할보다 자유롭게 체험하는 쪽이 맞습니다.",
+            "scores": {
+              "depth": -2,
+              "sharing": -1
+            }
+          }
+        ]
+      },
+      {
+        "id": "q07",
+        "textKo": "취미가 잠시 시들해졌을 때 다시 붙잡는 방법은?",
+        "options": [
+          {
+            "code": "small-goal",
+            "textKo": "작은 목표를 정하고 다시 반복한다",
+            "descriptionKo": "명확한 한 단계가 있으면 다시 몰입하기 쉽습니다.",
+            "scores": {
+              "depth": 2,
+              "sharing": -1
+            }
+          },
+          {
+            "code": "invite",
+            "textKo": "누군가와 약속을 잡아 흐름을 살린다",
+            "descriptionKo": "같이 하는 약속이 자연스러운 동력이 됩니다.",
+            "scores": {
+              "depth": 1,
+              "sharing": 2
+            }
+          },
+          {
+            "code": "switch",
+            "textKo": "비슷하지만 다른 취미로 잠깐 옮긴다",
+            "descriptionKo": "새 맛을 보고 돌아오면 부담이 줄어듭니다.",
+            "scores": {
+              "depth": -2,
+              "sharing": -1
+            }
+          }
+        ]
+      },
+      {
+        "id": "q08",
+        "textKo": "취미 공간이나 시간을 꾸밀 때 우선하는 것은?",
+        "options": [
+          {
+            "code": "setup",
+            "textKo": "혼자 바로 몰입할 수 있는 세팅",
+            "descriptionKo": "방해 없이 시작되는 환경이 중요합니다.",
+            "scores": {
+              "depth": 2,
+              "sharing": -1
+            }
+          },
+          {
+            "code": "open-seat",
+            "textKo": "다른 사람이 함께 앉을 여지",
+            "descriptionKo": "취미 시간이 자연스럽게 대화로 이어지면 좋습니다.",
+            "scores": {
+              "depth": 1,
+              "sharing": 2
+            }
+          },
+          {
+            "code": "portable",
+            "textKo": "언제든 꺼내고 접을 수 있는 가벼움",
+            "descriptionKo": "장소나 기분에 맞춰 옮겨 다닐 수 있어야 편합니다.",
+            "scores": {
+              "depth": -2,
+              "sharing": -1
+            }
+          }
+        ]
+      },
+      {
+        "id": "q09",
+        "textKo": "취미에서 정보를 얻을 때 더 믿게 되는 쪽은?",
+        "options": [
+          {
+            "code": "manual",
+            "textKo": "기본 원리와 순서가 정리된 자료",
+            "descriptionKo": "왜 그렇게 하는지 알면 오래 응용할 수 있습니다.",
+            "scores": {
+              "depth": 2,
+              "sharing": -1
+            }
+          },
+          {
+            "code": "review",
+            "textKo": "사람들의 후기와 실제 사용 경험",
+            "descriptionKo": "여러 반응을 보면 시도할 마음이 생깁니다.",
+            "scores": {
+              "depth": 1,
+              "sharing": 2
+            }
+          },
+          {
+            "code": "playlist",
+            "textKo": "짧게 훑을 수 있는 모음과 추천 목록",
+            "descriptionKo": "빠르게 둘러보며 지금 맞는 것을 고릅니다.",
+            "scores": {
+              "depth": -2,
+              "sharing": -1
+            }
+          }
+        ]
+      },
+      {
+        "id": "q10",
+        "textKo": "취미 결과물을 다루는 태도와 가까운 것은?",
+        "options": [
+          {
+            "code": "refine",
+            "textKo": "마음에 들 때까지 다시 다듬는다",
+            "descriptionKo": "완성도보다 과정의 밀도가 더 중요할 때가 많습니다.",
+            "scores": {
+              "depth": 2,
+              "sharing": -1
+            }
+          },
+          {
+            "code": "show",
+            "textKo": "완벽하지 않아도 함께 보고 이야기한다",
+            "descriptionKo": "공유하는 순간 결과물이 더 의미 있어집니다.",
+            "scores": {
+              "depth": 1,
+              "sharing": 2
+            }
+          },
+          {
+            "code": "move-on",
+            "textKo": "재미있었으면 다음 주제로 넘어간다",
+            "descriptionKo": "한 결과에 오래 머무르기보다 흐름을 이어갑니다.",
+            "scores": {
+              "depth": -2,
+              "sharing": -1
+            }
+          }
+        ]
+      },
+      {
+        "id": "q11",
+        "textKo": "취미를 오래 이어가기 위해 가장 필요한 것은?",
+        "options": [
+          {
+            "code": "routine",
+            "textKo": "작게라도 반복할 수 있는 나만의 리듬",
+            "descriptionKo": "자주 돌아올 수 있는 기준이 있어야 편합니다.",
+            "scores": {
+              "depth": 2,
+              "sharing": -1
+            }
+          },
+          {
+            "code": "companions",
+            "textKo": "가볍게 서로 부르는 사람들",
+            "descriptionKo": "함께할 얼굴이 떠오르면 취미가 덜 멀어집니다.",
+            "scores": {
+              "depth": 1,
+              "sharing": 2
+            }
+          },
+          {
+            "code": "variety",
+            "textKo": "질리지 않게 바꿔볼 수 있는 선택지",
+            "descriptionKo": "새로운 맛이 있어야 다시 손이 갑니다.",
+            "scores": {
+              "depth": -2,
+              "sharing": -1
+            }
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "code": "focus-craft",
+        "titleKo": "깊이 파고드는 공방형",
+        "summaryKo": "한 가지 취미를 손에 익히며 작은 개선을 쌓을 때 만족이 커지는 편입니다.",
+        "descriptionKo": "공방형은 취미를 빠르게 소비하기보다 내 손에 맞게 다듬고 반복하는 쪽에서 재미를 느끼는 편입니다. 처음에는 조용히 자료를 살피고, 기본 동작을 익히고, 어제보다 조금 나아진 지점을 확인하면서 오래 붙잡을 동력을 얻습니다. 결과를 크게 드러내기보다 과정이 정교해지는 감각을 중요하게 보기 때문에, 혼자만의 시간과 안정적인 도구가 있을 때 취미가 가장 편안하게 이어집니다.",
+        "strengthsKo": [
+          "반복 과정에서 세부 차이를 잘 발견하고 꾸준히 개선합니다.",
+          "유행보다 손에 맞는 방식과 도구를 찾는 힘이 있습니다.",
+          "취미 시간이 짧아도 연습의 맥락을 이어가기 좋습니다."
+        ],
+        "watchoutsKo": [
+          "기준이 높아져 시작 자체가 무거워질 수 있습니다.",
+          "공유나 피드백을 늦추면 취미가 혼자만의 숙제로 느껴질 수 있습니다."
+        ],
+        "collaborationKo": "함께 취미를 할 때는 완성도 경쟁보다 각자의 연습 과정을 존중하는 분위기가 잘 맞습니다. 공방형에게는 조용히 해볼 시간과 구체적인 관찰 피드백을 주면 좋고, 본인도 작은 중간 결과를 가볍게 보여주면 주변과의 연결이 훨씬 쉬워집니다.",
+        "shareIntroKo": "나는 취미를 손에 익히며 깊게 다듬는 공방형에 가까워요.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/hobby-immersion-style/focus-craft.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/hobby-immersion-style/focus-craft-share.png",
+        "vector": {
+          "depth": 22,
+          "sharing": -11
+        }
+      },
+      {
+        "code": "social-spark",
+        "titleKo": "함께 불붙이는 모임형",
+        "summaryKo": "취미가 사람들과 이어질 때 더 오래 살아나고, 작은 반응에서 에너지를 얻는 편입니다.",
+        "descriptionKo": "모임형은 혼자 완벽하게 준비한 뒤 시작하기보다, 누군가와 같이 해보며 취미의 온도를 올리는 편입니다. 질문을 주고받고, 결과물을 보여주고, 다음 약속을 잡는 과정이 자연스러운 지속 장치가 됩니다. 취미 자체의 깊이도 중요하지만 그 취미가 대화와 웃음, 서로의 시도와 연결될 때 만족이 커집니다. 초보자도 들어오기 쉬운 분위기를 만들고 취미 시간을 생활 속 작은 이벤트로 바꾸는 힘이 있습니다.",
+        "strengthsKo": [
+          "사람들이 편하게 참여할 수 있는 분위기를 잘 만듭니다.",
+          "가벼운 약속과 공유를 통해 취미를 오래 이어갑니다.",
+          "서로의 시도를 칭찬하고 다음 행동으로 연결하는 데 강합니다."
+        ],
+        "watchoutsKo": [
+          "함께할 사람이 없으면 취미가 쉽게 미뤄질 수 있습니다.",
+          "반응을 신경 쓰느라 내 속도나 기준을 놓칠 때가 있습니다."
+        ],
+        "collaborationKo": "모임형과 함께할 때는 완성도보다 참여 장벽을 낮추는 방식이 좋습니다. 짧은 공동 목표, 부담 없는 인증, 같이 고르는 다음 주제처럼 반응이 오가는 장치를 두면 잘 살아납니다. 모임형 본인은 혼자 해도 남는 작은 루틴을 하나 마련해두면 흐름이 더 안정됩니다.",
+        "shareIntroKo": "나는 같이 웃고 나눌수록 취미가 살아나는 모임형에 가까워요.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/hobby-immersion-style/social-spark.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/hobby-immersion-style/social-spark-share.png",
+        "vector": {
+          "depth": 5,
+          "sharing": 22
+        }
+      },
+      {
+        "code": "wandering-sampler",
+        "titleKo": "가볍게 넓히는 산책형",
+        "summaryKo": "한 가지에 묶이기보다 여러 취미를 가볍게 맛보며 지금의 기분에 맞는 재미를 찾는 편입니다.",
+        "descriptionKo": "산책형은 취미를 반드시 오래 붙잡아야 한다고 느끼기보다, 생활에 작은 환기를 주는 선택지로 다루는 편입니다. 짧은 체험, 추천 목록, 새로운 재료나 방식처럼 부담이 낮은 입구에서 재미를 발견합니다. 깊게 파고드는 단계로 바로 넘어가기보다 오늘의 기분과 시간에 맞춰 옮겨 다니며, 다양한 경험을 통해 나에게 맞는 감각을 천천히 선별합니다. 취미를 가볍게 유지하는 능력이 좋아 바쁜 시기에도 즐거움의 끈을 놓지 않습니다.",
+        "strengthsKo": [
+          "새로운 취미의 진입 장벽을 낮게 느끼고 빠르게 시도합니다.",
+          "기분과 상황에 맞춰 부담 없는 즐거움을 잘 고릅니다.",
+          "여러 경험을 조합해 나만의 취향 지도를 넓힙니다."
+        ],
+        "watchoutsKo": [
+          "재미가 조금 줄면 너무 빨리 접어서 아쉬움이 남을 수 있습니다.",
+          "도구나 자료가 흩어져 다음에 다시 시작하기 번거로울 수 있습니다."
+        ],
+        "collaborationKo": "산책형과 함께할 때는 긴 약속보다 짧은 체험형 일정이 잘 맞습니다. 한 번에 깊은 결과를 기대하기보다 여러 선택지를 같이 둘러보고, 마음에 드는 것을 가볍게 저장해두면 좋습니다. 산책형 본인은 다시 돌아올 수 있는 작은 기록만 남겨도 취미가 더 오래 이어집니다.",
+        "shareIntroKo": "나는 여러 취미를 가볍게 맛보며 넓히는 산책형에 가까워요.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/hobby-immersion-style/wandering-sampler.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/hobby-immersion-style/wandering-sampler-share.png",
+        "vector": {
+          "depth": -22,
+          "sharing": -11
+        }
+      },
+      {
+        "code": "showcase-curator",
+        "titleKo": "기록으로 엮는 큐레이터형",
+        "summaryKo": "취미를 깊게 즐기면서도 기록과 공유를 통해 취향의 맥락을 만들어가는 편입니다.",
+        "descriptionKo": "큐레이터형은 취미를 단순한 소비나 개인 연습으로만 두지 않고, 과정을 정리하고 보여주며 의미를 엮는 편입니다. 마음에 든 도구, 시도한 방법, 실패와 발견을 남겨두고 필요할 때 다른 사람과 나눕니다. 혼자 깊게 해보는 시간도 좋아하지만, 그 경험이 누군가에게 힌트가 되거나 대화의 출발점이 될 때 만족이 커집니다. 취미를 생활의 취향 아카이브처럼 쌓아가며 나만의 기준과 공유 가능한 이야기를 함께 만듭니다.",
+        "strengthsKo": [
+          "과정과 결과를 정리해 다음 시도에 쓸 수 있는 자료로 만듭니다.",
+          "혼자 쌓은 경험을 다른 사람이 이해하기 쉬운 이야기로 바꿉니다.",
+          "깊이 있는 취향과 열린 공유 사이의 균형을 잘 잡습니다."
+        ],
+        "watchoutsKo": [
+          "기록을 잘 남기려다 취미 시간이 편집 작업처럼 느껴질 수 있습니다.",
+          "보여줄 만한 형태를 의식하면 즉흥적인 재미가 줄어들 수 있습니다."
+        ],
+        "collaborationKo": "큐레이터형과 함께할 때는 과정 공유, 짧은 리뷰, 추천 목록처럼 맥락을 남기는 방식이 잘 맞습니다. 단순히 결과만 평가하기보다 왜 좋았는지, 다음에 무엇을 바꿔볼지 이야기하면 취미가 더 풍성해집니다. 큐레이터형 본인은 기록하지 않는 순수 체험 시간도 따로 두면 균형이 좋아집니다.",
+        "shareIntroKo": "나는 취미 경험을 기록하고 나누며 엮는 큐레이터형에 가까워요.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/hobby-immersion-style/showcase-curator.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/hobby-immersion-style/showcase-curator-share.png",
+        "vector": {
+          "depth": 16,
+          "sharing": 10
+        }
+      }
+    ]
+  }
+}

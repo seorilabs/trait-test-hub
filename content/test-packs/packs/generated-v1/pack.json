@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "version": 1,
+  "titleKo": "자동 생성 테스트팩",
+  "generatedAt": "2026-06-08T11:42:42.989Z",
+  "tests": [
+    {
+      "testId": "hobby-immersion-style",
+      "version": 1,
+      "path": "/test-packs/packs/generated-v1/tests/hobby-immersion-style.json",
+      "stats": {
+        "aggregateKey": "hobby-immersion-style",
+        "versionKey": "hobby-immersion-style@1",
+        "resultDimension": "result_code",
+        "eventDimension": "test_completed"
+      }
+    }
+  ]
+}
