@@ -13,7 +13,7 @@
     "validate:test-packs:public": "node scripts/validate-test-packs.mjs",
     "validate:test-packs:source": "pnpm validate:test-packs",
     "quality:test-packs": "node scripts/compile-test-packs.mjs --output=tmp/test-packs-check && node scripts/audit-test-pack-quality.mjs --assetRoot=tmp/test-packs-check",
-    "check:content": "pnpm validate:test-packs:source && pnpm quality:test-packs",
+    "check:content": "node scripts/compile-test-packs.mjs --output=tmp/test-packs-check && node scripts/validate-test-packs.mjs --assetRoot=tmp/test-packs-check && node scripts/audit-test-pack-quality.mjs --assetRoot=tmp/test-packs-check",
     "publish:test-pack-draft": "node scripts/publish-test-pack-draft.mjs",
     "build:pages": "node scripts/build-pages.mjs",
     "check": "pnpm check:core && pnpm check:content && pnpm check:preview && pnpm check:release",
