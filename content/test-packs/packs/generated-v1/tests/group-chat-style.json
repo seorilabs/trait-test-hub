@@ -1,0 +1,480 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "test": {
+    "id": "group-chat-style",
+    "version": 1,
+    "status": "published",
+    "titleKo": "단톡방 대화 스타일 테스트",
+    "category": "social",
+    "axes": [
+      {
+        "id": "tempo",
+        "labelKo": "실시간 반응 선호"
+      },
+      {
+        "id": "voice",
+        "labelKo": "적극 표현 선호"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q01",
+        "textKo": "자고 일어났더니 단톡방에 안 읽은 메시지가 200개 쌓여 있다면?",
+        "options": [
+          {
+            "code": "jump-in-now",
+            "textKo": "최신 화제부터 바로 끼어든다",
+            "descriptionKo": "다 읽는 것보다 지금 흐름에 합류하는 게 먼저입니다.",
+            "scores": {
+              "tempo": 2,
+              "voice": 2
+            }
+          },
+          {
+            "code": "scroll-up-first",
+            "textKo": "맨 위로 올라가 흐름을 다 읽고 답한다",
+            "descriptionKo": "무슨 이야기가 오갔는지 알아야 마음 편히 말할 수 있습니다.",
+            "scores": {
+              "tempo": -2,
+              "voice": 1
+            }
+          },
+          {
+            "code": "skim-and-later",
+            "textKo": "일단 훑기만 하고 답은 나중으로 미룬다",
+            "descriptionKo": "급한 게 없으면 굳이 바로 반응하지 않아도 됩니다.",
+            "scores": {
+              "tempo": -2,
+              "voice": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q02",
+        "textKo": "친구가 단톡방에 고민을 올렸을 때 나의 첫 반응은?",
+        "options": [
+          {
+            "code": "rapid-replies",
+            "textKo": "통화하듯 짧은 메시지를 연달아 보낸다",
+            "descriptionKo": "고민은 식기 전에 주고받아야 한다고 느낍니다.",
+            "scores": {
+              "tempo": 2,
+              "voice": 2
+            }
+          },
+          {
+            "code": "empathy-emoji",
+            "textKo": "공감 이모지부터 빠르게 누른다",
+            "descriptionKo": "내가 보고 있다는 신호를 가장 먼저 보냅니다.",
+            "scores": {
+              "tempo": 2,
+              "voice": -2
+            }
+          },
+          {
+            "code": "long-thought",
+            "textKo": "생각을 정리해 길게 한 번에 보낸다",
+            "descriptionKo": "급한 위로보다 도움이 되는 말을 고르고 싶습니다.",
+            "scores": {
+              "tempo": -2,
+              "voice": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q03",
+        "textKo": "단톡방에서 모임 날짜를 정해야 할 때 나는?",
+        "options": [
+          {
+            "code": "open-vote",
+            "textKo": "후보 날짜를 던지고 투표를 만든다",
+            "descriptionKo": "누군가 시작해야 정해진다면 그게 나여도 괜찮습니다.",
+            "scores": {
+              "tempo": 2,
+              "voice": 2
+            }
+          },
+          {
+            "code": "fast-voter",
+            "textKo": "누가 정리해 주면 바로 투표만 누른다",
+            "descriptionKo": "참여는 빠르게 하되 진행은 맡기는 편입니다.",
+            "scores": {
+              "tempo": 2,
+              "voice": -2
+            }
+          },
+          {
+            "code": "late-confirm",
+            "textKo": "흐름을 지켜보다 마지막에 가능한 날만 말한다",
+            "descriptionKo": "어차피 정리될 이야기라면 끝에 답해도 충분합니다.",
+            "scores": {
+              "tempo": -2,
+              "voice": -1
+            }
+          }
+        ]
+      },
+      {
+        "id": "q04",
+        "textKo": "점심시간에 단톡방 화제가 한창 달아올랐다면?",
+        "options": [
+          {
+            "code": "fuel-the-fire",
+            "textKo": "드립을 보태며 흐름을 더 키운다",
+            "descriptionKo": "달아오른 대화는 같이 타올라야 재밌습니다.",
+            "scores": {
+              "tempo": 2,
+              "voice": 2
+            }
+          },
+          {
+            "code": "meme-support",
+            "textKo": "웃긴 짤이나 이모지로 호응한다",
+            "descriptionKo": "말을 더하기보다 분위기에 추임새를 넣는 쪽입니다.",
+            "scores": {
+              "tempo": 2,
+              "voice": -1
+            }
+          },
+          {
+            "code": "mute-and-binge",
+            "textKo": "알림을 잠깐 꺼 두고 나중에 몰아 본다",
+            "descriptionKo": "내 시간을 지키고 대화는 정주행으로 즐깁니다.",
+            "scores": {
+              "tempo": -2,
+              "voice": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q05",
+        "textKo": "단톡방 이야기가 내 생각과 다른 방향으로 흘러가면?",
+        "options": [
+          {
+            "code": "speak-now",
+            "textKo": "바로 내 생각을 말한다",
+            "descriptionKo": "다른 의견도 빨리 나와야 대화가 건강해집니다.",
+            "scores": {
+              "tempo": 2,
+              "voice": 2
+            }
+          },
+          {
+            "code": "wait-then-sum",
+            "textKo": "충분히 읽은 뒤 정리해서 의견을 낸다",
+            "descriptionKo": "맥락을 다 본 다음의 한마디가 더 힘이 있습니다.",
+            "scores": {
+              "tempo": -2,
+              "voice": 2
+            }
+          },
+          {
+            "code": "just-watch",
+            "textKo": "굳이 끼어들지 않고 지켜본다",
+            "descriptionKo": "모든 흐름에 내 의견이 필요한 건 아닙니다.",
+            "scores": {
+              "tempo": -1,
+              "voice": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q06",
+        "textKo": "단톡방에서 누가 나를 콕 집어 부르면?",
+        "options": [
+          {
+            "code": "drop-and-reply",
+            "textKo": "하던 일을 멈추고 바로 답한다",
+            "descriptionKo": "나를 불렀다면 기다리게 하고 싶지 않습니다.",
+            "scores": {
+              "tempo": 2,
+              "voice": 1
+            }
+          },
+          {
+            "code": "quick-ack",
+            "textKo": "확인했다는 짧은 답만 남기고 자세한 건 나중에 한다",
+            "descriptionKo": "우선 신호만 보내고 제대로 된 답은 따로 챙깁니다.",
+            "scores": {
+              "tempo": 1,
+              "voice": -2
+            }
+          },
+          {
+            "code": "batch-answer",
+            "textKo": "제대로 답할 수 있을 때 모아서 답한다",
+            "descriptionKo": "성의 없는 즉답보다 늦어도 온전한 답이 낫습니다.",
+            "scores": {
+              "tempo": -2,
+              "voice": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "q07",
+        "textKo": "새 모임 단톡방에 초대된 첫날, 나는?",
+        "options": [
+          {
+            "code": "first-hello",
+            "textKo": "먼저 인사하고 가벼운 질문을 던진다",
+            "descriptionKo": "어색함은 누군가 먼저 말을 걸어야 풀립니다.",
+            "scores": {
+              "tempo": 2,
+              "voice": 2
+            }
+          },
+          {
+            "code": "emoji-greeting",
+            "textKo": "다른 사람 인사에 이모지로만 호응한다",
+            "descriptionKo": "존재감은 남기되 시선이 몰리는 건 피하고 싶습니다.",
+            "scores": {
+              "tempo": 1,
+              "voice": -2
+            }
+          },
+          {
+            "code": "read-the-room",
+            "textKo": "분위기를 파악할 때까지 읽기만 한다",
+            "descriptionKo": "이 방의 결을 알아야 내 자리도 보입니다.",
+            "scores": {
+              "tempo": -2,
+              "voice": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q08",
+        "textKo": "여행 다녀온 친구가 단톡방에 사진을 쏟아낼 때?",
+        "options": [
+          {
+            "code": "live-comment",
+            "textKo": "사진마다 실시간으로 감상평을 단다",
+            "descriptionKo": "올리는 사람 입장에선 즉각 반응이 제일 반갑습니다.",
+            "scores": {
+              "tempo": 2,
+              "voice": 2
+            }
+          },
+          {
+            "code": "heart-tap",
+            "textKo": "하트 리액션만 빠르게 누르며 넘긴다",
+            "descriptionKo": "잘 봤다는 표시는 가볍고 빠른 게 좋습니다.",
+            "scores": {
+              "tempo": 2,
+              "voice": -2
+            }
+          },
+          {
+            "code": "best-pick-reply",
+            "textKo": "나중에 몰아 보고 최고의 한 장에 길게 답한다",
+            "descriptionKo": "전부 훑은 뒤 고른 한마디가 진짜 감상입니다.",
+            "scores": {
+              "tempo": -2,
+              "voice": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q09",
+        "textKo": "모임이 끝난 다음 날 단톡방에서 나의 역할은?",
+        "options": [
+          {
+            "code": "recap-opener",
+            "textKo": "어제 재밌었다며 후기 이야기를 먼저 연다",
+            "descriptionKo": "여운은 단톡방에서 한 번 더 나눠야 완성됩니다.",
+            "scores": {
+              "tempo": 2,
+              "voice": 2
+            }
+          },
+          {
+            "code": "recap-reactor",
+            "textKo": "남들이 올린 후기와 사진에 리액션을 보탠다",
+            "descriptionKo": "이야기를 여는 것보다 받아 주는 쪽이 편합니다.",
+            "scores": {
+              "tempo": 1,
+              "voice": -2
+            }
+          },
+          {
+            "code": "private-echo",
+            "textKo": "단톡방 대신 친한 친구와 따로 후기를 나눈다",
+            "descriptionKo": "진짜 하고 싶은 말은 작은 대화에서 나옵니다.",
+            "scores": {
+              "tempo": -2,
+              "voice": -1
+            }
+          }
+        ]
+      },
+      {
+        "id": "q10",
+        "textKo": "회비나 장소 변경 같은 공지가 단톡방에 올라오면?",
+        "options": [
+          {
+            "code": "confirm-and-ask",
+            "textKo": "바로 확인 답을 하고 궁금한 것도 같이 묻는다",
+            "descriptionKo": "공지가 묻히기 전에 정리할 건 정리해 둡니다.",
+            "scores": {
+              "tempo": 2,
+              "voice": 2
+            }
+          },
+          {
+            "code": "check-emoji",
+            "textKo": "확인 이모지만 누르고 지나간다",
+            "descriptionKo": "봤다는 표시면 충분하고 대화는 늘리지 않습니다.",
+            "scores": {
+              "tempo": 2,
+              "voice": -2
+            }
+          },
+          {
+            "code": "save-for-later",
+            "textKo": "일단 읽어 두고 필요할 때 다시 찾아본다",
+            "descriptionKo": "당장 답할 일이 아니면 조용히 기억해 둡니다.",
+            "scores": {
+              "tempo": -2,
+              "voice": -1
+            }
+          }
+        ]
+      },
+      {
+        "id": "q11",
+        "textKo": "한동안 조용하던 단톡방, 나는 어떻게 할까?",
+        "options": [
+          {
+            "code": "topic-starter",
+            "textKo": "근황 질문이나 화젯거리를 먼저 던진다",
+            "descriptionKo": "방이 식으면 불씨를 넣는 건 보통 내 몫입니다.",
+            "scores": {
+              "tempo": 2,
+              "voice": 2
+            }
+          },
+          {
+            "code": "ready-receiver",
+            "textKo": "누가 말을 걸면 바로 받아칠 준비만 해 둔다",
+            "descriptionKo": "시작은 안 해도 호응은 누구보다 빠릅니다.",
+            "scores": {
+              "tempo": 1,
+              "voice": -1
+            }
+          },
+          {
+            "code": "let-it-rest",
+            "textKo": "조용한 대로 둔다, 필요하면 다시 살아난다",
+            "descriptionKo": "대화가 없는 시간도 단톡방의 자연스러운 상태입니다.",
+            "scores": {
+              "tempo": -2,
+              "voice": -2
+            }
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "code": "instant-tikitaka",
+        "titleKo": "번개 티키타카형",
+        "summaryKo": "메시지가 올라오는 순간 받아치고, 화제를 먼저 던지며 단톡방의 흐름을 끌고 가는 타입입니다.",
+        "descriptionKo": "번개 티키타카형에게 단톡방은 거의 실시간 수다 공간입니다. 새 메시지가 보이면 바로 받아치고, 조용해진 방에는 먼저 화젯거리를 던지며, 날짜를 정할 때는 투표부터 만드는 편입니다. 대화의 속도와 온도를 끌어올리는 역할을 자연스럽게 맡는 경우가 많습니다.",
+        "strengthsKo": [
+          "답이 빨라서 약속 잡기나 의견 모으기가 빠르게 굴러갑니다.",
+          "식은 단톡방에 화제를 던져 모임의 연결감을 유지합니다.",
+          "고민이나 좋은 소식에 즉각 반응해 상대가 혼자 말하는 기분이 들지 않게 합니다."
+        ],
+        "watchoutsKo": [
+          "메시지 양이 많아지면 천천히 읽는 사람이 흐름을 따라오기 어려울 수 있습니다.",
+          "즉답이 습관이 되면 정리가 필요한 이야기까지 속도로 밀어붙일 수 있습니다."
+        ],
+        "collaborationKo": "함께하는 사람들에게는 대화를 여는 에너지가 큰 선물입니다. 다만 결정이 필요한 이야기에서는 잠깐 속도를 늦추고, 아직 말하지 않은 사람에게 차례를 넘겨 주면 단톡방의 합이 훨씬 좋아집니다.",
+        "shareIntroKo": "나는 단톡방에서 실시간으로 받아치며 흐름을 끌고 가는 번개 티키타카형이에요.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/group-chat-style/instant-tikitaka.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/group-chat-style/instant-tikitaka-share.png",
+        "vector": {
+          "tempo": 16,
+          "voice": 14
+        }
+      },
+      {
+        "code": "emoji-firework",
+        "titleKo": "이모지 폭죽형",
+        "summaryKo": "긴 말 대신 빠른 리액션으로 존재감을 남기는, 단톡방 분위기의 든든한 호응 담당 타입입니다.",
+        "descriptionKo": "이모지 폭죽형은 단톡방을 늘 지켜보고 있지만, 긴 메시지보다 이모지·하트·짤로 반응하는 쪽이 훨씬 편합니다. 화제를 직접 열기보다 올라온 이야기에 추임새를 넣고, 투표가 생기면 누구보다 빨리 누릅니다. 말수는 적어도 반응 속도만큼은 방에서 손꼽히는 편입니다.",
+        "strengthsKo": [
+          "빠른 리액션으로 말한 사람이 머쓱해지지 않게 받쳐 줍니다.",
+          "공지 확인이나 투표 참여가 빨라 진행하는 사람이 편해집니다.",
+          "말을 보태지 않으면서도 단톡방의 분위기를 부드럽게 데워 줍니다."
+        ],
+        "watchoutsKo": [
+          "리액션만 쌓이면 정작 내 의견이나 사정은 전달되지 않을 수 있습니다.",
+          "이모지로 답을 대신하다 보면 길게 답해야 할 일을 놓치기 쉽습니다."
+        ],
+        "collaborationKo": "사람들과 함께할 때 당신의 빠른 호응은 대화를 이어 가게 하는 윤활유입니다. 다만 날짜 조율이나 역할 분담처럼 내 상황이 걸린 이야기에서는 이모지 대신 한 문장이라도 직접 말해 주면 오해가 줄어듭니다.",
+        "shareIntroKo": "나는 긴 말 대신 번개 같은 리액션으로 단톡방을 데우는 이모지 폭죽형이에요.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/group-chat-style/emoji-firework.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/group-chat-style/emoji-firework-share.png",
+        "vector": {
+          "tempo": 14,
+          "voice": -14
+        }
+      },
+      {
+        "code": "binge-summarizer",
+        "titleKo": "정주행 정리반장형",
+        "summaryKo": "쌓인 대화를 몰아 읽고, 흐름을 정리한 묵직한 한마디로 이야기를 매듭짓는 타입입니다.",
+        "descriptionKo": "정주행 정리반장형은 알림마다 달려가지 않습니다. 시간이 날 때 쌓인 대화를 처음부터 정주행하고, 맥락을 다 파악한 뒤에 입을 엽니다. 대신 한번 말하면 흩어진 이야기를 정리하거나 결론을 짚는 묵직한 메시지를 보내는 편이라, 친구들이 결정이 안 날 때 기다리는 사람이 되기도 합니다.",
+        "strengthsKo": [
+          "대화 전체의 맥락을 읽고 핵심을 정리하는 한마디를 잘 던집니다.",
+          "감정이 달아오른 화제에도 휩쓸리지 않고 차분한 관점을 보탭니다.",
+          "고민 상담에서 깊이 있는 답을 줘서 진지한 이야기 상대로 신뢰받습니다."
+        ],
+        "watchoutsKo": [
+          "답이 늦어 급한 약속 조율에서는 기다리는 사람이 생길 수 있습니다.",
+          "정리된 말만 하려다 가벼운 수다에 끼어들 타이밍을 놓칠 수 있습니다."
+        ],
+        "collaborationKo": "당신의 정리 한마디는 단톡방의 결론 메이커 역할을 합니다. 다만 시간이 걸리는 스타일이니, 급한 안건에는 \"이따 저녁에 답할게\"처럼 언제 답할지만 먼저 알려 주면 기다리는 사람들이 훨씬 편안해집니다.",
+        "shareIntroKo": "나는 쌓인 단톡을 정주행한 뒤 정리 한마디로 매듭짓는 정주행 정리반장형이에요.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/group-chat-style/binge-summarizer.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/group-chat-style/binge-summarizer-share.png",
+        "vector": {
+          "tempo": -14,
+          "voice": 12
+        }
+      },
+      {
+        "code": "silent-submarine",
+        "titleKo": "고요한 잠수함형",
+        "summaryKo": "평소엔 조용히 읽기만 하다가, 정말 필요한 순간에만 떠오르는 저전력 관찰자 타입입니다.",
+        "descriptionKo": "고요한 잠수함형에게 단톡방은 지켜보는 공간에 가깝습니다. 대화는 대부분 읽고 있고 모임 소식도 다 알고 있지만, 굳이 말을 보태지는 않습니다. 진짜 하고 싶은 이야기는 1:1 대화나 직접 만난 자리에서 꺼내는 편입니다. 잠수처럼 보여도 방을 나가지 않는 건 그 모임이 소중하기 때문입니다.",
+        "strengthsKo": [
+          "대화에 휩쓸리지 않아 단톡방이 주는 피로가 적은 편입니다.",
+          "조용히 흐름을 다 보고 있어 모임의 분위기 변화를 잘 알아챕니다.",
+          "말을 아끼는 만큼 입을 열었을 때 모두가 귀를 기울입니다."
+        ],
+        "watchoutsKo": [
+          "반응이 없으면 관심도 없다고 오해받아 초대가 줄어들 수 있습니다.",
+          "투표나 공지 확인까지 미루면 진행하는 친구의 일이 늘어납니다."
+        ],
+        "collaborationKo": "당신은 조용히 모임을 지키는 멤버입니다. 매번 말할 필요는 없지만, 공지 확인과 투표만큼은 빠르게 남기고 가끔 이모지 하나라도 띄워 주면 \"읽고 있구나\"라는 안심을 줄 수 있습니다. 깊은 이야기는 지금처럼 작은 자리에서 빛납니다.",
+        "shareIntroKo": "나는 조용히 다 보고 있다가 필요할 때만 떠오르는 고요한 잠수함형이에요.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/group-chat-style/silent-submarine.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/group-chat-style/silent-submarine-share.png",
+        "vector": {
+          "tempo": -14,
+          "voice": -14
+        }
+      }
+    ]
+  }
+}

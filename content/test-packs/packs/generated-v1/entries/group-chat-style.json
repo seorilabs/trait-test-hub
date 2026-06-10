@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "group-chat-style",
+  "metadata": {
+    "summaryKo": "단톡방에서 내가 어떤 속도와 방식으로 대화에 참여하는지 11문항으로 확인합니다.",
+    "tags": [
+      "social",
+      "chat",
+      "friends"
+    ],
+    "categoryLabelKo": "관계",
+    "tagLabelsKo": {
+      "social": "관계",
+      "chat": "채팅",
+      "friends": "친구"
+    },
+    "estimatedMinutes": "3-5분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-06-10T20:07:49.359Z",
+    "updatedAt": "2026-06-10T20:07:49.359Z"
+  }
+}
