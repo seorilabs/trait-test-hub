@@ -2,6 +2,8 @@
 
 자동화의 목표는 한 번 실행될 때마다 완성된 성향 테스트 1개를 draft로 만들고, 검증을 통과한 변경만 PR로 보내는 것입니다. 자동화 자체를 만들기 전에 파일 계약과 gate를 고정합니다.
 
+자동화 세션에 그대로 붙여넣는 실행용 프롬프트는 [docs/prompts/new-test-pack-pr.md](prompts/new-test-pack-pr.md)에 있습니다.
+
 ## 흐름
 
 ```mermaid
