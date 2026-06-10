@@ -74,7 +74,8 @@ metadata:
 
 규칙:
 
-- 결과 컨셉이 드러나는 일러스트 스타일을 기본으로 한다 (기존 에셋 참고: `assets/idea-capture-style/`)
+- 결과 컨셉이 드러나는 일러스트 스타일을 기본으로 한다
+  (기존 에셋 참고: `content/test-packs/packs/generated-v1/assets/idea-capture-style/`)
 - 결과별로 색·구도가 한눈에 구분되어야 한다. 같은 이미지의 색만 바꾼 복제 금지
 - 이미지 생성 도구를 쓸 수 없는 환경이면 프로그램 방식(SVG → PNG, PIL 등)으로
   결과별 팔레트를 가진 추상 그래픽을 만든다
