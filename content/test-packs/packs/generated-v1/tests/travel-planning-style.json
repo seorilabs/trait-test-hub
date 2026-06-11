@@ -1,0 +1,480 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "test": {
+    "id": "travel-planning-style",
+    "version": 1,
+    "status": "published",
+    "titleKo": "여행 계획 스타일 테스트",
+    "category": "travel",
+    "axes": [
+      {
+        "id": "plan",
+        "labelKo": "사전 설계 선호"
+      },
+      {
+        "id": "pace",
+        "labelKo": "일정 밀도 선호"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q01",
+        "textKo": "여행이 확정된 날 밤, 가장 먼저 하는 일은?",
+        "options": [
+          {
+            "code": "open-sheet",
+            "textKo": "지도 앱과 메모를 열고 일정 틀부터 잡는다",
+            "descriptionKo": "큰 그림이 잡혀야 설렘이 불안으로 변하지 않습니다.",
+            "scores": {
+              "plan": 2,
+              "pace": 1
+            }
+          },
+          {
+            "code": "scroll-photos",
+            "textKo": "현지 사진과 영상을 구경하며 설렘만 즐긴다",
+            "descriptionKo": "구체적인 계획은 나중 일이고, 지금은 기대가 먼저입니다.",
+            "scores": {
+              "plan": -2,
+              "pace": 0
+            }
+          },
+          {
+            "code": "two-wishes",
+            "textKo": "꼭 하고 싶은 것 한두 개만 적어 둔다",
+            "descriptionKo": "핵심만 정해 두면 나머지는 비워 둬도 괜찮습니다.",
+            "scores": {
+              "plan": 1,
+              "pace": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q02",
+        "textKo": "숙소를 고를 때 가장 중요한 기준은?",
+        "options": [
+          {
+            "code": "route-base",
+            "textKo": "일정 동선에 맞는 위치와 체크인 시간",
+            "descriptionKo": "숙소는 일정 전체를 받쳐 주는 베이스캠프입니다.",
+            "scores": {
+              "plan": 2,
+              "pace": 1
+            }
+          },
+          {
+            "code": "vibe-book",
+            "textKo": "분위기가 마음에 들면 일단 예약, 나머지는 가서 생각",
+            "descriptionKo": "끌리는 느낌이 정확한 비교표보다 믿을 만합니다.",
+            "scores": {
+              "plan": -2,
+              "pace": 1
+            }
+          },
+          {
+            "code": "stay-comfort",
+            "textKo": "오래 머물러도 편안한 공간인지가 1순위",
+            "descriptionKo": "숙소에서 보내는 시간도 여행의 큰 부분입니다.",
+            "scores": {
+              "plan": 0,
+              "pace": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q03",
+        "textKo": "여행 첫날 아침, 나에게 가장 자연스러운 풍경은?",
+        "options": [
+          {
+            "code": "alarm-launch",
+            "textKo": "전날 정리한 타임라인대로 알람 맞춰 출발한다",
+            "descriptionKo": "첫날을 알차게 시작해야 여행 전체가 살아납니다.",
+            "scores": {
+              "plan": 2,
+              "pace": 2
+            }
+          },
+          {
+            "code": "slow-walk",
+            "textKo": "눈이 떠지는 대로 일어나 동네 산책부터 한다",
+            "descriptionKo": "여행지의 아침 공기를 느끼는 것도 일정입니다.",
+            "scores": {
+              "plan": -1,
+              "pace": -2
+            }
+          },
+          {
+            "code": "one-pick",
+            "textKo": "그날 끌리는 곳 하나만 정하고 나선다",
+            "descriptionKo": "방향 하나만 있으면 길 위에서 나머지가 채워집니다.",
+            "scores": {
+              "plan": -2,
+              "pace": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "q04",
+        "textKo": "가려던 식당 앞에 줄이 길게 늘어서 있다면?",
+        "options": [
+          {
+            "code": "plan-b",
+            "textKo": "대기 시간을 가늠해 보고 일정에 걸리면 플랜B로 간다",
+            "descriptionKo": "한 곳의 줄 때문에 뒤 일정이 밀리는 건 아깝습니다.",
+            "scores": {
+              "plan": 2,
+              "pace": 1
+            }
+          },
+          {
+            "code": "next-alley",
+            "textKo": "옆 골목의 처음 보는 가게에 들어가 본다",
+            "descriptionKo": "계획에 없던 발견이 여행의 진짜 재미입니다.",
+            "scores": {
+              "plan": -2,
+              "pace": 1
+            }
+          },
+          {
+            "code": "wait-coffee",
+            "textKo": "근처 카페에서 쉬면서 느긋하게 차례를 기다린다",
+            "descriptionKo": "기다리는 시간도 서두를 이유가 없는 여행의 일부입니다.",
+            "scores": {
+              "plan": 0,
+              "pace": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q05",
+        "textKo": "하루 동선을 정할 때 나는?",
+        "options": [
+          {
+            "code": "pin-route",
+            "textKo": "지도에 핀을 찍고 가장 효율적인 순서로 묶는다",
+            "descriptionKo": "이동 시간을 줄이면 보고 싶은 걸 더 볼 수 있습니다.",
+            "scores": {
+              "plan": 2,
+              "pace": 1
+            }
+          },
+          {
+            "code": "feet-decide",
+            "textKo": "걷다가 마음에 드는 곳에서 멈추는 게 곧 동선이다",
+            "descriptionKo": "정해진 순서가 없을 때 거리의 표정이 더 잘 보입니다.",
+            "scores": {
+              "plan": -2,
+              "pace": -1
+            }
+          },
+          {
+            "code": "one-zone",
+            "textKo": "하루에 한 동네만 정해 적게 움직이고 깊게 본다",
+            "descriptionKo": "많이 찍는 것보다 오래 머무는 쪽이 남는 게 많습니다.",
+            "scores": {
+              "plan": 1,
+              "pace": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q06",
+        "textKo": "걷다가 우연히 동네 축제를 만났다면?",
+        "options": [
+          {
+            "code": "check-impact",
+            "textKo": "지금 들르면 일정이 얼마나 밀리는지부터 가늠한다",
+            "descriptionKo": "즐기더라도 전체 그림 안에서 즐기고 싶습니다.",
+            "scores": {
+              "plan": 2,
+              "pace": 0
+            }
+          },
+          {
+            "code": "dive-in",
+            "textKo": "일정이고 뭐고 일단 사람들 속으로 뛰어든다",
+            "descriptionKo": "이런 우연은 다시 만들 수 없는 그날만의 장면입니다.",
+            "scores": {
+              "plan": -2,
+              "pace": 2
+            }
+          },
+          {
+            "code": "watch-afar",
+            "textKo": "한 발 떨어져 분위기를 천천히 구경한다",
+            "descriptionKo": "북적임 속에 섞이지 않아도 충분히 즐길 수 있습니다.",
+            "scores": {
+              "plan": 0,
+              "pace": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q07",
+        "textKo": "출발 전 짐을 싸는 나의 모습은?",
+        "options": [
+          {
+            "code": "check-list",
+            "textKo": "체크리스트를 만들어 품목별로 확인하며 싼다",
+            "descriptionKo": "빠뜨린 물건 하나가 현지에서 큰 변수가 됩니다.",
+            "scores": {
+              "plan": 2,
+              "pace": 0
+            }
+          },
+          {
+            "code": "night-grab",
+            "textKo": "전날 밤 손에 잡히는 대로 가방에 넣는다",
+            "descriptionKo": "어떻게든 되는 게 짐이고, 안 되면 그것도 이야기가 됩니다.",
+            "scores": {
+              "plan": -2,
+              "pace": 1
+            }
+          },
+          {
+            "code": "buy-there",
+            "textKo": "짐은 최소한만, 부족하면 현지에서 산다",
+            "descriptionKo": "가볍게 떠나야 몸도 마음도 여유가 생깁니다.",
+            "scores": {
+              "plan": -1,
+              "pace": -1
+            }
+          }
+        ]
+      },
+      {
+        "id": "q08",
+        "textKo": "동행이 \"그냥 발 닿는 대로 다니자\"고 하면?",
+        "options": [
+          {
+            "code": "frame-first",
+            "textKo": "좋지만 큰 틀과 마지노선 시간은 정해 두자고 한다",
+            "descriptionKo": "최소한의 약속이 있어야 즉흥도 편하게 즐깁니다.",
+            "scores": {
+              "plan": 2,
+              "pace": 0
+            }
+          },
+          {
+            "code": "love-it",
+            "textKo": "완전 환영, 그게 제일 재미있는 방식이다",
+            "descriptionKo": "정해진 게 없을 때 여행의 감이 가장 잘 삽니다.",
+            "scores": {
+              "plan": -2,
+              "pace": 1
+            }
+          },
+          {
+            "code": "rest-slot",
+            "textKo": "좋은데 하루 한 번은 쉬는 시간을 챙기자고 한다",
+            "descriptionKo": "어떻게 다니든 회복할 틈은 있어야 끝까지 즐겁습니다.",
+            "scores": {
+              "plan": 0,
+              "pace": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q09",
+        "textKo": "여행 전 정보를 모으는 나의 방식은?",
+        "options": [
+          {
+            "code": "full-table",
+            "textKo": "영업시간, 예약, 교통편까지 한눈에 보이게 정리한다",
+            "descriptionKo": "현지에서 검색하는 시간을 미리 줄여 두는 편입니다.",
+            "scores": {
+              "plan": 2,
+              "pace": 1
+            }
+          },
+          {
+            "code": "ask-local",
+            "textKo": "도착해서 현지 사람이나 직원에게 물어보는 게 진짜 정보다",
+            "descriptionKo": "검색창보다 현장의 추천이 더 생생합니다.",
+            "scores": {
+              "plan": -2,
+              "pace": 1
+            }
+          },
+          {
+            "code": "few-saves",
+            "textKo": "후기 몇 개만 읽고 나머지는 여백으로 남긴다",
+            "descriptionKo": "너무 많이 알고 가면 현장의 감흥이 줄어듭니다.",
+            "scores": {
+              "plan": -1,
+              "pace": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q10",
+        "textKo": "일정이 생각보다 일찍 끝난 오후, 나는?",
+        "options": [
+          {
+            "code": "pull-forward",
+            "textKo": "내일 일정 중 하나를 오늘로 앞당긴다",
+            "descriptionKo": "비는 시간은 아껴 둔 코스를 당겨 쓸 기회입니다.",
+            "scores": {
+              "plan": 2,
+              "pace": 2
+            }
+          },
+          {
+            "code": "map-off",
+            "textKo": "지도를 끄고 아무 골목이나 걸어 본다",
+            "descriptionKo": "목적지가 없을 때 만나는 장면이 오래 남습니다.",
+            "scores": {
+              "plan": -2,
+              "pace": 1
+            }
+          },
+          {
+            "code": "back-rest",
+            "textKo": "숙소나 카페로 돌아가 쉬면서 하루를 정리한다",
+            "descriptionKo": "여행 중의 빈 시간은 채우는 게 아니라 누리는 것입니다.",
+            "scores": {
+              "plan": 0,
+              "pace": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q11",
+        "textKo": "여행 마지막 날, 공항이나 역으로 가기 전에는?",
+        "options": [
+          {
+            "code": "last-course",
+            "textKo": "남은 시간을 계산해 마지막 코스까지 알차게 돈다",
+            "descriptionKo": "끝까지 꽉 채워야 후회 없이 돌아올 수 있습니다.",
+            "scores": {
+              "plan": 2,
+              "pace": 2
+            }
+          },
+          {
+            "code": "impulse-stop",
+            "textKo": "가는 길에 끌리는 곳이 보이면 즉흥으로 들른다",
+            "descriptionKo": "마지막 순간까지 우연에게 자리를 남겨 둡니다.",
+            "scores": {
+              "plan": -2,
+              "pace": 1
+            }
+          },
+          {
+            "code": "early-coffee",
+            "textKo": "일찍 나와 커피 한 잔 마시며 느긋하게 마무리한다",
+            "descriptionKo": "쫓기지 않는 마무리가 여행의 마지막 인상을 만듭니다.",
+            "scores": {
+              "plan": 1,
+              "pace": -2
+            }
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "code": "minute-architect",
+        "titleKo": "분 단위 설계자형",
+        "summaryKo": "일정을 촘촘하게 설계하고 그 틀 안에서 여행을 최대치로 끌어올리는 타입입니다.",
+        "descriptionKo": "분 단위 설계자형에게 여행 준비는 이미 여행의 시작입니다. 동선, 예약, 대기 시간까지 미리 그려 두기 때문에 같은 시간에 남들보다 더 많은 장면을 담아 옵니다. 변수가 생겨도 당황하기보다 플랜B를 꺼내는 쪽이고, 일행들이 고민하는 동안 다음 행선지가 이미 정리되어 있는 경우가 많습니다.",
+        "strengthsKo": [
+          "한정된 시간과 예산에서 경험의 밀도를 최대로 끌어올립니다.",
+          "예약, 마감 시간, 이동 변수를 미리 챙겨 일행 전체를 안심시킵니다.",
+          "돌발 상황에도 대안을 빠르게 꺼내 여행 흐름을 지킵니다."
+        ],
+        "watchoutsKo": [
+          "계획이 어긋났을 때 어긋남 자체보다 스트레스가 더 커질 수 있습니다.",
+          "촘촘한 일정이 동행에게는 따라가기 벅찬 속도일 수 있습니다."
+        ],
+        "collaborationKo": "동행과 함께라면 일정표에 일부러 빈 칸을 넣어 보세요. 계획에 '자유 시간'이라는 항목을 만들어 두면, 설계의 장점은 지키면서 동행의 즉흥 욕구와 부딪히지 않습니다.",
+        "shareIntroKo": "나는 여행을 분 단위로 설계해서 최대치로 즐기는 분 단위 설계자형이에요.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/travel-planning-style/minute-architect.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/travel-planning-style/minute-architect-share.png",
+        "vector": {
+          "plan": 16,
+          "pace": 10
+        }
+      },
+      {
+        "code": "blank-curator",
+        "titleKo": "여백 큐레이터형",
+        "summaryKo": "꼭 하고 싶은 것만 신중히 골라 두고, 나머지 시간은 일부러 비워 두는 타입입니다.",
+        "descriptionKo": "여백 큐레이터형은 많이 보는 여행보다 깊게 남는 여행을 고릅니다. 가고 싶은 곳을 정할 때는 누구보다 신중하지만, 일정표를 빽빽하게 채우지는 않습니다. 좋은 공간을 만나면 예정보다 오래 머물고, 하루의 빈 시간을 손해가 아니라 여행의 본체라고 느낍니다. 돌아온 뒤에 기억나는 장면이 적지만 선명한 편입니다.",
+        "strengthsKo": [
+          "경험을 엄선하는 안목이 있어 만족도가 높은 코스를 고릅니다.",
+          "체력과 컨디션을 안정적으로 관리해 여행 내내 기분이 일정합니다.",
+          "한 장소에 오래 머물며 남들이 지나치는 디테일을 발견합니다."
+        ],
+        "watchoutsKo": [
+          "너무 골라내다 보면 우연이 들어올 자리까지 줄어들 수 있습니다.",
+          "활동량이 많은 동행에게는 일정이 심심하게 느껴질 수 있습니다."
+        ],
+        "collaborationKo": "동행과 일정을 짤 때는 '나는 이 한 곳만은 꼭'이라는 우선순위를 먼저 공유하세요. 나머지 시간을 동행의 리듬에 맞춰 주면, 서로의 페이스를 지키면서도 함께 좋은 장면을 남길 수 있습니다.",
+        "shareIntroKo": "나는 꼭 하고 싶은 것만 골라 두고 나머지는 비워 두는 여백 큐레이터형이에요.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/travel-planning-style/blank-curator.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/travel-planning-style/blank-curator-share.png",
+        "vector": {
+          "plan": 14,
+          "pace": -12
+        }
+      },
+      {
+        "code": "alley-explorer",
+        "titleKo": "골목 탐험가형",
+        "summaryKo": "계획 대신 현장의 에너지를 따라 움직이며 우연한 발견으로 하루를 채우는 타입입니다.",
+        "descriptionKo": "골목 탐험가형의 여행은 도착한 순간부터 만들어집니다. 정해진 코스가 없어도 불안하지 않고, 오히려 일정표가 있으면 갑갑해지는 쪽입니다. 처음 보는 골목, 현지 사람의 추천, 우연히 만난 축제처럼 검색으로는 찾을 수 없는 장면을 잘 줍습니다. 같은 도시를 가도 남들과 전혀 다른 여행기를 들고 돌아옵니다.",
+        "strengthsKo": [
+          "계획 밖의 발견을 끌어들이는 감각이 뛰어나 여행이 이야기로 가득합니다.",
+          "예상이 어긋나도 빠르게 즐길 거리를 찾아내는 적응력이 있습니다.",
+          "현지의 흐름에 자연스럽게 섞여 관광 너머의 경험을 만납니다."
+        ],
+        "watchoutsKo": [
+          "예약이 필수인 명소나 마감 시간이 있는 곳을 놓치기 쉽습니다.",
+          "발길 닿는 대로 움직이다 보면 체력과 지갑이 먼저 바닥날 수 있습니다."
+        ],
+        "collaborationKo": "계획형 동행과 함께라면 하루 중 '내가 끄는 시간'을 정해 달라고 제안해 보세요. 그 시간만큼은 마음껏 골목을 누비고, 나머지는 동행의 동선을 따라 주면 둘 다 자기 여행을 할 수 있습니다.",
+        "shareIntroKo": "나는 지도 대신 골목의 끌림을 따라가는 골목 탐험가형이에요.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/travel-planning-style/alley-explorer.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/travel-planning-style/alley-explorer-share.png",
+        "vector": {
+          "plan": -14,
+          "pace": 12
+        }
+      },
+      {
+        "code": "breeze-wanderer",
+        "titleKo": "바람 따라 산책형",
+        "summaryKo": "계획도 속도도 내려놓고, 그날의 공기와 기분을 따라 느리게 머무는 타입입니다.",
+        "descriptionKo": "바람 따라 산책형에게 여행의 목적은 장소가 아니라 상태입니다. 유명한 곳을 다 돌지 못해도 아쉽지 않고, 마음에 드는 카페나 공원 벤치에서 한참을 보내는 시간이 곧 여행입니다. 아침에 눈이 떠지는 대로 하루가 시작되고, 지도 없이 걷다가 만난 풍경 앞에서 오래 멈춥니다. 돌아온 뒤 '쉬고 왔다'는 말이 가장 잘 어울리는 타입입니다.",
+        "strengthsKo": [
+          "여행지의 공기와 분위기를 깊게 흡수해 일상의 피로를 제대로 풀어냅니다.",
+          "조급함이 없어 함께 있는 사람까지 편안하게 만드는 페이스를 가졌습니다.",
+          "순간의 기분에 솔직해서 그날의 자신에게 가장 맞는 시간을 보냅니다."
+        ],
+        "watchoutsKo": [
+          "교통편이나 체크아웃처럼 시간이 정해진 일을 놓치기 쉽습니다.",
+          "결정을 미루다 보면 정작 가 보고 싶던 곳을 못 가고 돌아올 수 있습니다."
+        ],
+        "collaborationKo": "동행이 있다면 시간 약속이 있는 일정만은 동행에게 알람 권한을 맡겨 보세요. 흐름을 깨지 않으면서 큰 사고를 막을 수 있고, 나의 느린 페이스가 주는 편안함은 그대로 동행에게 선물이 됩니다.",
+        "shareIntroKo": "나는 계획 없이 그날의 바람을 따라 느리게 머무는 바람 따라 산책형이에요.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/travel-planning-style/breeze-wanderer.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/travel-planning-style/breeze-wanderer-share.png",
+        "vector": {
+          "plan": -14,
+          "pace": -12
+        }
+      }
+    ]
+  }
+}
