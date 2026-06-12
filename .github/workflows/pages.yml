@@ -20,7 +20,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ${{ github.event_name == 'pull_request' && 'ubuntu-latest' || 'seorilabs-rpi-arm64' }}
+    runs-on: ${{ github.event.repository.private && github.event_name != 'pull_request' && 'seorilabs-rpi-arm64' || 'ubuntu-latest' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -53,7 +53,7 @@ jobs:
   deploy:
     if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
     needs: build
-    runs-on: seorilabs-rpi-arm64
+    runs-on: ${{ github.event.repository.private && 'seorilabs-rpi-arm64' || 'ubuntu-latest' }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
