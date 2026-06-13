@@ -1,0 +1,496 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "metadata": {
+    "summaryKo": "점심 메뉴 앞에서 내가 어떤 결정러인지 11문항으로 확인합니다.",
+    "tags": [
+      "food",
+      "lunch",
+      "decision"
+    ],
+    "categoryLabelKo": "음식",
+    "tagLabelsKo": {
+      "food": "음식",
+      "lunch": "점심",
+      "decision": "결정"
+    },
+    "estimatedMinutes": "3-5분",
+    "packTitleKo": "자동 생성 테스트팩"
+  },
+  "test": {
+    "id": "lunch-pick-style",
+    "version": 1,
+    "status": "published",
+    "titleKo": "점심 메뉴 결정 스타일 테스트",
+    "category": "food",
+    "axes": [
+      {
+        "id": "novelty",
+        "labelKo": "새 메뉴 탐험 선호"
+      },
+      {
+        "id": "drive",
+        "labelKo": "결정 주도 선호"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q01",
+        "textKo": "12시, 같이 먹는 사람들이 \"오늘 뭐 먹지?\" 하며 나를 쳐다보면?",
+        "options": [
+          {
+            "code": "new-spot-pitch",
+            "textKo": "안 가본 곳이 있다며 바로 제안한다",
+            "descriptionKo": "새로운 가게의 문을 먼저 여는 쪽이 신납니다.",
+            "scores": {
+              "novelty": 2,
+              "drive": 2
+            }
+          },
+          {
+            "code": "safe-pick-fast",
+            "textKo": "늘 가던 안전한 가게를 바로 말한다",
+            "descriptionKo": "검증된 곳이면 고민하는 시간이 줄어듭니다.",
+            "scores": {
+              "novelty": -2,
+              "drive": 2
+            }
+          },
+          {
+            "code": "listen-first",
+            "textKo": "다른 사람 의견부터 듣고 따라간다",
+            "descriptionKo": "메뉴보다 같이 먹는 분위기가 먼저입니다.",
+            "scores": {
+              "novelty": 0,
+              "drive": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q02",
+        "textKo": "회사나 집 근처에 새 식당이 오픈했다. 현수막을 본 순간?",
+        "options": [
+          {
+            "code": "first-week-visit",
+            "textKo": "오픈 첫 주 안에 가봐야 직성이 풀린다",
+            "descriptionKo": "남들보다 먼저 가본 사람이 되고 싶습니다.",
+            "scores": {
+              "novelty": 2,
+              "drive": 1
+            }
+          },
+          {
+            "code": "wait-reviews",
+            "textKo": "후기가 쌓일 때까지는 늘 가던 곳으로 간다",
+            "descriptionKo": "확실해지기 전까지는 익숙한 동선을 지킵니다.",
+            "scores": {
+              "novelty": -2,
+              "drive": 0
+            }
+          },
+          {
+            "code": "tag-along-later",
+            "textKo": "누가 가보자고 하면 그때 따라가 본다",
+            "descriptionKo": "궁금하긴 하지만 굳이 먼저 나서지는 않습니다.",
+            "scores": {
+              "novelty": 1,
+              "drive": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q03",
+        "textKo": "단톡방에 점심 메뉴 투표가 올라오면?",
+        "options": [
+          {
+            "code": "add-candidate",
+            "textKo": "보기에 없는 새 후보를 추가하고 홍보한다",
+            "descriptionKo": "선택지부터 넓혀야 재미있는 점심이 됩니다.",
+            "scores": {
+              "novelty": 2,
+              "drive": 2
+            }
+          },
+          {
+            "code": "instant-classic",
+            "textKo": "제일 무난하고 익숙한 메뉴에 1초 만에 투표한다",
+            "descriptionKo": "표가 갈릴수록 검증된 메뉴가 답이라고 봅니다.",
+            "scores": {
+              "novelty": -2,
+              "drive": 1
+            }
+          },
+          {
+            "code": "follow-majority",
+            "textKo": "표가 제일 많은 쪽으로 정해지면 거기에 맞춘다",
+            "descriptionKo": "다수가 만족하는 결론이면 충분히 좋습니다.",
+            "scores": {
+              "novelty": -1,
+              "drive": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q04",
+        "textKo": "자주 가는 식당에 도착해서 메뉴판을 받으면?",
+        "options": [
+          {
+            "code": "untried-bet",
+            "textKo": "안 먹어본 메뉴가 보이면 모험을 건다",
+            "descriptionKo": "같은 가게에서도 새로운 조합을 시험해 봅니다.",
+            "scores": {
+              "novelty": 2,
+              "drive": 1
+            }
+          },
+          {
+            "code": "usual-order",
+            "textKo": "고민 없이 늘 먹던 그 메뉴를 시킨다",
+            "descriptionKo": "이 가게에서 무엇이 최선인지 이미 알고 있습니다.",
+            "scores": {
+              "novelty": -2,
+              "drive": 2
+            }
+          },
+          {
+            "code": "same-as-next",
+            "textKo": "옆 사람이 시키는 걸 보고 같은 걸로 한다",
+            "descriptionKo": "남이 고른 메뉴가 기준이 되면 마음이 편합니다.",
+            "scores": {
+              "novelty": -1,
+              "drive": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q05",
+        "textKo": "일행이 내가 별로 안 끌리는 메뉴를 강하게 밀면?",
+        "options": [
+          {
+            "code": "yield-today",
+            "textKo": "오늘은 양보하고 다음에 내가 고르기로 한다",
+            "descriptionKo": "한 끼 메뉴보다 같이 먹는 관계가 중요합니다.",
+            "scores": {
+              "novelty": 0,
+              "drive": -2
+            }
+          },
+          {
+            "code": "persuade-back",
+            "textKo": "내가 가고 싶은 곳의 매력 포인트로 설득해 본다",
+            "descriptionKo": "끌리는 메뉴가 있으면 한 번은 목소리를 냅니다.",
+            "scores": {
+              "novelty": 1,
+              "drive": 2
+            }
+          },
+          {
+            "code": "middle-ground",
+            "textKo": "둘 다 아는 무난한 절충 가게를 빠르게 제안한다",
+            "descriptionKo": "모두가 손해 보지 않는 안전한 답을 찾습니다.",
+            "scores": {
+              "novelty": -1,
+              "drive": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "q06",
+        "textKo": "혼자 먹는 날, 메뉴를 고르는 방식은?",
+        "options": [
+          {
+            "code": "solo-adventure",
+            "textKo": "혼자일 때야말로 궁금했던 가게에 도전한다",
+            "descriptionKo": "눈치 볼 사람이 없을 때 실험하기 좋습니다.",
+            "scores": {
+              "novelty": 2,
+              "drive": 1
+            }
+          },
+          {
+            "code": "zero-risk",
+            "textKo": "실패 확률 없는 단골 메뉴로 직행한다",
+            "descriptionKo": "혼자 먹는 한 끼일수록 확실한 만족을 고릅니다.",
+            "scores": {
+              "novelty": -2,
+              "drive": 1
+            }
+          },
+          {
+            "code": "mood-follow",
+            "textKo": "그날 날씨와 기분이 끌리는 대로 정한다",
+            "descriptionKo": "계획보다 그 순간의 입맛 신호를 따릅니다.",
+            "scores": {
+              "novelty": 1,
+              "drive": -1
+            }
+          }
+        ]
+      },
+      {
+        "id": "q07",
+        "textKo": "점심시간 10분 전인데 아직 메뉴를 못 정했다면?",
+        "options": [
+          {
+            "code": "wrap-it-up",
+            "textKo": "\"그냥 거기 가자\" 하고 익숙한 곳으로 정리한다",
+            "descriptionKo": "시간이 없을수록 검증된 답으로 빨리 끝냅니다.",
+            "scores": {
+              "novelty": -2,
+              "drive": 2
+            }
+          },
+          {
+            "code": "alley-dive",
+            "textKo": "이럴 때일수록 안 가본 골목으로 들어가 본다",
+            "descriptionKo": "급할 때 만나는 우연한 가게가 의외로 남습니다.",
+            "scores": {
+              "novelty": 2,
+              "drive": 0
+            }
+          },
+          {
+            "code": "wait-anyone",
+            "textKo": "누가 정해줄 때까지 기다린다, 어디든 괜찮다",
+            "descriptionKo": "결정 자체가 스트레스라 흐름에 맡기는 편입니다.",
+            "scores": {
+              "novelty": 0,
+              "drive": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q08",
+        "textKo": "배달 앱을 열었을 때 내 손가락이 먼저 가는 곳은?",
+        "options": [
+          {
+            "code": "reorder-button",
+            "textKo": "주문 내역의 재주문 버튼부터 누른다",
+            "descriptionKo": "맛이 보장된 기록이 가장 빠른 길입니다.",
+            "scores": {
+              "novelty": -2,
+              "drive": 1
+            }
+          },
+          {
+            "code": "new-banner",
+            "textKo": "신규 입점과 새 메뉴 배너를 먼저 구경한다",
+            "descriptionKo": "어떤 가게가 새로 들어왔는지가 제일 궁금합니다.",
+            "scores": {
+              "novelty": 2,
+              "drive": 0
+            }
+          },
+          {
+            "code": "pass-the-phone",
+            "textKo": "같이 먹는 사람에게 화면을 넘겨 고르게 한다",
+            "descriptionKo": "상대가 고른 메뉴에 맞추는 쪽이 편합니다.",
+            "scores": {
+              "novelty": 0,
+              "drive": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q09",
+        "textKo": "지난주에 갔던 가게가 꽤 괜찮았다. 이번 주에는?",
+        "options": [
+          {
+            "code": "repeat-hit",
+            "textKo": "맛있었으니 이번 주도 그대로 간다",
+            "descriptionKo": "좋은 답을 찾았으면 바꿀 이유가 없습니다.",
+            "scores": {
+              "novelty": -2,
+              "drive": 1
+            }
+          },
+          {
+            "code": "save-and-scout",
+            "textKo": "그 가게는 아껴두고 새 가게를 또 찾아본다",
+            "descriptionKo": "리스트가 늘어나는 재미가 점심의 절반입니다.",
+            "scores": {
+              "novelty": 2,
+              "drive": 1
+            }
+          },
+          {
+            "code": "if-they-want",
+            "textKo": "일행이 가자고 하면 가고, 아니면 다른 곳도 좋다",
+            "descriptionKo": "메뉴 선택권은 기꺼이 일행에게 넘깁니다.",
+            "scores": {
+              "novelty": 0,
+              "drive": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q10",
+        "textKo": "메뉴판에서 처음 보는 이름의 음식을 발견하면?",
+        "options": [
+          {
+            "code": "order-blind",
+            "textKo": "뭔지 몰라도 일단 시켜본다",
+            "descriptionKo": "처음 보는 이름은 그 자체로 주문할 이유가 됩니다.",
+            "scores": {
+              "novelty": 2,
+              "drive": 1
+            }
+          },
+          {
+            "code": "search-later",
+            "textKo": "검색해 보고 다음 기회에 시도할지 정한다",
+            "descriptionKo": "궁금하지만 오늘의 한 끼를 걸지는 않습니다.",
+            "scores": {
+              "novelty": 1,
+              "drive": -1
+            }
+          },
+          {
+            "code": "known-taste-wins",
+            "textKo": "아는 맛이 이긴다, 익숙한 메뉴를 지킨다",
+            "descriptionKo": "한정된 점심시간에 모험을 걸 이유가 없습니다.",
+            "scores": {
+              "novelty": -2,
+              "drive": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "q11",
+        "textKo": "점심을 다 먹고 가게를 나서면서 드는 생각은?",
+        "options": [
+          {
+            "code": "share-points",
+            "textKo": "다음에 올 사람에게 추천할 포인트를 정리한다",
+            "descriptionKo": "좋은 가게는 알리고 싶어서 입이 근질거립니다.",
+            "scores": {
+              "novelty": 1,
+              "drive": 2
+            }
+          },
+          {
+            "code": "update-list",
+            "textKo": "단골 후보 리스트에 오늘 점수를 갱신한다",
+            "descriptionKo": "다음 결정을 더 빠르게 만들 데이터가 쌓입니다.",
+            "scores": {
+              "novelty": -1,
+              "drive": 1
+            }
+          },
+          {
+            "code": "time-was-enough",
+            "textKo": "메뉴가 뭐였든 같이 먹은 시간이 좋았으면 만족",
+            "descriptionKo": "점심의 핵심은 메뉴보다 함께한 사람입니다.",
+            "scores": {
+              "novelty": 0,
+              "drive": -2
+            }
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "code": "tasty-pioneer",
+        "titleKo": "맛집 개척대장형",
+        "summaryKo": "안 가본 가게부터 뚫고, 일행의 점심 지도를 넓혀 가는 탐험 리더 타입입니다.",
+        "descriptionKo": "맛집 개척대장형에게 점심은 하루 중 가장 확실한 모험 시간입니다. 새로 생긴 가게, 처음 보는 메뉴 이름, 안 가본 골목이 보이면 먼저 제안하고 일행을 데려갑니다. 실패한 한 끼도 다음에 써먹을 이야깃거리가 되기 때문에, 이 타입의 점심 리스트는 늘 업데이트 중입니다.",
+        "strengthsKo": [
+          "새 가게와 새 메뉴를 먼저 발굴해 모임의 선택지를 계속 넓힙니다.",
+          "뭐 먹을지 고민하는 시간을 제안 한 방으로 줄여 줍니다.",
+          "실패한 메뉴도 웃으면서 다음 도전의 재료로 만드는 회복력이 있습니다."
+        ],
+        "watchoutsKo": [
+          "검증 안 된 가게 연속 도전은 일행에게 피로가 될 수 있으니 속도 조절이 필요합니다.",
+          "안전한 메뉴를 원하는 날도 있다는 신호를 놓치지 않는 것이 좋습니다."
+        ],
+        "collaborationKo": "함께 먹는 사람들과는 새 가게 도전과 검증된 가게를 번갈아 섞으면 좋습니다. 제안하기 전에 오늘 모험할 기분인지 한 번 물어봐 주면, 개척대장의 추진력이 모두의 즐거움이 됩니다.",
+        "shareIntroKo": "나는 안 가본 가게부터 뚫는 맛집 개척대장형이에요.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/lunch-pick-style/tasty-pioneer.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/lunch-pick-style/tasty-pioneer-share.png",
+        "vector": {
+          "novelty": 14,
+          "drive": 10
+        }
+      },
+      {
+        "code": "proven-regular",
+        "titleKo": "검증된 단골형",
+        "summaryKo": "맛이 보장된 단골 메뉴로 직행해 점심 고민을 1초 만에 끝내는 효율 타입입니다.",
+        "descriptionKo": "검증된 단골형은 점심에서 불확실성을 빼는 데 탁월합니다. 어느 가게에서 무엇이 최선인지 이미 알고 있고, 고민이 길어질 틈에 바로 답을 내놓습니다. 새로움보다 확실한 만족을 고르는 것은 게으름이 아니라, 한정된 점심시간을 가장 안전하게 쓰는 이 타입만의 전략입니다.",
+        "strengthsKo": [
+          "메뉴 결정이 빨라서 일행의 점심시간을 실제로 아껴 줍니다.",
+          "가게별 최선의 메뉴를 기억해 실패 없는 한 끼를 보장합니다.",
+          "흔들리는 투표 상황에서 무난하고 모두가 수긍할 기준점을 제시합니다."
+        ],
+        "watchoutsKo": [
+          "같은 메뉴 반복이 길어지면 점심의 즐거움 자체가 무뎌질 수 있습니다.",
+          "단골집이 문 닫는 날 대안이 없어 평소보다 크게 흔들릴 수 있습니다."
+        ],
+        "collaborationKo": "함께 먹는 사람들에게는 단골 리스트가 곧 공공재입니다. 다만 일행이 새 가게를 제안할 때 한 달에 한두 번은 따라가 보면, 리스트도 늘고 같이 먹는 재미도 커집니다.",
+        "shareIntroKo": "나는 맛 보장 단골 메뉴로 직행하는 검증된 단골형이에요.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/lunch-pick-style/proven-regular.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/lunch-pick-style/proven-regular-share.png",
+        "vector": {
+          "novelty": -14,
+          "drive": 10
+        }
+      },
+      {
+        "code": "mood-antenna",
+        "titleKo": "오늘의 끌림 안테나형",
+        "summaryKo": "계획 대신 그날의 날씨, 기분, 우연한 발견에 따라 메뉴가 정해지는 감각 타입입니다.",
+        "descriptionKo": "오늘의 끌림 안테나형은 점심 메뉴를 머리가 아니라 안테나로 잡습니다. 비 오는 날의 국물, 지나가다 본 새 가게의 냄새, 문득 떠오른 메뉴 같은 신호에 민감하고, 그 끌림이 올 때까지는 결정을 서두르지 않습니다. 누가 정해 주는 것도 싫지 않지만, 신호가 잡힌 날의 점심 만족도는 누구보다 높습니다.",
+        "strengthsKo": [
+          "그날의 컨디션과 가장 잘 맞는 메뉴를 찾아내는 감이 좋습니다.",
+          "우연히 발견한 가게나 메뉴에서 의외의 보석을 자주 건집니다.",
+          "정해진 답을 고집하지 않아 어떤 일행과도 유연하게 맞춥니다."
+        ],
+        "watchoutsKo": [
+          "끌림이 안 오는 날은 결정이 늦어져 일행을 기다리게 할 수 있습니다.",
+          "신호만 기다리다 점심시간이 줄어들면 만족도가 오히려 떨어질 수 있습니다."
+        ],
+        "collaborationKo": "함께 먹는 사람들에게 오늘은 끌리는 게 있다거나 아직 신호가 없다고 일찍 말해 주면 좋습니다. 신호가 없는 날은 후보 두세 개 중에서 고르는 방식으로 바꾸면 감각과 속도를 모두 지킬 수 있습니다.",
+        "shareIntroKo": "나는 그날의 끌림으로 메뉴를 잡는 오늘의 끌림 안테나형이에요.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/lunch-pick-style/mood-antenna.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/lunch-pick-style/mood-antenna-share.png",
+        "vector": {
+          "novelty": 10,
+          "drive": -12
+        }
+      },
+      {
+        "code": "peace-surfer",
+        "titleKo": "평화로운 흐름 서퍼형",
+        "summaryKo": "메뉴보다 함께 먹는 분위기를 챙기며, 다수의 흐름에 기분 좋게 올라타는 조화 타입입니다.",
+        "descriptionKo": "평화로운 흐름 서퍼형에게 점심의 핵심은 메뉴가 아니라 같이 먹는 시간입니다. 어디든 괜찮다는 말은 무관심이 아니라, 일행이 만족하는 결론이 곧 자기 만족이라는 뜻입니다. 투표가 갈리고 의견이 부딪힐 때 분위기를 부드럽게 만드는 사람도 대부분 이 타입입니다.",
+        "strengthsKo": [
+          "메뉴 갈등 상황에서 분위기를 풀고 결론을 부드럽게 만듭니다.",
+          "일행의 취향과 그날의 상태를 세심하게 살피고 배려합니다.",
+          "어떤 결정이 나와도 즐겁게 따라가 모임의 만족도를 올립니다."
+        ],
+        "watchoutsKo": [
+          "양보가 쌓이면 정작 자기가 먹고 싶은 메뉴를 계속 놓칠 수 있습니다.",
+          "모두가 결정을 미루는 날에는 점심이 표류할 수 있으니 가끔은 먼저 정해도 좋습니다."
+        ],
+        "collaborationKo": "함께 먹는 사람들과는 가끔 자기 취향을 먼저 말하는 연습이 도움이 됩니다. 일주일에 한 번은 서퍼가 메뉴를 정하는 날로 약속해 두면, 배려가 한쪽으로 쏠리지 않고 모두의 점심이 더 즐거워집니다.",
+        "shareIntroKo": "나는 점심 분위기를 먼저 챙기는 평화로운 흐름 서퍼형이에요.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/lunch-pick-style/peace-surfer.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/lunch-pick-style/peace-surfer-share.png",
+        "vector": {
+          "novelty": -10,
+          "drive": -12
+        }
+      }
+    ]
+  }
+}
