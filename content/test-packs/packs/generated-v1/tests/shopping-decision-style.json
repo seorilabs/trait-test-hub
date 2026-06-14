@@ -1,0 +1,480 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "test": {
+    "id": "shopping-decision-style",
+    "version": 1,
+    "status": "published",
+    "titleKo": "쇼핑 결정 스타일 테스트",
+    "category": "shopping",
+    "axes": [
+      {
+        "id": "analysis",
+        "labelKo": "분석적 접근 선호"
+      },
+      {
+        "id": "independent",
+        "labelKo": "독립적 결정 선호"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q01",
+        "textKo": "새 스마트폰이 필요할 것 같다. 가장 먼저 하는 행동은?",
+        "options": [
+          {
+            "code": "spec-compare",
+            "textKo": "공식 스펙표를 열어 카메라·배터리·AP를 항목별로 직접 비교한다",
+            "descriptionKo": "정확한 수치가 있어야 진짜 비교가 가능합니다.",
+            "scores": {
+              "analysis": 2,
+              "independent": 2
+            }
+          },
+          {
+            "code": "review-hunt",
+            "textKo": "유튜브 리뷰 영상과 커뮤니티 후기를 며칠에 걸쳐 샅샅이 읽는다",
+            "descriptionKo": "실제 쓰는 사람들의 경험이 광고보다 훨씬 믿을 만합니다.",
+            "scores": {
+              "analysis": 2,
+              "independent": -2
+            }
+          },
+          {
+            "code": "design-first",
+            "textKo": "디자인·색상이 마음에 들면 바로 제품 페이지로 들어가 결제 버튼을 누른다",
+            "descriptionKo": "쓸 때마다 눈에 보이는 게 마음에 들어야 기분이 좋습니다.",
+            "scores": {
+              "analysis": -2,
+              "independent": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q02",
+        "textKo": "장바구니에 한 달째 방치 중인 물건. 어떻게 하나?",
+        "options": [
+          {
+            "code": "final-compare",
+            "textKo": "마지막으로 가격 추이·재고·대체 상품을 한 번 더 비교하고 최종 결정한다",
+            "descriptionKo": "더 나은 선택이 없는지 확인하고 나야 마음이 놓입니다.",
+            "scores": {
+              "analysis": 2,
+              "independent": 2
+            }
+          },
+          {
+            "code": "forum-check",
+            "textKo": "유사 상품 후기 스레드에서 여론이 어떻게 형성됐는지 다시 찾아본다",
+            "descriptionKo": "시간이 지나면 새로운 후기나 평가가 쌓여 있기 마련입니다.",
+            "scores": {
+              "analysis": 2,
+              "independent": -2
+            }
+          },
+          {
+            "code": "ask-friend",
+            "textKo": "친구에게 \"나 이거 살까 말까?\" 물어보고 친구 말대로 따른다",
+            "descriptionKo": "혼자 오래 고민하는 것보다 믿는 사람의 한마디가 더 빠릅니다.",
+            "scores": {
+              "analysis": -2,
+              "independent": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q03",
+        "textKo": "쇼핑몰에서 상품 페이지를 열었다. 리뷰는 어떻게 읽나?",
+        "options": [
+          {
+            "code": "analyze-reviews",
+            "textKo": "별점 분포부터 최신·최저점 리뷰까지 직접 훑으며 결함 패턴을 찾는다",
+            "descriptionKo": "나쁜 리뷰를 보면 어떤 결함이 있는지 파악할 수 있습니다.",
+            "scores": {
+              "analysis": 2,
+              "independent": 2
+            }
+          },
+          {
+            "code": "community-trail",
+            "textKo": "리뷰가 많고 상세하면 커뮤니티 후기 링크까지 탭을 열어 가며 파고든다",
+            "descriptionKo": "공식 페이지보다 커뮤니티에 진짜 정보가 있는 경우가 많습니다.",
+            "scores": {
+              "analysis": 2,
+              "independent": -2
+            }
+          },
+          {
+            "code": "star-skim",
+            "textKo": "별점 4.0 이상이면 OK, 리뷰는 한두 개만 훑고 바로 구매 버튼을 누른다",
+            "descriptionKo": "너무 깊이 읽으면 오히려 사고 싶은 마음이 식어 버립니다.",
+            "scores": {
+              "analysis": -2,
+              "independent": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q04",
+        "textKo": "12시간 한정 타임딜이 뜬 물건, 가격도 꽤 괜찮아 보인다. 나는?",
+        "options": [
+          {
+            "code": "price-verify",
+            "textKo": "타임딜 가격이 진짜 최저가인지 여러 사이트와 직접 비교한 뒤 결정한다",
+            "descriptionKo": "타임딜이라도 진짜 싼 건지 확인해야 직성이 풀립니다.",
+            "scores": {
+              "analysis": 2,
+              "independent": 2
+            }
+          },
+          {
+            "code": "quick-review",
+            "textKo": "이 상품 실사용 후기를 빠르게 검색해 믿을 만한지 먼저 확인한다",
+            "descriptionKo": "아무리 급해도 실제 쓴 사람 의견은 한 번 봐야 합니다.",
+            "scores": {
+              "analysis": 2,
+              "independent": -2
+            }
+          },
+          {
+            "code": "cart-fire",
+            "textKo": "일단 주문하고, 불만족스러우면 반품하면 된다는 생각으로 바로 결제한다",
+            "descriptionKo": "고민하다 놓치는 게 더 아깝습니다.",
+            "scores": {
+              "analysis": -2,
+              "independent": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q05",
+        "textKo": "브랜드와 가격이 비슷한 A와 B 두 제품 중 하나를 골라야 한다.",
+        "options": [
+          {
+            "code": "spec-table",
+            "textKo": "두 제품의 스펙·소재·용도 차이를 직접 정리해 합리적 기준으로 선택한다",
+            "descriptionKo": "나중에 후회 없으려면 기준을 세우고 골라야 합니다.",
+            "scores": {
+              "analysis": 2,
+              "independent": 2
+            }
+          },
+          {
+            "code": "user-vote",
+            "textKo": "두 제품을 모두 검색해 어느 쪽 사용자 만족도가 더 높은지 비교한다",
+            "descriptionKo": "많은 사람이 검증해 준 쪽이 결국 더 나은 선택일 때가 많습니다.",
+            "scores": {
+              "analysis": 2,
+              "independent": -2
+            }
+          },
+          {
+            "code": "gut-pick",
+            "textKo": "손에 들었을 때 느낌, 눈에 더 들어오는 디자인 쪽을 그냥 고른다",
+            "descriptionKo": "비슷하면 결국 마음이 먼저 움직인 걸 사는 게 맞습니다.",
+            "scores": {
+              "analysis": -2,
+              "independent": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q06",
+        "textKo": "친구들과 쇼핑하러 나갔다. 나의 역할은 주로?",
+        "options": [
+          {
+            "code": "solo-analyst",
+            "textKo": "사고 싶은 물건이 있으면 혼자 꼼꼼히 따져보고 친구 의견은 참고 수준만 한다",
+            "descriptionKo": "결국 내가 쓸 물건이니 내 판단이 가장 중요합니다.",
+            "scores": {
+              "analysis": 2,
+              "independent": 2
+            }
+          },
+          {
+            "code": "crowd-wisdom",
+            "textKo": "친구들의 평가를 듣고 반응이 좋은 물건 위주로 구매를 결정한다",
+            "descriptionKo": "아는 사람 여러 명의 실제 반응이 온라인 리뷰보다 믿음이 갑니다.",
+            "scores": {
+              "analysis": 2,
+              "independent": -2
+            }
+          },
+          {
+            "code": "friend-says-yes",
+            "textKo": "친구가 \"이거 너한테 너무 잘 어울린다\"고 하면 고민 없이 바로 결제한다",
+            "descriptionKo": "아는 사람의 추천 한마디가 가장 강력한 구매 동기입니다.",
+            "scores": {
+              "analysis": -2,
+              "independent": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q07",
+        "textKo": "SNS 피드에서 광고가 아닌 실제 사람이 올린 제품 후기를 봤다.",
+        "options": [
+          {
+            "code": "official-check",
+            "textKo": "공식 사이트에 들어가 스펙·소재·가격을 직접 확인하고 정말 필요한지 따져본다",
+            "descriptionKo": "예쁜 사진 하나로 충동구매하지 않으려면 직접 확인이 필수입니다.",
+            "scores": {
+              "analysis": 2,
+              "independent": 2
+            }
+          },
+          {
+            "code": "comment-scroll",
+            "textKo": "댓글과 다른 사람들의 반응을 쭉 훑어보고 여론이 좋으면 검토를 시작한다",
+            "descriptionKo": "많은 사람이 긍정적으로 반응한다면 살펴볼 가치는 있습니다.",
+            "scores": {
+              "analysis": 2,
+              "independent": -2
+            }
+          },
+          {
+            "code": "instant-tap",
+            "textKo": "예쁘고 갖고 싶다는 느낌이 오면 게시물의 링크나 태그를 바로 탭해 구매한다",
+            "descriptionKo": "보는 순간 설레는 물건은 사도 됩니다.",
+            "scores": {
+              "analysis": -2,
+              "independent": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q08",
+        "textKo": "소중한 사람에게 줄 선물을 골라야 한다.",
+        "options": [
+          {
+            "code": "gift-analyze",
+            "textKo": "선물 후보 목록을 만들고 예산·기호·실용성 기준으로 비교한 뒤 최적을 고른다",
+            "descriptionKo": "받는 사람이 진짜 좋아할 선물은 고민의 깊이가 다릅니다.",
+            "scores": {
+              "analysis": 2,
+              "independent": 2
+            }
+          },
+          {
+            "code": "gift-research",
+            "textKo": "선물 추천 커뮤니티나 블로그를 검색해서 검증된 아이템 목록을 참고한다",
+            "descriptionKo": "비슷한 상황에서 성공한 선물 사례를 참고하는 게 제일 안전합니다.",
+            "scores": {
+              "analysis": 2,
+              "independent": -2
+            }
+          },
+          {
+            "code": "gift-instinct",
+            "textKo": "마음에 드는 걸 발견하는 순간 \"이거다!\" 싶으면 바로 구매한다",
+            "descriptionKo": "선물은 고르는 마음이 진심이면 됩니다.",
+            "scores": {
+              "analysis": -2,
+              "independent": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q09",
+        "textKo": "쇼핑 앱을 아무 목적 없이 켰다. 자연스럽게 하게 되는 행동은?",
+        "options": [
+          {
+            "code": "browse-spec",
+            "textKo": "관심 카테고리에 들어가 신상품·가격 변동을 꼼꼼히 체크하며 정보를 쌓는다",
+            "descriptionKo": "관심 분야는 늘 최신 정보를 파악해 두면 나중에 유용합니다.",
+            "scores": {
+              "analysis": 2,
+              "independent": 2
+            }
+          },
+          {
+            "code": "impulse-add",
+            "textKo": "첫 화면에서 눈에 확 들어오는 게 있으면 바로 장바구니에 담아 버린다",
+            "descriptionKo": "처음 눈길이 가는 물건에는 이유가 있습니다.",
+            "scores": {
+              "analysis": -2,
+              "independent": 2
+            }
+          },
+          {
+            "code": "shared-link",
+            "textKo": "친구가 공유해 준 상품 링크를 열어 보며 같이 살지 의견을 나눈다",
+            "descriptionKo": "쇼핑은 혼자보다 같이 하면 더 재밌습니다.",
+            "scores": {
+              "analysis": -2,
+              "independent": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q10",
+        "textKo": "충동구매한 물건이 생각보다 별로였을 때 드는 생각은?",
+        "options": [
+          {
+            "code": "post-analysis",
+            "textKo": "어떤 리뷰를 더 믿었어야 했나, 다음에는 어떻게 고를지 스스로 분석한다",
+            "descriptionKo": "같은 실수를 반복하지 않으려면 원인 파악이 먼저입니다.",
+            "scores": {
+              "analysis": 2,
+              "independent": -2
+            }
+          },
+          {
+            "code": "shake-off",
+            "textKo": "\"이번엔 아닌가 보다\" 하고 금방 털어 버린다. 다음에 잘 고르면 되지",
+            "descriptionKo": "과거에 매달리는 것보다 다음 구매를 잘하는 게 낫습니다.",
+            "scores": {
+              "analysis": -2,
+              "independent": 2
+            }
+          },
+          {
+            "code": "seek-validation",
+            "textKo": "친구들에게 내 선택이 그렇게 나쁜 건 아니었다는 확인을 받아야 마음이 놓인다",
+            "descriptionKo": "내 선택에 대한 공감을 얻어야 진짜 마무리됩니다.",
+            "scores": {
+              "analysis": -2,
+              "independent": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q11",
+        "textKo": "오래 마음에 두던 물건이 드디어 할인에 들어갔다. 나는?",
+        "options": [
+          {
+            "code": "discount-verify",
+            "textKo": "할인율이 합리적인지 원가와 비교해 보고 지금이 살 타이밍인지 직접 판단한다",
+            "descriptionKo": "\"할인\"이라는 말에 흔들리지 않고 진짜 가치를 계산합니다.",
+            "scores": {
+              "analysis": 2,
+              "independent": 2
+            }
+          },
+          {
+            "code": "now-or-never",
+            "textKo": "고민할 것도 없이 바로 구매한다. 이 가격이 다시 올 것 같지 않다",
+            "descriptionKo": "기다려 온 물건은 기회가 왔을 때 잡아야 합니다.",
+            "scores": {
+              "analysis": -2,
+              "independent": 2
+            }
+          },
+          {
+            "code": "crowd-confirm",
+            "textKo": "주변 사람 두세 명에게 \"나 이거 살까?\"라고 물어보고 다수 의견에 따른다",
+            "descriptionKo": "이 가격에 사는 게 진짜 맞는지 다른 사람 의견도 들어야 합니다.",
+            "scores": {
+              "analysis": -2,
+              "independent": -2
+            }
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "code": "spec-hunter",
+        "titleKo": "스펙 헌터형",
+        "summaryKo": "스펙표·가격 비교·상세 분석을 혼자 처리해 최적의 선택을 내리는 타입입니다.",
+        "descriptionKo": "스펙 헌터형은 쇼핑을 일종의 과제처럼 접근합니다. 원하는 물건이 생기면 공식 스펙, 최저가 흐름, 소재 등을 직접 비교표로 정리하고, 남의 리뷰보다 자신의 분석을 더 신뢰합니다. 이 과정이 귀찮지 않고 오히려 재미있는 타입이라, 주변에서 물건 추천을 부탁하면 설명이 너무 길어진다는 소리를 들을 수도 있습니다. 결제 버튼을 누르는 순간의 확신이 남다릅니다.",
+        "strengthsKo": [
+          "꼼꼼한 사전 조사 덕분에 구매 실패율이 낮고 장기적으로 비용을 절약합니다.",
+          "가성비를 판단하는 안목이 생겨 동일 예산으로 더 나은 선택을 끌어냅니다.",
+          "비슷해 보이는 제품들의 핵심 차이를 빠르게 파악해 주변에 유용한 정보를 공유합니다."
+        ],
+        "watchoutsKo": [
+          "분석에 너무 많은 시간을 쓰다 타임딜을 놓치거나 결정 자체가 늦어질 수 있습니다.",
+          "비교할수록 완벽한 선택에 대한 기대치가 높아져 구매 만족감이 오히려 낮아질 수 있습니다."
+        ],
+        "collaborationKo": "함께 쇼핑할 때 당신의 분석력은 팀에게 큰 도움이 됩니다. 다만 빠른 결정이 필요한 타임딜 상황에서는 \"충분히 좋은 선택\"을 기준으로 삼고 분석을 마무리 짓는 연습이 도움이 됩니다. 모든 조건이 완벽한 제품은 없습니다.",
+        "shareIntroKo": "나는 스펙 비교표를 혼자 완성하고 최적의 선택을 내리는 스펙 헌터형이에요.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/shopping-decision-style/spec-hunter.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/shopping-decision-style/spec-hunter-share.png",
+        "vector": {
+          "analysis": 14,
+          "independent": 14
+        }
+      },
+      {
+        "code": "review-sleuth",
+        "titleKo": "리뷰 탐정형",
+        "summaryKo": "상품 페이지에서 커뮤니티까지 샅샅이 파고들어 검증하고 나서야 결제하는 타입입니다.",
+        "descriptionKo": "리뷰 탐정형에게 쇼핑은 정보를 수집하고 검증하는 과정입니다. 별점 4.8짜리 제품도 최저점 리뷰를 먼저 읽고, 공식 페이지 후기가 부족하면 커뮤니티와 블로그까지 탭을 열어 가며 파고듭니다. 혼자 결정하기보다 많은 사람이 검증한 정보를 바탕으로 결론을 냅니다. 구매를 결정하기까지 시간이 걸리지만, 그만큼 후회가 적습니다.",
+        "strengthsKo": [
+          "실사용자의 다양한 경험을 수집해 광고에 속지 않는 현명한 구매를 합니다.",
+          "여러 정보를 종합하는 능력 덕분에 사기 상품이나 과대광고를 잘 걸러냅니다.",
+          "신뢰할 수 있는 리뷰어나 커뮤니티를 파악해 두어 정보 탐색을 효율적으로 합니다."
+        ],
+        "watchoutsKo": [
+          "후기 수집에 지나치게 빠져들다 정작 구매 결정이 늦어지거나 기회를 놓칠 수 있습니다.",
+          "리뷰 간 의견이 엇갈릴 때 결론을 내리지 못하고 무한 탐색 루프에 빠질 위험이 있습니다."
+        ],
+        "collaborationKo": "당신이 수집한 리뷰와 정보는 함께하는 사람들에게도 큰 자산입니다. 단, 정보를 충분히 모았다고 느끼는 시점을 미리 정해 두면 결정 속도를 높일 수 있습니다. 모든 후기를 다 읽을 필요는 없습니다.",
+        "shareIntroKo": "나는 커뮤니티까지 샅샅이 파헤치고 나서야 결제하는 리뷰 탐정형이에요.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/shopping-decision-style/review-sleuth.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/shopping-decision-style/review-sleuth-share.png",
+        "vector": {
+          "analysis": 14,
+          "independent": -14
+        }
+      },
+      {
+        "code": "flash-buyer",
+        "titleKo": "번쩍 결제형",
+        "summaryKo": "보는 순간 직감이 OK 신호를 보내면 고민 없이 결제 버튼을 누르는 타입입니다.",
+        "descriptionKo": "번쩍 결제형은 쇼핑에서 직감을 최우선으로 삼습니다. 마음에 드는 제품을 보는 순간 살지 말지가 이미 결정되는 타입입니다. 리뷰를 여러 개 읽거나 친구 의견을 구하는 과정 없이, 자신의 감각을 믿고 바로 결제합니다. 가끔 실패도 있지만, 그 경험에서 쌓인 감각으로 다음 선택은 더 빠르고 정확해집니다.",
+        "strengthsKo": [
+          "결정에 필요한 에너지를 최소화해 쇼핑 피로 없이 원하는 걸 빠르게 손에 넣습니다.",
+          "타임딜이나 한정 수량 상황에서 기회를 놓치지 않고 행동력이 빠릅니다.",
+          "직감 쇼핑이 맞아 떨어졌을 때의 만족감이 커서 쇼핑 자체를 즐겁게 경험합니다."
+        ],
+        "watchoutsKo": [
+          "충동에 따라 구매하다 예산을 초과하거나 쓸 일이 없는 물건이 쌓일 수 있습니다.",
+          "사전 조사 없이 구매하다 품질·크기·기능이 기대와 달라 실망하는 경우가 생길 수 있습니다."
+        ],
+        "collaborationKo": "빠른 결정력은 큰 장점이지만, 큰 금액이나 오래 쓸 물건에는 스펙을 간단히 확인하는 단계를 하나 추가해 보세요. \"30초 체크\"만으로도 실패 확률이 크게 줄어듭니다.",
+        "shareIntroKo": "나는 직감이 OK 신호를 보내면 바로 결제 버튼을 누르는 번쩍 결제형이에요.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/shopping-decision-style/flash-buyer.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/shopping-decision-style/flash-buyer-share.png",
+        "vector": {
+          "analysis": -14,
+          "independent": 14
+        }
+      },
+      {
+        "code": "vibe-follower",
+        "titleKo": "감성 팔로워형",
+        "summaryKo": "예쁘거나 친구 추천이면 고민 없이 담는, 취향과 관계를 쇼핑 기준으로 삼는 타입입니다.",
+        "descriptionKo": "감성 팔로워형은 쇼핑을 취향과 관계의 교차점에서 합니다. 스펙이나 가격표보다 \"예쁜가\", \"친구가 추천했는가\", \"분위기가 맞는가\"를 먼저 봅니다. 혼자 오래 고민하기보다 믿는 사람의 추천 한마디에 바로 반응하고, 같이 쇼핑하면서 나오는 즉흥적인 \"이거 어때?\"에 가장 잘 반응하는 타입입니다. 구매한 물건에 감성적인 스토리가 남아 있는 편입니다.",
+        "strengthsKo": [
+          "취향 기반 쇼핑이라 선택한 물건에 대한 애착이 강하고 오래 사용하는 경향이 있습니다.",
+          "쇼핑 자체를 즐거운 경험으로 만들어 같이 다니는 사람도 신나게 합니다.",
+          "인간관계에서 나온 추천을 잘 수용해 소규모 브랜드나 신상품을 먼저 발견하기도 합니다."
+        ],
+        "watchoutsKo": [
+          "분위기나 추천에 이끌려 정작 자신에게 맞지 않는 물건을 구매하는 경우가 생길 수 있습니다.",
+          "타인 의견에 의존하다 사고 싶지 않은 물건을 구매하는 압박을 느낄 수 있습니다."
+        ],
+        "collaborationKo": "당신의 감성 안테나는 신선한 발견을 가져다줍니다. 다만 큰 금액의 구매에서는 추천이나 분위기가 아닌 자신이 세운 기준 하나를 기억해 두세요. \"내가 혼자라도 살 것인가?\"라는 질문 하나가 기준이 됩니다.",
+        "shareIntroKo": "나는 예쁘거나 친구 추천이면 고민 없이 장바구니에 담는 감성 팔로워형이에요.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/shopping-decision-style/vibe-follower.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/shopping-decision-style/vibe-follower-share.png",
+        "vector": {
+          "analysis": -14,
+          "independent": -14
+        }
+      }
+    ]
+  }
+}
