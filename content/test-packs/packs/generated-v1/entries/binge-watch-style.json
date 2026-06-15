@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "binge-watch-style",
+  "metadata": {
+    "summaryKo": "OTT를 볼 때 나만의 정주행 방식을 11문항으로 확인합니다.",
+    "tags": [
+      "entertainment",
+      "media",
+      "leisure"
+    ],
+    "categoryLabelKo": "엔터테인먼트",
+    "tagLabelsKo": {
+      "entertainment": "엔터테인먼트",
+      "media": "미디어",
+      "leisure": "여가"
+    },
+    "estimatedMinutes": "3-5분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-06-14T20:15:11.712Z",
+    "updatedAt": "2026-06-14T20:15:11.712Z"
+  }
+}
