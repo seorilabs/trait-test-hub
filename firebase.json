@@ -9,5 +9,8 @@
   "functions": {
     "source": "firebase/functions",
     "runtime": "nodejs22"
+  },
+  "remoteconfig": {
+    "template": "firebase/remoteconfig.template.json"
   }
 }

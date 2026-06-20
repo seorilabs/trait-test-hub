@@ -1,6 +1,6 @@
 {
   "appId": "trait-test-hub",
-  "bundleId": "확정 필요",
+  "bundleId": "com.seorilabs.traithub",
   "sku": "trait-test-hub",
   "primaryLocale": "ko-KR",
   "name": {
