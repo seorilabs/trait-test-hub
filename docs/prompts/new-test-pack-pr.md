@@ -15,12 +15,18 @@
 
 ### 0. 중복 방지 사전 조사
 
-새 테스트는 "기존에 없던 테스트"여야 한다. 주제를 정하기 전에 아래를 모두 수집한다.
+새 테스트는 "기존에 없던 테스트"여야 한다. 주제를 정하기 전에 아래 명령으로 중복 후보를 한 번에 수집한다.
 
-1. 기존 testId와 제목: `content/test-packs/packs/*/tests/*.json`
+```bash
+pnpm list:test-topics
+```
+
+이 명령은 아래 셋을 모두 출력한다. 여기 등장한 주제·testId·제목과 겹치면 안 된다.
+
+1. 발행/소스 테스트: `content/test-packs/packs/*/tests/*.json`
 2. 작성 중 draft: `content/test-packs/drafts/*.json`
-3. 열려 있는 PR: `feature/generated-test-*` 브랜치의 오픈 PR 제목과 testId
-   (여러 테스트 PR이 동시에 쌓여 있을 수 있으므로 merge 전인 것도 모두 중복 대상으로 본다)
+3. 열린 PR: `feature/generated-test-*` 오픈 PR (merge 전인 것도 모두 중복 대상)
+   (gh CLI를 못 쓰는 환경이면 PR은 직접 확인한다)
 
 위 어디에도 없는 새 주제와 새 kebab-case `testId`를 고른다.
 기존 주제의 사소한 변형(예: "공간 정리 스타일"이 있는데 "책상 정리 스타일")도 중복으로 간주하고 피한다.
@@ -67,21 +73,30 @@ metadata:
 
 ### 3. 결과 이미지 생성
 
-결과 code마다 이미지 2장을 만들어 `content/test-packs/packs/generated-v1/assets/<testId>/`에 둔다.
+draft를 만든 뒤(아직 publish 전), 범용 제너레이터로 결과 code마다 이미지 2장을 만든다.
+
+```bash
+pnpm gen:result-images -- --testId=<testId>
+```
+
+이 명령은 draft의 결과 code를 읽어 결과마다 색·구도(모티프)가 다른 추상 그래픽을
+`content/test-packs/packs/generated-v1/assets/<testId>/`에 생성한다.
 
 - `<resultCode>.png`: 960×640, 결과 대표 이미지
 - `<resultCode>-share.png`: 1200×630, 공유 카드 이미지
 
 규칙:
 
-- 결과 컨셉이 드러나는 일러스트 스타일을 기본으로 한다
-  (기존 에셋 참고: `content/test-packs/packs/generated-v1/assets/idea-capture-style/`)
-- 결과별로 색·구도가 한눈에 구분되어야 한다. 같은 이미지의 색만 바꾼 복제 금지
-- 이미지 생성 도구를 쓸 수 없는 환경이면 프로그램 방식(SVG → PNG, PIL 등)으로
-  결과별 팔레트를 가진 추상 그래픽을 만든다
-- 한글 텍스트는 폰트 렌더링이 보장되지 않으면 이미지에 넣지 않는다
-- 파일당 2048바이트 이상, 유효한 PNG/JPG/WebP여야 한다 (`check:content`가 검사)
-- 저작권 있는 이미지·캐릭터·실사 인물 사용 금지
+- 기본은 `pnpm gen:result-images`다. 결과 code 해시로 팔레트와 모티프를 정해
+  결과별로 색·구도가 한눈에 구분된다(같은 이미지의 색만 바꾼 복제가 아니다).
+- 더 정교한 일러스트가 필요하면 결과별 팔레트를 가진 별도 그래픽으로 교체할 수 있으나,
+  결과별 색·구도 구분과 한글 텍스트 미포함 원칙은 그대로 지킨다.
+- 한글 텍스트는 폰트 렌더링이 보장되지 않으면 이미지에 넣지 않는다.
+- 파일당 2048바이트 이상, 유효한 PNG/JPG/WebP여야 한다 (`check:content`가 검사).
+- 저작권 있는 이미지·캐릭터·실사 인물 사용 금지.
+- 제너레이터는 Python 3 + Pillow가 필요하다. 없으면 `pip3 install Pillow`로 설치한다.
+
+draft의 각 결과 `imagePath`/`shareImagePath`는 위 산출 경로와 정확히 일치해야 한다.
 
 ### 4. Publish와 검증
 
