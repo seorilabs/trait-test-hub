@@ -1,0 +1,381 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "metadata": {
+    "summaryKo": "OTT를 볼 때 나만의 정주행 방식을 11문항으로 확인합니다.",
+    "tags": ["entertainment", "media", "leisure"],
+    "categoryLabelKo": "엔터테인먼트",
+    "tagLabelsKo": {
+      "entertainment": "엔터테인먼트",
+      "media": "미디어",
+      "leisure": "여가"
+    },
+    "estimatedMinutes": "3-5분",
+    "packTitleKo": "자동 생성 테스트팩"
+  },
+  "test": {
+    "id": "binge-watch-style",
+    "version": 1,
+    "status": "published",
+    "titleKo": "정주행 스타일 테스트",
+    "category": "entertainment",
+    "axes": [
+      {
+        "id": "marathon",
+        "labelKo": "몰아보기 선호도"
+      },
+      {
+        "id": "focus",
+        "labelKo": "집중 시청 선호도"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q01",
+        "textKo": "OTT 앱을 열었다. 오늘의 자연스러운 시청 방식은?",
+        "options": [
+          {
+            "code": "immersive-binge",
+            "textKo": "재미있는 시리즈에 꽂혀서 몇 화든 집중해서 달린다",
+            "descriptionKo": "오늘 밤 얼마나 볼지는 화면이 정합니다.",
+            "scores": {"marathon": 2, "focus": 2}
+          },
+          {
+            "code": "planned-ep",
+            "textKo": "오늘 볼 분량을 정하고 그만큼만 집중해서 즐긴다",
+            "descriptionKo": "분량을 미리 정해야 제대로 음미할 수 있습니다.",
+            "scores": {"marathon": -2, "focus": 2}
+          },
+          {
+            "code": "quick-skim",
+            "textKo": "여러 화를 배속으로 빠르게 훑으며 많이 본다",
+            "descriptionKo": "효율적으로 많이 보는 게 최선입니다.",
+            "scores": {"marathon": 2, "focus": -2}
+          }
+        ]
+      },
+      {
+        "id": "q02",
+        "textKo": "자려고 누웠다가 \"한 화만 더\"를 켰다. 어떻게 되나?",
+        "options": [
+          {
+            "code": "cant-stop",
+            "textKo": "어느새 새벽이 됐다. 클리프행어는 멈출 수가 없었다",
+            "descriptionKo": "멈추는 건 선택지에 없었습니다.",
+            "scores": {"marathon": 2, "focus": 2}
+          },
+          {
+            "code": "strict-cut",
+            "textKo": "딱 한 화만 보고 끈다. 내일의 설렘을 위해 참는다",
+            "descriptionKo": "기다리는 설렘도 시청의 일부입니다.",
+            "scores": {"marathon": -2, "focus": 2}
+          },
+          {
+            "code": "background-drift",
+            "textKo": "반쯤 보다 잠이 드는 것도 나쁘지 않다. 틀어 두면 된다",
+            "descriptionKo": "배경음이 있으면 잠도 잘 옵니다.",
+            "scores": {"marathon": -2, "focus": -2}
+          }
+        ]
+      },
+      {
+        "id": "q03",
+        "textKo": "드라마를 볼 때 스마트폰은 주로 어디 있나?",
+        "options": [
+          {
+            "code": "phone-down",
+            "textKo": "최대한 내려두거나 뒤집어 둔다. 드라마에 집중하고 싶다",
+            "descriptionKo": "화면 밖에 방해 요소가 있으면 몰입이 깨집니다.",
+            "scores": {"marathon": 0, "focus": 2}
+          },
+          {
+            "code": "phone-ready",
+            "textKo": "늘 한 손에 쥐고 있다. 지루한 장면이 나오면 자연스럽게 다른 앱을 연다",
+            "descriptionKo": "드라마와 폰을 동시에 즐기는 게 자연스럽습니다.",
+            "scores": {"marathon": 0, "focus": -2}
+          },
+          {
+            "code": "skip-button",
+            "textKo": "10초 스킵 버튼을 손에 들고 있다. 지루한 장면은 바로 넘긴다",
+            "descriptionKo": "핵심 장면만 보면 됩니다. 나머지는 스킵입니다.",
+            "scores": {"marathon": 2, "focus": -2}
+          }
+        ]
+      },
+      {
+        "id": "q04",
+        "textKo": "흥미롭던 장면이 끝나고 한동안 지루한 전개가 계속된다. 나는?",
+        "options": [
+          {
+            "code": "sit-through",
+            "textKo": "지루해도 흐름을 놓치기 싫어서 집중해서 본다",
+            "descriptionKo": "느린 장면에도 중요한 단서가 숨어 있습니다.",
+            "scores": {"marathon": 0, "focus": 2}
+          },
+          {
+            "code": "skip-ahead",
+            "textKo": "배속이나 스킵으로 건너뛰고 중요한 장면만 챙긴다",
+            "descriptionKo": "시간은 소중하고 핵심만 있으면 됩니다.",
+            "scores": {"marathon": 2, "focus": -2}
+          },
+          {
+            "code": "phone-time",
+            "textKo": "드라마는 틀어 두고 스마트폰으로 딴짓을 한다",
+            "descriptionKo": "지루하면 자연스럽게 관심이 다른 데로 갑니다.",
+            "scores": {"marathon": -2, "focus": -2}
+          }
+        ]
+      },
+      {
+        "id": "q05",
+        "textKo": "한 시즌이 끝났다. 다음 시즌이 있다면 어떻게 하나?",
+        "options": [
+          {
+            "code": "start-now",
+            "textKo": "바로 다음 시즌을 튼다. 이 흐름을 끊고 싶지 않다",
+            "descriptionKo": "몰입의 흐름을 유지하는 게 가장 중요합니다.",
+            "scores": {"marathon": 2, "focus": 2}
+          },
+          {
+            "code": "rest-reflect",
+            "textKo": "이번 시즌을 충분히 소화한 다음에 다음 시즌을 시작한다",
+            "descriptionKo": "여운을 즐기고 나서 새 시즌을 맞이하고 싶습니다.",
+            "scores": {"marathon": -2, "focus": 2}
+          },
+          {
+            "code": "skim-preview",
+            "textKo": "다음 시즌 예고편을 빠르게 확인하고 재미있을 것 같으면 바로 튼다",
+            "descriptionKo": "기대치를 빠르게 파악하면 판단도 빠릅니다.",
+            "scores": {"marathon": 2, "focus": -2}
+          }
+        ]
+      },
+      {
+        "id": "q06",
+        "textKo": "집에서 드라마를 볼 때 나의 환경은?",
+        "options": [
+          {
+            "code": "immersion-mode",
+            "textKo": "불을 끄고 폰을 뒤집어 두고 화면에만 집중한다",
+            "descriptionKo": "극장 같은 환경을 만들어야 제대로 즐길 수 있습니다.",
+            "scores": {"marathon": 2, "focus": 2}
+          },
+          {
+            "code": "multitask-mode",
+            "textKo": "밥을 먹거나 청소를 하면서 틀어 두고 슬쩍슬쩍 본다",
+            "descriptionKo": "드라마가 배경이 되어 주는 것만으로도 충분합니다.",
+            "scores": {"marathon": -2, "focus": -2}
+          },
+          {
+            "code": "speed-mode",
+            "textKo": "배속으로 맞춰 두고 여러 화를 빠르게 넘긴다",
+            "descriptionKo": "같은 시간에 더 많이 볼 수 있으면 그게 최선입니다.",
+            "scores": {"marathon": 2, "focus": -2}
+          }
+        ]
+      },
+      {
+        "id": "q07",
+        "textKo": "친구가 \"요즘 뭐 봐?\" 물어봤을 때 나는?",
+        "options": [
+          {
+            "code": "passionate-share",
+            "textKo": "요즘 완전히 빠진 시리즈를 열정적으로 설명한다. 스포 조심하라고 경고하면서",
+            "descriptionKo": "감동을 나눠야 제대로 즐긴 겁니다.",
+            "scores": {"marathon": 2, "focus": 2}
+          },
+          {
+            "code": "ep-highlight",
+            "textKo": "특히 인상 깊었던 한두 화를 꼭 봐야 한다고 추천한다",
+            "descriptionKo": "한 화 한 화가 남긴 감동을 오래 기억합니다.",
+            "scores": {"marathon": -2, "focus": 2}
+          },
+          {
+            "code": "vague-answer",
+            "textKo": "\"이것저것 보는데 제목이 잘 기억 안 나\"라고 한다",
+            "descriptionKo": "많이 봤다는 게 중요하지 모든 걸 기억할 필요는 없습니다.",
+            "scores": {"marathon": 2, "focus": -2}
+          }
+        ]
+      },
+      {
+        "id": "q08",
+        "textKo": "오늘 볼 수 있는 시간이 딱 30분이다. 어떻게 하나?",
+        "options": [
+          {
+            "code": "30-min-ok",
+            "textKo": "30분도 충분하다. 일단 튼다",
+            "descriptionKo": "짧아도 볼 수 있을 때 봐야 합니다.",
+            "scores": {"marathon": 2, "focus": 2}
+          },
+          {
+            "code": "wait-more",
+            "textKo": "짧은 시간에 제대로 몰입하기 어려우니 더 여유가 있을 때 본다",
+            "descriptionKo": "집중할 수 있는 환경이 준비됐을 때 제대로 즐기고 싶습니다.",
+            "scores": {"marathon": -2, "focus": 2}
+          },
+          {
+            "code": "power-skip",
+            "textKo": "30분 안에 2~3화를 배속으로 빠르게 돌린다",
+            "descriptionKo": "짧은 시간이라도 효율을 높이면 됩니다.",
+            "scores": {"marathon": 2, "focus": -2}
+          }
+        ]
+      },
+      {
+        "id": "q09",
+        "textKo": "다음에 볼 작품을 고르는 방식은?",
+        "options": [
+          {
+            "code": "instant-gut",
+            "textKo": "썸네일이나 제목을 보다 끌리면 바로 튼다. 재미있으면 밤새 달린다",
+            "descriptionKo": "첫 직감이 대부분 맞습니다.",
+            "scores": {"marathon": 2, "focus": 2}
+          },
+          {
+            "code": "research-pick",
+            "textKo": "미리 평점·리뷰를 찾아보고 기대치를 높인 뒤 시작한다",
+            "descriptionKo": "제대로 고른 작품은 한 화 한 화가 소중합니다.",
+            "scores": {"marathon": -2, "focus": 2}
+          },
+          {
+            "code": "background-pick",
+            "textKo": "편하게 틀어 둘 수 있는 잔잔한 걸 주로 고른다",
+            "descriptionKo": "배경으로 적합한 작품이 따로 있습니다.",
+            "scores": {"marathon": -2, "focus": -2}
+          }
+        ]
+      },
+      {
+        "id": "q10",
+        "textKo": "드라마 속 충격적인 반전 장면이 나왔다. 나의 반응은?",
+        "options": [
+          {
+            "code": "rewind-again",
+            "textKo": "멈추고 직전 장면을 다시 본다. 디테일을 놓치고 싶지 않다",
+            "descriptionKo": "반전의 실마리를 되짚는 것이 진짜 재미입니다.",
+            "scores": {"marathon": 0, "focus": 2}
+          },
+          {
+            "code": "forward-check",
+            "textKo": "빠르게 스킵해서 다음 전개를 먼저 확인한다",
+            "descriptionKo": "긴장감을 빨리 해소해야 계속 볼 수 있습니다.",
+            "scores": {"marathon": 2, "focus": -2}
+          },
+          {
+            "code": "half-miss",
+            "textKo": "사실 다른 일을 하다가 놓쳤다. 계속 흘려 듣는다",
+            "descriptionKo": "흐름을 파악할 수 있으면 놓쳐도 괜찮습니다.",
+            "scores": {"marathon": 0, "focus": -2}
+          }
+        ]
+      },
+      {
+        "id": "q11",
+        "textKo": "새벽에 시리즈를 보다가 내일 일찍 일어나야 한다는 게 생각났다.",
+        "options": [
+          {
+            "code": "one-more-ep",
+            "textKo": "\"한 화만 더\"라고 생각하면서 끄지 못한다",
+            "descriptionKo": "내일은 내일의 내가 알아서 할 것입니다.",
+            "scores": {"marathon": 2, "focus": 2}
+          },
+          {
+            "code": "discipline-off",
+            "textKo": "아쉽지만 내일을 위해 끈다. 다음 화가 더 기대된다",
+            "descriptionKo": "설렘을 아껴 둬야 더 즐겁게 볼 수 있습니다.",
+            "scores": {"marathon": -2, "focus": 2}
+          },
+          {
+            "code": "sleep-play",
+            "textKo": "틀어 두고 들으면서 잠을 청한다",
+            "descriptionKo": "배경음이 있으면 잠이 더 잘 옵니다.",
+            "scores": {"marathon": -2, "focus": -2}
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "code": "storm-binger",
+        "titleKo": "폭풍 정주행형",
+        "summaryKo": "한번 꽂히면 새벽까지 달리는, 완전 몰입 정주행 타입입니다.",
+        "descriptionKo": "폭풍 정주행형에게 드라마는 시작부터 끝까지 하나의 흐름입니다. 재미있는 작품을 발견하면 '오늘은 딱 두 화만'이라는 계획은 자연스럽게 사라지고, 어느새 새벽 3시에 시즌 피날레를 보고 있습니다. 클리프행어 앞에서는 다음 화를 안 보고 자는 게 오히려 불가능합니다. 같은 작품을 느리게 즐기는 사람을 이해하기 어려울 수 있지만, 그 몰입의 열기로 주변 사람들에게 시리즈를 추천하면 누구도 거절하기 힘듭니다.",
+        "strengthsKo": [
+          "작품에 완전히 빠져드는 몰입력 덕분에 캐릭터와 세계관을 깊이 이해합니다.",
+          "재미있는 시리즈를 발견하면 주변에 열정적으로 전파해서 새로운 팬을 만드는 능력이 있습니다.",
+          "시즌 전체를 한 흐름으로 소화해서 복잡한 서사 구조도 한눈에 파악합니다."
+        ],
+        "watchoutsKo": [
+          "수면 패턴이 흐트러지기 쉽고, 다음 날 컨디션에 영향을 줄 수 있습니다.",
+          "한 작품에 깊이 빠지는 동안 다른 일과 균형을 잡기 어려울 수 있습니다."
+        ],
+        "collaborationKo": "같이 드라마를 볼 사람을 찾는다면 최고의 파트너입니다. 단, 동행이 새벽 마라톤을 힘들어한다면 중간에 종료 시간을 미리 정해 두는 것이 좋습니다. 당신의 열기는 혼자 간직하기에 너무 강렬합니다. 나눌수록 빛납니다.",
+        "shareIntroKo": "나는 한번 꽂히면 새벽까지 달리는 폭풍 정주행형이에요.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/binge-watch-style/storm-binger.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/binge-watch-style/storm-binger-share.png",
+        "vector": {"marathon": 14, "focus": 14}
+      },
+      {
+        "code": "slow-savorer",
+        "titleKo": "한편 음미형",
+        "summaryKo": "한 화 한 화를 천천히 소화하며 깊이 즐기는 완전 몰입 타입입니다.",
+        "descriptionKo": "한편 음미형에게 드라마는 매 화가 하나의 완성된 경험입니다. 오늘 볼 분량을 미리 정해 두고, 그 시간만큼은 화면에만 집중합니다. 클리프행어 앞에서도 '내일이 더 기대된다'며 참는 편이고, 시즌이 끝난 뒤에는 여운이 가라앉을 때까지 다음 시즌을 미루기도 합니다. 빠르게 많이 보는 것보다 깊게 기억에 남기는 것을 선택합니다. 그 작품이 진짜 좋았는지 아닌지는 결국 이 타입이 가장 잘 압니다.",
+        "strengthsKo": [
+          "작품의 세부 디테일과 복선을 놓치지 않아 반전 장면에서 가장 큰 쾌감을 느낍니다.",
+          "시청 경험을 오래 기억하고 풍부하게 소화해서 깊이 있는 감상을 나눌 수 있습니다.",
+          "설렘을 의도적으로 늘려 작품을 더 오래 즐길 수 있는 자기 조절력이 있습니다."
+        ],
+        "watchoutsKo": [
+          "시청 속도가 느려 함께 보는 사람이 기다려야 할 때 보조를 맞추기 어려울 수 있습니다.",
+          "작품 수가 쌓이면 볼 목록이 밀려 부담감이 생길 수 있습니다."
+        ],
+        "collaborationKo": "같이 드라마를 보는 상황이라면 사전에 '오늘 몇 화까지'를 합의하면 좋습니다. 당신의 깊은 시청 방식은 상대방이 놓친 장면을 잡아내는 데 도움이 되고, 드라마를 보고 나누는 대화가 가장 풍부한 타입입니다.",
+        "shareIntroKo": "나는 한 화 한 화 깊이 음미하는 한편 음미형이에요.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/binge-watch-style/slow-savorer.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/binge-watch-style/slow-savorer-share.png",
+        "vector": {"marathon": -14, "focus": 14}
+      },
+      {
+        "code": "speed-skipper",
+        "titleKo": "스킵 고수형",
+        "summaryKo": "배속과 스킵으로 핵심만 빠르게 챙기는 효율 시청 타입입니다.",
+        "descriptionKo": "스킵 고수형에게 시청은 효율의 영역입니다. 지루한 장면이 나오면 스킵, 핵심이 아닌 전개는 배속으로 빠르게 넘깁니다. 30분 안에 3화를 보는 것도 자연스럽고, 하루에 여러 작품을 병행하기도 합니다. '다 보는 것'보다 '재미있는 장면을 최대한 많이 보는 것'이 목표입니다. 넓고 얕은 시청이 약점처럼 보일 수 있지만, 많은 작품을 경험한 만큼 장르별 감각과 트렌드 파악은 누구보다 빠릅니다.",
+        "strengthsKo": [
+          "OTT 트렌드와 화제작을 가장 빠르게 파악해서 대화 소재를 항상 가지고 있습니다.",
+          "작품을 빠르게 판단하는 눈이 있어 시간을 낭비하지 않고 재미있는 장면에만 집중합니다.",
+          "다양한 장르와 작품을 폭넓게 경험해서 취향의 스펙트럼이 넓습니다."
+        ],
+        "watchoutsKo": [
+          "빠른 속도로 많이 보다 보면 개별 작품의 감동이나 여운을 깊게 느끼기 어려울 수 있습니다.",
+          "함께 보는 상황에서 스킵·배속 습관이 동행에게 방해가 될 수 있습니다."
+        ],
+        "collaborationKo": "누군가와 처음 드라마를 같이 볼 때는 스킵 버튼을 잠깐 내려두는 것이 좋습니다. 당신이 무심코 넘긴 장면이 상대방에게는 중요한 순간일 수 있기 때문입니다. 대신 어떤 작품이 볼 만한지는 당신이 가장 잘 압니다.",
+        "shareIntroKo": "나는 배속과 스킵으로 핵심만 빠르게 챙기는 스킵 고수형이에요.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/binge-watch-style/speed-skipper.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/binge-watch-style/speed-skipper-share.png",
+        "vector": {"marathon": 14, "focus": -14}
+      },
+      {
+        "code": "ambient-viewer",
+        "titleKo": "배경 재생형",
+        "summaryKo": "드라마를 배경 삼아 다른 일을 하며 편하게 즐기는 멀티태스킹 타입입니다.",
+        "descriptionKo": "배경 재생형에게 드라마는 공간의 분위기를 만들어 주는 존재입니다. 완전히 집중하지 않아도 되고, 반쯤 흘려들으면서 밥을 먹거나 다른 일을 해도 충분히 즐겁습니다. 잠이 들 때까지 틀어 두는 것도 자연스럽고, 한 화를 다 봤는지 아닌지는 그다지 중요하지 않습니다. 억지로 몰입하지 않아도 되는 편안함이 가장 큰 가치입니다. 조용한 공간보다 뭔가 흐르는 공간에서 더 잘 쉰다면 이 타입입니다.",
+        "strengthsKo": [
+          "시청에 에너지를 과하게 쏟지 않아서 드라마를 보며 여러 일을 동시에 처리할 수 있습니다.",
+          "작품에 기대치를 크게 걸지 않아서 실망이 적고 다양한 작품을 부담 없이 시도합니다.",
+          "편안한 시청 태도로 함께 있는 사람을 자연스럽게 편하게 만드는 분위기가 있습니다."
+        ],
+        "watchoutsKo": [
+          "집중해서 보지 않다 보니 줄거리를 제대로 기억하지 못해 대화에서 빠질 수 있습니다.",
+          "내용에 깊이 빠져드는 경험이 적어서 드라마가 주는 감동이나 여운을 충분히 못 느낄 수 있습니다."
+        ],
+        "collaborationKo": "친구와 드라마를 볼 때는 미리 '나는 완전 집중 모드가 아닐 수 있다'고 말해 두면 좋습니다. 당신의 편안한 분위기 덕분에 함께 보는 자리 자체가 부담 없어지기도 합니다. 깊이 빠지고 싶은 작품이 생기면 잠깐만 폰을 내려놔 보세요.",
+        "shareIntroKo": "나는 드라마를 배경 삼아 편하게 즐기는 배경 재생형이에요.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/binge-watch-style/ambient-viewer.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/binge-watch-style/ambient-viewer-share.png",
+        "vector": {"marathon": -14, "focus": -14}
+      }
+    ]
+  }
+}
