@@ -6,11 +6,14 @@ import {
   type ManifestEntry,
   type TraitScore,
   type TraitTest,
+  computeResultRarity,
+  formatRarityKo,
   scoreTraitTest,
   sortManifestEntries,
   validateManifest,
   validateTraitTest,
 } from '../vendor/product-core.js';
+import { getStats, recordCompletion } from '../lib/statsRepository';
 
 export const Route = createRoute('/', {
   component: HubPage,
@@ -52,6 +55,7 @@ function HubPage() {
   const [error, setError] = useState<string | null>(null);
   const [entries, setEntries] = useState<ManifestEntry[]>([]);
   const [screen, setScreen] = useState<Screen>('home');
+  const [activeEntry, setActiveEntry] = useState<ManifestEntry | null>(null);
   const [test, setTest] = useState<TraitTest | null>(null);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -81,6 +85,7 @@ function HubPage() {
       if (payload.schemaVersion !== 1 || !payload.test) {
         throw new Error(`잘못된 테스트 데이터: ${entry.path}`);
       }
+      setActiveEntry(entry);
       setTest(validateTraitTest(payload.test));
       setAnswers({});
       setCurrentIndex(0);
@@ -190,8 +195,18 @@ function HubPage() {
     );
   }
 
-  if (screen === 'result' && test && score) {
-    return <ResultView test={test} score={score} topPadding={topPadding} onRestart={restart} onHome={goHome} />;
+  if (screen === 'result' && test && score && activeEntry) {
+    return (
+      <ResultView
+        test={test}
+        score={score}
+        testId={activeEntry.testId}
+        version={activeEntry.version}
+        topPadding={topPadding}
+        onRestart={restart}
+        onHome={goHome}
+      />
+    );
   }
 
   return (
@@ -217,17 +232,40 @@ function HubPage() {
 function ResultView({
   test,
   score,
+  testId,
+  version,
   topPadding,
   onRestart,
   onHome,
 }: {
   test: TraitTest;
   score: TraitScore;
+  testId: string;
+  version: number;
   topPadding: { paddingTop: number };
   onRestart: () => void;
   onHome: () => void;
 }) {
   const result = score.result;
+  const [rarityText, setRarityText] = useState<string>('아직 집계 중이에요');
+
+  // 결과 화면 진입 시 완료 1건 기록 + 최신 분포로 희소성을 계산합니다.
+  // 배포 전이면 recordCompletion이 null을 반환해 fallback 문구가 유지됩니다.
+  useEffect(() => {
+    let alive = true;
+    // 완료 기록은 fire-and-forget(트리거가 집계). 분포는 test_stats를 공개 read.
+    recordCompletion(testId, version, result.code);
+    getStats(testId, version).then((distribution) => {
+      if (!alive || !distribution) {
+        return;
+      }
+      setRarityText(formatRarityKo(computeResultRarity(distribution, result.code)));
+    });
+    return () => {
+      alive = false;
+    };
+  }, [testId, version, result.code]);
+
   const axisLabels: Record<string, string> = Object.fromEntries(
     test.axes.map((axis) => [axis.id, axis.labelKo ?? axis.id]),
   );
@@ -238,6 +276,12 @@ function ResultView({
       <Text style={styles.eyebrow}>테스트 결과</Text>
       <Text style={styles.title}>{result.titleKo}</Text>
       <Text style={styles.muted}>{result.summaryKo}</Text>
+
+      <View style={styles.rarityCard}>
+        <Text style={styles.rarityLabel}>나와 같은 성향</Text>
+        <Text style={styles.rarityValue}>{rarityText}</Text>
+      </View>
+
       {result.imagePath ? (
         <Image source={{ uri: absoluteUrl(result.imagePath) }} style={styles.resultImage} resizeMode="contain" />
       ) : null}
@@ -421,6 +465,23 @@ const styles = StyleSheet.create({
   optionDesc: {
     fontSize: 13,
     color: '#5A6472',
+  },
+  rarityCard: {
+    backgroundColor: '#EAF3F1',
+    borderRadius: 14,
+    padding: 16,
+    marginTop: 4,
+    gap: 4,
+  },
+  rarityLabel: {
+    fontSize: 13,
+    fontWeight: '600',
+    color: '#3C7A70',
+  },
+  rarityValue: {
+    fontSize: 18,
+    fontWeight: '700',
+    color: BRAND,
   },
   resultImage: {
     width: '100%',

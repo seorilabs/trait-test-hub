@@ -1,7 +1,9 @@
 // 결과 희소성("N명 중 1명") 계산. SDK 비의존 순수 로직이라 mobile/AIT가 공유한다.
 // 입력 분포는 Firestore `test_stats/<versionKey>` 문서 형태({ total, counts })를 그대로 받는다.
 
-// 이 표본 수 미만이면 "집계 중"으로 표시해, 1~2명일 때 "1명 중 1명" 같은 의미 없는 수치를 막는다.
+// 비율(%)을 노출하기 시작하는 최소 표본. 그 미만이면 "집계 중"으로 표시해 적은 표본의 비율 왜곡을 막는다.
+export const MIN_SHARE_SAMPLE = 30;
+// "N명 중 1명" 구체 숫자를 노출하기 시작하는 최소 표본.
 export const MIN_RARITY_SAMPLE = 100;
 
 /**
@@ -17,7 +19,7 @@ export const MIN_RARITY_SAMPLE = 100;
  *   - enoughSample: 표본이 충분해 화면에 노출해도 되는지
  */
 export function computeResultRarity(distribution, resultCode, options = {}) {
-  const { minSample = MIN_RARITY_SAMPLE } = options;
+  const { minShareSample = MIN_SHARE_SAMPLE, minCountSample = MIN_RARITY_SAMPLE } = options;
   if (typeof resultCode !== 'string' || resultCode.length === 0) {
     throw new Error('resultCode must be a non-empty string');
   }
@@ -29,9 +31,12 @@ export function computeResultRarity(distribution, resultCode, options = {}) {
 
   const share = total > 0 ? count / total : 0;
   const oneInN = count > 0 ? Math.max(1, Math.round(total / count)) : null;
-  const enoughSample = total >= minSample && count > 0;
+  // 비율(%)은 minShareSample(기본 30)부터, "N명 중 1명" 숫자는 minCountSample(기본 100)부터 노출.
+  const showShare = total >= minShareSample && count > 0;
+  const showCount = total >= minCountSample && count > 0;
 
-  return { resultCode, total, count, share, oneInN, enoughSample };
+  // enoughSample은 하위호환을 위해 유지한다(= showCount, "N명 중 1명" 노출 여부).
+  return { resultCode, total, count, share, oneInN, showShare, showCount, enoughSample: showCount };
 }
 
 /**
@@ -40,12 +45,16 @@ export function computeResultRarity(distribution, resultCode, options = {}) {
  * @returns {string}
  */
 export function formatRarityKo(rarity) {
-  if (!rarity || !rarity.enoughSample || rarity.oneInN === null) {
+  if (!rarity || !rarity.showShare) {
     return '아직 집계 중이에요';
   }
   const pct = rarity.share * 100;
   const pctText = pct < 1 ? '1% 미만' : `${Math.round(pct)}%`;
-  return `${rarity.oneInN.toLocaleString('ko-KR')}명 중 1명 · 전체의 ${pctText}`;
+  // 100명 이상이면 "N명 중 1명 · 전체의 X%", 30~99명이면 비율만 보여준다.
+  if (rarity.showCount && rarity.oneInN !== null) {
+    return `${rarity.oneInN.toLocaleString('ko-KR')}명 중 1명 · 전체의 ${pctText}`;
+  }
+  return `전체의 ${pctText}`;
 }
 
 function normalizeCounts(distribution) {

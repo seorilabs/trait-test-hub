@@ -37,6 +37,8 @@ export interface Axis {
 }
 
 export interface TraitTest {
+  id: string;
+  version: number;
   titleKo: string;
   questions: Question[];
   axes: Axis[];
@@ -44,6 +46,7 @@ export interface TraitTest {
 }
 
 export interface TraitResult {
+  code: string;
   titleKo: string;
   summaryKo: string;
   descriptionKo?: string;
@@ -65,3 +68,31 @@ export function validateTraitTest(data: unknown): TraitTest;
 export function scoreTraitTest(test: TraitTest, answers: Record<string, string>): TraitScore;
 export function sortManifestEntries(entries: ManifestEntry[], sort: string): ManifestEntry[];
 export function filterManifestEntries(entries: ManifestEntry[], filters: unknown): ManifestEntry[];
+
+// 결과 통계("N명 중 1명") — Firestore test_stats 분포로 희소성 계산.
+export interface ResultDistribution {
+  total: number;
+  counts: Record<string, number>;
+}
+
+export interface ResultRarity {
+  resultCode: string;
+  total: number;
+  count: number;
+  share: number;
+  oneInN: number | null;
+  showShare: boolean;
+  showCount: boolean;
+  enoughSample: boolean;
+}
+
+export const MIN_SHARE_SAMPLE: number;
+export const MIN_RARITY_SAMPLE: number;
+
+export function computeResultRarity(
+  distribution: ResultDistribution | Record<string, number>,
+  resultCode: string,
+  options?: { minSample?: number },
+): ResultRarity;
+
+export function formatRarityKo(rarity: ResultRarity | null): string;

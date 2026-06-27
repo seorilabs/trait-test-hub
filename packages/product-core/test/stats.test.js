@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { computeResultRarity, formatRarityKo, MIN_RARITY_SAMPLE } from '../src/index.js';
+import { computeResultRarity, formatRarityKo } from '../src/index.js';
 
 test('computes one-in-N rarity from a distribution doc', () => {
   const distribution = { total: 999, counts: { a: 80, b: 120, c: 800 } };
@@ -19,10 +19,24 @@ test('accepts a bare counts map', () => {
   assert.equal(rarity.oneInN, 2);
 });
 
-test('marks insufficient sample below the threshold', () => {
-  const rarity = computeResultRarity({ a: 3, b: 4 }, 'a', { minSample: MIN_RARITY_SAMPLE });
-  assert.equal(rarity.enoughSample, false);
+test('marks insufficient sample below the share threshold (<30)', () => {
+  const rarity = computeResultRarity({ a: 3, b: 4 }, 'a');
+  assert.equal(rarity.showShare, false);
+  assert.equal(rarity.showCount, false);
   assert.equal(formatRarityKo(rarity), '아직 집계 중이에요');
+});
+
+test('shows share only between 30 and 99 samples', () => {
+  const rarity = computeResultRarity({ a: 10, b: 40 }, 'a'); // total 50
+  assert.equal(rarity.showShare, true);
+  assert.equal(rarity.showCount, false);
+  assert.equal(formatRarityKo(rarity), '전체의 20%');
+});
+
+test('shows one-in-N once 100 samples reached', () => {
+  const rarity = computeResultRarity({ a: 20, b: 80 }, 'a'); // total 100
+  assert.equal(rarity.showCount, true);
+  assert.equal(formatRarityKo(rarity), '5명 중 1명 · 전체의 20%');
 });
 
 test('handles a result code with zero completions', () => {

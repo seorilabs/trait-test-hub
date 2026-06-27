@@ -36,9 +36,14 @@ pnpm --dir apps/ait bundle:core  # product-core를 src/vendor로 번들 (dev/bui
 
 `granite dev`(Metro) 실행 전 루트 `pages-dist/`가 남아 있으면 `apps/ait` 복사본과 패키지 name이 겹쳐 `Duplicated files or mocks` haste 충돌이 납니다. dev 전에 `rm -rf pages-dist`로 정리하세요(`pages-dist`는 `build:pages` 산출물이며 gitignore 대상). dev 서버 종료는 `lsof -ti:8081 | xargs kill`로 확실히 정리합니다(좀비 서버가 8081을 점유하면 EADDRINUSE).
 
+## 결과 통계 ("나와 같은 성향")
+
+결과 화면에서 같은 결과 유형의 희소성을 보여줍니다. `src/lib/statsRepository.ts`가 firestore REST API로 직접 접근합니다 — 완료는 `completions`에 write(서버 트리거가 `test_stats`로 집계), 분포는 `test_stats`를 공개 read. org 정책상 Cloud Function 직접 호출이 막혀 있고, firebase Web SDK firestore는 Node `crypto` 의존으로 Metro 번들에서 깨지므로 **REST(fetch)** 로 우회합니다. 표시 정책·집계 흐름은 `docs/stats.md` 참고.
+
 ## Release blockers (출시 전 확정)
 
 - `granite.config.ts`의 `brand.icon`: 현재 placehold.co 임시 URL → AppsInToss 콘솔 업로드 HTTPS URL로 교체.
+- 결과 통계 조작 방지: `completions` create가 현재 형식만 검증 → 출시 전 App Check(firestore enforcement) 또는 rate-limit 보강(`docs/stats.md`).
 - `src/pages/index.tsx`의 `CONTENT_ORIGIN`: 현재 `https://trait-test-hub.web.app` 기본값 → 실제 Firebase Hosting origin(커스텀 도메인 포함) 확정. 테스트팩 manifest/JSON을 Hosting에 배포해야 런타임 로딩이 동작.
 - AppsInToss 콘솔 등록: 카테고리, 등록 이미지(logo 600×600, thumbnail, 세로 스크린샷 3장), 고객센터 연락처.
 - TDS 컴포넌트 적용: 현재 화면은 RN 기본 컴포넌트 + `TDSProvider` 래핑. 심사 정합을 위해 핵심 UI를 TDS 컴포넌트로 전환 검토.

@@ -1,12 +1,14 @@
 // 결과 통계 집계 Cloud Functions.
 //
+// org 정책상 public 함수 호출(allUsers run.invoker)이 막혀, 클라이언트는 함수를 직접 호출하지 않는다.
+// 대신 클라이언트가 completions/{id}에 완료 1건을 write하고, 이 firestore 트리거가
+// test_stats/<versionKey>에 집계한다(트리거는 호출이 아닌 이벤트라 org 정책과 무관하다).
+// 분포 read는 test_stats가 공개 read라 클라이언트가 firestore에서 직접 읽는다.
+//
 // 데이터 모델: test_stats/<versionKey>  (versionKey = `${testId}@${version}`)
 //   { testId, version, total, counts: { <resultCode>: n }, updatedAt }
-//
-// 쓰기는 이 함수만 가능하다(firestore.rules에서 test_stats client write 금지).
-// 읽기는 공개라 mobile은 Firestore SDK로 직접 읽고, AIT는 getStats를 호출한다.
 import { setGlobalOptions } from 'firebase-functions/v2';
-import { onCall, HttpsError } from 'firebase-functions/v2/https';
+import { onDocumentCreated } from 'firebase-functions/v2/firestore';
 import { initializeApp } from 'firebase-admin/app';
 import { FieldValue, getFirestore } from 'firebase-admin/firestore';
 
@@ -23,54 +25,37 @@ function versionKeyOf(testId, version) {
   return `${testId}@${version}`;
 }
 
-function validateKeys(data) {
-  const testId = data?.testId;
-  const version = data?.version;
-  const resultCode = data?.resultCode;
-  if (typeof testId !== 'string' || !TEST_ID_PATTERN.test(testId)) {
-    throw new HttpsError('invalid-argument', 'invalid testId');
+// completions/{id} 생성 시 test_stats에 집계하고, 처리한 완료 문서는 삭제해 큐를 비운다.
+// 잘못된 형식의 문서는 집계하지 않고 삭제만 한다(rules에서 1차 검증, 여기서 2차 검증).
+export const aggregateCompletion = onDocumentCreated('completions/{completionId}', async (event) => {
+  const snap = event.data;
+  if (!snap) {
+    return;
   }
-  if (!Number.isInteger(version) || version < 1) {
-    throw new HttpsError('invalid-argument', 'invalid version');
-  }
-  if (resultCode !== undefined && (typeof resultCode !== 'string' || !RESULT_CODE_PATTERN.test(resultCode))) {
-    throw new HttpsError('invalid-argument', 'invalid resultCode');
-  }
-  return { testId, version, resultCode };
-}
+  const data = snap.data() ?? {};
+  const { testId, version, resultCode } = data;
 
-// 완료 1건을 기록하고 갱신된 분포를 돌려준다.
-// App Check로 정품 앱에서 온 요청만 받아 카운트 조작을 막는다.
-export const recordCompletion = onCall({ enforceAppCheck: true }, async (request) => {
-  const { testId, version, resultCode } = validateKeys(request.data);
-  if (!resultCode) {
-    throw new HttpsError('invalid-argument', 'resultCode is required');
+  const valid =
+    typeof testId === 'string' &&
+    TEST_ID_PATTERN.test(testId) &&
+    Number.isInteger(version) &&
+    version >= 1 &&
+    typeof resultCode === 'string' &&
+    RESULT_CODE_PATTERN.test(resultCode);
+
+  if (valid) {
+    await db.collection('test_stats').doc(versionKeyOf(testId, version)).set(
+      {
+        testId,
+        version,
+        total: FieldValue.increment(1),
+        counts: { [resultCode]: FieldValue.increment(1) },
+        updatedAt: FieldValue.serverTimestamp(),
+      },
+      { merge: true },
+    );
   }
 
-  const ref = db.collection('test_stats').doc(versionKeyOf(testId, version));
-  await ref.set(
-    {
-      testId,
-      version,
-      total: FieldValue.increment(1),
-      counts: { [resultCode]: FieldValue.increment(1) },
-      updatedAt: FieldValue.serverTimestamp(),
-    },
-    { merge: true },
-  );
-
-  const snap = await ref.get();
-  const stats = snap.data() ?? {};
-  return { total: stats.total ?? 0, counts: stats.counts ?? {} };
-});
-
-// 완료 없이 분포만 조회한다(목록/상세 미리보기, Firestore SDK 없는 AIT용).
-export const getStats = onCall(async (request) => {
-  const { testId, version } = validateKeys(request.data);
-  const snap = await db.collection('test_stats').doc(versionKeyOf(testId, version)).get();
-  if (!snap.exists) {
-    return { total: 0, counts: {} };
-  }
-  const stats = snap.data() ?? {};
-  return { total: stats.total ?? 0, counts: stats.counts ?? {} };
+  // 집계 후 완료 문서 삭제(큐 역할, 누적 방지). 삭제 실패해도 집계 결과는 유지된다.
+  await snap.ref.delete().catch(() => {});
 });

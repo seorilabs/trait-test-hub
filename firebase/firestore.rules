@@ -7,9 +7,24 @@ service cloud.firestore {
       allow write: if false;
     }
 
-    match /test_stats/{testId} {
+    // 결과 분포: 공개 읽기, 쓰기는 집계 트리거(admin)만.
+    match /test_stats/{versionKey} {
       allow read: if true;
       allow write: if false;
+    }
+
+    // 완료 기록 큐: 클라이언트가 1건 생성만, 형식만 검증한다(집계 트리거가 읽고 삭제).
+    // 누구도 읽거나 수정/삭제할 수 없고, 본문은 정확히 testId/version/resultCode 세 키만 허용한다.
+    // (App Check 기반 조작 방지는 후속 과제 — docs/stats.md 참고)
+    match /completions/{completionId} {
+      allow read, update, delete: if false;
+      allow create: if request.resource.data.keys().hasOnly(['testId', 'version', 'resultCode'])
+        && request.resource.data.testId is string
+        && request.resource.data.testId.size() <= 64
+        && request.resource.data.version is int
+        && request.resource.data.version >= 1
+        && request.resource.data.resultCode is string
+        && request.resource.data.resultCode.size() <= 64;
     }
 
     match /{document=**} {
