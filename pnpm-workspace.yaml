@@ -2,8 +2,41 @@ packages:
   - apps/*
   - packages/*
 
+# granite 1.0.33은 use-back-event 배럴에서 useBackEventContext를 누락해
+# @apps-in-toss/framework·@toss/tds-react-native의 top-level import가 깨집니다.
+# upstream 수정 전까지 배럴 re-export 한 줄을 보정합니다.
+patchedDependencies:
+  '@granite-js/react-native@1.0.33': patches/@granite-js__react-native@1.0.33.patch
+
 allowBuilds:
   '@sentry/cli': true
   '@swc/core': true
   esbuild: true
   protobufjs: true
+
+minimumReleaseAgeExclude:
+  - '@granite-js/blur-view@1.0.33'
+  - '@granite-js/brownfield-module@1.0.33'
+  - '@granite-js/cli@1.0.33'
+  - '@granite-js/image@1.0.33'
+  - '@granite-js/jest@1.0.33'
+  - '@granite-js/lottie@1.0.33'
+  - '@granite-js/mpack@1.0.33'
+  - '@granite-js/native@1.0.33'
+  - '@granite-js/plugin-core@1.0.33'
+  - '@granite-js/react-native@1.0.33'
+  - '@granite-js/style-utils@1.0.33'
+  - '@granite-js/utils@1.0.33'
+  - '@granite-js/video@1.0.33'
+  - '@granite-js/plugin-hermes@1.0.33'
+  - '@granite-js/plugin-router@1.0.33'
+  - babel-preset-granite@1.0.33
+  - '@apps-in-toss/analytics@2.10.1'
+  - '@apps-in-toss/cli@2.10.1'
+  - '@apps-in-toss/framework@2.10.1'
+  - '@apps-in-toss/native-modules@2.10.1'
+  - '@apps-in-toss/plugin-compat@2.10.1'
+  - '@apps-in-toss/plugins@2.10.1'
+  - '@apps-in-toss/types@2.10.1'
+  - '@apps-in-toss/user-scripts@2.10.1'
+  - '@apps-in-toss/web-config@2.10.1'

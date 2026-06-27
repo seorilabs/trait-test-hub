@@ -1,0 +1,23 @@
+node_modules/
+dist/
+npm-debug.log
+
+.yarn/*
+.pnp.*
+yarn-error.log
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+.env
+.granite
+.swc
+.DS_Store
+
+# product-core 번들 산출물 (pnpm bundle:core가 생성)
+src/vendor/
+
+# AppsInToss 빌드 패키지
+*.ait

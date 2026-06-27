@@ -1,0 +1,7 @@
+diff --git a/src/use-back-event/index.ts b/src/use-back-event/index.ts
+--- a/src/use-back-event/index.ts
++++ b/src/use-back-event/index.ts
+@@ -1,2 +1,3 @@
+ export * from './useBackEvent';
+ export * from './useBackHandler';
++export * from './useBackEventContext';

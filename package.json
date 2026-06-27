@@ -27,6 +27,7 @@
     "check:release:strict": "node scripts/check-release-blockers.mjs --strict",
     "build:android": "pnpm --dir apps/mobile build:android",
     "build:ios": "pnpm --dir apps/mobile build:ios",
-    "build:ait": "pnpm --dir apps/ait build"
+    "build:ait": "pnpm --dir apps/ait build",
+    "bootstrap:ait": "bash scripts/bootstrap_ait.sh"
   }
 }
