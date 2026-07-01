@@ -1,10 +1,11 @@
+# GitHub Pages 배포 전용 워크플로우.
+# 정적 품질 체크(pnpm check)는 static-checks.yml(org 재사용 caller)로 분리했고,
+# 여기서는 Pages 빌드 + 배포만 수행한다. org에 RN web-Pages 재사용 워크플로우가 없어 인라인 잡을 유지한다.
+# public repo이므로 빌드/배포 모두 self-hosted(ARC)가 아닌 ubuntu-latest로 라우팅한다.
 name: Deploy GitHub Pages
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
     branches:
       - main
   workflow_dispatch:
@@ -16,11 +17,11 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
-    runs-on: ${{ github.event.repository.private && github.event_name != 'pull_request' && 'seorilabs-rpi-arm64' || 'ubuntu-latest' }}
+    runs-on: ${{ github.event.repository.private && 'seorilabs-rpi-arm64' || 'ubuntu-latest' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -28,16 +29,14 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: '24'
+          node-version: "24"
+          check-latest: false
 
       - name: Enable pnpm
         run: corepack enable
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-
-      - name: Check
-        run: pnpm check
 
       - name: Build Pages artifact
         run: pnpm build:pages
@@ -49,9 +48,9 @@ jobs:
         uses: actions/upload-pages-artifact@v5
         with:
           path: pages-dist
+          retention-days: 3
 
   deploy:
-    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
     needs: build
     runs-on: ${{ github.event.repository.private && 'seorilabs-rpi-arm64' || 'ubuntu-latest' }}
     environment:
