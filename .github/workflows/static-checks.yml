@@ -1,0 +1,32 @@
+# Seorilabs org 표준 정적 품질 게이트 caller.
+# main 병합/PR/수동 실행 시 org 재사용 워크플로우로 lint/typecheck/test/style + 정적 게이트만 수행한다.
+# public repo이므로 PR 잡은 self-hosted(ARC) 러너에 노출하지 않고 ubuntu-latest로 라우팅한다.
+name: Static Checks
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: static-checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  static-checks:
+    uses: seorilabs/.github/.github/workflows/rn-static-checks.yml@main
+    secrets: inherit
+    with:
+      # public repo → ubuntu, private면 ARC. ARC self-hosted는 public PR 경로에 노출하지 않는다.
+      runs_on: ${{ github.event.repository.private && 'seorilabs-rpi-arm64' || 'ubuntu-latest' }}
+      node_version: "24"
+      package_manager: "pnpm"
+      pnpm_version: "11.3.0"
+      check_command: pnpm check
