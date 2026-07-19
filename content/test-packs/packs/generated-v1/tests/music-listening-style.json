@@ -1,0 +1,480 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "test": {
+    "id": "music-listening-style",
+    "version": 1,
+    "status": "published",
+    "titleKo": "음악 듣는 스타일 테스트",
+    "category": "music",
+    "axes": [
+      {
+        "id": "digging",
+        "labelKo": "새 음악 탐험 선호"
+      },
+      {
+        "id": "immersion",
+        "labelKo": "음악 몰입 선호"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q01",
+        "textKo": "새 플레이리스트를 만들 때 나는?",
+        "options": [
+          {
+            "code": "dig-and-listen",
+            "textKo": "매번 처음 듣는 아티스트를 찾아 넣고 한 곡씩 끝까지 들어본다",
+            "descriptionKo": "새 이름을 발굴하고 곡을 온전히 소화하는 게 즐겁습니다.",
+            "scores": {
+              "digging": 2,
+              "immersion": 2
+            }
+          },
+          {
+            "code": "fresh-flow",
+            "textKo": "요즘 뜨는 신곡을 쭉 담아 흐르게 두는 편이다",
+            "descriptionKo": "최신 곡들이 배경으로 흐르는 감각을 좋아합니다.",
+            "scores": {
+              "digging": 2,
+              "immersion": -2
+            }
+          },
+          {
+            "code": "favorites-first",
+            "textKo": "몇 년째 아끼는 최애 곡들로 정성껏 채운다",
+            "descriptionKo": "검증된 인생곡으로 리스트를 단단히 세웁니다.",
+            "scores": {
+              "digging": -2,
+              "immersion": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q02",
+        "textKo": "이동하는 길에 음악을 들을 때?",
+        "options": [
+          {
+            "code": "album-deep-dive",
+            "textKo": "안 들어본 앨범을 통째로 처음부터 끝까지 듣는다",
+            "descriptionKo": "앨범 한 장을 흐름 그대로 따라가며 몰입합니다.",
+            "scores": {
+              "digging": 2,
+              "immersion": 2
+            }
+          },
+          {
+            "code": "scan-new",
+            "textKo": "새로 나온 곡들을 훑으며 마음에 드는 걸 저장한다",
+            "descriptionKo": "신곡을 가볍게 스캔하며 취향에 맞는 걸 골라 둡니다.",
+            "scores": {
+              "digging": 2,
+              "immersion": -2
+            }
+          },
+          {
+            "code": "familiar-bg",
+            "textKo": "늘 듣던 익숙한 곡을 배경처럼 틀어둔다",
+            "descriptionKo": "익숙한 곡을 배경으로 두고 마음을 편하게 둡니다.",
+            "scores": {
+              "digging": -2,
+              "immersion": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q03",
+        "textKo": "정말 마음에 드는 곡을 만나면?",
+        "options": [
+          {
+            "code": "artist-rabbit-hole",
+            "textKo": "그 아티스트의 다른 곡과 비슷한 음악까지 파고든다",
+            "descriptionKo": "한 곡을 실마리 삼아 주변 음악까지 깊이 탐험합니다.",
+            "scores": {
+              "digging": 2,
+              "immersion": 2
+            }
+          },
+          {
+            "code": "loop-and-savor",
+            "textKo": "가사와 편곡을 곱씹으며 며칠을 반복해 듣는다",
+            "descriptionKo": "좋아하는 곡을 완전히 소화할 때까지 반복합니다.",
+            "scores": {
+              "digging": -2,
+              "immersion": 2
+            }
+          },
+          {
+            "code": "add-and-flow",
+            "textKo": "플레이리스트에 넣고 다른 곡들과 자연스럽게 흘려 듣는다",
+            "descriptionKo": "좋은 곡도 일상 흐름 속에 편하게 섞어 둡니다.",
+            "scores": {
+              "digging": -2,
+              "immersion": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q04",
+        "textKo": "집중해서 일이나 공부를 할 때 음악은?",
+        "options": [
+          {
+            "code": "new-as-bg",
+            "textKo": "새로 나온 곡을 배경으로 깔아 분위기를 바꾼다",
+            "descriptionKo": "신곡으로 공기를 환기하되 곡에 매이지는 않습니다.",
+            "scores": {
+              "digging": 2,
+              "immersion": -2
+            }
+          },
+          {
+            "code": "one-album-focus",
+            "textKo": "가장 좋아하는 앨범 하나를 처음부터 몰입해 듣는다",
+            "descriptionKo": "익숙한 앨범에 깊이 잠겨 집중력을 끌어올립니다.",
+            "scores": {
+              "digging": -2,
+              "immersion": 2
+            }
+          },
+          {
+            "code": "safe-loop",
+            "textKo": "익숙해서 신경 안 쓰이는 곡만 반복 재생한다",
+            "descriptionKo": "귀에 걸리지 않는 익숙한 곡을 배경으로 돌립니다.",
+            "scores": {
+              "digging": -2,
+              "immersion": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q05",
+        "textKo": "친구가 \"이 노래 어때?\" 하고 추천하면?",
+        "options": [
+          {
+            "code": "explore-recommendation",
+            "textKo": "바로 듣고 관련 아티스트까지 찾아보며 대화를 잇는다",
+            "descriptionKo": "추천 한 곡을 새로운 탐험의 입구로 삼습니다.",
+            "scores": {
+              "digging": 2,
+              "immersion": 2
+            }
+          },
+          {
+            "code": "save-for-later",
+            "textKo": "일단 저장해 두고 나중에 가볍게 들어본다",
+            "descriptionKo": "새 곡은 반갑지만 지금 흐름을 깨지는 않습니다.",
+            "scores": {
+              "digging": 2,
+              "immersion": -2
+            }
+          },
+          {
+            "code": "share-my-favorite",
+            "textKo": "내 최애 곡을 대신 들려주며 그 곡 이야기를 한다",
+            "descriptionKo": "새 곡보다 이미 사랑하는 곡을 함께 나누고 싶습니다.",
+            "scores": {
+              "digging": -2,
+              "immersion": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q06",
+        "textKo": "음악 스트리밍 앱을 열면 먼저 하는 것은?",
+        "options": [
+          {
+            "code": "hunt-new-releases",
+            "textKo": "새 발매 탭에서 못 보던 아티스트를 골라 재생한다",
+            "descriptionKo": "새로 나온 이름을 먼저 뒤지는 게 첫 습관입니다.",
+            "scores": {
+              "digging": 2,
+              "immersion": 2
+            }
+          },
+          {
+            "code": "press-play-mix",
+            "textKo": "추천 믹스를 그냥 재생 버튼 눌러 흐르게 둔다",
+            "descriptionKo": "알아서 골라 주는 새 곡 믹스를 가볍게 즐깁니다.",
+            "scores": {
+              "digging": 2,
+              "immersion": -2
+            }
+          },
+          {
+            "code": "my-usual-list",
+            "textKo": "내가 만든 익숙한 플레이리스트를 바로 튼다",
+            "descriptionKo": "고민 없이 늘 듣던 나만의 리스트로 직행합니다.",
+            "scores": {
+              "digging": -2,
+              "immersion": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q07",
+        "textKo": "처음 들어보는 장르를 마주치면?",
+        "options": [
+          {
+            "code": "learn-the-genre",
+            "textKo": "대표곡부터 찾아 들으며 그 장르를 알아간다",
+            "descriptionKo": "낯선 장르도 대표곡을 짚으며 깊이 파고듭니다.",
+            "scores": {
+              "digging": 2,
+              "immersion": 2
+            }
+          },
+          {
+            "code": "deepen-my-lane",
+            "textKo": "익숙한 장르 안에서 더 깊이 좋아하는 곡을 판다",
+            "descriptionKo": "넓히기보다 좋아하는 결을 더 깊게 파고듭니다.",
+            "scores": {
+              "digging": -2,
+              "immersion": 2
+            }
+          },
+          {
+            "code": "skip-and-return",
+            "textKo": "취향 아니면 넘기고 늘 듣던 걸로 돌아온다",
+            "descriptionKo": "낯선 소리는 가볍게 흘리고 익숙한 곳으로 돌아옵니다.",
+            "scores": {
+              "digging": -2,
+              "immersion": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q08",
+        "textKo": "노래의 가사를 대하는 태도는?",
+        "options": [
+          {
+            "code": "mood-over-lyrics",
+            "textKo": "가사보다 그날 분위기에 맞는 새 곡이면 충분하다",
+            "descriptionKo": "가사 해석보다 지금 분위기에 맞는 새 곡이 우선입니다.",
+            "scores": {
+              "digging": 2,
+              "immersion": -2
+            }
+          },
+          {
+            "code": "memorize-lyrics",
+            "textKo": "좋아하는 곡의 가사는 외울 만큼 곱씹는다",
+            "descriptionKo": "아끼는 곡의 가사를 곱씹으며 깊이 빠져듭니다.",
+            "scores": {
+              "digging": -2,
+              "immersion": 2
+            }
+          },
+          {
+            "code": "melody-background",
+            "textKo": "가사는 크게 신경 쓰지 않고 익숙한 멜로디를 튼다",
+            "descriptionKo": "가사보다 익숙한 멜로디의 편안함을 택합니다.",
+            "scores": {
+              "digging": -2,
+              "immersion": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q09",
+        "textKo": "콘서트나 공연을 대하는 나는?",
+        "options": [
+          {
+            "code": "seek-new-shows",
+            "textKo": "새로 알게 된 아티스트의 공연도 궁금해 찾아본다",
+            "descriptionKo": "처음 접한 아티스트의 무대까지 챙겨 보고 싶습니다.",
+            "scores": {
+              "digging": 2,
+              "immersion": 2
+            }
+          },
+          {
+            "code": "festival-vibe",
+            "textKo": "라인업이 화제인 페스티벌을 가볍게 즐기러 간다",
+            "descriptionKo": "누가 나오든 그 자리의 분위기 자체를 즐깁니다.",
+            "scores": {
+              "digging": 2,
+              "immersion": -2
+            }
+          },
+          {
+            "code": "repeat-favorite-show",
+            "textKo": "최애 아티스트 공연은 몇 번이고 다시 간다",
+            "descriptionKo": "사랑하는 무대는 반복해서 다시 찾는 편입니다.",
+            "scores": {
+              "digging": -2,
+              "immersion": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q10",
+        "textKo": "한 곡을 여러 번 반복해서 듣는가?",
+        "options": [
+          {
+            "code": "replay-to-discover",
+            "textKo": "새 곡을 반복하며 구석구석 다른 소리를 찾아 듣는다",
+            "descriptionKo": "반복 재생으로 새 곡의 숨은 디테일을 캐냅니다.",
+            "scores": {
+              "digging": 2,
+              "immersion": 2
+            }
+          },
+          {
+            "code": "keep-skipping",
+            "textKo": "반복보다 새 곡으로 계속 넘기는 편이다",
+            "descriptionKo": "같은 곡에 머물기보다 새 곡으로 계속 흘러갑니다.",
+            "scores": {
+              "digging": 2,
+              "immersion": -2
+            }
+          },
+          {
+            "code": "comfort-repeat",
+            "textKo": "익숙한 곡 몇 개를 편하게 계속 돌린다",
+            "descriptionKo": "손에 익은 몇 곡을 편안하게 반복해 듣습니다.",
+            "scores": {
+              "digging": -2,
+              "immersion": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q11",
+        "textKo": "음악을 남과 나누는 방식은?",
+        "options": [
+          {
+            "code": "curator-share",
+            "textKo": "발굴한 숨은 곡을 먼저 소개하는 걸 즐긴다",
+            "descriptionKo": "아직 안 알려진 곡을 먼저 꺼내 보이는 게 즐겁습니다.",
+            "scores": {
+              "digging": 2,
+              "immersion": 2
+            }
+          },
+          {
+            "code": "explain-anthem",
+            "textKo": "내 인생곡의 좋은 포인트를 진지하게 설명한다",
+            "descriptionKo": "아끼는 곡이 왜 좋은지 진지하게 풀어 설명합니다.",
+            "scores": {
+              "digging": -2,
+              "immersion": 2
+            }
+          },
+          {
+            "code": "set-the-mood",
+            "textKo": "분위기에 맞는 익숙한 곡을 함께 틀어둔다",
+            "descriptionKo": "그 자리에 어울리는 익숙한 곡으로 분위기를 맞춥니다.",
+            "scores": {
+              "digging": -2,
+              "immersion": -2
+            }
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "code": "crate-digger",
+        "titleKo": "디깅 탐험가형",
+        "summaryKo": "안 들어본 음악을 먼저 발굴하고 곡을 깊이 파고드는, 리스너 중의 탐험가 타입입니다.",
+        "descriptionKo": "디깅 탐험가형에게 음악은 매번 새로 열리는 지도입니다. 새 발매 탭과 낯선 아티스트, 처음 듣는 장르를 먼저 뒤지고, 마음에 드는 곡을 만나면 주변 음악까지 파고들어 자기 것으로 만듭니다. 한 곡을 반복하더라도 그건 질려서가 아니라 숨은 소리를 더 캐내기 위해서입니다. 그래서 이 타입의 플레이리스트는 늘 갱신 중이고, 남들이 아직 모르는 좋은 곡이 가장 많습니다.",
+        "strengthsKo": [
+          "남들보다 먼저 좋은 곡과 새 아티스트를 발굴해 주변의 음악 지도를 넓혀 줍니다.",
+          "한 곡을 끝까지 파고들어 소리의 디테일과 맥락을 자기 것으로 소화합니다.",
+          "낯선 장르 앞에서도 주저 없이 대표곡부터 짚으며 탐험을 시작합니다."
+        ],
+        "watchoutsKo": [
+          "늘 새것을 좇다 보면 정작 좋아했던 곡을 충분히 음미하지 못하고 지나칠 수 있습니다.",
+          "발굴한 곡을 강하게 권하다 보면 상대의 취향 속도와 어긋날 수 있으니 살펴보면 좋습니다."
+        ],
+        "collaborationKo": "함께 듣는 사람들에게는 새 곡을 소개하되 상대가 지금 그 곡을 받을 준비가 되었는지 한 번 물어봐 주면 좋습니다. 한 달에 한 번은 서로의 인생곡을 천천히 나누는 시간을 두면, 탐험가의 발굴력이 관계 안에서도 즐거움으로 남습니다.",
+        "shareIntroKo": "나는 안 들어본 음악부터 파고드는 디깅 탐험가형이에요.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/music-listening-style/crate-digger.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/music-listening-style/crate-digger-share.png",
+        "vector": {
+          "digging": 14,
+          "immersion": 12
+        }
+      },
+      {
+        "code": "anthem-replayer",
+        "titleKo": "최애곡 몰입가형",
+        "summaryKo": "아끼는 인생곡을 깊이 반복해 들으며 곡과 감정으로 이어지는 몰입형 리스너입니다.",
+        "descriptionKo": "최애곡 몰입가형에게 음악은 넓히는 것이 아니라 깊어지는 것입니다. 새 곡을 좇기보다 이미 사랑하는 곡을 며칠이고 반복하며 가사와 편곡, 그날의 감정까지 곡에 겹쳐 듣습니다. 좋아하는 앨범 하나에 완전히 잠기는 집중력이 있고, 그 곡의 좋은 포인트를 남에게 진지하게 설명할 줄도 압니다. 이 타입에게 인생곡은 단순한 재생 목록이 아니라 자기 이야기의 일부입니다.",
+        "strengthsKo": [
+          "한 곡을 깊이 소화해 가사와 편곡의 결까지 온전히 자기 것으로 만듭니다.",
+          "좋아하는 앨범에 몰입하는 집중력으로 감정과 순간을 진하게 남깁니다.",
+          "아끼는 곡의 매력을 진지하게 풀어내 듣는 사람에게 곡의 이야기를 전합니다."
+        ],
+        "watchoutsKo": [
+          "익숙한 곡에만 머물다 보면 취향과 잘 맞을 새 음악을 놓칠 수 있습니다.",
+          "같은 곡의 감정에 오래 잠기면 기분의 흐름까지 곡에 묶일 수 있으니 살펴보면 좋습니다."
+        ],
+        "collaborationKo": "함께 듣는 사람들과는 내 인생곡을 나누는 만큼 상대가 아끼는 곡에도 한 번 깊이 귀 기울여 주면 좋습니다. 가끔은 친구가 건넨 새 곡을 며칠 곁에 두고 들어 보면, 몰입의 깊이는 지키면서 취향의 폭도 함께 넓어집니다.",
+        "shareIntroKo": "나는 인생곡을 깊이 반복해 듣는 최애곡 몰입가형이에요.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/music-listening-style/anthem-replayer.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/music-listening-style/anthem-replayer-share.png",
+        "vector": {
+          "digging": -14,
+          "immersion": 12
+        }
+      },
+      {
+        "code": "newwave-surfer",
+        "titleKo": "신곡 서핑형",
+        "summaryKo": "쏟아지는 신곡을 가볍게 훑으며 최신 흐름을 배경처럼 즐기는 트렌드 리스너입니다.",
+        "descriptionKo": "신곡 서핑형은 음악의 최신 물결 위를 가볍게 미끄러집니다. 새 발매와 추천 믹스를 부지런히 훑으며 마음에 드는 곡을 저장하지만, 한 곡에 오래 매이기보다 다음 곡으로 계속 흘러갑니다. 곡은 그날의 분위기를 바꾸는 배경이고, 페스티벌도 라인업보다 그 자리의 공기를 즐기러 갑니다. 덕분에 이 타입은 요즘 무슨 곡이 뜨는지 가장 빨리 감지하는 안테나를 가지고 있습니다.",
+        "strengthsKo": [
+          "쏟아지는 신곡 속에서 지금 뜨는 흐름을 누구보다 빠르게 감지합니다.",
+          "한 곡에 매이지 않아 어떤 자리에서도 분위기에 맞는 곡을 유연하게 고릅니다.",
+          "가볍게 훑는 감각으로 폭넓은 곡을 접하며 대화 소재를 늘 갖고 있습니다."
+        ],
+        "watchoutsKo": [
+          "새 곡을 계속 넘기다 보면 정작 마음에 들었던 곡을 깊이 즐기지 못하고 지나칠 수 있습니다.",
+          "흐름만 좇다가 진짜 취향으로 남는 곡이 무엇인지 흐릿해질 수 있으니 가끔 돌아보면 좋습니다."
+        ],
+        "collaborationKo": "함께 듣는 사람들에게는 최신 곡을 빠르게 공유해 주는 것이 큰 즐거움입니다. 다만 가끔은 마음에 든 곡 하나를 며칠 곁에 두고 천천히 들어 보면, 넓은 안테나에 깊이까지 더해져 나만의 취향이 또렷해집니다.",
+        "shareIntroKo": "나는 신곡을 가볍게 훑으며 흐름을 타는 신곡 서핑형이에요.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/music-listening-style/newwave-surfer.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/music-listening-style/newwave-surfer-share.png",
+        "vector": {
+          "digging": 14,
+          "immersion": -12
+        }
+      },
+      {
+        "code": "mood-bgm",
+        "titleKo": "분위기 BGM형",
+        "summaryKo": "익숙한 곡을 배경으로 편안하게 두며 그때의 분위기를 챙기는 무드 중심 리스너입니다.",
+        "descriptionKo": "분위기 BGM형에게 음악은 앞에 나서는 주인공이 아니라 공간을 채우는 편안한 공기입니다. 새 곡을 굳이 찾기보다 손에 익은 몇 곡을 상황에 맞게 돌리고, 가사를 분석하기보다 익숙한 멜로디가 주는 안정감을 택합니다. 일할 때도 신경 쓰이지 않는 곡을 배경으로 두고, 사람들과 있을 때는 그 자리에 어울리는 곡으로 분위기를 맞춥니다. 이 타입의 강점은 음악을 삶의 온도로 쓰는 감각입니다.",
+        "strengthsKo": [
+          "상황과 공간에 어울리는 익숙한 곡을 골라 편안한 분위기를 만들어 냅니다.",
+          "음악에 휘둘리지 않고 배경으로 두어 집중과 휴식의 리듬을 안정적으로 지킵니다.",
+          "함께 있는 사람들이 편안하도록 그 자리에 맞는 곡을 세심하게 맞춰 줍니다."
+        ],
+        "watchoutsKo": [
+          "익숙한 곡만 배경으로 돌리다 보면 취향을 넓혀 줄 새 음악과 멀어질 수 있습니다.",
+          "음악을 늘 배경으로만 두면 마음을 크게 울릴 한 곡을 만날 기회를 놓칠 수 있습니다."
+        ],
+        "collaborationKo": "함께 듣는 사람들에게는 편안한 분위기를 만들어 주는 든든한 존재입니다. 가끔은 친구가 권한 새 곡이나 아끼는 곡을 배경이 아니라 정면으로 한 번 들어 보면, 안정감은 지키면서 마음에 남는 곡이 하나씩 늘어갑니다.",
+        "shareIntroKo": "나는 익숙한 곡으로 분위기를 챙기는 분위기 BGM형이에요.",
+        "imagePath": "/test-packs/packs/generated-v1/assets/music-listening-style/mood-bgm.png",
+        "shareImagePath": "/test-packs/packs/generated-v1/assets/music-listening-style/mood-bgm-share.png",
+        "vector": {
+          "digging": -14,
+          "immersion": -12
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "music-listening-style",
+  "metadata": {
+    "summaryKo": "음악을 접하고 듣는 방식으로 내가 어떤 리스너인지 11문항으로 확인합니다.",
+    "tags": [
+      "music",
+      "listening",
+      "playlist"
+    ],
+    "categoryLabelKo": "음악",
+    "tagLabelsKo": {
+      "music": "음악",
+      "listening": "감상",
+      "playlist": "플레이리스트"
+    },
+    "estimatedMinutes": "3-5분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-07-19T22:13:36.888Z",
+    "updatedAt": "2026-07-19T22:13:36.888Z"
+  }
+}
