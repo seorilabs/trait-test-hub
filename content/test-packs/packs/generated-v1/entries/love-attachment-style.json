@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "love-attachment-style",
+  "metadata": {
+    "summaryKo": "연애할 때 가까움과 거리, 불안을 어떻게 다루는지 8문항으로 알아봅니다.",
+    "tags": [
+      "relationship",
+      "love",
+      "attachment",
+      "couple"
+    ],
+    "categoryLabelKo": "관계",
+    "tagLabelsKo": {
+      "relationship": "관계",
+      "love": "연애",
+      "attachment": "애착",
+      "couple": "커플"
+    },
+    "estimatedMinutes": "2-3분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-07-21T11:27:18.239Z",
+    "updatedAt": "2026-07-21T11:27:18.239Z"
+  }
+}

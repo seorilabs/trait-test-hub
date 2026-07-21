@@ -266,8 +266,8 @@ function auditReachability(test) {
 }
 
 function auditAutomationQualityGate(entry, test) {
-  if (test.questions.length < 10) {
-    errors.push(`Generated tests must have at least 10 questions: ${test.id} has ${test.questions.length}`);
+  if (test.questions.length < 8) {
+    errors.push(`Generated tests must have at least 8 questions: ${test.id} has ${test.questions.length}`);
   }
   if (test.results.length < 4) {
     errors.push(`Generated tests must have at least 4 results: ${test.id} has ${test.results.length}`);

@@ -1,0 +1,344 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "metadata": {
+    "summaryKo": "연애할 때 가까움과 거리, 불안을 어떻게 다루는지 8문항으로 알아봅니다.",
+    "tags": ["relationship", "love", "attachment", "couple"],
+    "categoryLabelKo": "관계",
+    "tagLabelsKo": {
+      "relationship": "관계",
+      "love": "연애",
+      "attachment": "애착",
+      "couple": "커플"
+    },
+    "estimatedMinutes": "2-3분",
+    "packTitleKo": "자동 생성 테스트팩"
+  },
+  "test": {
+    "id": "love-attachment-style",
+    "version": 1,
+    "status": "published",
+    "titleKo": "연애 애착 스타일 테스트",
+    "category": "relationship",
+    "axes": [
+      { "id": "anxiety", "labelKo": "관계 불안" },
+      { "id": "avoidance", "labelKo": "거리 두기" }
+    ],
+    "questions": [
+      {
+        "id": "q01",
+        "textKo": "좋아하는 사람이 생겼을 때 나는?",
+        "options": [
+          {
+            "code": "secure",
+            "textKo": "설레지만 조급하지 않게 천천히 다가간다",
+            "descriptionKo": "마음을 편하게 인정하고 무리 없이 거리를 좁혀 갑니다.",
+            "scores": { "anxiety": -2, "avoidance": -2 }
+          },
+          {
+            "code": "anxious",
+            "textKo": "그 사람 생각으로 하루가 가득 찬다",
+            "descriptionKo": "상대에게 마음이 크게 쏠려 온 신경이 그쪽으로 향합니다.",
+            "scores": { "anxiety": 2, "avoidance": -2 }
+          },
+          {
+            "code": "dismissive",
+            "textKo": "티 내지 않고 원래 내 페이스를 지킨다",
+            "descriptionKo": "감정을 드러내기보다 평소의 거리감을 그대로 유지합니다.",
+            "scores": { "anxiety": -2, "avoidance": 2 }
+          },
+          {
+            "code": "fearful",
+            "textKo": "좋으면서도 상처받을까 봐 망설여진다",
+            "descriptionKo": "다가가고 싶은 마음과 물러서고 싶은 마음이 함께 올라옵니다.",
+            "scores": { "anxiety": 2, "avoidance": 2 }
+          }
+        ]
+      },
+      {
+        "id": "q02",
+        "textKo": "연인의 답장이 평소보다 늦어질 때?",
+        "options": [
+          {
+            "code": "secure",
+            "textKo": "바쁜가 보다 하고 내 할 일을 한다",
+            "descriptionKo": "특별한 의미를 두지 않고 편하게 기다립니다.",
+            "scores": { "anxiety": -2, "avoidance": -2 }
+          },
+          {
+            "code": "anxious",
+            "textKo": "무슨 일 있나 계속 확인하게 된다",
+            "descriptionKo": "연락 간격에 민감해져 신경이 쓰이고 마음이 급해집니다.",
+            "scores": { "anxiety": 2, "avoidance": -2 }
+          },
+          {
+            "code": "dismissive",
+            "textKo": "어차피 각자 시간이 필요하니 신경 안 쓴다",
+            "descriptionKo": "연락 텀을 자연스러운 것으로 받아들이며 개의치 않습니다.",
+            "scores": { "anxiety": -2, "avoidance": 2 }
+          },
+          {
+            "code": "fearful",
+            "textKo": "서운하지만 티 내면 안 될 것 같아 참는다",
+            "descriptionKo": "속상한 마음이 들면서도 표현했다 멀어질까 봐 눌러 둡니다.",
+            "scores": { "anxiety": 2, "avoidance": 2 }
+          }
+        ]
+      },
+      {
+        "id": "q03",
+        "textKo": "연인과 다툰 뒤 나의 모습은?",
+        "options": [
+          {
+            "code": "secure",
+            "textKo": "감정을 가라앉히고 먼저 대화를 청한다",
+            "descriptionKo": "문제를 관계 안에서 풀 수 있다고 믿고 차분히 마주합니다.",
+            "scores": { "anxiety": -2, "avoidance": -2 }
+          },
+          {
+            "code": "anxious",
+            "textKo": "관계가 끝날까 봐 바로 풀고 싶어진다",
+            "descriptionKo": "불안이 커져 지금 당장 확인하고 화해하려 매달립니다.",
+            "scores": { "anxiety": 2, "avoidance": -2 }
+          },
+          {
+            "code": "dismissive",
+            "textKo": "혼자 시간을 두며 거리를 둔다",
+            "descriptionKo": "감정이 부딪히는 상황에서 한발 물러나 혼자 정리합니다.",
+            "scores": { "anxiety": -2, "avoidance": 2 }
+          },
+          {
+            "code": "fearful",
+            "textKo": "화해하고 싶은데 다가가기가 두렵다",
+            "descriptionKo": "풀고 싶은 마음과 또 상처받을까 하는 두려움이 엇갈립니다.",
+            "scores": { "anxiety": 2, "avoidance": 2 }
+          }
+        ]
+      },
+      {
+        "id": "q04",
+        "textKo": "관계가 점점 깊어질 때 드는 생각은?",
+        "options": [
+          {
+            "code": "secure",
+            "textKo": "가까워지는 만큼 편안하고 든든하다",
+            "descriptionKo": "친밀함이 깊어지는 과정을 자연스럽고 안정적으로 느낍니다.",
+            "scores": { "anxiety": -2, "avoidance": -2 }
+          },
+          {
+            "code": "anxious",
+            "textKo": "더 확실한 애정 표현을 받고 싶어진다",
+            "descriptionKo": "가까워질수록 사랑을 자주 확인받고 싶은 마음이 커집니다.",
+            "scores": { "anxiety": 2, "avoidance": -2 }
+          },
+          {
+            "code": "dismissive",
+            "textKo": "내 공간이 줄어드는 건 아닐까 걱정된다",
+            "descriptionKo": "친밀함이 커지면 자율성을 잃을까 봐 조심스러워집니다.",
+            "scores": { "anxiety": -2, "avoidance": 2 }
+          },
+          {
+            "code": "fearful",
+            "textKo": "행복하면서도 언제 무너질지 불안하다",
+            "descriptionKo": "좋은 만큼 이 관계가 흔들릴까 하는 불안이 함께 옵니다.",
+            "scores": { "anxiety": 2, "avoidance": 2 }
+          }
+        ]
+      },
+      {
+        "id": "q05",
+        "textKo": "나의 힘들고 약한 모습을 보일 때?",
+        "options": [
+          {
+            "code": "secure",
+            "textKo": "솔직하게 털어놓고 기대는 편이다",
+            "descriptionKo": "약한 모습도 관계 안에서 나눌 수 있다고 믿고 표현합니다.",
+            "scores": { "anxiety": -2, "avoidance": -2 }
+          },
+          {
+            "code": "anxious",
+            "textKo": "털어놓되 부담을 줄까 봐 계속 눈치를 본다",
+            "descriptionKo": "기대고 싶으면서도 상대 반응을 살피며 조마조마해합니다.",
+            "scores": { "anxiety": 2, "avoidance": -2 }
+          },
+          {
+            "code": "dismissive",
+            "textKo": "웬만하면 혼자 해결하고 넘어간다",
+            "descriptionKo": "속내를 드러내기보다 스스로 감당하는 쪽을 택합니다.",
+            "scores": { "anxiety": -2, "avoidance": 2 }
+          },
+          {
+            "code": "fearful",
+            "textKo": "보여 주고 싶다가도 결국 숨기게 된다",
+            "descriptionKo": "기대고 싶은 마음이 들다가도 약점을 감추게 됩니다.",
+            "scores": { "anxiety": 2, "avoidance": 2 }
+          }
+        ]
+      },
+      {
+        "id": "q06",
+        "textKo": "연인이 약속을 갑자기 미뤘을 때?",
+        "options": [
+          {
+            "code": "secure",
+            "textKo": "사정이 있겠거니 하고 다음을 기약한다",
+            "descriptionKo": "상황을 넉넉히 이해하며 관계를 흔들지 않습니다.",
+            "scores": { "anxiety": -2, "avoidance": -2 }
+          },
+          {
+            "code": "anxious",
+            "textKo": "마음이 식은 건 아닌지 자꾸 곱씹는다",
+            "descriptionKo": "작은 변화에도 애정이 줄었을까 봐 반복해 생각합니다.",
+            "scores": { "anxiety": 2, "avoidance": -2 }
+          },
+          {
+            "code": "dismissive",
+            "textKo": "잘됐다 싶어 혼자 시간을 즐긴다",
+            "descriptionKo": "오히려 홀가분하게 나만의 시간을 반깁니다.",
+            "scores": { "anxiety": -2, "avoidance": 2 }
+          },
+          {
+            "code": "fearful",
+            "textKo": "서운함과 안도감이 동시에 든다",
+            "descriptionKo": "아쉬우면서도 부담이 줄어 마음이 복잡하게 엇갈립니다.",
+            "scores": { "anxiety": 2, "avoidance": 2 }
+          }
+        ]
+      },
+      {
+        "id": "q07",
+        "textKo": "연애 중 혼자만의 시간에 대한 나의 태도는?",
+        "options": [
+          {
+            "code": "secure",
+            "textKo": "각자 시간도 함께 시간도 균형 있게 즐긴다",
+            "descriptionKo": "가까움과 독립 사이에서 무리 없이 균형을 잡습니다.",
+            "scores": { "anxiety": -2, "avoidance": -2 }
+          },
+          {
+            "code": "anxious",
+            "textKo": "떨어져 있으면 금세 보고 싶고 허전하다",
+            "descriptionKo": "혼자 있는 시간에 쉽게 외로움과 그리움을 느낍니다.",
+            "scores": { "anxiety": 2, "avoidance": -2 }
+          },
+          {
+            "code": "dismissive",
+            "textKo": "내 시간은 꼭 확보되어야 편하다",
+            "descriptionKo": "혼자만의 영역이 지켜져야 관계도 편하게 느낍니다.",
+            "scores": { "anxiety": -2, "avoidance": 2 }
+          },
+          {
+            "code": "fearful",
+            "textKo": "혼자도 불안, 붙어 있어도 부담스럽다",
+            "descriptionKo": "거리가 멀어도 가까워도 마음이 편치 않을 때가 많습니다.",
+            "scores": { "anxiety": 2, "avoidance": 2 }
+          }
+        ]
+      },
+      {
+        "id": "q08",
+        "textKo": "둘의 미래를 이야기할 때 나는?",
+        "options": [
+          {
+            "code": "secure",
+            "textKo": "기대와 현실을 함께 이야기하며 그려 본다",
+            "descriptionKo": "설렘과 현실을 균형 있게 나누며 미래를 함께 계획합니다.",
+            "scores": { "anxiety": -2, "avoidance": -2 }
+          },
+          {
+            "code": "anxious",
+            "textKo": "확답을 듣고 싶어 자꾸 마음을 확인한다",
+            "descriptionKo": "미래가 불확실하게 느껴져 약속과 확신을 구하게 됩니다.",
+            "scores": { "anxiety": 2, "avoidance": -2 }
+          },
+          {
+            "code": "dismissive",
+            "textKo": "너무 먼 약속은 말을 아끼는 편이다",
+            "descriptionKo": "묶이는 느낌이 부담스러워 확정적인 말은 조심합니다.",
+            "scores": { "anxiety": -2, "avoidance": 2 }
+          },
+          {
+            "code": "fearful",
+            "textKo": "함께하고 싶으면서도 겁이 나 머뭇거린다",
+            "descriptionKo": "미래를 바라면서도 실망하거나 다칠까 봐 망설여집니다.",
+            "scores": { "anxiety": 2, "avoidance": 2 }
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "code": "secure",
+        "titleKo": "편안한 안정 애착형",
+        "summaryKo": "가까움과 혼자를 모두 편하게 오가며, 과한 불안 없이 신뢰를 쌓아 가는 타입이에요.",
+        "descriptionKo": "편안한 안정 애착형은 연애에서 상대를 믿고 자신도 솔직하게 드러내는 것이 자연스럽습니다. 가까워지는 것도 각자의 시간을 갖는 것도 크게 흔들리지 않고 받아들이며, 문제가 생기면 관계 안에서 대화로 풀 수 있다고 믿습니다. 그 안정감이 상대에게도 편안함을 전해 관계를 오래 지탱하는 힘이 됩니다.",
+        "strengthsKo": [
+          "감정을 솔직하게 표현하면서도 상대를 몰아세우지 않습니다.",
+          "갈등이 생겨도 대화로 풀 수 있다고 믿고 마주합니다.",
+          "가까움과 독립 사이에서 무리 없이 균형을 잡습니다."
+        ],
+        "watchoutsKo": [
+          "안정감이 익숙해 상대의 불안 신호를 늦게 알아챌 수 있습니다.",
+          "내 방식이 편하다 보니 다른 애착 유형의 속도를 답답해할 수 있습니다."
+        ],
+        "collaborationKo": "당신은 관계에 안정감을 주는 사람입니다. 상대가 불안형이나 회피형이라면 당신의 담담함이 무심함으로 느껴질 수 있으니, 먼저 마음을 표현하고 상대의 속도를 물어봐 주면 관계가 더 단단해집니다.",
+        "shareIntroKo": "나는 가까움과 혼자를 편하게 오가는 안정 애착형이에요.",
+        "vector": { "anxiety": -16, "avoidance": -16 }
+      },
+      {
+        "code": "anxious",
+        "titleKo": "마음이 앞서는 몰입형",
+        "summaryKo": "상대에게 마음을 깊이 쏟는 대신, 관계의 작은 변화에도 크게 흔들리는 타입이에요.",
+        "descriptionKo": "마음이 앞서는 몰입형은 사랑에 빠지면 상대에게 온 마음을 쏟고, 그만큼 애정을 자주 확인받고 싶어 합니다. 연락 간격이나 사소한 반응에도 의미를 크게 두어 쉽게 불안해지지만, 그 예민함은 상대를 세심하게 살피고 깊이 사랑하는 능력의 다른 얼굴이기도 합니다. 관계에 헌신적이고 표현에 진심입니다.",
+        "strengthsKo": [
+          "상대의 감정 변화를 민감하게 알아채고 살핍니다.",
+          "애정 표현에 솔직하고 관계에 헌신적입니다.",
+          "함께하는 시간에 진심을 다해 몰입합니다."
+        ],
+        "watchoutsKo": [
+          "작은 신호를 부정적으로 해석해 스스로 불안을 키울 수 있습니다.",
+          "확인받고 싶은 마음이 앞서 상대에게 부담이 될 수 있습니다."
+        ],
+        "collaborationKo": "당신은 사랑에 진심인 사람입니다. 불안이 올라올 때 바로 확인하려 하기보다 잠시 감정을 가라앉히고, 상대에게 필요한 것을 구체적으로 부탁하면 원하는 안정감을 훨씬 편하게 얻을 수 있습니다.",
+        "shareIntroKo": "나는 상대에게 마음을 깊이 쏟는 몰입형 연애를 해요.",
+        "vector": { "anxiety": 16, "avoidance": -16 }
+      },
+      {
+        "code": "dismissive",
+        "titleKo": "거리를 지키는 독립형",
+        "summaryKo": "가까워져도 나만의 공간과 페이스를 지키며, 감정보다 자율성을 앞에 두는 타입이에요.",
+        "descriptionKo": "거리를 지키는 독립형은 연애 중에도 자신만의 시간과 영역이 확보될 때 가장 편안합니다. 감정을 크게 드러내기보다 스스로 정리하는 쪽을 택하고, 관계가 지나치게 밀착되면 자율성을 잃을까 봐 한발 물러섭니다. 그 담백함은 상대에게 안정적으로 보이기도 하지만, 때로는 속을 알기 어렵게 만들기도 합니다.",
+        "strengthsKo": [
+          "감정에 휘둘리지 않고 차분하게 상황을 봅니다.",
+          "상대에게 지나치게 의존하지 않고 자기 삶을 지킵니다.",
+          "혼자서도 안정적으로 관계의 균형을 유지합니다."
+        ],
+        "watchoutsKo": [
+          "속마음을 감추다 상대가 거리감이나 무관심으로 느낄 수 있습니다.",
+          "가까워질 기회를 스스로 밀어내 관계가 얕게 머물 수 있습니다."
+        ],
+        "collaborationKo": "당신은 독립적이고 담담한 사람입니다. 거리를 두고 싶을 때 아무 말 없이 멀어지기보다, 지금 혼자 정리할 시간이 필요하다고 한마디만 전해도 상대는 거절이 아니라 존중으로 받아들입니다.",
+        "shareIntroKo": "나는 나만의 공간을 지키며 담백하게 연애하는 독립형이에요.",
+        "vector": { "anxiety": -16, "avoidance": 16 }
+      },
+      {
+        "code": "fearful",
+        "titleKo": "다가가고 물러서는 신중형",
+        "summaryKo": "가까워지고 싶은 마음과 상처받을까 하는 두려움 사이에서 조심스레 오가는 타입이에요.",
+        "descriptionKo": "다가가고 물러서는 신중형은 사랑을 깊이 바라면서도 그만큼 상처를 크게 두려워합니다. 좋은 순간에도 이 관계가 흔들릴까 하는 불안이 함께 올라와, 다가갔다가 물러서기를 반복하곤 합니다. 그 조심스러움은 관계를 소중히 여기는 마음에서 나오며, 안전하다고 느낄수록 훨씬 따뜻하고 깊은 사람이 됩니다.",
+        "strengthsKo": [
+          "관계의 위험 신호를 예민하게 감지하고 조심합니다.",
+          "사랑을 가볍게 여기지 않고 신중하게 마음을 냅니다.",
+          "안전하다고 느끼면 누구보다 깊고 따뜻해집니다."
+        ],
+        "watchoutsKo": [
+          "다가가고 물러서기를 반복해 상대를 혼란스럽게 할 수 있습니다.",
+          "두려움에 미리 마음을 닫아 스스로 기회를 놓칠 수 있습니다."
+        ],
+        "collaborationKo": "당신은 사랑을 소중히 여기는 사람입니다. 물러서고 싶어질 때 그 이유를 상대에게 조금씩 나누면, 밀어냄이 아니라 두려움이었다는 걸 알게 되어 관계가 안전한 방향으로 자랍니다.",
+        "shareIntroKo": "나는 다가가고 싶으면서도 조심스러운 신중형 연애를 해요.",
+        "vector": { "anxiety": 16, "avoidance": 16 }
+      }
+    ]
+  }
+}

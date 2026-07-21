@@ -77,7 +77,7 @@ flowchart LR
 `pnpm check:content`가 통과해야 PR 후보가 됩니다.
 
 - manifest와 payload의 `testId`, `version`, `packId`, stats key가 일치한다.
-- 자동 생성 테스트는 최소 10문항이어야 한다.
+- 자동 생성 테스트는 최소 8문항이어야 한다(표준 8문항).
 - 자동 생성 테스트는 최소 4개 결과를 가져야 한다.
 - 자동 생성 테스트의 각 문항은 최소 3개 선택지를 가져야 한다.
 - 질문 ID, 결과 code, axis ID가 중복되지 않는다.

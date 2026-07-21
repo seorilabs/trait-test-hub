@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "aura-color-style",
+  "metadata": {
+    "summaryKo": "요즘 나를 감싸는 기운이 어떤 색인지 8문항으로 알아봅니다.",
+    "tags": [
+      "aura",
+      "color",
+      "mood"
+    ],
+    "categoryLabelKo": "취향",
+    "tagLabelsKo": {
+      "aura": "아우라",
+      "color": "컬러",
+      "mood": "분위기"
+    },
+    "estimatedMinutes": "2-3분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-07-21T11:30:58.450Z",
+    "updatedAt": "2026-07-21T11:30:58.450Z"
+  }
+}
