@@ -26,10 +26,10 @@ export const Route = createRoute('/', {
 const CONTENT_ORIGIN = 'https://traithub.vzyx.xyz';
 const contentRepository = createContentRepository({ storage: Storage, origin: CONTENT_ORIGIN });
 
-// 결과 공유(AIT 어댑터). 링크는 앱 딥링크, 미리보기는 브랜드 아이콘 OG 이미지.
+// 결과 공유(AIT 어댑터). 링크는 앱 딥링크, 미리보기는 GitHub Pages에서 서빙하는 정적 OG 이미지.
 const sharePort = createAitSharePort();
 const APP_DEEP_LINK = 'intoss://trait-test-hub';
-const SHARE_OG_IMAGE_URL = 'https://static.toss.im/appsintoss/38345/6629020b-e8a6-43e5-92ef-f983bdaf66c9.png';
+const SHARE_OG_IMAGE_URL = 'https://traithub.vzyx.xyz/public/share-og.png';
 
 // 결과 화면 진입 시 전면 광고 1회.
 // TODO(release-blocker): 콘솔에서 실제 광고 그룹 ID 발급 후 교체. 개발/샌드박스는 테스트 ID를 사용합니다.
