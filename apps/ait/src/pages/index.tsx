@@ -12,6 +12,7 @@ import {
   scoreTraitTest,
   sortManifestEntries,
 } from '../vendor/product-core.js';
+import { resolveInterstitialAdGroupId } from '../lib/ads/adConfig';
 import { createAitInterstitialPort } from '../lib/ads/aitInterstitialPort';
 import { createContentRepository } from '../lib/contentRepository';
 import { createAitSharePort } from '../lib/share/aitSharePort';
@@ -31,10 +32,7 @@ const sharePort = createAitSharePort();
 const APP_DEEP_LINK = 'intoss://trait-test-hub';
 const SHARE_OG_IMAGE_URL = 'https://traithub.vzyx.xyz/public/share-og.png';
 
-// 결과 화면 진입 시 전면 광고 1회.
-// TODO(release-blocker): 콘솔에서 실제 광고 그룹 ID 발급 후 교체. 개발/샌드박스는 테스트 ID를 사용합니다.
-const INTERSTITIAL_AD_GROUP_ID = 'ait-ad-test-interstitial-id';
-const interstitialAd = createAitInterstitialPort({ adGroupId: INTERSTITIAL_AD_GROUP_ID });
+// 결과 화면 진입 시 전면 광고 1회. 광고 그룹 ID는 운영 환경에 따라 결정합니다(adConfig).
 
 const BRAND = '#2F6F68';
 
@@ -341,12 +339,13 @@ function ResultView({
   const adShownRef = useRef(false);
 
   // 결과 화면 진입 시 전면 광고를 딱 한 번 노출합니다(리렌더로 중복 노출 방지, UX는 막지 않음).
+  // 광고 그룹 ID는 이 시점(운영 환경 준비 완료)에 해석합니다.
   useEffect(() => {
     if (adShownRef.current) {
       return;
     }
     adShownRef.current = true;
-    void interstitialAd.showInterstitial();
+    void createAitInterstitialPort({ adGroupId: resolveInterstitialAdGroupId() }).showInterstitial();
   }, []);
 
   const onShare = useCallback(async () => {
