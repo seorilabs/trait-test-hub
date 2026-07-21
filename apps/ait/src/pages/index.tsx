@@ -14,6 +14,7 @@ import {
 } from '../vendor/product-core.js';
 import { createContentRepository } from '../lib/contentRepository';
 import { getStats, recordCompletion } from '../lib/statsRepository';
+import { pickDailyEntry, pickRandomEntry } from '../lib/testSelection';
 
 export const Route = createRoute('/', {
   component: HubPage,
@@ -35,7 +36,7 @@ const RESULT_THEMES = [
   { emoji: '🎯', background: '#FCECE8', foreground: '#8C493C' },
 ] as const;
 
-type Screen = 'home' | 'question' | 'result';
+type Screen = 'home' | 'list' | 'question' | 'result';
 type Status = 'loading' | 'ready' | 'error';
 
 function getResultTheme(code: string) {
@@ -58,6 +59,7 @@ function HubPage() {
   const [usingCachedFallback, setUsingCachedFallback] = useState(false);
   const [entries, setEntries] = useState<ManifestEntry[]>([]);
   const [screen, setScreen] = useState<Screen>('home');
+  const [returnTo, setReturnTo] = useState<Screen>('home');
   const [activeEntry, setActiveEntry] = useState<ManifestEntry | null>(null);
   const [test, setTest] = useState<TraitTest | null>(null);
   const [answers, setAnswers] = useState<Record<string, string>>({});
@@ -94,19 +96,33 @@ function HubPage() {
     loadManifest();
   }, [loadManifest]);
 
-  const startTest = useCallback(async (entry: ManifestEntry) => {
-    try {
-      setActiveEntry(entry);
-      setTest(await contentRepository.loadTest(entry));
-      setAnswers({});
-      setCurrentIndex(0);
-      setScore(null);
-      setScreen('question');
-    } catch (err) {
-      setError(messageOf(err, '테스트를 불러오지 못했습니다.'));
-      setStatus('error');
+  const startTest = useCallback(
+    async (entry: ManifestEntry) => {
+      // 완료 후 뒤로가기가 진입 화면(홈/목록)으로 돌아가도록 기억합니다.
+      setReturnTo(screen === 'list' ? 'list' : 'home');
+      try {
+        setActiveEntry(entry);
+        setTest(await contentRepository.loadTest(entry));
+        setAnswers({});
+        setCurrentIndex(0);
+        setScore(null);
+        setScreen('question');
+      } catch (err) {
+        setError(messageOf(err, '테스트를 불러오지 못했습니다.'));
+        setStatus('error');
+      }
+    },
+    [screen]
+  );
+
+  const startRandom = useCallback(() => {
+    const entry = pickRandomEntry(entries);
+    if (entry) {
+      void startTest(entry);
     }
-  }, []);
+  }, [entries, startTest]);
+
+  const goList = useCallback(() => setScreen('list'), []);
 
   const onAnswer = useCallback(
     (code: string) => {
@@ -131,11 +147,11 @@ function HubPage() {
 
   const goBack = useCallback(() => {
     if (currentIndex === 0) {
-      setScreen('home');
+      setScreen(returnTo);
     } else {
       setCurrentIndex(currentIndex - 1);
     }
-  }, [currentIndex]);
+  }, [currentIndex, returnTo]);
 
   const restart = useCallback(() => {
     setAnswers({});
@@ -220,23 +236,72 @@ function HubPage() {
     );
   }
 
+  if (screen === 'list') {
+    return (
+      <ScrollView contentContainerStyle={[styles.screen, topPadding]}>
+        <View style={styles.questionHeader}>
+          <TouchableOpacity onPress={goHome}>
+            <Text style={styles.ghost}>홈</Text>
+          </TouchableOpacity>
+          <Text style={styles.muted}>{entries.length}개</Text>
+        </View>
+        <Text style={styles.title}>전체 테스트</Text>
+        <View style={styles.testList}>
+          {entries.map((entry) => (
+            <TouchableOpacity key={entry.testId} style={styles.card} onPress={() => startTest(entry)}>
+              <Text style={styles.cardMeta}>
+                {entry.questionCount}문항 · {entry.estimatedMinutes}
+              </Text>
+              <Text style={styles.cardTitle}>{entry.titleKo}</Text>
+              {entry.summaryKo ? <Text style={styles.cardSummary}>{entry.summaryKo}</Text> : null}
+            </TouchableOpacity>
+          ))}
+        </View>
+      </ScrollView>
+    );
+  }
+
+  const dailyEntry = pickDailyEntry(entries);
+  const dailyTheme = dailyEntry ? getResultTheme(dailyEntry.testId) : DEFAULT_RESULT_THEME;
+
   return (
     <ScrollView contentContainerStyle={[styles.screen, topPadding]}>
       <Text style={styles.eyebrow}>Trait Test Hub</Text>
       <Text style={styles.title}>성향 테스트</Text>
       <Text style={styles.muted}>{entries.length}개의 테스트가 준비되어 있어요.</Text>
       {usingCachedFallback ? <Text style={styles.cacheNotice}>오프라인 저장본을 표시 중이에요.</Text> : null}
-      <View style={styles.testList}>
-        {entries.map((entry) => (
-          <TouchableOpacity key={entry.testId} style={styles.card} onPress={() => startTest(entry)}>
-            <Text style={styles.cardMeta}>
-              {entry.questionCount}문항 · {entry.estimatedMinutes}
+
+      {dailyEntry ? (
+        <>
+          <Text style={styles.sectionTitle}>오늘의 성향 테스트</Text>
+          <TouchableOpacity
+            style={[styles.heroCard, { backgroundColor: dailyTheme.background }]}
+            onPress={() => startTest(dailyEntry)}
+          >
+            <Text style={styles.heroEmoji}>{dailyTheme.emoji}</Text>
+            <Text style={[styles.heroTitle, { color: dailyTheme.foreground }]}>{dailyEntry.titleKo}</Text>
+            {dailyEntry.summaryKo ? <Text style={styles.heroSummary}>{dailyEntry.summaryKo}</Text> : null}
+            <Text style={styles.heroMeta}>
+              {dailyEntry.questionCount}문항 · {dailyEntry.estimatedMinutes}
             </Text>
-            <Text style={styles.cardTitle}>{entry.titleKo}</Text>
-            {entry.summaryKo ? <Text style={styles.cardSummary}>{entry.summaryKo}</Text> : null}
           </TouchableOpacity>
-        ))}
-      </View>
+        </>
+      ) : null}
+
+      <TouchableOpacity style={styles.menuButton} onPress={startRandom}>
+        <Text style={styles.menuEmoji}>🎲</Text>
+        <View style={styles.menuTextWrap}>
+          <Text style={styles.menuTitle}>랜덤 테스트</Text>
+          <Text style={styles.menuDesc}>아무거나 하나 바로 시작해요</Text>
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.menuButton} onPress={goList}>
+        <Text style={styles.menuEmoji}>📚</Text>
+        <View style={styles.menuTextWrap}>
+          <Text style={styles.menuTitle}>전체 테스트 목록</Text>
+          <Text style={styles.menuDesc}>{entries.length}개 전체 보기</Text>
+        </View>
+      </TouchableOpacity>
     </ScrollView>
   );
 }
@@ -442,6 +507,55 @@ const styles = StyleSheet.create({
   cardSummary: {
     fontSize: 14,
     color: '#5A6472',
+  },
+  heroCard: {
+    borderRadius: 18,
+    padding: 20,
+    gap: 6,
+    marginTop: 4,
+  },
+  heroEmoji: {
+    fontSize: 36,
+  },
+  heroTitle: {
+    fontSize: 22,
+    fontWeight: '800',
+  },
+  heroSummary: {
+    fontSize: 14,
+    lineHeight: 20,
+    color: '#46505C',
+  },
+  heroMeta: {
+    fontSize: 12,
+    color: '#6B7480',
+    marginTop: 2,
+  },
+  menuButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 14,
+    borderWidth: 1,
+    borderColor: '#E3E8EC',
+    borderRadius: 14,
+    padding: 16,
+    marginTop: 4,
+  },
+  menuEmoji: {
+    fontSize: 26,
+  },
+  menuTextWrap: {
+    flex: 1,
+    gap: 2,
+  },
+  menuTitle: {
+    fontSize: 17,
+    fontWeight: '700',
+    color: '#17202A',
+  },
+  menuDesc: {
+    fontSize: 13,
+    color: '#8A93A0',
   },
   questionHeader: {
     flexDirection: 'row',
