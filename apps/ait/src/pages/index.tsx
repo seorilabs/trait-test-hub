@@ -1,6 +1,7 @@
+import { Storage } from '@apps-in-toss/framework';
 import { createRoute } from '@granite-js/react-native';
 import { type ReactNode, useCallback, useEffect, useState } from 'react';
-import { ActivityIndicator, Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { ActivityIndicator, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import {
   type ManifestEntry,
@@ -10,38 +11,39 @@ import {
   formatRarityKo,
   scoreTraitTest,
   sortManifestEntries,
-  validateManifest,
-  validateTraitTest,
 } from '../vendor/product-core.js';
+import { createContentRepository } from '../lib/contentRepository';
 import { getStats, recordCompletion } from '../lib/statsRepository';
 
 export const Route = createRoute('/', {
   component: HubPage,
 });
 
-// 테스트팩은 Firebase Hosting에서 HTTPS로 받아옵니다.
-// TODO(release-blocker): 실제 Hosting origin(커스텀 도메인 포함) 확정 후 교체합니다.
-const CONTENT_ORIGIN = 'https://trait-test-hub.web.app';
-const MANIFEST_URL = `${CONTENT_ORIGIN}/test-packs/manifest.json`;
+// 공개 테스트팩은 현재 GitHub Pages custom domain에서 HTTPS로 받아옵니다.
+const CONTENT_ORIGIN = 'https://traithub.vzyx.xyz';
+const contentRepository = createContentRepository({ storage: Storage, origin: CONTENT_ORIGIN });
 
 const BRAND = '#2F6F68';
+
+const DEFAULT_RESULT_THEME = { emoji: '🧭', background: '#EAF3F1', foreground: '#245C56' } as const;
+const RESULT_THEMES = [
+  DEFAULT_RESULT_THEME,
+  { emoji: '✨', background: '#F4EEFF', foreground: '#62449A' },
+  { emoji: '🌿', background: '#EEF5E8', foreground: '#456B35' },
+  { emoji: '💡', background: '#FFF4D9', foreground: '#8A6418' },
+  { emoji: '🌊', background: '#E8F3FA', foreground: '#2E617E' },
+  { emoji: '🎯', background: '#FCECE8', foreground: '#8C493C' },
+] as const;
 
 type Screen = 'home' | 'question' | 'result';
 type Status = 'loading' | 'ready' | 'error';
 
-async function fetchJson(url: string): Promise<unknown> {
-  const response = await fetch(url, { cache: 'no-store' } as RequestInit);
-  if (!response.ok) {
-    throw new Error(`HTTP ${response.status}: ${url}`);
+function getResultTheme(code: string) {
+  let hash = 0;
+  for (const character of code) {
+    hash = (hash * 31 + character.codePointAt(0)!) >>> 0;
   }
-  return response.json();
-}
-
-function absoluteUrl(path: string): string {
-  if (/^https?:\/\//.test(path)) {
-    return path;
-  }
-  return `${CONTENT_ORIGIN}${path.startsWith('/') ? '' : '/'}${path}`;
+  return RESULT_THEMES[hash % RESULT_THEMES.length] ?? DEFAULT_RESULT_THEME;
 }
 
 function messageOf(err: unknown, fallback: string): string {
@@ -53,6 +55,7 @@ function HubPage() {
 
   const [status, setStatus] = useState<Status>('loading');
   const [error, setError] = useState<string | null>(null);
+  const [usingCachedFallback, setUsingCachedFallback] = useState(false);
   const [entries, setEntries] = useState<ManifestEntry[]>([]);
   const [screen, setScreen] = useState<Screen>('home');
   const [activeEntry, setActiveEntry] = useState<ManifestEntry | null>(null);
@@ -64,12 +67,24 @@ function HubPage() {
   const loadManifest = useCallback(async () => {
     setStatus('loading');
     setError(null);
+    setUsingCachedFallback(false);
+    const cached = await contentRepository.readCachedManifest();
+    if (cached) {
+      const published = cached.tests.filter((entry) => entry.status === 'published');
+      setEntries(sortManifestEntries(published, 'featured'));
+      setStatus('ready');
+    }
     try {
-      const manifest = validateManifest(await fetchJson(MANIFEST_URL));
+      const manifest = await contentRepository.fetchManifest();
       const published = manifest.tests.filter((entry) => entry.status === 'published');
       setEntries(sortManifestEntries(published, 'featured'));
       setStatus('ready');
+      void contentRepository.prefetchTests(published);
     } catch (err) {
+      if (cached) {
+        setUsingCachedFallback(true);
+        return;
+      }
       setError(messageOf(err, '알 수 없는 오류가 발생했습니다.'));
       setStatus('error');
     }
@@ -81,12 +96,8 @@ function HubPage() {
 
   const startTest = useCallback(async (entry: ManifestEntry) => {
     try {
-      const payload = (await fetchJson(absoluteUrl(entry.path))) as { schemaVersion?: number; test?: unknown };
-      if (payload.schemaVersion !== 1 || !payload.test) {
-        throw new Error(`잘못된 테스트 데이터: ${entry.path}`);
-      }
       setActiveEntry(entry);
-      setTest(validateTraitTest(payload.test));
+      setTest(await contentRepository.loadTest(entry));
       setAnswers({});
       setCurrentIndex(0);
       setScore(null);
@@ -115,7 +126,7 @@ function HubPage() {
         setScreen('result');
       }
     },
-    [test, currentIndex, answers],
+    [test, currentIndex, answers]
   );
 
   const goBack = useCallback(() => {
@@ -214,6 +225,7 @@ function HubPage() {
       <Text style={styles.eyebrow}>Trait Test Hub</Text>
       <Text style={styles.title}>성향 테스트</Text>
       <Text style={styles.muted}>{entries.length}개의 테스트가 준비되어 있어요.</Text>
+      {usingCachedFallback ? <Text style={styles.cacheNotice}>오프라인 저장본을 표시 중이에요.</Text> : null}
       <View style={styles.testList}>
         {entries.map((entry) => (
           <TouchableOpacity key={entry.testId} style={styles.card} onPress={() => startTest(entry)}>
@@ -267,24 +279,27 @@ function ResultView({
   }, [testId, version, result.code]);
 
   const axisLabels: Record<string, string> = Object.fromEntries(
-    test.axes.map((axis) => [axis.id, axis.labelKo ?? axis.id]),
+    test.axes.map((axis) => [axis.id, axis.labelKo ?? axis.id])
   );
   const abilityLabels: Record<string, string> = test.abilityLabelsKo ?? {};
+  const resultTheme = getResultTheme(result.code);
 
   return (
     <ScrollView contentContainerStyle={[styles.screen, topPadding]}>
       <Text style={styles.eyebrow}>테스트 결과</Text>
-      <Text style={styles.title}>{result.titleKo}</Text>
-      <Text style={styles.muted}>{result.summaryKo}</Text>
+      <View style={[styles.resultIdentity, { backgroundColor: resultTheme.background }]}>
+        <Text style={styles.resultEmoji}>{resultTheme.emoji}</Text>
+        <View style={styles.resultIdentityText}>
+          <Text style={[styles.resultTitle, { color: resultTheme.foreground }]}>{result.titleKo}</Text>
+          <Text style={styles.resultSummary}>{result.summaryKo}</Text>
+        </View>
+      </View>
 
       <View style={styles.rarityCard}>
         <Text style={styles.rarityLabel}>나와 같은 성향</Text>
         <Text style={styles.rarityValue}>{rarityText}</Text>
       </View>
 
-      {result.imagePath ? (
-        <Image source={{ uri: absoluteUrl(result.imagePath) }} style={styles.resultImage} resizeMode="contain" />
-      ) : null}
       {result.descriptionKo ? <Text style={styles.body}>{result.descriptionKo}</Text> : null}
 
       <View style={styles.scoreList}>
@@ -391,6 +406,14 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#5A6472',
   },
+  cacheNotice: {
+    fontSize: 13,
+    color: '#7A5D1D',
+    backgroundColor: '#FFF7DF',
+    borderRadius: 10,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+  },
   body: {
     fontSize: 15,
     color: '#2D3640',
@@ -483,11 +506,28 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: BRAND,
   },
-  resultImage: {
-    width: '100%',
-    height: 200,
-    borderRadius: 14,
-    marginVertical: 8,
+  resultIdentity: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 14,
+    borderRadius: 18,
+    padding: 18,
+  },
+  resultEmoji: {
+    fontSize: 40,
+  },
+  resultIdentityText: {
+    flex: 1,
+    gap: 4,
+  },
+  resultTitle: {
+    fontSize: 22,
+    fontWeight: '800',
+  },
+  resultSummary: {
+    fontSize: 14,
+    lineHeight: 20,
+    color: '#46505C',
   },
   scoreList: {
     gap: 8,

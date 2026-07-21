@@ -68,7 +68,7 @@ pnpm validate:test-packs
 pnpm check:content
 ```
 
-자동 생성 테스트 PR은 테스트별 draft, entry, payload, image asset만 추가합니다. manifest, pack index, public 산출물은 check/build 단계에서 컴파일됩니다.
+자동 생성 테스트 PR은 테스트별 draft, entry, payload만 추가합니다. 결과 화면은 앱의 로컬 색상·이모지 카드로 표현하며 테스트팩 이미지는 사용하지 않습니다. manifest, pack index, public 산출물은 check/build 단계에서 컴파일됩니다.
 
 자세한 구조는 [docs/test-packs.md](docs/test-packs.md)를 봅니다.
 자동 생성 테스트를 PR로 보내는 체계는 [docs/content-automation.md](docs/content-automation.md)를 봅니다.

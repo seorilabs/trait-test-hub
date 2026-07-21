@@ -1,6 +1,6 @@
-import { copyFileSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
-import { basename, join, resolve } from 'node:path';
+import { join, resolve } from 'node:path';
 import { Script } from 'node:vm';
 
 const root = process.cwd();
@@ -9,7 +9,6 @@ const require = createRequire(import.meta.url);
 const ts = require(join(dptiRoot, 'node_modules/typescript/lib/typescript.js'));
 const dptiSource = join(dptiRoot, 'src/dpti.ts');
 const outputFile = join(root, 'packages/product-core/src/dptiCatalog.js');
-const assetRoot = join(root, 'packages/product-assets/dpti');
 
 const source = readFileSync(dptiSource, 'utf8');
 const transpiled = ts.transpileModule(source, {
@@ -101,8 +100,6 @@ const dptiTraitTest = {
       titleKo: result.title,
       summaryKo: result.summary,
       descriptionKo: result.description,
-      imagePath: `/packages/product-assets/dpti/type/${code.toLowerCase()}.png`,
-      shareImagePath: `/packages/product-assets/dpti/share/${code.toLowerCase()}.png`,
       strengthsKo: [...result.strengths],
       watchoutsKo: [...result.watchouts],
       collaborationKo: result.collaboration,
@@ -127,17 +124,5 @@ writeFileSync(
     '',
   ].join('\n'),
 );
-
-for (const folder of ['type', 'share']) {
-  const sourceDir = join(dptiRoot, 'public', folder);
-  const targetDir = join(assetRoot, folder);
-  mkdirSync(targetDir, { recursive: true });
-  for (const file of readdirSync(sourceDir)) {
-    if (!/\.(png|svg)$/.test(file)) {
-      continue;
-    }
-    copyFileSync(join(sourceDir, file), join(targetDir, basename(file)));
-  }
-}
 
 console.log(`Imported DPTI: ${QUESTIONS.length} questions, ${RESULT_CODES.length} results`);

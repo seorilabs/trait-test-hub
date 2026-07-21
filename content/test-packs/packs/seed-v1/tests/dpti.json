@@ -460,8 +460,6 @@
         "titleKo": "독립적 코드 아키텍트",
         "summaryKo": "혼자 깊게 파고들어 구조를 먼저 세우는 설계형 개발자.",
         "descriptionKo": "문제를 받으면 요구사항의 뼈대와 경계부터 정리합니다. 새로운 접근을 좋아하지만, 막연한 실험보다 논리와 구조로 증명되는 해법에 마음이 움직입니다.",
-        "imagePath": "/packages/product-assets/dpti/type/aclo.png",
-        "shareImagePath": "/packages/product-assets/dpti/share/aclo.png",
         "strengthsKo": [
           "초기 설계와 기술 방향을 빠르게 잡아요.",
           "복잡한 문제를 작은 단위로 분해해요.",
@@ -528,8 +526,6 @@
         "titleKo": "독립 코드 탐험가",
         "summaryKo": "새로운 길을 찾고 빠르게 실험하는 독립형 문제 해결자.",
         "descriptionKo": "정답지가 없는 문제를 만나도 겁내기보다 여러 가능성을 열어봅니다. 논리적인 검증은 놓치지 않지만, 계획보다 발견의 속도를 더 믿는 편입니다.",
-        "imagePath": "/packages/product-assets/dpti/type/aclf.png",
-        "shareImagePath": "/packages/product-assets/dpti/share/aclf.png",
         "strengthsKo": [
           "낯선 문제에서 독특한 해법을 잘 찾아요.",
           "프로토타입과 실험으로 막힌 흐름을 뚫어요.",
@@ -596,8 +592,6 @@
         "titleKo": "사용자 중심 개발자",
         "summaryKo": "사용자 맥락을 혼자 깊게 정리해 완성도 있게 구현하는 타입.",
         "descriptionKo": "요구사항 뒤에 있는 사람의 상황을 읽고, 그 경험이 흐트러지지 않도록 체계적으로 구현합니다. 독립적으로 움직이되 결과물은 사용자에게 닿는 지점을 향합니다.",
-        "imagePath": "/packages/product-assets/dpti/type/aceo.png",
-        "shareImagePath": "/packages/product-assets/dpti/share/aceo.png",
         "strengthsKo": [
           "사용자 관점과 구현 디테일을 함께 봐요.",
           "범위와 일정 안에서 경험 품질을 지켜요.",
@@ -664,8 +658,6 @@
         "titleKo": "사용자 맥락 탐색가",
         "summaryKo": "사람의 불편과 맥락을 읽고 유연하게 풀어내는 개발자.",
         "descriptionKo": "정해진 답보다 상황에 맞는 해법을 찾는 데 강합니다. 사용자와 팀의 감정선을 읽고, 필요한 순간에는 방향을 바꾸며 더 나은 경험을 만듭니다.",
-        "imagePath": "/packages/product-assets/dpti/type/acef.png",
-        "shareImagePath": "/packages/product-assets/dpti/share/acef.png",
         "strengthsKo": [
           "사용자 피드백을 빠르게 해석해요.",
           "변화하는 요구에 부드럽게 적응해요.",
@@ -732,8 +724,6 @@
         "titleKo": "실행 설계자",
         "summaryKo": "명확한 계획과 실용적인 선택으로 실행 흐름을 설계하는 타입.",
         "descriptionKo": "불필요한 복잡도를 줄이고, 지금 필요한 결과를 안정적으로 내는 데 집중합니다. 혼자서도 우선순위와 일정을 잘 쪼개며 품질과 속도의 균형을 잡습니다.",
-        "imagePath": "/packages/product-assets/dpti/type/aplo.png",
-        "shareImagePath": "/packages/product-assets/dpti/share/aplo.png",
         "strengthsKo": [
           "일정, 범위, 품질 기준을 분명하게 잡아요.",
           "검증된 방식으로 빠르게 안정화해요.",
@@ -800,8 +790,6 @@
         "titleKo": "코드 트러블슈터",
         "summaryKo": "현실적인 감각으로 문제를 좁히고 빠르게 복구하는 해결사.",
         "descriptionKo": "장애나 버그 앞에서 침착하게 원인을 좁히고, 가장 효과적인 해결책부터 적용합니다. 계획보다 현장의 단서에 민감하며 혼자서도 빠른 복구력을 보여줍니다.",
-        "imagePath": "/packages/product-assets/dpti/type/aplf.png",
-        "shareImagePath": "/packages/product-assets/dpti/share/aplf.png",
         "strengthsKo": [
           "재현, 원인 분석, 우회책 판단이 빨라요.",
           "도구와 로그를 실용적으로 활용해요.",
@@ -868,8 +856,6 @@
         "titleKo": "고객 친화적 개발자",
         "summaryKo": "현실적인 구현과 고객 맥락을 균형 있게 챙기는 타입.",
         "descriptionKo": "고객이 겪는 문제를 구체적인 작업으로 바꾸고, 일정 안에서 납득 가능한 결과를 만듭니다. 감정적인 니즈를 읽지만 실행은 계획적으로 가져갑니다.",
-        "imagePath": "/packages/product-assets/dpti/type/apeo.png",
-        "shareImagePath": "/packages/product-assets/dpti/share/apeo.png",
         "strengthsKo": [
           "고객 요구를 개발 언어로 잘 번역해요.",
           "우선순위와 마감 기준을 잘 세워요.",
@@ -936,8 +922,6 @@
         "titleKo": "유연한 소프트웨어 조언자",
         "summaryKo": "사람과 상황을 읽고 실용적인 다음 수를 제안하는 타입.",
         "descriptionKo": "정답을 강하게 밀기보다 상황에 맞는 선택지를 제시합니다. 변화가 많은 환경에서 부담을 줄이고, 팀이나 고객이 바로 움직일 수 있는 해법을 찾습니다.",
-        "imagePath": "/packages/product-assets/dpti/type/apef.png",
-        "shareImagePath": "/packages/product-assets/dpti/share/apef.png",
         "strengthsKo": [
           "상황 변화에 맞춰 현실적인 대안을 찾아요.",
           "기술적 선택을 쉬운 언어로 풀어줘요.",
@@ -1004,8 +988,6 @@
         "titleKo": "협업적 기술 혁신가",
         "summaryKo": "팀의 아이디어를 구조화해 기술적 방향으로 밀어주는 타입.",
         "descriptionKo": "혼자만의 해법보다 팀 안에서 더 좋은 해법이 나온다고 믿습니다. 새로운 시도를 좋아하지만, 논리와 계획으로 팀이 따라올 수 있게 길을 만듭니다.",
-        "imagePath": "/packages/product-assets/dpti/type/tclo.png",
-        "shareImagePath": "/packages/product-assets/dpti/share/tclo.png",
         "strengthsKo": [
           "아이디어를 기술 전략으로 연결해요.",
           "팀의 논의를 구조화하고 방향을 잡아요.",
@@ -1072,8 +1054,6 @@
         "titleKo": "팀 코드 실험가",
         "summaryKo": "팀 흐름 안에서 창의적인 구현을 빠르게 맞춰가는 타입.",
         "descriptionKo": "동료의 아이디어를 받아 새로운 구현으로 연결하는 데 능숙합니다. 계획이 바뀌어도 팀과 함께 방향을 조정하며, 코드로 가능한 선택지를 넓힙니다.",
-        "imagePath": "/packages/product-assets/dpti/type/tclf.png",
-        "shareImagePath": "/packages/product-assets/dpti/share/tclf.png",
         "strengthsKo": [
           "팀의 아이디어를 빠르게 코드로 실험해요.",
           "변화하는 역할과 요구에 잘 적응해요.",
@@ -1140,8 +1120,6 @@
         "titleKo": "UX 구현 조율가",
         "summaryKo": "사용자 경험과 팀 합의를 체계적으로 이어주는 타입.",
         "descriptionKo": "사용자에게 보이는 흐름과 팀이 만드는 과정을 함께 챙깁니다. 감각적인 아이디어를 좋아하지만, 일정과 기준 안에서 경험 품질을 지키는 쪽에 강합니다.",
-        "imagePath": "/packages/product-assets/dpti/type/tceo.png",
-        "shareImagePath": "/packages/product-assets/dpti/share/tceo.png",
         "strengthsKo": [
           "디자인 의도를 구현 디테일로 잘 옮겨요.",
           "팀과 사용자 사이의 맥락을 연결해요.",
@@ -1208,8 +1186,6 @@
         "titleKo": "팀 공감 기술자",
         "summaryKo": "팀의 감정선과 사용자의 불편을 읽고 유연하게 움직이는 타입.",
         "descriptionKo": "상황마다 필요한 대화와 조율을 찾아 팀의 마찰을 줄입니다. 새로운 아이디어도 사람의 맥락 안에서 다루며, 변화가 많은 프로젝트에서 완충 역할을 잘합니다.",
-        "imagePath": "/packages/product-assets/dpti/type/tcef.png",
-        "shareImagePath": "/packages/product-assets/dpti/share/tcef.png",
         "strengthsKo": [
           "팀원이 놓친 사용자 감정을 잘 포착해요.",
           "분위기가 흔들릴 때 대화를 부드럽게 이어요.",
@@ -1276,8 +1252,6 @@
         "titleKo": "팀 실행 설계자",
         "summaryKo": "팀의 속도와 품질을 계획적으로 정리하는 실용형 리더.",
         "descriptionKo": "좋은 프로세스가 좋은 결과를 만든다고 믿습니다. 검증된 방식과 명확한 일정으로 팀의 낭비를 줄이고, 모두가 같은 목표를 향해 움직이게 합니다.",
-        "imagePath": "/packages/product-assets/dpti/type/tplo.png",
-        "shareImagePath": "/packages/product-assets/dpti/share/tplo.png",
         "strengthsKo": [
           "팀 작업을 우선순위와 일정으로 잘 정리해요.",
           "실용적인 개선으로 병목을 줄여요.",
@@ -1344,8 +1318,6 @@
         "titleKo": "협동적 버그 해결사",
         "summaryKo": "팀과 함께 현장의 문제를 빠르게 좁혀 해결하는 타입.",
         "descriptionKo": "문제가 터졌을 때 혼자 끌어안기보다 팀의 단서를 모아 빠르게 대응합니다. 계획에 묶이기보다 지금 필요한 조치를 찾고, 현실적인 해결로 흐름을 되살립니다.",
-        "imagePath": "/packages/product-assets/dpti/type/tplf.png",
-        "shareImagePath": "/packages/product-assets/dpti/share/tplf.png",
         "strengthsKo": [
           "장애 상황에서 팀의 단서를 빠르게 모아요.",
           "실용적인 우회책과 후속 조치를 구분해요.",
@@ -1412,8 +1384,6 @@
         "titleKo": "제품 개선 조율가",
         "summaryKo": "팀 협업으로 사용자 문제를 현실적인 제품 개선으로 바꾸는 타입.",
         "descriptionKo": "사용자 불편을 놓치지 않으면서도 팀이 실제로 구현할 수 있는 범위를 찾습니다. 감정적인 맥락과 일정 관리를 함께 챙겨 제품 개선을 꾸준히 밀어줍니다.",
-        "imagePath": "/packages/product-assets/dpti/type/tpeo.png",
-        "shareImagePath": "/packages/product-assets/dpti/share/tpeo.png",
         "strengthsKo": [
           "사용자 문제를 팀 작업으로 잘 쪼개요.",
           "기획, 디자인, 개발 사이의 언어를 연결해요.",
@@ -1480,8 +1450,6 @@
         "titleKo": "현실적 변화 조율가",
         "summaryKo": "팀과 함께 현실적인 변화와 새로운 가능성을 연결하는 타입.",
         "descriptionKo": "협업을 통해 더 나은 아이디어가 나온다고 믿고, 변화하는 상황을 부담보다 기회로 봅니다. 사람의 맥락을 놓치지 않으면서 실용적인 개선을 만들어냅니다.",
-        "imagePath": "/packages/product-assets/dpti/type/tpef.png",
-        "shareImagePath": "/packages/product-assets/dpti/share/tpef.png",
         "strengthsKo": [
           "팀의 다양한 관점을 실행 가능한 변화로 묶어요.",
           "사용자와 동료의 피드백을 빠르게 흡수해요.",

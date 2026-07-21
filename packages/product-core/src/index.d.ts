@@ -50,7 +50,6 @@ export interface TraitResult {
   titleKo: string;
   summaryKo: string;
   descriptionKo?: string;
-  imagePath?: string;
   strengthsKo?: string[];
   watchoutsKo?: string[];
   abilities?: Record<string, number>;

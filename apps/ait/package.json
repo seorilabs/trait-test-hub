@@ -5,7 +5,7 @@
     "bundle:core": "esbuild ../../packages/product-core/src/index.js --bundle --format=esm --platform=neutral --outfile=src/vendor/product-core.js && cp ../../packages/product-core/src/index.d.ts src/vendor/product-core.d.ts",
     "dev": "pnpm bundle:core && granite dev",
     "build": "pnpm bundle:core && ait build",
-    "test": "jest --passWithNoTests",
+    "test": "pnpm bundle:core && jest --passWithNoTests",
     "typecheck": "pnpm bundle:core && tsc --noEmit",
     "lint": "eslint .",
     "check": "pnpm lint && pnpm typecheck && pnpm test",

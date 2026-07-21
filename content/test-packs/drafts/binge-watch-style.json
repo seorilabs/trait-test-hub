@@ -312,8 +312,6 @@
         ],
         "collaborationKo": "같이 드라마를 볼 사람을 찾는다면 최고의 파트너입니다. 단, 동행이 새벽 마라톤을 힘들어한다면 중간에 종료 시간을 미리 정해 두는 것이 좋습니다. 당신의 열기는 혼자 간직하기에 너무 강렬합니다. 나눌수록 빛납니다.",
         "shareIntroKo": "나는 한번 꽂히면 새벽까지 달리는 폭풍 정주행형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/binge-watch-style/storm-binger.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/binge-watch-style/storm-binger-share.png",
         "vector": {"marathon": 14, "focus": 14}
       },
       {
@@ -332,8 +330,6 @@
         ],
         "collaborationKo": "같이 드라마를 보는 상황이라면 사전에 '오늘 몇 화까지'를 합의하면 좋습니다. 당신의 깊은 시청 방식은 상대방이 놓친 장면을 잡아내는 데 도움이 되고, 드라마를 보고 나누는 대화가 가장 풍부한 타입입니다.",
         "shareIntroKo": "나는 한 화 한 화 깊이 음미하는 한편 음미형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/binge-watch-style/slow-savorer.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/binge-watch-style/slow-savorer-share.png",
         "vector": {"marathon": -14, "focus": 14}
       },
       {
@@ -352,8 +348,6 @@
         ],
         "collaborationKo": "누군가와 처음 드라마를 같이 볼 때는 스킵 버튼을 잠깐 내려두는 것이 좋습니다. 당신이 무심코 넘긴 장면이 상대방에게는 중요한 순간일 수 있기 때문입니다. 대신 어떤 작품이 볼 만한지는 당신이 가장 잘 압니다.",
         "shareIntroKo": "나는 배속과 스킵으로 핵심만 빠르게 챙기는 스킵 고수형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/binge-watch-style/speed-skipper.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/binge-watch-style/speed-skipper-share.png",
         "vector": {"marathon": 14, "focus": -14}
       },
       {
@@ -372,8 +366,6 @@
         ],
         "collaborationKo": "친구와 드라마를 볼 때는 미리 '나는 완전 집중 모드가 아닐 수 있다'고 말해 두면 좋습니다. 당신의 편안한 분위기 덕분에 함께 보는 자리 자체가 부담 없어지기도 합니다. 깊이 빠지고 싶은 작품이 생기면 잠깐만 폰을 내려놔 보세요.",
         "shareIntroKo": "나는 드라마를 배경 삼아 편하게 즐기는 배경 재생형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/binge-watch-style/ambient-viewer.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/binge-watch-style/ambient-viewer-share.png",
         "vector": {"marathon": -14, "focus": -14}
       }
     ]

@@ -399,8 +399,6 @@
         ],
         "collaborationKo": "함께 먹는 사람들과는 새 가게 도전과 검증된 가게를 번갈아 섞으면 좋습니다. 제안하기 전에 오늘 모험할 기분인지 한 번 물어봐 주면, 개척대장의 추진력이 모두의 즐거움이 됩니다.",
         "shareIntroKo": "나는 안 가본 가게부터 뚫는 맛집 개척대장형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/lunch-pick-style/tasty-pioneer.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/lunch-pick-style/tasty-pioneer-share.png",
         "vector": {
           "novelty": 14,
           "drive": 10
@@ -422,8 +420,6 @@
         ],
         "collaborationKo": "함께 먹는 사람들에게는 단골 리스트가 곧 공공재입니다. 다만 일행이 새 가게를 제안할 때 한 달에 한두 번은 따라가 보면, 리스트도 늘고 같이 먹는 재미도 커집니다.",
         "shareIntroKo": "나는 맛 보장 단골 메뉴로 직행하는 검증된 단골형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/lunch-pick-style/proven-regular.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/lunch-pick-style/proven-regular-share.png",
         "vector": {
           "novelty": -14,
           "drive": 10
@@ -445,8 +441,6 @@
         ],
         "collaborationKo": "함께 먹는 사람들에게 오늘은 끌리는 게 있다거나 아직 신호가 없다고 일찍 말해 주면 좋습니다. 신호가 없는 날은 후보 두세 개 중에서 고르는 방식으로 바꾸면 감각과 속도를 모두 지킬 수 있습니다.",
         "shareIntroKo": "나는 그날의 끌림으로 메뉴를 잡는 오늘의 끌림 안테나형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/lunch-pick-style/mood-antenna.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/lunch-pick-style/mood-antenna-share.png",
         "vector": {
           "novelty": 10,
           "drive": -12
@@ -468,8 +462,6 @@
         ],
         "collaborationKo": "함께 먹는 사람들과는 가끔 자기 취향을 먼저 말하는 연습이 도움이 됩니다. 일주일에 한 번은 서퍼가 메뉴를 정하는 날로 약속해 두면, 배려가 한쪽으로 쏠리지 않고 모두의 점심이 더 즐거워집니다.",
         "shareIntroKo": "나는 점심 분위기를 먼저 챙기는 평화로운 흐름 서퍼형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/lunch-pick-style/peace-surfer.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/lunch-pick-style/peace-surfer-share.png",
         "vector": {
           "novelty": -10,
           "drive": -12

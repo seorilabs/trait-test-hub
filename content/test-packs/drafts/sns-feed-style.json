@@ -310,8 +310,6 @@
         ],
         "collaborationKo": "같이 일하거나 프로젝트를 진행할 때 SNS 채널이나 그룹 피드를 활용하면 소통이 자연스럽게 됩니다. 다만 모든 사람이 같은 속도로 반응하지 않는다는 점을 고려하면 더 편안한 팀이 됩니다.",
         "shareIntroKo": "나는 게시도 활발하고 반응도 잘 하는 피드 연결형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/sns-feed-style/feed-connector.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/sns-feed-style/feed-connector-share.png",
         "vector": { "create": 12, "engage": 14 }
       },
       {
@@ -330,8 +328,6 @@
         ],
         "collaborationKo": "협업에서는 공지나 자료를 피드에 올리는 역할이 잘 맞습니다. 다만 상대의 게시물에도 짧은 반응을 남기면 관계가 더 부드럽게 유지됩니다.",
         "shareIntroKo": "나는 내 피드는 열심히 채우지만 반응은 조용한 셀프 큐레이터형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/sns-feed-style/self-curator.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/sns-feed-style/self-curator-share.png",
         "vector": { "create": 12, "engage": -10 }
       },
       {
@@ -350,8 +346,6 @@
         ],
         "collaborationKo": "피드백을 주는 역할에서 강점이 있습니다. 상대의 아이디어나 결과물을 진지하게 보고 반응해 주기 때문에 팀에서 소중한 독자가 됩니다. 가끔 자기 의견이나 경험도 먼저 내어 보면 관계가 한층 깊어집니다.",
         "shareIntroKo": "나는 올리진 않지만 응원은 제일 잘하는 숨은 응원단형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/sns-feed-style/silent-supporter.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/sns-feed-style/silent-supporter-share.png",
         "vector": { "create": -10, "engage": 12 }
       },
       {
@@ -370,8 +364,6 @@
         ],
         "collaborationKo": "메시지나 이메일처럼 직접 소통 채널이 더 잘 맞습니다. SNS보다 1:1 대화나 오프라인 만남에서 훨씬 적극적으로 관계를 쌓는 타입입니다. SNS 활동이 기대되는 팀에서는 최소한의 반응만 남기는 것으로도 충분합니다.",
         "shareIntroKo": "나는 피드를 눈으로만 보는 조용한 관찰자형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/sns-feed-style/quiet-observer.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/sns-feed-style/quiet-observer-share.png",
         "vector": { "create": -14, "engage": -14 }
       }
     ]

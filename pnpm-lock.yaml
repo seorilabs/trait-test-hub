@@ -106,8 +106,6 @@ importers:
 
   apps/preview: {}
 
-  packages/product-assets: {}
-
   packages/product-core: {}
 
 packages:

@@ -40,11 +40,21 @@ pnpm --dir apps/ait bundle:core  # product-core를 src/vendor로 번들 (dev/bui
 
 결과 화면에서 같은 결과 유형의 희소성을 보여줍니다. `src/lib/statsRepository.ts`가 firestore REST API로 직접 접근합니다 — 완료는 `completions`에 write(서버 트리거가 `test_stats`로 집계), 분포는 `test_stats`를 공개 read. org 정책상 Cloud Function 직접 호출이 막혀 있고, firebase Web SDK firestore는 Node `crypto` 의존으로 Metro 번들에서 깨지므로 **REST(fetch)** 로 우회합니다. 표시 정책·집계 흐름은 `docs/stats.md` 참고.
 
+## 테스트팩 로컬 캐시
+
+공개 테스트팩은 `https://traithub.vzyx.xyz/test-packs/manifest.json`에서 가져옵니다. 현재 origin은 GitHub Pages이며, 앱은 AppsInToss `Storage`에 마지막으로 검증된 manifest와 `testId@version`별 테스트 JSON을 저장합니다.
+
+- 시작 시 캐시를 먼저 표시하고 원격 manifest를 백그라운드 갱신합니다.
+- 원격 갱신에 실패하면 마지막 정상 캐시를 계속 사용합니다.
+- 새 manifest를 받으면 published 테스트 JSON을 백그라운드 선저장합니다.
+- manifest와 ID/버전이 일치하고 core validator를 통과한 데이터만 저장합니다.
+- 결과 화면은 원격 이미지 없이 앱 내부의 색상·이모지 카드로 표시됩니다.
+
 ## Release blockers (출시 전 확정)
 
 - `granite.config.ts`의 `brand.icon`: 현재 placehold.co 임시 URL → AppsInToss 콘솔 업로드 HTTPS URL로 교체.
 - 결과 통계 조작 방지: `completions` create가 현재 형식만 검증 → 출시 전 App Check(firestore enforcement) 또는 rate-limit 보강(`docs/stats.md`).
-- `src/pages/index.tsx`의 `CONTENT_ORIGIN`: 현재 `https://trait-test-hub.web.app` 기본값 → 실제 Firebase Hosting origin(커스텀 도메인 포함) 확정. 테스트팩 manifest/JSON을 Hosting에 배포해야 런타임 로딩이 동작.
+- 콘텐츠 origin 운영 정책: 현재 GitHub Pages custom domain을 사용하며, 트래픽/수익화 확대 전 Firebase Hosting 또는 전용 CDN 이전 검토.
 - AppsInToss 콘솔 등록: 카테고리, 등록 이미지(logo 600×600, thumbnail, 세로 스크린샷 3장), 고객센터 연락처.
 - TDS 컴포넌트 적용: 현재 화면은 RN 기본 컴포넌트 + `TDSProvider` 래핑. 심사 정합을 위해 핵심 UI를 TDS 컴포넌트로 전환 검토.
 

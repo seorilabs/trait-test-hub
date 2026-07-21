@@ -415,8 +415,6 @@
         ],
         "collaborationKo": "함께 듣는 사람들에게는 새 곡을 소개하되 상대가 지금 그 곡을 받을 준비가 되었는지 한 번 물어봐 주면 좋습니다. 한 달에 한 번은 서로의 인생곡을 천천히 나누는 시간을 두면, 탐험가의 발굴력이 관계 안에서도 즐거움으로 남습니다.",
         "shareIntroKo": "나는 안 들어본 음악부터 파고드는 디깅 탐험가형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/music-listening-style/crate-digger.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/music-listening-style/crate-digger-share.png",
         "vector": {
           "digging": 14,
           "immersion": 12
@@ -438,8 +436,6 @@
         ],
         "collaborationKo": "함께 듣는 사람들과는 내 인생곡을 나누는 만큼 상대가 아끼는 곡에도 한 번 깊이 귀 기울여 주면 좋습니다. 가끔은 친구가 건넨 새 곡을 며칠 곁에 두고 들어 보면, 몰입의 깊이는 지키면서 취향의 폭도 함께 넓어집니다.",
         "shareIntroKo": "나는 인생곡을 깊이 반복해 듣는 최애곡 몰입가형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/music-listening-style/anthem-replayer.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/music-listening-style/anthem-replayer-share.png",
         "vector": {
           "digging": -14,
           "immersion": 12
@@ -461,8 +457,6 @@
         ],
         "collaborationKo": "함께 듣는 사람들에게는 최신 곡을 빠르게 공유해 주는 것이 큰 즐거움입니다. 다만 가끔은 마음에 든 곡 하나를 며칠 곁에 두고 천천히 들어 보면, 넓은 안테나에 깊이까지 더해져 나만의 취향이 또렷해집니다.",
         "shareIntroKo": "나는 신곡을 가볍게 훑으며 흐름을 타는 신곡 서핑형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/music-listening-style/newwave-surfer.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/music-listening-style/newwave-surfer-share.png",
         "vector": {
           "digging": 14,
           "immersion": -12
@@ -484,8 +478,6 @@
         ],
         "collaborationKo": "함께 듣는 사람들에게는 편안한 분위기를 만들어 주는 든든한 존재입니다. 가끔은 친구가 권한 새 곡이나 아끼는 곡을 배경이 아니라 정면으로 한 번 들어 보면, 안정감은 지키면서 마음에 남는 곡이 하나씩 늘어갑니다.",
         "shareIntroKo": "나는 익숙한 곡으로 분위기를 챙기는 분위기 BGM형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/music-listening-style/mood-bgm.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/music-listening-style/mood-bgm-share.png",
         "vector": {
           "digging": -14,
           "immersion": -12

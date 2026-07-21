@@ -69,13 +69,13 @@ for (let index = 0; index < 16; index += 1) {
 await wait(500);
 
 const result = await evaluateJson(
-  'JSON.stringify({ text: document.body.innerText.slice(0, 360), hasImage: !!document.querySelector(".result-image"), imageComplete: document.querySelector(".result-image")?.complete ?? false, innerWidth: window.innerWidth, scrollWidth: document.documentElement.scrollWidth })',
+  'JSON.stringify({ text: document.body.innerText.slice(0, 360), hasIdentityCard: !!document.querySelector(".result-identity"), innerWidth: window.innerWidth, scrollWidth: document.documentElement.scrollWidth })',
 );
 if (!result.text.includes('독립적 코드 아키텍트')) {
   throw new Error(`Unexpected result screen: ${result.text}`);
 }
-if (!result.hasImage || !result.imageComplete) {
-  throw new Error('DPTI result image did not load');
+if (!result.hasIdentityCard) {
+  throw new Error('DPTI local result identity card did not render');
 }
 if (result.scrollWidth > result.innerWidth) {
   throw new Error(`Mobile overflow detected on result: ${result.scrollWidth} > ${result.innerWidth}`);

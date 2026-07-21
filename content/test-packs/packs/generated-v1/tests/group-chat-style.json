@@ -399,8 +399,6 @@
         ],
         "collaborationKo": "함께하는 사람들에게는 대화를 여는 에너지가 큰 선물입니다. 다만 결정이 필요한 이야기에서는 잠깐 속도를 늦추고, 아직 말하지 않은 사람에게 차례를 넘겨 주면 단톡방의 합이 훨씬 좋아집니다.",
         "shareIntroKo": "나는 단톡방에서 실시간으로 받아치며 흐름을 끌고 가는 번개 티키타카형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/group-chat-style/instant-tikitaka.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/group-chat-style/instant-tikitaka-share.png",
         "vector": {
           "tempo": 16,
           "voice": 14
@@ -422,8 +420,6 @@
         ],
         "collaborationKo": "사람들과 함께할 때 당신의 빠른 호응은 대화를 이어 가게 하는 윤활유입니다. 다만 날짜 조율이나 역할 분담처럼 내 상황이 걸린 이야기에서는 이모지 대신 한 문장이라도 직접 말해 주면 오해가 줄어듭니다.",
         "shareIntroKo": "나는 긴 말 대신 번개 같은 리액션으로 단톡방을 데우는 이모지 폭죽형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/group-chat-style/emoji-firework.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/group-chat-style/emoji-firework-share.png",
         "vector": {
           "tempo": 14,
           "voice": -14
@@ -445,8 +441,6 @@
         ],
         "collaborationKo": "당신의 정리 한마디는 단톡방의 결론 메이커 역할을 합니다. 다만 시간이 걸리는 스타일이니, 급한 안건에는 \"이따 저녁에 답할게\"처럼 언제 답할지만 먼저 알려 주면 기다리는 사람들이 훨씬 편안해집니다.",
         "shareIntroKo": "나는 쌓인 단톡을 정주행한 뒤 정리 한마디로 매듭짓는 정주행 정리반장형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/group-chat-style/binge-summarizer.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/group-chat-style/binge-summarizer-share.png",
         "vector": {
           "tempo": -14,
           "voice": 12
@@ -468,8 +462,6 @@
         ],
         "collaborationKo": "당신은 조용히 모임을 지키는 멤버입니다. 매번 말할 필요는 없지만, 공지 확인과 투표만큼은 빠르게 남기고 가끔 이모지 하나라도 띄워 주면 \"읽고 있구나\"라는 안심을 줄 수 있습니다. 깊은 이야기는 지금처럼 작은 자리에서 빛납니다.",
         "shareIntroKo": "나는 조용히 다 보고 있다가 필요할 때만 떠오르는 고요한 잠수함형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/group-chat-style/silent-submarine.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/group-chat-style/silent-submarine-share.png",
         "vector": {
           "tempo": -14,
           "voice": -14

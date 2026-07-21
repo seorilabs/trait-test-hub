@@ -312,8 +312,6 @@
         ],
         "collaborationKo": "함께 쇼핑할 때 당신의 분석력은 팀에게 큰 도움이 됩니다. 다만 빠른 결정이 필요한 타임딜 상황에서는 \"충분히 좋은 선택\"을 기준으로 삼고 분석을 마무리 짓는 연습이 도움이 됩니다. 모든 조건이 완벽한 제품은 없습니다.",
         "shareIntroKo": "나는 스펙 비교표를 혼자 완성하고 최적의 선택을 내리는 스펙 헌터형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/shopping-decision-style/spec-hunter.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/shopping-decision-style/spec-hunter-share.png",
         "vector": {"analysis": 14, "independent": 14}
       },
       {
@@ -332,8 +330,6 @@
         ],
         "collaborationKo": "당신이 수집한 리뷰와 정보는 함께하는 사람들에게도 큰 자산입니다. 단, 정보를 충분히 모았다고 느끼는 시점을 미리 정해 두면 결정 속도를 높일 수 있습니다. 모든 후기를 다 읽을 필요는 없습니다.",
         "shareIntroKo": "나는 커뮤니티까지 샅샅이 파헤치고 나서야 결제하는 리뷰 탐정형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/shopping-decision-style/review-sleuth.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/shopping-decision-style/review-sleuth-share.png",
         "vector": {"analysis": 14, "independent": -14}
       },
       {
@@ -352,8 +348,6 @@
         ],
         "collaborationKo": "빠른 결정력은 큰 장점이지만, 큰 금액이나 오래 쓸 물건에는 스펙을 간단히 확인하는 단계를 하나 추가해 보세요. \"30초 체크\"만으로도 실패 확률이 크게 줄어듭니다.",
         "shareIntroKo": "나는 직감이 OK 신호를 보내면 바로 결제 버튼을 누르는 번쩍 결제형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/shopping-decision-style/flash-buyer.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/shopping-decision-style/flash-buyer-share.png",
         "vector": {"analysis": -14, "independent": 14}
       },
       {
@@ -372,8 +366,6 @@
         ],
         "collaborationKo": "당신의 감성 안테나는 신선한 발견을 가져다줍니다. 다만 큰 금액의 구매에서는 추천이나 분위기가 아닌 자신이 세운 기준 하나를 기억해 두세요. \"내가 혼자라도 살 것인가?\"라는 질문 하나가 기준이 됩니다.",
         "shareIntroKo": "나는 예쁘거나 친구 추천이면 고민 없이 장바구니에 담는 감성 팔로워형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/shopping-decision-style/vibe-follower.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/shopping-decision-style/vibe-follower-share.png",
         "vector": {"analysis": -14, "independent": -14}
       }
     ]

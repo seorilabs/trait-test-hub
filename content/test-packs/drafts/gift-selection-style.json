@@ -414,8 +414,6 @@
         ],
         "collaborationKo": "함께 선물을 고를 때는 빠른 아이디어 제안이 큰 도움이 됩니다. 다만 최종 결정 전에 상대 취향을 한 번 더 확인하는 과정을 더하면 성공률이 높아집니다.",
         "shareIntroKo": "나는 딱 떠오른 감각으로 바로 선물을 고르는 직감 속사포형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/gift-selection-style/instinct-picker.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/gift-selection-style/instinct-picker-share.png",
         "vector": {
           "research": -16,
           "care": -16
@@ -437,8 +435,6 @@
         ],
         "collaborationKo": "함께 선물을 고를 때는 받는 사람에 대한 인사이트를 가장 잘 제공하는 역할을 합니다. 리서치를 잘하는 사람과 조합되면 마음과 완성도를 모두 갖춘 선물이 탄생합니다.",
         "shareIntroKo": "나는 상대의 작은 말 한마디를 기억해 마음을 담아 선물하는 온기 기억형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/gift-selection-style/warm-memory-type.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/gift-selection-style/warm-memory-type-share.png",
         "vector": {
           "research": -16,
           "care": 16
@@ -460,8 +456,6 @@
         ],
         "collaborationKo": "함께 선물을 고를 때는 정보 수집과 후보 좁히기를 맡으면 큰 도움이 됩니다. 상대를 잘 아는 사람과 협력하면 객관성과 맞춤감을 모두 갖춘 선물이 완성됩니다.",
         "shareIntroKo": "나는 후기와 평점을 꼼꼼히 분석해 최선의 선물을 찾는 큐레이션 달인형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/gift-selection-style/curated-practical.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/gift-selection-style/curated-practical-share.png",
         "vector": {
           "research": 16,
           "care": -16
@@ -483,8 +477,6 @@
         ],
         "collaborationKo": "함께 선물을 고를 때는 리서치와 상대 맞춤 체크 두 가지를 동시에 담당합니다. 빠른 실행력을 가진 사람과 협력하면 완성도 높은 선물이 시간 안에 준비됩니다.",
         "shareIntroKo": "나는 리서치와 상대 취향 분석을 동시에 하는 꼼꼼 탐정형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/gift-selection-style/detail-researcher.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/gift-selection-style/detail-researcher-share.png",
         "vector": {
           "research": 16,
           "care": 16

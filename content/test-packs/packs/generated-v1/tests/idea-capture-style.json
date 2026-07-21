@@ -399,8 +399,6 @@
         ],
         "collaborationKo": "함께 일하거나 생활할 때는 아이디어 조각을 던진 뒤, 바로 결정이 필요한지 단순 공유인지 구분해 주면 좋습니다. 속도감은 장점이지만 상대에게는 정리 시간이 필요할 수 있습니다.",
         "shareIntroKo": "나는 떠오른 생각을 바로 붙잡고 작은 행동으로 이어 가는 번쩍임 캐처형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/idea-capture-style/spark-catcher.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/idea-capture-style/spark-catcher-share.png",
         "vector": {
           "capture": 16,
           "activation": 10
@@ -422,8 +420,6 @@
         ],
         "collaborationKo": "다른 사람과 아이디어를 나눌 때는 완성된 지도만 보여주기보다 현재 어떤 기준으로 묶고 있는지 중간 구조를 공유하면 좋습니다. 상대는 그 구조 위에 새 재료를 더하기 쉬워집니다.",
         "shareIntroKo": "나는 흩어진 생각을 연결해 오래 쓰는 지도로 만드는 맥락 지도 제작형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/idea-capture-style/map-builder.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/idea-capture-style/map-builder-share.png",
         "vector": {
           "capture": -16,
           "activation": -8
@@ -445,8 +441,6 @@
         ],
         "collaborationKo": "함께 움직일 때는 아이디어마다 담당자나 기한을 붙이기 전에, 상대가 동의한 다음 행동인지 확인하면 좋습니다. 실행력은 강점이지만 모든 생각이 바로 작업이 될 필요는 없습니다.",
         "shareIntroKo": "나는 좋은 생각을 다음 행동에 꽂아 두는 실행 북마커형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/idea-capture-style/action-bookmarker.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/idea-capture-style/action-bookmarker-share.png",
         "vector": {
           "capture": -8,
           "activation": 16
@@ -468,8 +462,6 @@
         ],
         "collaborationKo": "다른 사람과 나눌 때는 아직 숙성 중인 생각인지, 의견이 필요한 생각인지 먼저 알려주면 좋습니다. 바로 결론을 요구받지 않을 때 더 풍부한 관점으로 기여할 수 있습니다.",
         "shareIntroKo": "나는 생각의 씨앗을 남겨 두고 천천히 연결시키는 조용한 숙성형이에요.",
-        "imagePath": "/test-packs/packs/generated-v1/assets/idea-capture-style/quiet-incubator.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/idea-capture-style/quiet-incubator-share.png",
         "vector": {
           "capture": 10,
           "activation": -16

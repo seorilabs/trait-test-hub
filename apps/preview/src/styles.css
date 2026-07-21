@@ -478,14 +478,27 @@ h2 {
   background: var(--soft);
 }
 
-.result-image {
-  width: min(100%, 360px);
-  aspect-ratio: 1;
-  justify-self: center;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  object-fit: cover;
-  background: #fff;
+.result-identity {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 16px;
+  background: var(--result-bg);
+}
+
+.result-identity h1 {
+  color: var(--result-ink);
+}
+
+.result-identity p {
+  margin-top: 6px;
+}
+
+.result-emoji {
+  font-size: 44px;
+  line-height: 1;
 }
 
 .score-list {

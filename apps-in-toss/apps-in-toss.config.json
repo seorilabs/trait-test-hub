@@ -1,23 +1,54 @@
 {
   "appId": "trait-test-hub",
   "appName": "trait-test-hub",
-  "appNameStatus": "확정 필요",
+  "appType": "NON_GAME",
+  "title": "성향 테스트 허브",
+  "titleEn": "Trait Hub",
   "displayName": {
     "ko-KR": "성향 테스트 허브",
     "en-US": "Trait Hub"
   },
   "subtitle": "매일 새 성향 테스트",
-  "category": "확정 필요",
+  "description": "성향·심리 테스트를 모아 매일 새로 즐겨요",
+  "detailDescription": "성향 테스트 허브는 일상, 관계, 취향까지 다양한 성향·심리 테스트를 한 곳에 모은 미니앱이에요. 마음에 드는 테스트를 골라 몇 개의 질문에 답하면 나의 결과 유형과 강점·주의할 점을 정리해 주고, '나와 같은 성향'을 가진 사람이 얼마나 드문지도 함께 보여줘요. 새로운 테스트가 계속 추가돼 매일 가볍게 나를 알아갈 수 있어요.",
+  "category": {
+    "group": "생활",
+    "category": "콘텐츠",
+    "subCategory": "테스트",
+    "categoryIds": [3834],
+    "subCategoryIds": [72]
+  },
+  "keywordList": [
+    "성향테스트",
+    "심리테스트",
+    "성격유형",
+    "취향테스트",
+    "일상",
+    "관계",
+    "자기이해",
+    "성격테스트",
+    "오늘의테스트"
+  ],
+  "minAge": 14,
+  "maxAge": 99,
+  "hasHarmfulContent": false,
+  "homePageUri": "https://traithub.vzyx.xyz",
+  "customerSupportEmail": "cs@seorilabs.com",
+  "tdsRequired": true,
   "featureUrls": [
     "intoss://trait-test-hub/",
     "intoss://trait-test-hub/test",
     "intoss://trait-test-hub/result"
   ],
-  "customerSupportEmail": "cs@seorilabs.com",
-  "tdsRequired": true,
   "releaseAssets": {
-    "logo600": "확정 필요",
-    "thumbnail1932x828": "확정 필요",
-    "screenshots636x1048": "확정 필요"
-  }
+    "logo600": "apps/ait/public/trait-test-hub-icon-600.png",
+    "thumbnail1932x828": "apps/ait/public/trait-test-hub-thumbnail-1932x828.png",
+    "screenshots636x1048": [
+      "apps/ait/public/screenshots/trait-test-hub-home-636x1048.png",
+      "apps/ait/public/screenshots/trait-test-hub-question-636x1048.png",
+      "apps/ait/public/screenshots/trait-test-hub-result-636x1048.png"
+    ]
+  },
+  "workspaceId": 38345,
+  "notes": "CS 이메일은 콘솔 계정 이메일로 자동 설정됨(MCP 입력 불가). category는 dpti-app과 동일 경로. keywordList에서 상표 리스크 있는 MBTI는 제외."
 }

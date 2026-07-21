@@ -14,7 +14,6 @@ const requiredFiles = [
   'apps/preview/src/styles.css',
   'packages/product-core/src/index.js',
   'packages/product-core/src/dptiCatalog.js',
-  'packages/product-assets/dpti/type/aclo.png',
   `${testPackRoot}/manifest.json`,
   `${testPackRoot}/packs/seed-v1/tests/dpti.json`,
 ];

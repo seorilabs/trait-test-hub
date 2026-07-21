@@ -8,8 +8,12 @@ const distRoot = join(root, 'pages-dist');
 rmSync(distRoot, { recursive: true, force: true });
 mkdirSync(distRoot, { recursive: true });
 
-cpSync(join(root, 'apps'), join(distRoot, 'apps'), { recursive: true });
-cpSync(join(root, 'packages'), join(distRoot, 'packages'), { recursive: true });
+mkdirSync(join(distRoot, 'apps'), { recursive: true });
+cpSync(join(root, 'apps', 'preview'), join(distRoot, 'apps', 'preview'), { recursive: true });
+mkdirSync(join(distRoot, 'packages'), { recursive: true });
+cpSync(join(root, 'packages', 'product-core'), join(distRoot, 'packages', 'product-core'), {
+  recursive: true,
+});
 cpSync(join(root, 'public'), join(distRoot, 'public'), { recursive: true });
 rmSync(join(distRoot, 'public', 'test-packs'), { recursive: true, force: true });
 buildTestPackOutput({

@@ -325,6 +325,7 @@ function renderQuestion() {
 
 function renderResult() {
   const result = state.score.result;
+  const theme = getResultTheme(result.code);
   const axisLabels = Object.fromEntries(state.test.axes.map((axis) => [axis.id, axis.labelKo ?? axis.id]));
   const totals = Object.entries(state.score.totals)
     .map(([axis, value]) => `<li><span>${axisLabels[axis] ?? axis}</span><strong>${formatScore(value)}</strong></li>`)
@@ -337,13 +338,17 @@ function renderResult() {
     <section class="shell compact">
       <section class="result">
         <p class="eyebrow">테스트 결과</p>
-        <h1>${result.titleKo}</h1>
-        <p>${result.summaryKo}</p>
+        <div class="result-identity" style="--result-bg:${theme.background};--result-ink:${theme.foreground}">
+          <span class="result-emoji" aria-hidden="true">${theme.emoji}</span>
+          <div>
+            <h1>${result.titleKo}</h1>
+            <p>${result.summaryKo}</p>
+          </div>
+        </div>
         <div style="background:#EAF3F1;border-radius:14px;padding:16px;margin:12px 0;display:flex;flex-direction:column;gap:4px;">
           <span style="font-size:13px;color:#3C7A70;font-weight:600;">나와 같은 성향</span>
           <strong style="font-size:18px;color:#2F6F68;">${state.rarityText ?? '아직 집계 중이에요'}</strong>
         </div>
-        ${result.imagePath ? `<img class="result-image" src="${result.imagePath}" alt="${result.titleKo} 이미지" />` : ''}
         ${result.descriptionKo ? `<p>${result.descriptionKo}</p>` : ''}
         <ul class="score-list">${totals}</ul>
         ${abilities}
@@ -402,6 +407,22 @@ function formatScore(value) {
     return `+${value}`;
   }
   return String(value);
+}
+
+function getResultTheme(code) {
+  const themes = [
+    { emoji: '🧭', background: '#EAF3F1', foreground: '#245C56' },
+    { emoji: '✨', background: '#F4EEFF', foreground: '#62449A' },
+    { emoji: '🌿', background: '#EEF5E8', foreground: '#456B35' },
+    { emoji: '💡', background: '#FFF4D9', foreground: '#8A6418' },
+    { emoji: '🌊', background: '#E8F3FA', foreground: '#2E617E' },
+    { emoji: '🎯', background: '#FCECE8', foreground: '#8C493C' },
+  ];
+  let hash = 0;
+  for (const character of code) {
+    hash = (hash * 31 + character.codePointAt(0)) >>> 0;
+  }
+  return themes[hash % themes.length];
 }
 
 app.addEventListener('click', (event) => {

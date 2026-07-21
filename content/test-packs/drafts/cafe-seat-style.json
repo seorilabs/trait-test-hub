@@ -419,9 +419,7 @@
         "vector": {
           "vibe": 14,
           "tempo": 8
-        },
-        "imagePath": "/test-packs/packs/generated-v1/assets/cafe-seat-style/sunny-window.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/cafe-seat-style/sunny-window-share.png"
+        }
       },
       {
         "code": "cozy-nook",
@@ -442,9 +440,7 @@
         "vector": {
           "vibe": -14,
           "tempo": 8
-        },
-        "imagePath": "/test-packs/packs/generated-v1/assets/cafe-seat-style/cozy-nook.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/cafe-seat-style/cozy-nook-share.png"
+        }
       },
       {
         "code": "spot-scout",
@@ -465,9 +461,7 @@
         "vector": {
           "vibe": 10,
           "tempo": -12
-        },
-        "imagePath": "/test-packs/packs/generated-v1/assets/cafe-seat-style/spot-scout.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/cafe-seat-style/spot-scout-share.png"
+        }
       },
       {
         "code": "focus-outlet",
@@ -488,9 +482,7 @@
         "vector": {
           "vibe": -10,
           "tempo": -12
-        },
-        "imagePath": "/test-packs/packs/generated-v1/assets/cafe-seat-style/focus-outlet.png",
-        "shareImagePath": "/test-packs/packs/generated-v1/assets/cafe-seat-style/focus-outlet-share.png"
+        }
       }
     ]
   }

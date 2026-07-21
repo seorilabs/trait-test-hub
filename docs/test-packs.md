@@ -11,11 +11,10 @@
 | manifest | `public/test-packs/manifest.json` | 앱이 가장 먼저 읽는 파일 |
 | test payload | `public/test-packs/packs/<packId>/tests/<testId>.json` | 선택한 테스트만 lazy load |
 | generated entry | `content/test-packs/packs/generated-v1/entries/<testId>.json` | 자동 생성 테스트의 manifest metadata 원본 |
-| generated image assets | `content/test-packs/packs/generated-v1/assets/<testId>/` | 자동 생성 테스트 결과 이미지 원본 |
 
 앱 runtime은 `/test-packs/manifest.json`을 읽습니다. GitHub Pages와 Firebase Hosting 모두 `public/test-packs` 내용을 `/test-packs` 아래로 배포하면 됩니다.
 
-repo에서 사람이 관리하는 원본은 `content/test-packs`입니다. 자동 생성 테스트는 shared manifest를 직접 수정하지 않고, 테스트별 `entries/<testId>.json`, `tests/<testId>.json`, `assets/<testId>/`만 추가합니다. `public/test-packs`와 pack index는 build/check 단계에서 컴파일됩니다.
+repo에서 사람이 관리하는 원본은 `content/test-packs`입니다. 자동 생성 테스트는 shared manifest를 직접 수정하지 않고, 테스트별 `entries/<testId>.json`, `tests/<testId>.json`만 추가합니다. `public/test-packs`와 pack index는 build/check 단계에서 컴파일됩니다.
 
 ## Manifest
 
@@ -64,7 +63,7 @@ pnpm validate:test-packs
 pnpm check:content
 ```
 
-주의: `pnpm generate:test-packs`는 seed pack과 base manifest를 재생성합니다. generated 테스트의 tests/entries/assets는 보존하지만, 운영 단계의 generated 테스트 publish에는 사용하지 않습니다.
+주의: `pnpm generate:test-packs`는 seed pack과 base manifest를 재생성합니다. generated 테스트의 tests/entries는 보존하지만, 운영 단계의 generated 테스트 publish에는 사용하지 않습니다.
 
 자동 생성 테스트는 `generate:test-packs`를 쓰지 않습니다. draft를 만든 뒤 conflict-free publish 스크립트를 사용합니다.
 
@@ -81,14 +80,14 @@ pnpm check:content
 - 최소 4개 결과
 - 문항별 최소 3개 선택지
 - 결과별 상세 설명, 강점 3개 이상, 주의점 2개 이상, 적용 조언, 공유 문구
-- 결과별 대표 이미지와 공유 이미지
+- `imagePath`, `shareImagePath` 또는 테스트팩 이미지 파일 없음
 
 ## 정적 호스팅 운영 방향
 
 ```mermaid
 flowchart LR
   Draft["LLM draft / reviewer"] --> Source["content/test-packs"]
-  Source --> Entry["per-test entries/tests/assets"]
+  Source --> Entry["per-test entries/tests"]
   Entry --> Compile["compile:test-packs"]
   Compile --> Validate["check:content"]
   Compile --> Hosting["GitHub Pages or Firebase Hosting /test-packs"]
