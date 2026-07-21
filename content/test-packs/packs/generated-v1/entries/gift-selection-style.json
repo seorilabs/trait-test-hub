@@ -3,7 +3,7 @@
   "packId": "generated-v1",
   "testId": "gift-selection-style",
   "metadata": {
-    "summaryKo": "선물을 고를 때 나만의 방식이 있다. 직감인지, 꼼꼼 리서치인지, 상대 맞춤인지 11문항으로 확인합니다.",
+    "summaryKo": "선물을 고를 때 나만의 방식이 있다. 직감인지, 꼼꼼 리서치인지, 상대 맞춤인지 8문항으로 확인합니다.",
     "tags": [
       "daily",
       "gift",
@@ -14,7 +14,7 @@
       "gift": "선물",
       "relationship": "관계"
     },
-    "estimatedMinutes": "3-5분",
+    "estimatedMinutes": "2-3분",
     "packTitleKo": "자동 생성 테스트팩",
     "publishedAt": "2026-06-16T00:59:34.568Z",
     "updatedAt": "2026-06-16T00:59:34.568Z"

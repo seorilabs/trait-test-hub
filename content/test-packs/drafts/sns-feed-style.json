@@ -2,14 +2,18 @@
   "schemaVersion": 1,
   "packId": "generated-v1",
   "metadata": {
-    "summaryKo": "피드를 보고 게시하고 반응하는 나만의 SNS 패턴을 11문항으로 확인합니다.",
-    "tags": ["social", "digital", "sns"],
+    "summaryKo": "피드를 보고 게시하고 반응하는 나만의 SNS 패턴을 8문항으로 확인합니다.",
+    "tags": [
+      "social",
+      "digital",
+      "sns"
+    ],
     "categoryLabelKo": "관계",
     "tagLabelsKo": {
       "digital": "디지털",
       "sns": "SNS"
     },
-    "estimatedMinutes": "3-5분"
+    "estimatedMinutes": "2-3분"
   },
   "test": {
     "id": "sns-feed-style",
@@ -36,19 +40,28 @@
             "code": "comment-right-away",
             "textKo": "댓글로 궁금한 것을 바로 남긴다",
             "descriptionKo": "보자마자 말을 걸고 싶어집니다.",
-            "scores": { "create": 0, "engage": 2 }
+            "scores": {
+              "create": 0,
+              "engage": 2
+            }
           },
           {
             "code": "like-only",
             "textKo": "좋아요만 눌러 보았다는 신호를 준다",
             "descriptionKo": "봤다는 표시는 남기지만 댓글은 생략합니다.",
-            "scores": { "create": 0, "engage": 0 }
+            "scores": {
+              "create": 0,
+              "engage": 0
+            }
           },
           {
             "code": "scroll-past",
             "textKo": "조용히 보고 그냥 넘긴다",
             "descriptionKo": "반응 없이 혼자 확인하는 편입니다.",
-            "scores": { "create": -1, "engage": -2 }
+            "scores": {
+              "create": -1,
+              "engage": -2
+            }
           }
         ]
       },
@@ -60,19 +73,28 @@
             "code": "post-immediately",
             "textKo": "짧은 문구와 함께 바로 올린다",
             "descriptionKo": "좋은 순간은 공유하면 더 빛난다고 생각합니다.",
-            "scores": { "create": 2, "engage": 1 }
+            "scores": {
+              "create": 2,
+              "engage": 1
+            }
           },
           {
             "code": "consider-later",
             "textKo": "올릴까 한참 고민하다 나중으로 미룬다",
             "descriptionKo": "올리고 싶은 마음은 있지만 결정이 쉽지 않습니다.",
-            "scores": { "create": 0, "engage": 0 }
+            "scores": {
+              "create": 0,
+              "engage": 0
+            }
           },
           {
             "code": "dont-think-of-posting",
             "textKo": "올리는 생각 자체를 잘 하지 않는다",
             "descriptionKo": "좋은 사진이어도 공유 욕구가 크지 않습니다.",
-            "scores": { "create": -2, "engage": -1 }
+            "scores": {
+              "create": -2,
+              "engage": -1
+            }
           }
         ]
       },
@@ -84,19 +106,28 @@
             "code": "comment-reaction",
             "textKo": "바로 댓글로 반응을 남긴다",
             "descriptionKo": "좋은 글에는 내 감상을 꼭 전하고 싶습니다.",
-            "scores": { "create": 0, "engage": 2 }
+            "scores": {
+              "create": 0,
+              "engage": 2
+            }
           },
           {
             "code": "like-and-move",
             "textKo": "좋아요만 누르고 넘어간다",
             "descriptionKo": "확인은 하지만 반응은 가볍게 합니다.",
-            "scores": { "create": 0, "engage": 0 }
+            "scores": {
+              "create": 0,
+              "engage": 0
+            }
           },
           {
             "code": "batch-check",
             "textKo": "알림은 꺼 두고 여유 있을 때 몰아서 확인한다",
             "descriptionKo": "실시간 반응보다 내 속도로 보는 편입니다.",
-            "scores": { "create": -1, "engage": -1 }
+            "scores": {
+              "create": -1,
+              "engage": -1
+            }
           }
         ]
       },
@@ -108,19 +139,28 @@
             "code": "frequent-poster",
             "textKo": "자주 올리는 편이다 (주 2~3개 이상)",
             "descriptionKo": "일상의 다양한 순간을 꾸준히 기록합니다.",
-            "scores": { "create": 2, "engage": 0 }
+            "scores": {
+              "create": 2,
+              "engage": 0
+            }
           },
           {
             "code": "occasional-poster",
             "textKo": "특별한 순간에만 올린다 (월 1~2개)",
             "descriptionKo": "의미 있는 장면을 선별해 올리는 편입니다.",
-            "scores": { "create": 0, "engage": 0 }
+            "scores": {
+              "create": 0,
+              "engage": 0
+            }
           },
           {
             "code": "rarely-post",
             "textKo": "거의 올리지 않는다",
             "descriptionKo": "업로드 자체가 부담스럽거나 익숙하지 않습니다.",
-            "scores": { "create": -2, "engage": -1 }
+            "scores": {
+              "create": -2,
+              "engage": -1
+            }
           }
         ]
       },
@@ -132,19 +172,28 @@
             "code": "multiple-times-active",
             "textKo": "하루에 여러 번 열고 댓글까지 꼼꼼히 챙긴다",
             "descriptionKo": "피드와 알림을 수시로 확인하는 습관이 있습니다.",
-            "scores": { "create": 0, "engage": 2 }
+            "scores": {
+              "create": 0,
+              "engage": 2
+            }
           },
           {
             "code": "once-or-twice",
             "textKo": "하루 한두 번 훑어보는 정도다",
             "descriptionKo": "일정한 시간에 가볍게 확인합니다.",
-            "scores": { "create": 0, "engage": 0 }
+            "scores": {
+              "create": 0,
+              "engage": 0
+            }
           },
           {
             "code": "days-without",
             "textKo": "며칠씩 열지 않는 경우도 있다",
             "descriptionKo": "SNS에 크게 의존하지 않는 편입니다.",
-            "scores": { "create": -1, "engage": -2 }
+            "scores": {
+              "create": -1,
+              "engage": -2
+            }
           }
         ]
       },
@@ -156,19 +205,28 @@
             "code": "join-and-post",
             "textKo": "내 버전을 만들어 직접 올린다",
             "descriptionKo": "유행에 내 색깔을 입혀 동참하는 게 재미있습니다.",
-            "scores": { "create": 2, "engage": 1 }
+            "scores": {
+              "create": 2,
+              "engage": 1
+            }
           },
           {
             "code": "watch-enjoy",
             "textKo": "재미있게 구경하지만 직접 올리진 않는다",
             "descriptionKo": "남의 것을 보며 즐기는 관객이 더 편합니다.",
-            "scores": { "create": -1, "engage": 1 }
+            "scores": {
+              "create": -1,
+              "engage": 1
+            }
           },
           {
             "code": "scroll-past-trend",
             "textKo": "크게 관심이 없어 그냥 스크롤해서 넘긴다",
             "descriptionKo": "유행 콘텐츠에 별로 관심이 없습니다.",
-            "scores": { "create": -2, "engage": -2 }
+            "scores": {
+              "create": -2,
+              "engage": -2
+            }
           }
         ]
       },
@@ -180,19 +238,28 @@
             "code": "reply-every-comment",
             "textKo": "댓글마다 꼭 답장하는 편이다",
             "descriptionKo": "반응해 준 것에 성의껏 화답하고 싶습니다.",
-            "scores": { "create": 0, "engage": 2 }
+            "scores": {
+              "create": 0,
+              "engage": 2
+            }
           },
           {
             "code": "like-to-acknowledge",
             "textKo": "좋아요로 읽었다는 표시만 한다",
             "descriptionKo": "확인은 하지만 매번 답장은 부담스럽습니다.",
-            "scores": { "create": 0, "engage": 0 }
+            "scores": {
+              "create": 0,
+              "engage": 0
+            }
           },
           {
             "code": "dont-check-notifications",
             "textKo": "알림을 자주 확인하지 않는다",
             "descriptionKo": "올리고 나면 반응을 크게 신경 쓰지 않습니다.",
-            "scores": { "create": 0, "engage": -2 }
+            "scores": {
+              "create": 0,
+              "engage": -2
+            }
           }
         ]
       },
@@ -204,91 +271,28 @@
             "code": "post-review",
             "textKo": "사진을 찍어 후기와 함께 피드에 올린다",
             "descriptionKo": "좋은 경험은 나눌수록 가치 있다고 생각합니다.",
-            "scores": { "create": 2, "engage": 0 }
+            "scores": {
+              "create": 2,
+              "engage": 0
+            }
           },
           {
             "code": "keep-memory",
             "textKo": "기록은 하지만 공유는 거의 안 한다",
             "descriptionKo": "나만의 기록으로 남기는 편이 편합니다.",
-            "scores": { "create": -1, "engage": -1 }
+            "scores": {
+              "create": -1,
+              "engage": -1
+            }
           },
           {
             "code": "no-sns-thought",
             "textKo": "SNS에 올리는 생각 자체를 잘 하지 않는다",
             "descriptionKo": "경험은 경험 자체로 충분합니다.",
-            "scores": { "create": -2, "engage": -1 }
-          }
-        ]
-      },
-      {
-        "id": "q09",
-        "textKo": "한동안 연락 못 한 지인의 피드를 우연히 봤을 때는?",
-        "options": [
-          {
-            "code": "reach-out",
-            "textKo": "댓글이나 DM으로 먼저 말을 건다",
-            "descriptionKo": "피드가 연락의 계기가 되면 좋다고 생각합니다.",
-            "scores": { "create": 0, "engage": 2 }
-          },
-          {
-            "code": "check-is-enough",
-            "textKo": "소식을 확인하는 것으로 충분하다",
-            "descriptionKo": "소식은 알지만 굳이 먼저 말을 걸진 않습니다.",
-            "scores": { "create": 0, "engage": -1 }
-          },
-          {
-            "code": "just-scroll",
-            "textKo": "그냥 스크롤해서 넘어간다",
-            "descriptionKo": "특별히 반응하지 않아도 불편하지 않습니다.",
-            "scores": { "create": -1, "engage": -2 }
-          }
-        ]
-      },
-      {
-        "id": "q10",
-        "textKo": "내가 올린 게시물의 좋아요·조회수에 대한 내 태도는?",
-        "options": [
-          {
-            "code": "reaction-motivates",
-            "textKo": "반응이 오면 기분이 좋고 더 올리고 싶어진다",
-            "descriptionKo": "반응이 창작 동기가 됩니다.",
-            "scores": { "create": 1, "engage": 1 }
-          },
-          {
-            "code": "post-for-itself",
-            "textKo": "올리는 것 자체가 목적이라 수치는 크게 신경 안 쓴다",
-            "descriptionKo": "내 기록과 표현이 먼저입니다.",
-            "scores": { "create": 1, "engage": -1 }
-          },
-          {
-            "code": "dont-care-numbers",
-            "textKo": "수치를 거의 의식하지 않는 편이다",
-            "descriptionKo": "좋아요나 조회수가 동기에 크게 영향을 주지 않습니다.",
-            "scores": { "create": -1, "engage": -2 }
-          }
-        ]
-      },
-      {
-        "id": "q11",
-        "textKo": "나의 팔로우 현황과 반응 패턴을 한마디로 하면?",
-        "options": [
-          {
-            "code": "many-follow-active",
-            "textKo": "팔로우도 많고 댓글·반응도 활발히 남기는 편이다",
-            "descriptionKo": "넓은 피드에서 활발하게 소통합니다.",
-            "scores": { "create": 1, "engage": 2 }
-          },
-          {
-            "code": "many-follow-quiet",
-            "textKo": "팔로우는 많지만 반응은 눈팅 위주다",
-            "descriptionKo": "보는 범위는 넓지만 직접 나서지는 않습니다.",
-            "scores": { "create": -1, "engage": -1 }
-          },
-          {
-            "code": "few-follow-inactive",
-            "textKo": "팔로우도 적고 SNS 자체를 잘 쓰지 않는다",
-            "descriptionKo": "SNS가 일상의 큰 부분을 차지하지 않습니다.",
-            "scores": { "create": -2, "engage": -2 }
+            "scores": {
+              "create": -2,
+              "engage": -1
+            }
           }
         ]
       }
@@ -310,7 +314,10 @@
         ],
         "collaborationKo": "같이 일하거나 프로젝트를 진행할 때 SNS 채널이나 그룹 피드를 활용하면 소통이 자연스럽게 됩니다. 다만 모든 사람이 같은 속도로 반응하지 않는다는 점을 고려하면 더 편안한 팀이 됩니다.",
         "shareIntroKo": "나는 게시도 활발하고 반응도 잘 하는 피드 연결형이에요.",
-        "vector": { "create": 12, "engage": 14 }
+        "vector": {
+          "create": 12,
+          "engage": 14
+        }
       },
       {
         "code": "self-curator",
@@ -328,7 +335,10 @@
         ],
         "collaborationKo": "협업에서는 공지나 자료를 피드에 올리는 역할이 잘 맞습니다. 다만 상대의 게시물에도 짧은 반응을 남기면 관계가 더 부드럽게 유지됩니다.",
         "shareIntroKo": "나는 내 피드는 열심히 채우지만 반응은 조용한 셀프 큐레이터형이에요.",
-        "vector": { "create": 12, "engage": -10 }
+        "vector": {
+          "create": 12,
+          "engage": -10
+        }
       },
       {
         "code": "silent-supporter",
@@ -346,7 +356,10 @@
         ],
         "collaborationKo": "피드백을 주는 역할에서 강점이 있습니다. 상대의 아이디어나 결과물을 진지하게 보고 반응해 주기 때문에 팀에서 소중한 독자가 됩니다. 가끔 자기 의견이나 경험도 먼저 내어 보면 관계가 한층 깊어집니다.",
         "shareIntroKo": "나는 올리진 않지만 응원은 제일 잘하는 숨은 응원단형이에요.",
-        "vector": { "create": -10, "engage": 12 }
+        "vector": {
+          "create": -10,
+          "engage": 12
+        }
       },
       {
         "code": "quiet-observer",
@@ -364,7 +377,10 @@
         ],
         "collaborationKo": "메시지나 이메일처럼 직접 소통 채널이 더 잘 맞습니다. SNS보다 1:1 대화나 오프라인 만남에서 훨씬 적극적으로 관계를 쌓는 타입입니다. SNS 활동이 기대되는 팀에서는 최소한의 반응만 남기는 것으로도 충분합니다.",
         "shareIntroKo": "나는 피드를 눈으로만 보는 조용한 관찰자형이에요.",
-        "vector": { "create": -14, "engage": -14 }
+        "vector": {
+          "create": -14,
+          "engage": -14
+        }
       }
     ]
   }

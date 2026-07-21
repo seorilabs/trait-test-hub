@@ -3,7 +3,7 @@
   "packId": "generated-v1",
   "testId": "lunch-pick-style",
   "metadata": {
-    "summaryKo": "점심 메뉴 앞에서 내가 어떤 결정러인지 11문항으로 확인합니다.",
+    "summaryKo": "점심 메뉴 앞에서 내가 어떤 결정러인지 8문항으로 확인합니다.",
     "tags": [
       "food",
       "lunch",
@@ -15,7 +15,7 @@
       "lunch": "점심",
       "decision": "결정"
     },
-    "estimatedMinutes": "3-5분",
+    "estimatedMinutes": "2-3분",
     "packTitleKo": "자동 생성 테스트팩",
     "publishedAt": "2026-06-12T20:12:37.159Z",
     "updatedAt": "2026-06-12T20:12:37.159Z"

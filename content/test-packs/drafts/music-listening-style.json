@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "packId": "generated-v1",
   "metadata": {
-    "summaryKo": "음악을 접하고 듣는 방식으로 내가 어떤 리스너인지 11문항으로 확인합니다.",
+    "summaryKo": "음악을 접하고 듣는 방식으로 내가 어떤 리스너인지 8문항으로 확인합니다.",
     "tags": [
       "music",
       "listening",
@@ -14,7 +14,7 @@
       "listening": "감상",
       "playlist": "플레이리스트"
     },
-    "estimatedMinutes": "3-5분",
+    "estimatedMinutes": "2-3분",
     "packTitleKo": "자동 생성 테스트팩"
   },
   "test": {
@@ -291,105 +291,6 @@
             "code": "melody-background",
             "textKo": "가사는 크게 신경 쓰지 않고 익숙한 멜로디를 튼다",
             "descriptionKo": "가사보다 익숙한 멜로디의 편안함을 택합니다.",
-            "scores": {
-              "digging": -2,
-              "immersion": -2
-            }
-          }
-        ]
-      },
-      {
-        "id": "q09",
-        "textKo": "콘서트나 공연을 대하는 나는?",
-        "options": [
-          {
-            "code": "seek-new-shows",
-            "textKo": "새로 알게 된 아티스트의 공연도 궁금해 찾아본다",
-            "descriptionKo": "처음 접한 아티스트의 무대까지 챙겨 보고 싶습니다.",
-            "scores": {
-              "digging": 2,
-              "immersion": 2
-            }
-          },
-          {
-            "code": "festival-vibe",
-            "textKo": "라인업이 화제인 페스티벌을 가볍게 즐기러 간다",
-            "descriptionKo": "누가 나오든 그 자리의 분위기 자체를 즐깁니다.",
-            "scores": {
-              "digging": 2,
-              "immersion": -2
-            }
-          },
-          {
-            "code": "repeat-favorite-show",
-            "textKo": "최애 아티스트 공연은 몇 번이고 다시 간다",
-            "descriptionKo": "사랑하는 무대는 반복해서 다시 찾는 편입니다.",
-            "scores": {
-              "digging": -2,
-              "immersion": 2
-            }
-          }
-        ]
-      },
-      {
-        "id": "q10",
-        "textKo": "한 곡을 여러 번 반복해서 듣는가?",
-        "options": [
-          {
-            "code": "replay-to-discover",
-            "textKo": "새 곡을 반복하며 구석구석 다른 소리를 찾아 듣는다",
-            "descriptionKo": "반복 재생으로 새 곡의 숨은 디테일을 캐냅니다.",
-            "scores": {
-              "digging": 2,
-              "immersion": 2
-            }
-          },
-          {
-            "code": "keep-skipping",
-            "textKo": "반복보다 새 곡으로 계속 넘기는 편이다",
-            "descriptionKo": "같은 곡에 머물기보다 새 곡으로 계속 흘러갑니다.",
-            "scores": {
-              "digging": 2,
-              "immersion": -2
-            }
-          },
-          {
-            "code": "comfort-repeat",
-            "textKo": "익숙한 곡 몇 개를 편하게 계속 돌린다",
-            "descriptionKo": "손에 익은 몇 곡을 편안하게 반복해 듣습니다.",
-            "scores": {
-              "digging": -2,
-              "immersion": -2
-            }
-          }
-        ]
-      },
-      {
-        "id": "q11",
-        "textKo": "음악을 남과 나누는 방식은?",
-        "options": [
-          {
-            "code": "curator-share",
-            "textKo": "발굴한 숨은 곡을 먼저 소개하는 걸 즐긴다",
-            "descriptionKo": "아직 안 알려진 곡을 먼저 꺼내 보이는 게 즐겁습니다.",
-            "scores": {
-              "digging": 2,
-              "immersion": 2
-            }
-          },
-          {
-            "code": "explain-anthem",
-            "textKo": "내 인생곡의 좋은 포인트를 진지하게 설명한다",
-            "descriptionKo": "아끼는 곡이 왜 좋은지 진지하게 풀어 설명합니다.",
-            "scores": {
-              "digging": -2,
-              "immersion": 2
-            }
-          },
-          {
-            "code": "set-the-mood",
-            "textKo": "분위기에 맞는 익숙한 곡을 함께 틀어둔다",
-            "descriptionKo": "그 자리에 어울리는 익숙한 곡으로 분위기를 맞춥니다.",
             "scores": {
               "digging": -2,
               "immersion": -2

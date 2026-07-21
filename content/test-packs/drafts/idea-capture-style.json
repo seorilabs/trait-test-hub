@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "packId": "generated-v1",
   "metadata": {
-    "summaryKo": "떠오른 생각을 어떤 방식으로 붙잡고 살리는지 11문항으로 확인합니다.",
+    "summaryKo": "떠오른 생각을 어떤 방식으로 붙잡고 살리는지 8문항으로 확인합니다.",
     "tags": [
       "routine",
       "daily",
@@ -14,7 +14,7 @@
       "ideas": "아이디어",
       "notes": "기록"
     },
-    "estimatedMinutes": "3-5분",
+    "estimatedMinutes": "2-3분",
     "packTitleKo": "자동 생성 테스트팩"
   },
   "test": {
@@ -293,105 +293,6 @@
             "descriptionKo": "바로 결론보다 연결되는 흐름을 더 보고 싶습니다.",
             "scores": {
               "capture": -1,
-              "activation": -2
-            }
-          }
-        ]
-      },
-      {
-        "id": "q09",
-        "textKo": "좋은 글을 읽고 나서 가장 남기고 싶은 것은?",
-        "options": [
-          {
-            "code": "quote-spark",
-            "textKo": "마음에 걸린 문장과 즉흥 감상",
-            "descriptionKo": "처음 반응이 다음 생각을 여는 열쇠라고 봅니다.",
-            "scores": {
-              "capture": 2,
-              "activation": -1
-            }
-          },
-          {
-            "code": "argument-map",
-            "textKo": "글의 구조와 핵심 논리",
-            "descriptionKo": "나중에 다시 써먹으려면 뼈대가 보여야 합니다.",
-            "scores": {
-              "capture": -2,
-              "activation": -1
-            }
-          },
-          {
-            "code": "use-case",
-            "textKo": "내 일상에서 적용할 한 장면",
-            "descriptionKo": "읽은 내용은 실제 상황과 연결될 때 살아납니다.",
-            "scores": {
-              "capture": -1,
-              "activation": 2
-            }
-          }
-        ]
-      },
-      {
-        "id": "q10",
-        "textKo": "주말에 지난 메모를 정리한다면 가장 먼저 손이 가는 일은?",
-        "options": [
-          {
-            "code": "keep-most",
-            "textKo": "눈에 띄는 것만 지우고 대부분 남긴다",
-            "descriptionKo": "아직 의미를 모르는 재료도 남겨 둘 가치가 있습니다.",
-            "scores": {
-              "capture": 2,
-              "activation": -1
-            }
-          },
-          {
-            "code": "group-map",
-            "textKo": "비슷한 메모를 묶어 큰 지도로 만든다",
-            "descriptionKo": "조각들이 모이면 방향과 반복 패턴이 보입니다.",
-            "scores": {
-              "capture": -2,
-              "activation": -1
-            }
-          },
-          {
-            "code": "pick-three",
-            "textKo": "다음 주에 해볼 세 가지를 고른다",
-            "descriptionKo": "정리는 실제로 움직일 항목을 좁힐 때 끝납니다.",
-            "scores": {
-              "capture": -1,
-              "activation": 2
-            }
-          }
-        ]
-      },
-      {
-        "id": "q11",
-        "textKo": "떠오른 생각을 다른 사람에게 공유할 때 가장 자연스러운 방식은?",
-        "options": [
-          {
-            "code": "send-spark",
-            "textKo": "짧은 아이디어 조각을 바로 보낸다",
-            "descriptionKo": "생각이 뜨거울 때 반응을 주고받는 편이 좋습니다.",
-            "scores": {
-              "capture": 2,
-              "activation": 1
-            }
-          },
-          {
-            "code": "clear-summary",
-            "textKo": "배경과 핵심을 정리한 뒤 보낸다",
-            "descriptionKo": "상대가 바로 이해할 수 있는 구조를 먼저 만듭니다.",
-            "scores": {
-              "capture": -2,
-              "activation": 1
-            }
-          },
-          {
-            "code": "wait-mature",
-            "textKo": "조금 더 익힌 뒤 필요한 순간에 꺼낸다",
-            "descriptionKo": "생각이 충분히 연결될 때 공유하는 편이 편합니다.",
-            "scores": {
-              "capture": 1,
               "activation": -2
             }
           }

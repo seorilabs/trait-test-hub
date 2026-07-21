@@ -3,7 +3,7 @@
   "packId": "generated-v1",
   "testId": "sns-feed-style",
   "metadata": {
-    "summaryKo": "피드를 보고 게시하고 반응하는 나만의 SNS 패턴을 11문항으로 확인합니다.",
+    "summaryKo": "피드를 보고 게시하고 반응하는 나만의 SNS 패턴을 8문항으로 확인합니다.",
     "tags": [
       "social",
       "digital",
@@ -14,7 +14,7 @@
       "digital": "디지털",
       "sns": "SNS"
     },
-    "estimatedMinutes": "3-5분",
+    "estimatedMinutes": "2-3분",
     "publishedAt": "2026-06-17T03:19:36.317Z",
     "updatedAt": "2026-06-17T03:19:36.317Z"
   }

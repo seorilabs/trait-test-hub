@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "packId": "generated-v1",
   "metadata": {
-    "summaryKo": "내 공간을 어떤 기준으로 정리하면 편한지 11문항으로 확인합니다.",
+    "summaryKo": "내 공간을 어떤 기준으로 정리하면 편한지 8문항으로 확인합니다.",
     "tags": [
       "routine",
       "daily",
@@ -14,7 +14,7 @@
       "space": "공간",
       "organizing": "정리"
     },
-    "estimatedMinutes": "3-5분",
+    "estimatedMinutes": "2-3분",
     "packTitleKo": "자동 생성 테스트팩"
   },
   "test": {
@@ -293,105 +293,6 @@
             "descriptionKo": "진행 단계가 섞이지 않아야 오래 편합니다.",
             "scores": {
               "visibility": -1,
-              "reset": -2
-            }
-          }
-        ]
-      },
-      {
-        "id": "q09",
-        "textKo": "정리를 시작해야겠다고 느끼는 순간에 가까운 것은?",
-        "options": [
-          {
-            "code": "reach",
-            "textKo": "자주 쓰는 물건이 손에 안 잡힐 때",
-            "descriptionKo": "동선이 막히면 바로 손을 봅니다.",
-            "scores": {
-              "visibility": 2,
-              "reset": 1
-            }
-          },
-          {
-            "code": "visual",
-            "textKo": "공간이 답답해 보이기 시작할 때",
-            "descriptionKo": "시야가 가벼워져야 다음 일도 편합니다.",
-            "scores": {
-              "visibility": -2,
-              "reset": 1
-            }
-          },
-          {
-            "code": "system",
-            "textKo": "정한 자리가 잘 지켜지지 않을 때",
-            "descriptionKo": "규칙이 흐려지면 구조를 다시 잡습니다.",
-            "scores": {
-              "visibility": 1,
-              "reset": -2
-            }
-          }
-        ]
-      },
-      {
-        "id": "q10",
-        "textKo": "새 물건을 들인 뒤 포장과 설명서를 처리하는 방식은?",
-        "options": [
-          {
-            "code": "near",
-            "textKo": "며칠은 가까이 두고 필요한지 본다",
-            "descriptionKo": "실제로 쓰며 남길 것을 판단합니다.",
-            "scores": {
-              "visibility": 2,
-              "reset": 1
-            }
-          },
-          {
-            "code": "discard",
-            "textKo": "필요한 것만 남기고 바로 치운다",
-            "descriptionKo": "새 물건이 들어와도 여백은 유지합니다.",
-            "scores": {
-              "visibility": -2,
-              "reset": 1
-            }
-          },
-          {
-            "code": "file",
-            "textKo": "보증, 부품, 설명서를 따로 분류한다",
-            "descriptionKo": "나중에 찾을 정보를 안정적으로 보관합니다.",
-            "scores": {
-              "visibility": -1,
-              "reset": -2
-            }
-          }
-        ]
-      },
-      {
-        "id": "q11",
-        "textKo": "정리 후 가장 만족스러운 장면은 무엇인가요?",
-        "options": [
-          {
-            "code": "flow",
-            "textKo": "필요한 물건이 한눈에 보여 바로 움직인다",
-            "descriptionKo": "생활 흐름이 끊기지 않는 장면이 좋습니다.",
-            "scores": {
-              "visibility": 2,
-              "reset": 1
-            }
-          },
-          {
-            "code": "calm",
-            "textKo": "표면이 비어 있어 공간이 조용해 보인다",
-            "descriptionKo": "시야의 여백이 가장 큰 만족을 줍니다.",
-            "scores": {
-              "visibility": -2,
-              "reset": 1
-            }
-          },
-          {
-            "code": "layout",
-            "textKo": "물건마다 돌아갈 자리가 선명하다",
-            "descriptionKo": "오늘뿐 아니라 다음 정리까지 쉬운 구조를 원합니다.",
-            "scores": {
-              "visibility": 1,
               "reset": -2
             }
           }

@@ -3,7 +3,7 @@
   "packId": "generated-v1",
   "testId": "space-organizing-style",
   "metadata": {
-    "summaryKo": "내 공간을 어떤 기준으로 정리하면 편한지 11문항으로 확인합니다.",
+    "summaryKo": "내 공간을 어떤 기준으로 정리하면 편한지 8문항으로 확인합니다.",
     "tags": [
       "routine",
       "daily",
@@ -15,7 +15,7 @@
       "space": "공간",
       "organizing": "정리"
     },
-    "estimatedMinutes": "3-5분",
+    "estimatedMinutes": "2-3분",
     "packTitleKo": "자동 생성 테스트팩",
     "publishedAt": "2026-06-08T10:18:29.048Z",
     "updatedAt": "2026-06-08T10:18:29.048Z"

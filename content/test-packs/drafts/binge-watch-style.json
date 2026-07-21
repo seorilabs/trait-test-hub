@@ -2,15 +2,19 @@
   "schemaVersion": 1,
   "packId": "generated-v1",
   "metadata": {
-    "summaryKo": "OTT를 볼 때 나만의 정주행 방식을 11문항으로 확인합니다.",
-    "tags": ["entertainment", "media", "leisure"],
+    "summaryKo": "OTT를 볼 때 나만의 정주행 방식을 8문항으로 확인합니다.",
+    "tags": [
+      "entertainment",
+      "media",
+      "leisure"
+    ],
     "categoryLabelKo": "엔터테인먼트",
     "tagLabelsKo": {
       "entertainment": "엔터테인먼트",
       "media": "미디어",
       "leisure": "여가"
     },
-    "estimatedMinutes": "3-5분",
+    "estimatedMinutes": "2-3분",
     "packTitleKo": "자동 생성 테스트팩"
   },
   "test": {
@@ -38,19 +42,28 @@
             "code": "immersive-binge",
             "textKo": "재미있는 시리즈에 꽂혀서 몇 화든 집중해서 달린다",
             "descriptionKo": "오늘 밤 얼마나 볼지는 화면이 정합니다.",
-            "scores": {"marathon": 2, "focus": 2}
+            "scores": {
+              "marathon": 2,
+              "focus": 2
+            }
           },
           {
             "code": "planned-ep",
             "textKo": "오늘 볼 분량을 정하고 그만큼만 집중해서 즐긴다",
             "descriptionKo": "분량을 미리 정해야 제대로 음미할 수 있습니다.",
-            "scores": {"marathon": -2, "focus": 2}
+            "scores": {
+              "marathon": -2,
+              "focus": 2
+            }
           },
           {
             "code": "quick-skim",
             "textKo": "여러 화를 배속으로 빠르게 훑으며 많이 본다",
             "descriptionKo": "효율적으로 많이 보는 게 최선입니다.",
-            "scores": {"marathon": 2, "focus": -2}
+            "scores": {
+              "marathon": 2,
+              "focus": -2
+            }
           }
         ]
       },
@@ -62,19 +75,28 @@
             "code": "cant-stop",
             "textKo": "어느새 새벽이 됐다. 클리프행어는 멈출 수가 없었다",
             "descriptionKo": "멈추는 건 선택지에 없었습니다.",
-            "scores": {"marathon": 2, "focus": 2}
+            "scores": {
+              "marathon": 2,
+              "focus": 2
+            }
           },
           {
             "code": "strict-cut",
             "textKo": "딱 한 화만 보고 끈다. 내일의 설렘을 위해 참는다",
             "descriptionKo": "기다리는 설렘도 시청의 일부입니다.",
-            "scores": {"marathon": -2, "focus": 2}
+            "scores": {
+              "marathon": -2,
+              "focus": 2
+            }
           },
           {
             "code": "background-drift",
             "textKo": "반쯤 보다 잠이 드는 것도 나쁘지 않다. 틀어 두면 된다",
             "descriptionKo": "배경음이 있으면 잠도 잘 옵니다.",
-            "scores": {"marathon": -2, "focus": -2}
+            "scores": {
+              "marathon": -2,
+              "focus": -2
+            }
           }
         ]
       },
@@ -86,19 +108,28 @@
             "code": "phone-down",
             "textKo": "최대한 내려두거나 뒤집어 둔다. 드라마에 집중하고 싶다",
             "descriptionKo": "화면 밖에 방해 요소가 있으면 몰입이 깨집니다.",
-            "scores": {"marathon": 0, "focus": 2}
+            "scores": {
+              "marathon": 0,
+              "focus": 2
+            }
           },
           {
             "code": "phone-ready",
             "textKo": "늘 한 손에 쥐고 있다. 지루한 장면이 나오면 자연스럽게 다른 앱을 연다",
             "descriptionKo": "드라마와 폰을 동시에 즐기는 게 자연스럽습니다.",
-            "scores": {"marathon": 0, "focus": -2}
+            "scores": {
+              "marathon": 0,
+              "focus": -2
+            }
           },
           {
             "code": "skip-button",
             "textKo": "10초 스킵 버튼을 손에 들고 있다. 지루한 장면은 바로 넘긴다",
             "descriptionKo": "핵심 장면만 보면 됩니다. 나머지는 스킵입니다.",
-            "scores": {"marathon": 2, "focus": -2}
+            "scores": {
+              "marathon": 2,
+              "focus": -2
+            }
           }
         ]
       },
@@ -110,19 +141,28 @@
             "code": "sit-through",
             "textKo": "지루해도 흐름을 놓치기 싫어서 집중해서 본다",
             "descriptionKo": "느린 장면에도 중요한 단서가 숨어 있습니다.",
-            "scores": {"marathon": 0, "focus": 2}
+            "scores": {
+              "marathon": 0,
+              "focus": 2
+            }
           },
           {
             "code": "skip-ahead",
             "textKo": "배속이나 스킵으로 건너뛰고 중요한 장면만 챙긴다",
             "descriptionKo": "시간은 소중하고 핵심만 있으면 됩니다.",
-            "scores": {"marathon": 2, "focus": -2}
+            "scores": {
+              "marathon": 2,
+              "focus": -2
+            }
           },
           {
             "code": "phone-time",
             "textKo": "드라마는 틀어 두고 스마트폰으로 딴짓을 한다",
             "descriptionKo": "지루하면 자연스럽게 관심이 다른 데로 갑니다.",
-            "scores": {"marathon": -2, "focus": -2}
+            "scores": {
+              "marathon": -2,
+              "focus": -2
+            }
           }
         ]
       },
@@ -134,19 +174,28 @@
             "code": "start-now",
             "textKo": "바로 다음 시즌을 튼다. 이 흐름을 끊고 싶지 않다",
             "descriptionKo": "몰입의 흐름을 유지하는 게 가장 중요합니다.",
-            "scores": {"marathon": 2, "focus": 2}
+            "scores": {
+              "marathon": 2,
+              "focus": 2
+            }
           },
           {
             "code": "rest-reflect",
             "textKo": "이번 시즌을 충분히 소화한 다음에 다음 시즌을 시작한다",
             "descriptionKo": "여운을 즐기고 나서 새 시즌을 맞이하고 싶습니다.",
-            "scores": {"marathon": -2, "focus": 2}
+            "scores": {
+              "marathon": -2,
+              "focus": 2
+            }
           },
           {
             "code": "skim-preview",
             "textKo": "다음 시즌 예고편을 빠르게 확인하고 재미있을 것 같으면 바로 튼다",
             "descriptionKo": "기대치를 빠르게 파악하면 판단도 빠릅니다.",
-            "scores": {"marathon": 2, "focus": -2}
+            "scores": {
+              "marathon": 2,
+              "focus": -2
+            }
           }
         ]
       },
@@ -158,19 +207,28 @@
             "code": "immersion-mode",
             "textKo": "불을 끄고 폰을 뒤집어 두고 화면에만 집중한다",
             "descriptionKo": "극장 같은 환경을 만들어야 제대로 즐길 수 있습니다.",
-            "scores": {"marathon": 2, "focus": 2}
+            "scores": {
+              "marathon": 2,
+              "focus": 2
+            }
           },
           {
             "code": "multitask-mode",
             "textKo": "밥을 먹거나 청소를 하면서 틀어 두고 슬쩍슬쩍 본다",
             "descriptionKo": "드라마가 배경이 되어 주는 것만으로도 충분합니다.",
-            "scores": {"marathon": -2, "focus": -2}
+            "scores": {
+              "marathon": -2,
+              "focus": -2
+            }
           },
           {
             "code": "speed-mode",
             "textKo": "배속으로 맞춰 두고 여러 화를 빠르게 넘긴다",
             "descriptionKo": "같은 시간에 더 많이 볼 수 있으면 그게 최선입니다.",
-            "scores": {"marathon": 2, "focus": -2}
+            "scores": {
+              "marathon": 2,
+              "focus": -2
+            }
           }
         ]
       },
@@ -182,19 +240,28 @@
             "code": "passionate-share",
             "textKo": "요즘 완전히 빠진 시리즈를 열정적으로 설명한다. 스포 조심하라고 경고하면서",
             "descriptionKo": "감동을 나눠야 제대로 즐긴 겁니다.",
-            "scores": {"marathon": 2, "focus": 2}
+            "scores": {
+              "marathon": 2,
+              "focus": 2
+            }
           },
           {
             "code": "ep-highlight",
             "textKo": "특히 인상 깊었던 한두 화를 꼭 봐야 한다고 추천한다",
             "descriptionKo": "한 화 한 화가 남긴 감동을 오래 기억합니다.",
-            "scores": {"marathon": -2, "focus": 2}
+            "scores": {
+              "marathon": -2,
+              "focus": 2
+            }
           },
           {
             "code": "vague-answer",
             "textKo": "\"이것저것 보는데 제목이 잘 기억 안 나\"라고 한다",
             "descriptionKo": "많이 봤다는 게 중요하지 모든 걸 기억할 필요는 없습니다.",
-            "scores": {"marathon": 2, "focus": -2}
+            "scores": {
+              "marathon": 2,
+              "focus": -2
+            }
           }
         ]
       },
@@ -206,91 +273,28 @@
             "code": "30-min-ok",
             "textKo": "30분도 충분하다. 일단 튼다",
             "descriptionKo": "짧아도 볼 수 있을 때 봐야 합니다.",
-            "scores": {"marathon": 2, "focus": 2}
+            "scores": {
+              "marathon": 2,
+              "focus": 2
+            }
           },
           {
             "code": "wait-more",
             "textKo": "짧은 시간에 제대로 몰입하기 어려우니 더 여유가 있을 때 본다",
             "descriptionKo": "집중할 수 있는 환경이 준비됐을 때 제대로 즐기고 싶습니다.",
-            "scores": {"marathon": -2, "focus": 2}
+            "scores": {
+              "marathon": -2,
+              "focus": 2
+            }
           },
           {
             "code": "power-skip",
             "textKo": "30분 안에 2~3화를 배속으로 빠르게 돌린다",
             "descriptionKo": "짧은 시간이라도 효율을 높이면 됩니다.",
-            "scores": {"marathon": 2, "focus": -2}
-          }
-        ]
-      },
-      {
-        "id": "q09",
-        "textKo": "다음에 볼 작품을 고르는 방식은?",
-        "options": [
-          {
-            "code": "instant-gut",
-            "textKo": "썸네일이나 제목을 보다 끌리면 바로 튼다. 재미있으면 밤새 달린다",
-            "descriptionKo": "첫 직감이 대부분 맞습니다.",
-            "scores": {"marathon": 2, "focus": 2}
-          },
-          {
-            "code": "research-pick",
-            "textKo": "미리 평점·리뷰를 찾아보고 기대치를 높인 뒤 시작한다",
-            "descriptionKo": "제대로 고른 작품은 한 화 한 화가 소중합니다.",
-            "scores": {"marathon": -2, "focus": 2}
-          },
-          {
-            "code": "background-pick",
-            "textKo": "편하게 틀어 둘 수 있는 잔잔한 걸 주로 고른다",
-            "descriptionKo": "배경으로 적합한 작품이 따로 있습니다.",
-            "scores": {"marathon": -2, "focus": -2}
-          }
-        ]
-      },
-      {
-        "id": "q10",
-        "textKo": "드라마 속 충격적인 반전 장면이 나왔다. 나의 반응은?",
-        "options": [
-          {
-            "code": "rewind-again",
-            "textKo": "멈추고 직전 장면을 다시 본다. 디테일을 놓치고 싶지 않다",
-            "descriptionKo": "반전의 실마리를 되짚는 것이 진짜 재미입니다.",
-            "scores": {"marathon": 0, "focus": 2}
-          },
-          {
-            "code": "forward-check",
-            "textKo": "빠르게 스킵해서 다음 전개를 먼저 확인한다",
-            "descriptionKo": "긴장감을 빨리 해소해야 계속 볼 수 있습니다.",
-            "scores": {"marathon": 2, "focus": -2}
-          },
-          {
-            "code": "half-miss",
-            "textKo": "사실 다른 일을 하다가 놓쳤다. 계속 흘려 듣는다",
-            "descriptionKo": "흐름을 파악할 수 있으면 놓쳐도 괜찮습니다.",
-            "scores": {"marathon": 0, "focus": -2}
-          }
-        ]
-      },
-      {
-        "id": "q11",
-        "textKo": "새벽에 시리즈를 보다가 내일 일찍 일어나야 한다는 게 생각났다.",
-        "options": [
-          {
-            "code": "one-more-ep",
-            "textKo": "\"한 화만 더\"라고 생각하면서 끄지 못한다",
-            "descriptionKo": "내일은 내일의 내가 알아서 할 것입니다.",
-            "scores": {"marathon": 2, "focus": 2}
-          },
-          {
-            "code": "discipline-off",
-            "textKo": "아쉽지만 내일을 위해 끈다. 다음 화가 더 기대된다",
-            "descriptionKo": "설렘을 아껴 둬야 더 즐겁게 볼 수 있습니다.",
-            "scores": {"marathon": -2, "focus": 2}
-          },
-          {
-            "code": "sleep-play",
-            "textKo": "틀어 두고 들으면서 잠을 청한다",
-            "descriptionKo": "배경음이 있으면 잠이 더 잘 옵니다.",
-            "scores": {"marathon": -2, "focus": -2}
+            "scores": {
+              "marathon": 2,
+              "focus": -2
+            }
           }
         ]
       }
@@ -312,7 +316,10 @@
         ],
         "collaborationKo": "같이 드라마를 볼 사람을 찾는다면 최고의 파트너입니다. 단, 동행이 새벽 마라톤을 힘들어한다면 중간에 종료 시간을 미리 정해 두는 것이 좋습니다. 당신의 열기는 혼자 간직하기에 너무 강렬합니다. 나눌수록 빛납니다.",
         "shareIntroKo": "나는 한번 꽂히면 새벽까지 달리는 폭풍 정주행형이에요.",
-        "vector": {"marathon": 14, "focus": 14}
+        "vector": {
+          "marathon": 14,
+          "focus": 14
+        }
       },
       {
         "code": "slow-savorer",
@@ -330,7 +337,10 @@
         ],
         "collaborationKo": "같이 드라마를 보는 상황이라면 사전에 '오늘 몇 화까지'를 합의하면 좋습니다. 당신의 깊은 시청 방식은 상대방이 놓친 장면을 잡아내는 데 도움이 되고, 드라마를 보고 나누는 대화가 가장 풍부한 타입입니다.",
         "shareIntroKo": "나는 한 화 한 화 깊이 음미하는 한편 음미형이에요.",
-        "vector": {"marathon": -14, "focus": 14}
+        "vector": {
+          "marathon": -14,
+          "focus": 14
+        }
       },
       {
         "code": "speed-skipper",
@@ -348,7 +358,10 @@
         ],
         "collaborationKo": "누군가와 처음 드라마를 같이 볼 때는 스킵 버튼을 잠깐 내려두는 것이 좋습니다. 당신이 무심코 넘긴 장면이 상대방에게는 중요한 순간일 수 있기 때문입니다. 대신 어떤 작품이 볼 만한지는 당신이 가장 잘 압니다.",
         "shareIntroKo": "나는 배속과 스킵으로 핵심만 빠르게 챙기는 스킵 고수형이에요.",
-        "vector": {"marathon": 14, "focus": -14}
+        "vector": {
+          "marathon": 14,
+          "focus": -14
+        }
       },
       {
         "code": "ambient-viewer",
@@ -366,7 +379,10 @@
         ],
         "collaborationKo": "친구와 드라마를 볼 때는 미리 '나는 완전 집중 모드가 아닐 수 있다'고 말해 두면 좋습니다. 당신의 편안한 분위기 덕분에 함께 보는 자리 자체가 부담 없어지기도 합니다. 깊이 빠지고 싶은 작품이 생기면 잠깐만 폰을 내려놔 보세요.",
         "shareIntroKo": "나는 드라마를 배경 삼아 편하게 즐기는 배경 재생형이에요.",
-        "vector": {"marathon": -14, "focus": -14}
+        "vector": {
+          "marathon": -14,
+          "focus": -14
+        }
       }
     ]
   }

@@ -3,7 +3,7 @@
   "packId": "generated-v1",
   "testId": "travel-planning-style",
   "metadata": {
-    "summaryKo": "여행을 준비하고 보내는 방식으로 나의 여행 계획 성향을 11문항으로 확인합니다.",
+    "summaryKo": "여행을 준비하고 보내는 방식으로 나의 여행 계획 성향을 8문항으로 확인합니다.",
     "tags": [
       "travel",
       "leisure",
@@ -15,7 +15,7 @@
       "leisure": "여가",
       "planning": "계획"
     },
-    "estimatedMinutes": "3-5분",
+    "estimatedMinutes": "2-3분",
     "packTitleKo": "자동 생성 테스트팩",
     "publishedAt": "2026-06-11T20:11:57.264Z",
     "updatedAt": "2026-06-11T20:11:57.264Z"

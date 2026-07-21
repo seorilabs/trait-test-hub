@@ -3,7 +3,7 @@
   "packId": "generated-v1",
   "testId": "idea-capture-style",
   "metadata": {
-    "summaryKo": "떠오른 생각을 어떤 방식으로 붙잡고 살리는지 11문항으로 확인합니다.",
+    "summaryKo": "떠오른 생각을 어떤 방식으로 붙잡고 살리는지 8문항으로 확인합니다.",
     "tags": [
       "routine",
       "daily",
@@ -15,7 +15,7 @@
       "ideas": "아이디어",
       "notes": "기록"
     },
-    "estimatedMinutes": "3-5분",
+    "estimatedMinutes": "2-3분",
     "packTitleKo": "자동 생성 테스트팩",
     "publishedAt": "2026-06-10T03:44:08.329Z",
     "updatedAt": "2026-06-10T03:44:08.329Z"

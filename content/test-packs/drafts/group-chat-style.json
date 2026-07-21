@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "packId": "generated-v1",
   "metadata": {
-    "summaryKo": "단톡방에서 내가 어떤 속도와 방식으로 대화에 참여하는지 11문항으로 확인합니다.",
+    "summaryKo": "단톡방에서 내가 어떤 속도와 방식으로 대화에 참여하는지 8문항으로 확인합니다.",
     "tags": [
       "social",
       "chat",
@@ -14,7 +14,7 @@
       "chat": "채팅",
       "friends": "친구"
     },
-    "estimatedMinutes": "3-5분",
+    "estimatedMinutes": "2-3분",
     "packTitleKo": "자동 생성 테스트팩"
   },
   "test": {
@@ -294,105 +294,6 @@
             "scores": {
               "tempo": -2,
               "voice": 2
-            }
-          }
-        ]
-      },
-      {
-        "id": "q09",
-        "textKo": "모임이 끝난 다음 날 단톡방에서 나의 역할은?",
-        "options": [
-          {
-            "code": "recap-opener",
-            "textKo": "어제 재밌었다며 후기 이야기를 먼저 연다",
-            "descriptionKo": "여운은 단톡방에서 한 번 더 나눠야 완성됩니다.",
-            "scores": {
-              "tempo": 2,
-              "voice": 2
-            }
-          },
-          {
-            "code": "recap-reactor",
-            "textKo": "남들이 올린 후기와 사진에 리액션을 보탠다",
-            "descriptionKo": "이야기를 여는 것보다 받아 주는 쪽이 편합니다.",
-            "scores": {
-              "tempo": 1,
-              "voice": -2
-            }
-          },
-          {
-            "code": "private-echo",
-            "textKo": "단톡방 대신 친한 친구와 따로 후기를 나눈다",
-            "descriptionKo": "진짜 하고 싶은 말은 작은 대화에서 나옵니다.",
-            "scores": {
-              "tempo": -2,
-              "voice": -1
-            }
-          }
-        ]
-      },
-      {
-        "id": "q10",
-        "textKo": "회비나 장소 변경 같은 공지가 단톡방에 올라오면?",
-        "options": [
-          {
-            "code": "confirm-and-ask",
-            "textKo": "바로 확인 답을 하고 궁금한 것도 같이 묻는다",
-            "descriptionKo": "공지가 묻히기 전에 정리할 건 정리해 둡니다.",
-            "scores": {
-              "tempo": 2,
-              "voice": 2
-            }
-          },
-          {
-            "code": "check-emoji",
-            "textKo": "확인 이모지만 누르고 지나간다",
-            "descriptionKo": "봤다는 표시면 충분하고 대화는 늘리지 않습니다.",
-            "scores": {
-              "tempo": 2,
-              "voice": -2
-            }
-          },
-          {
-            "code": "save-for-later",
-            "textKo": "일단 읽어 두고 필요할 때 다시 찾아본다",
-            "descriptionKo": "당장 답할 일이 아니면 조용히 기억해 둡니다.",
-            "scores": {
-              "tempo": -2,
-              "voice": -1
-            }
-          }
-        ]
-      },
-      {
-        "id": "q11",
-        "textKo": "한동안 조용하던 단톡방, 나는 어떻게 할까?",
-        "options": [
-          {
-            "code": "topic-starter",
-            "textKo": "근황 질문이나 화젯거리를 먼저 던진다",
-            "descriptionKo": "방이 식으면 불씨를 넣는 건 보통 내 몫입니다.",
-            "scores": {
-              "tempo": 2,
-              "voice": 2
-            }
-          },
-          {
-            "code": "ready-receiver",
-            "textKo": "누가 말을 걸면 바로 받아칠 준비만 해 둔다",
-            "descriptionKo": "시작은 안 해도 호응은 누구보다 빠릅니다.",
-            "scores": {
-              "tempo": 1,
-              "voice": -1
-            }
-          },
-          {
-            "code": "let-it-rest",
-            "textKo": "조용한 대로 둔다, 필요하면 다시 살아난다",
-            "descriptionKo": "대화가 없는 시간도 단톡방의 자연스러운 상태입니다.",
-            "scores": {
-              "tempo": -2,
-              "voice": -2
             }
           }
         ]

@@ -3,7 +3,7 @@
   "packId": "generated-v1",
   "testId": "cafe-seat-style",
   "metadata": {
-    "summaryKo": "카페에서 어떤 자리를 어떻게 고르는지 11문항으로 알아봅니다.",
+    "summaryKo": "카페에서 어떤 자리를 어떻게 고르는지 8문항으로 알아봅니다.",
     "tags": [
       "lifestyle",
       "cafe",
@@ -16,7 +16,7 @@
       "cafe": "카페",
       "mood": "분위기"
     },
-    "estimatedMinutes": "3-5분",
+    "estimatedMinutes": "2-3분",
     "packTitleKo": "자동 생성 테스트팩",
     "publishedAt": "2026-07-20T22:16:11.188Z",
     "updatedAt": "2026-07-20T22:16:11.188Z"

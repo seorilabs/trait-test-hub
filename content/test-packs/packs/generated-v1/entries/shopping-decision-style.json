@@ -3,7 +3,7 @@
   "packId": "generated-v1",
   "testId": "shopping-decision-style",
   "metadata": {
-    "summaryKo": "물건을 살 때 나만의 쇼핑 결정 방식을 11문항으로 파악합니다.",
+    "summaryKo": "물건을 살 때 나만의 쇼핑 결정 방식을 8문항으로 파악합니다.",
     "tags": [
       "shopping",
       "daily",
@@ -15,7 +15,7 @@
       "daily": "일상",
       "decision": "결정"
     },
-    "estimatedMinutes": "3-5분",
+    "estimatedMinutes": "2-3분",
     "packTitleKo": "자동 생성 테스트팩",
     "publishedAt": "2026-06-13T20:16:31.774Z",
     "updatedAt": "2026-06-13T20:16:31.774Z"
