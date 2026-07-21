@@ -1,6 +1,6 @@
 import { Storage } from '@apps-in-toss/framework';
 import { createRoute } from '@granite-js/react-native';
-import { type ReactNode, useCallback, useEffect, useState } from 'react';
+import { type ReactNode, useCallback, useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import {
@@ -12,6 +12,7 @@ import {
   scoreTraitTest,
   sortManifestEntries,
 } from '../vendor/product-core.js';
+import { createAitInterstitialPort } from '../lib/ads/aitInterstitialPort';
 import { createContentRepository } from '../lib/contentRepository';
 import { createAitSharePort } from '../lib/share/aitSharePort';
 import { getStats, recordCompletion } from '../lib/statsRepository';
@@ -29,6 +30,11 @@ const contentRepository = createContentRepository({ storage: Storage, origin: CO
 const sharePort = createAitSharePort();
 const APP_DEEP_LINK = 'intoss://trait-test-hub';
 const SHARE_OG_IMAGE_URL = 'https://static.toss.im/appsintoss/38345/6629020b-e8a6-43e5-92ef-f983bdaf66c9.png';
+
+// 결과 화면 진입 시 전면 광고 1회.
+// TODO(release-blocker): 콘솔에서 실제 광고 그룹 ID 발급 후 교체. 개발/샌드박스는 테스트 ID를 사용합니다.
+const INTERSTITIAL_AD_GROUP_ID = 'ait-ad-test-interstitial-id';
+const interstitialAd = createAitInterstitialPort({ adGroupId: INTERSTITIAL_AD_GROUP_ID });
 
 const BRAND = '#2F6F68';
 
@@ -332,6 +338,16 @@ function ResultView({
   const result = score.result;
   const [rarityText, setRarityText] = useState<string>('아직 집계 중이에요');
   const [shareState, setShareState] = useState<'idle' | 'sharing' | 'failed'>('idle');
+  const adShownRef = useRef(false);
+
+  // 결과 화면 진입 시 전면 광고를 딱 한 번 노출합니다(리렌더로 중복 노출 방지, UX는 막지 않음).
+  useEffect(() => {
+    if (adShownRef.current) {
+      return;
+    }
+    adShownRef.current = true;
+    void interstitialAd.showInterstitial();
+  }, []);
 
   const onShare = useCallback(async () => {
     setShareState('sharing');
