@@ -13,6 +13,7 @@ import {
   sortManifestEntries,
 } from '../vendor/product-core.js';
 import { createContentRepository } from '../lib/contentRepository';
+import { createAitSharePort } from '../lib/share/aitSharePort';
 import { getStats, recordCompletion } from '../lib/statsRepository';
 import { pickDailyEntry, pickRandomEntry } from '../lib/testSelection';
 
@@ -23,6 +24,11 @@ export const Route = createRoute('/', {
 // 공개 테스트팩은 현재 GitHub Pages custom domain에서 HTTPS로 받아옵니다.
 const CONTENT_ORIGIN = 'https://traithub.vzyx.xyz';
 const contentRepository = createContentRepository({ storage: Storage, origin: CONTENT_ORIGIN });
+
+// 결과 공유(AIT 어댑터). 링크는 앱 딥링크, 미리보기는 브랜드 아이콘 OG 이미지.
+const sharePort = createAitSharePort();
+const APP_DEEP_LINK = 'intoss://trait-test-hub';
+const SHARE_OG_IMAGE_URL = 'https://static.toss.im/appsintoss/38345/6629020b-e8a6-43e5-92ef-f983bdaf66c9.png';
 
 const BRAND = '#2F6F68';
 
@@ -325,6 +331,19 @@ function ResultView({
 }) {
   const result = score.result;
   const [rarityText, setRarityText] = useState<string>('아직 집계 중이에요');
+  const [shareState, setShareState] = useState<'idle' | 'sharing' | 'failed'>('idle');
+
+  const onShare = useCallback(async () => {
+    setShareState('sharing');
+    const outcome = await sharePort.share({
+      testTitle: test.titleKo,
+      resultTitle: result.titleKo,
+      resultSummary: result.summaryKo,
+      deepLinkPath: APP_DEEP_LINK,
+      ogImageUrl: SHARE_OG_IMAGE_URL,
+    });
+    setShareState(outcome === 'shared' ? 'idle' : 'failed');
+  }, [test.titleKo, result.titleKo, result.summaryKo]);
 
   // 결과 화면 진입 시 완료 1건 기록 + 최신 분포로 희소성을 계산합니다.
   // 배포 전이면 recordCompletion이 null을 반환해 fallback 문구가 유지됩니다.
@@ -398,7 +417,16 @@ function ResultView({
         </Section>
       ) : null}
 
-      <PrimaryButton label="다시 하기" onPress={onRestart} />
+      <PrimaryButton
+        label={shareState === 'sharing' ? '공유 준비 중…' : '결과 공유하기'}
+        onPress={onShare}
+      />
+      {shareState === 'failed' ? (
+        <Text style={styles.shareError}>공유를 시작하지 못했어요. 잠시 후 다시 시도해 주세요.</Text>
+      ) : null}
+      <TouchableOpacity style={styles.secondaryButton} onPress={onRestart}>
+        <Text style={styles.secondaryButtonText}>다시 하기</Text>
+      </TouchableOpacity>
       <TouchableOpacity style={styles.secondaryButton} onPress={onHome}>
         <Text style={styles.secondaryButtonText}>홈으로</Text>
       </TouchableOpacity>
@@ -711,5 +739,11 @@ const styles = StyleSheet.create({
     color: '#5A6472',
     fontSize: 15,
     fontWeight: '600',
+  },
+  shareError: {
+    fontSize: 13,
+    color: '#B0413E',
+    textAlign: 'center',
+    marginTop: 8,
   },
 });
