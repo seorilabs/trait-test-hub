@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "notification-style",
+  "metadata": {
+    "summaryKo": "쌓이는 스마트폰 알림 앞에서 내가 어떤 대처러인지 10문항으로 확인합니다.",
+    "tags": [
+      "digital",
+      "notification",
+      "habit"
+    ],
+    "categoryLabelKo": "디지털",
+    "tagLabelsKo": {
+      "digital": "디지털",
+      "notification": "알림",
+      "habit": "습관"
+    },
+    "estimatedMinutes": "2-3분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-07-22T22:13:21.985Z",
+    "updatedAt": "2026-07-22T22:13:21.985Z"
+  }
+}

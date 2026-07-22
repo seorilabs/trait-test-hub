@@ -1,0 +1,439 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "test": {
+    "id": "notification-style",
+    "version": 1,
+    "status": "published",
+    "titleKo": "스마트폰 알림 대처 스타일 테스트",
+    "category": "digital",
+    "axes": [
+      {
+        "id": "clearing",
+        "labelKo": "알림 즉시 정리 성향"
+      },
+      {
+        "id": "curation",
+        "labelKo": "알림 사전 통제 성향"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q01",
+        "textKo": "앱 아이콘에 빨간 숫자 배지가 잔뜩 떠 있는 걸 봤을 때?",
+        "options": [
+          {
+            "code": "clear-and-tidy",
+            "textKo": "하나씩 눌러 0으로 만들고, 안 볼 앱은 배지 표시도 꺼둔다",
+            "descriptionKo": "숫자를 지우는 김에 다시 안 쌓이게 설정까지 손봅니다.",
+            "scores": {
+              "clearing": 2,
+              "curation": 1
+            }
+          },
+          {
+            "code": "zero-fast",
+            "textKo": "일단 다 눌러서 빨간 숫자부터 싹 없앤다",
+            "descriptionKo": "내용보다 화면에서 빨간 표시가 사라지는 게 먼저입니다.",
+            "scores": {
+              "clearing": 2,
+              "curation": -1
+            }
+          },
+          {
+            "code": "let-it-pile",
+            "textKo": "숫자가 쌓여 있어도 크게 신경 쓰지 않는다",
+            "descriptionKo": "배지 숫자는 그러려니 하고 넘어가는 편입니다.",
+            "scores": {
+              "clearing": -2,
+              "curation": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "q02",
+        "textKo": "새 앱을 깔고 처음 실행하면 알림은?",
+        "options": [
+          {
+            "code": "permission-first",
+            "textKo": "알림 권한 설정부터 들어가 필요한 것만 켠다",
+            "descriptionKo": "쓰기 전에 알림 범위를 내 손으로 먼저 정합니다.",
+            "scores": {
+              "clearing": 1,
+              "curation": 2
+            }
+          },
+          {
+            "code": "mute-then-check",
+            "textKo": "일단 알림은 다 꺼두고 앱을 열 때 직접 확인한다",
+            "descriptionKo": "먼저 조용하게 막아두고 필요할 때만 들여다봅니다.",
+            "scores": {
+              "clearing": -1,
+              "curation": 2
+            }
+          },
+          {
+            "code": "keep-default",
+            "textKo": "기본 설정 그대로 두고 오면 오는 대로 본다",
+            "descriptionKo": "따로 만지지 않고 앱이 주는 대로 받아들입니다.",
+            "scores": {
+              "clearing": 0,
+              "curation": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q03",
+        "textKo": "잠금화면에 알림이 여러 개 쌓여 있으면?",
+        "options": [
+          {
+            "code": "swipe-and-sort",
+            "textKo": "하나씩 확인하며 필요 없는 알림 출처는 그 자리에서 정리한다",
+            "descriptionKo": "확인하는 김에 반복되는 알림의 뿌리를 뽑아둡니다.",
+            "scores": {
+              "clearing": 2,
+              "curation": 1
+            }
+          },
+          {
+            "code": "clear-all",
+            "textKo": "전부 밀어서 한 번에 지우고 화면을 비운다",
+            "descriptionKo": "깔끔하게 비워진 잠금화면이 마음을 편하게 합니다.",
+            "scores": {
+              "clearing": 2,
+              "curation": -1
+            }
+          },
+          {
+            "code": "later-batch",
+            "textKo": "급한 게 없으면 그대로 두고 나중에 몰아서 본다",
+            "descriptionKo": "쌓여 있어도 여유 있을 때 한꺼번에 처리합니다.",
+            "scores": {
+              "clearing": -2,
+              "curation": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "q04",
+        "textKo": "단톡방 알림이 쉴 새 없이 울릴 때?",
+        "options": [
+          {
+            "code": "per-room-tune",
+            "textKo": "방마다 알림을 나눠 설정하고 중요한 방만 소리가 나게 둔다",
+            "descriptionKo": "방별로 우선순위를 정해 소음과 중요 알림을 갈라둡니다.",
+            "scores": {
+              "clearing": 1,
+              "curation": 2
+            }
+          },
+          {
+            "code": "mute-loud-room",
+            "textKo": "시끄러운 방은 바로 음소거해 버린다",
+            "descriptionKo": "울림이 거슬리는 방부터 조용히 눌러 막습니다.",
+            "scores": {
+              "clearing": -1,
+              "curation": 2
+            }
+          },
+          {
+            "code": "let-it-ring",
+            "textKo": "그냥 울리게 두고 손이 날 때 확인한다",
+            "descriptionKo": "알림이 오가는 건 자연스럽다고 보고 흐름에 맡깁니다.",
+            "scores": {
+              "clearing": 0,
+              "curation": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q05",
+        "textKo": "메일 앱에 안 읽은 메일이 100개 넘게 쌓이면?",
+        "options": [
+          {
+            "code": "read-and-unsub",
+            "textKo": "시간 내서 읽고 정리하며 광고는 수신거부까지 해둔다",
+            "descriptionKo": "지금 비우면서 앞으로 올 소음의 통로도 함께 막습니다.",
+            "scores": {
+              "clearing": 2,
+              "curation": 1
+            }
+          },
+          {
+            "code": "mark-all-read",
+            "textKo": "전체 선택해서 읽음 처리로 숫자부터 없앤다",
+            "descriptionKo": "일단 안 읽음 표시를 걷어내 부담을 덜어냅니다.",
+            "scores": {
+              "clearing": 2,
+              "curation": -1
+            }
+          },
+          {
+            "code": "count-ignore",
+            "textKo": "안 읽은 숫자가 커도 별로 개의치 않는다",
+            "descriptionKo": "필요한 메일은 검색으로 찾으면 된다고 생각합니다.",
+            "scores": {
+              "clearing": -2,
+              "curation": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "q06",
+        "textKo": "쇼핑 앱이 할인 알림을 자꾸 보내면?",
+        "options": [
+          {
+            "code": "cut-marketing",
+            "textKo": "알림 설정에 들어가 마케팅 알림만 콕 집어 끈다",
+            "descriptionKo": "필요한 배송 알림은 남기고 광고성만 골라 차단합니다.",
+            "scores": {
+              "clearing": 1,
+              "curation": 2
+            }
+          },
+          {
+            "code": "kill-app-alert",
+            "textKo": "그 앱 알림을 통째로 꺼버린다",
+            "descriptionKo": "귀찮게 하는 앱은 알림 자체를 아예 닫아둡니다.",
+            "scores": {
+              "clearing": -1,
+              "curation": 2
+            }
+          },
+          {
+            "code": "swipe-past",
+            "textKo": "귀찮아서 그냥 두고 뜨면 뜨는 대로 넘긴다",
+            "descriptionKo": "설정까지 갈 것 없이 그때그때 밀어 넘깁니다.",
+            "scores": {
+              "clearing": 0,
+              "curation": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q07",
+        "textKo": "자기 전에 휴대폰을 마지막으로 볼 때?",
+        "options": [
+          {
+            "code": "night-cleanup",
+            "textKo": "남은 알림을 정리하고 필요 없는 건 꺼서 깔끔히 비워둔다",
+            "descriptionKo": "하루를 알림 없는 화면으로 마무리해야 개운합니다.",
+            "scores": {
+              "clearing": 2,
+              "curation": 1
+            }
+          },
+          {
+            "code": "quick-wipe",
+            "textKo": "안 읽은 표시만 빠르게 다 없애고 잔다",
+            "descriptionKo": "내용은 넘겨도 표시는 지워야 마음이 놓입니다.",
+            "scores": {
+              "clearing": 2,
+              "curation": -1
+            }
+          },
+          {
+            "code": "sleep-as-is",
+            "textKo": "알림이 남아 있어도 신경 안 쓰고 그냥 잔다",
+            "descriptionKo": "내일 봐도 되는 건 내일의 나에게 맡깁니다.",
+            "scores": {
+              "clearing": -2,
+              "curation": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "q08",
+        "textKo": "집중해서 처리할 일이 있을 때 알림은?",
+        "options": [
+          {
+            "code": "focus-mode-on",
+            "textKo": "방해금지나 집중 모드를 미리 켜서 알림을 통제한다",
+            "descriptionKo": "시작 전에 방해 요소를 차단하는 장치를 걸어둡니다.",
+            "scores": {
+              "clearing": 1,
+              "curation": 2
+            }
+          },
+          {
+            "code": "mute-on-spot",
+            "textKo": "그때그때 시끄러운 앱만 즉석에서 음소거한다",
+            "descriptionKo": "미리 설정하기보단 거슬릴 때 바로 눌러 막습니다.",
+            "scores": {
+              "clearing": -1,
+              "curation": 2
+            }
+          },
+          {
+            "code": "no-setup",
+            "textKo": "딱히 설정 안 하고 알림이 오면 오는 대로 둔다",
+            "descriptionKo": "울려도 흐름을 크게 방해받지 않는다고 여깁니다.",
+            "scores": {
+              "clearing": 0,
+              "curation": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q09",
+        "textKo": "오랜만에 켠 앱에 알림이 수백 개 쌓여 있으면?",
+        "options": [
+          {
+            "code": "scan-and-fix",
+            "textKo": "쭉 훑어 정리하고 앞으로 안 쌓이게 알림 설정도 손본다",
+            "descriptionKo": "밀린 걸 비우면서 재발 방지까지 한 번에 처리합니다.",
+            "scores": {
+              "clearing": 2,
+              "curation": 1
+            }
+          },
+          {
+            "code": "bulk-clear",
+            "textKo": "모두 읽음으로 처리해 숫자를 단번에 0으로 만든다",
+            "descriptionKo": "쌓인 양에 눌리지 않게 한 방에 초기화합니다.",
+            "scores": {
+              "clearing": 2,
+              "curation": -1
+            }
+          },
+          {
+            "code": "shrug-off",
+            "textKo": "그러려니 하고 그대로 둔다",
+            "descriptionKo": "안 본다고 큰일 나는 건 아니라고 생각합니다.",
+            "scores": {
+              "clearing": -2,
+              "curation": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "q10",
+        "textKo": "위젯이나 알림 요약 기능을 대하는 태도는?",
+        "options": [
+          {
+            "code": "custom-summary",
+            "textKo": "요약 시간대와 우선순위를 내 손으로 직접 세팅해 둔다",
+            "descriptionKo": "언제 무엇을 받을지까지 스스로 설계해 둡니다.",
+            "scores": {
+              "clearing": 1,
+              "curation": 2
+            }
+          },
+          {
+            "code": "trim-widgets",
+            "textKo": "필요 없는 위젯이나 요약 알림은 바로 빼버린다",
+            "descriptionKo": "안 쓰는 알림 통로는 눈에 띌 때 정리해 없앱니다.",
+            "scores": {
+              "clearing": -1,
+              "curation": 2
+            }
+          },
+          {
+            "code": "leave-defaults",
+            "textKo": "기본값 그대로 쓰고 따로 만지지 않는다",
+            "descriptionKo": "주어진 대로 두는 게 편해 굳이 바꾸지 않습니다.",
+            "scores": {
+              "clearing": 0,
+              "curation": -2
+            }
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "code": "control-tower",
+        "titleKo": "무결점 관제탑형",
+        "summaryKo": "알림을 즉시 비우고 설정까지 손봐, 늘 정돈된 화면을 유지하는 관제탑 타입입니다.",
+        "descriptionKo": "무결점 관제탑형에게 알림은 그때그때 처리하고 근본까지 관리하는 대상입니다. 빨간 배지가 뜨면 바로 비우는 동시에, 다시 쌓이지 않도록 권한과 설정을 손봐 둡니다. 화면이 깔끔하게 정돈돼 있을 때 가장 집중이 잘 되고, 중요한 알림을 놓칠 걱정도 크게 줄어듭니다.",
+        "strengthsKo": [
+          "알림을 즉시 처리하면서 반복 원인까지 없애 화면을 깨끗하게 유지합니다.",
+          "권한과 우선순위를 미리 정해 중요한 알림을 놓치지 않습니다.",
+          "정돈된 환경을 만들어 집중이 필요한 순간에 방해를 스스로 줄입니다."
+        ],
+        "watchoutsKo": [
+          "모든 알림을 완벽히 관리하려다 오히려 휴대폰에 자주 손이 갈 수 있습니다.",
+          "설정을 너무 촘촘히 걸어두면 예상 밖의 중요한 알림까지 막힐 수 있습니다."
+        ],
+        "collaborationKo": "함께 일하는 사람에게는 알림 정리 기준이나 집중 시간대를 미리 공유해 두면 좋습니다. 관제탑형의 세팅 노하우는 팀의 알림 피로를 줄이는 데 큰 도움이 되니, 나만의 규칙으로 두지 말고 가끔 나눠 주면 모두가 편해집니다.",
+        "shareIntroKo": "나는 알림을 즉시 비우고 설정까지 손보는 무결점 관제탑형이에요.",
+        "vector": {
+          "clearing": 14,
+          "curation": 14
+        }
+      },
+      {
+        "code": "reflex-zero",
+        "titleKo": "빨간불 반사신경형",
+        "summaryKo": "쌓인 알림은 즉시 비워 0으로 만들지만, 사전 설정보다는 그때그때 반응하는 타입입니다.",
+        "descriptionKo": "빨간불 반사신경형은 빨간 배지나 안 읽음 표시를 견디기 어려워하고, 보이는 즉시 눌러 비웁니다. 다만 미리 알림 설정을 촘촘히 걸어두기보다는, 알림이 올 때마다 반사적으로 처리하는 쪽이 편합니다. 덕분에 화면은 늘 깨끗하지만, 알림이 몰리는 날에는 손이 바빠지기도 합니다.",
+        "strengthsKo": [
+          "안 읽음 표시를 빠르게 없애 화면을 항상 깔끔하게 유지합니다.",
+          "새 알림에 즉각 반응해 급한 연락을 놓치는 일이 거의 없습니다.",
+          "복잡한 설정 없이도 그때그때 상황에 맞춰 유연하게 대처합니다."
+        ],
+        "watchoutsKo": [
+          "알림이 몰리면 지우는 데 시간을 뺏겨 정작 할 일이 밀릴 수 있습니다.",
+          "표시를 없애는 데 급해 내용을 제대로 안 보고 넘길 위험이 있습니다."
+        ],
+        "collaborationKo": "함께 일하는 사람에게는 반응이 빠른 편이라 급한 연락에 든든한 상대입니다. 다만 자주 확인하다 흐름이 끊길 수 있으니, 집중 모드 같은 장치를 하나쯤 두면 빠른 반응과 몰입을 함께 지킬 수 있습니다.",
+        "shareIntroKo": "나는 빨간 표시를 바로 지워야 직성이 풀리는 빨간불 반사신경형이에요.",
+        "vector": {
+          "clearing": 14,
+          "curation": -14
+        }
+      },
+      {
+        "code": "quiet-curator",
+        "titleKo": "조용한 큐레이터형",
+        "summaryKo": "필요 없는 알림은 미리 걸러 조용하게 만들고, 남은 알림은 여유 있게 확인하는 타입입니다.",
+        "descriptionKo": "조용한 큐레이터형은 알림을 즉시 비우는 데는 크게 얽매이지 않지만, 어떤 알림을 받을지는 스스로 정하고 싶어 합니다. 시끄러운 앱은 미리 음소거하거나 설정을 손봐 소음을 걷어내고, 정말 필요한 알림만 남긴 채 여유 있게 확인합니다. 덕분에 배지가 남아 있어도 마음이 흔들리지 않습니다.",
+        "strengthsKo": [
+          "불필요한 알림을 미리 걸러 정말 중요한 것만 남기는 감이 좋습니다.",
+          "배지가 쌓여도 흔들리지 않아 알림에 끌려다니지 않습니다.",
+          "자신에게 맞는 알림 환경을 설계해 오래 유지하는 뚝심이 있습니다."
+        ],
+        "watchoutsKo": [
+          "너무 많은 알림을 꺼두면 이따금 중요한 소식까지 늦게 알 수 있습니다.",
+          "남겨둔 알림을 몰아서 보다 답장이나 처리가 늦어질 수 있습니다."
+        ],
+        "collaborationKo": "함께 일하는 사람에게는 급한 건은 알림 말고 다른 경로로 알려달라고 미리 말해두면 좋습니다. 큐레이터형은 확인 주기가 여유로운 편이라, 중요한 연락의 창구를 하나 정해두면 서로의 속도 차이를 줄일 수 있습니다.",
+        "shareIntroKo": "나는 소음은 미리 끄고 필요한 알림만 남기는 조용한 큐레이터형이에요.",
+        "vector": {
+          "clearing": -14,
+          "curation": 14
+        }
+      },
+      {
+        "code": "flow-nomad",
+        "titleKo": "흐르는 대로 알림 유목민형",
+        "summaryKo": "알림은 오는 대로 두고 설정도 기본값 그대로, 필요할 때 찾아보는 자유로운 타입입니다.",
+        "descriptionKo": "흐르는 대로 알림 유목민형에게 알림은 굳이 관리할 대상이 아닙니다. 배지가 쌓여도 크게 신경 쓰지 않고, 설정도 기본값 그대로 두며, 필요한 정보는 그때그때 직접 찾아봅니다. 알림에 반응하느라 흐름이 끊기는 일이 적어, 자기 페이스를 지키며 여유롭게 지냅니다.",
+        "strengthsKo": [
+          "알림에 휘둘리지 않아 자기 페이스와 집중 흐름을 잘 지킵니다.",
+          "쌓인 배지에도 스트레스를 받지 않는 단단한 여유가 있습니다.",
+          "설정에 공들이지 않아 새 앱이나 기기에도 부담 없이 적응합니다."
+        ],
+        "watchoutsKo": [
+          "확인이 늦어져 급한 연락이나 마감 알림을 놓칠 수 있습니다.",
+          "필요한 알림까지 흘려보내면 중요한 정보를 뒤늦게 알게 될 수 있습니다."
+        ],
+        "collaborationKo": "함께 일하는 사람에게는 알림 확인이 느릴 수 있다고 미리 알려두면 좋습니다. 정말 급한 일은 전화처럼 확실한 방법으로 부탁하고, 유목민형도 중요한 몇몇 알림은 켜두면 여유와 책임을 함께 지킬 수 있습니다.",
+        "shareIntroKo": "나는 알림은 오는 대로 두고 필요할 때 찾아보는 흐르는 대로 알림 유목민형이에요.",
+        "vector": {
+          "clearing": -14,
+          "curation": -14
+        }
+      }
+    ]
+  }
+}
