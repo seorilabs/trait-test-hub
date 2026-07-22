@@ -1,5 +1,5 @@
 import { Storage } from '@apps-in-toss/framework';
-import { createRoute } from '@granite-js/react-native';
+import { createRoute, useBackEvent } from '@granite-js/react-native';
 import { type ReactNode, useCallback, useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -176,7 +176,29 @@ function HubPage() {
     setScore(null);
   }, []);
 
-  const topPadding = { paddingTop: insets.top + 16 };
+  // 하드웨어/iOS 스와이프/호스트 뒤로가기를 내부 화면 전환에 연결합니다.
+  // 홈이 아닌 화면에서만 핸들러를 등록하면 프레임워크(CanGoBackGuard)가 뒤로가기를
+  // 가로채(앱 종료 대신) 이 콜백을 실행하고, 홈에서는 등록하지 않아 뒤로가기가 앱을
+  // 정상 종료합니다. 문항은 이전 문항/진입 화면으로, 목록·결과는 홈으로 돌아갑니다.
+  const backEvent = useBackEvent();
+  useEffect(() => {
+    if (screen === 'home') {
+      return;
+    }
+    const handler = () => {
+      if (screen === 'question') {
+        goBack();
+      } else {
+        goHome();
+      }
+    };
+    backEvent.addEventListener(handler);
+    return () => {
+      backEvent.removeEventListener(handler);
+    };
+  }, [screen, backEvent, goBack, goHome]);
+
+  const topPadding = { paddingTop: insets.top + 8 };
 
   if (status === 'loading') {
     return (
@@ -190,7 +212,6 @@ function HubPage() {
   if (status === 'error') {
     return (
       <View style={[styles.center, topPadding]}>
-        <Text style={styles.eyebrow}>Trait Test Hub</Text>
         <Text style={styles.title}>테스트팩을 불러오지 못했습니다</Text>
         <Text style={styles.muted}>{error}</Text>
         <PrimaryButton label="다시 시도" onPress={loadManifest} />
@@ -205,16 +226,19 @@ function HubPage() {
     }
     const total = test.questions.length;
     const progress = Math.round(((currentIndex + 1) / total) * 100);
+    const atStart = currentIndex === 0;
+    // 첫 문항에서 뒤로가면 진입 화면(홈/목록)으로, 이후엔 이전 문항으로 돌아갑니다.
+    const backLabel = atStart ? (returnTo === 'list' ? '목록' : '홈') : '이전';
+    // 진행 중 언제든 홈으로 나갈 수 있게 홈 버튼을 노출합니다(뒤로가 이미 홈이면 중복 제거).
+    const homeAction = atStart && returnTo === 'home' ? undefined : goHome;
     return (
       <ScrollView contentContainerStyle={[styles.screen, topPadding]}>
-        <View style={styles.questionHeader}>
-          <TouchableOpacity onPress={goBack}>
-            <Text style={styles.ghost}>뒤로</Text>
-          </TouchableOpacity>
-          <Text style={styles.muted}>
-            {currentIndex + 1} / {total}
-          </Text>
-        </View>
+        <NavBar
+          onBack={goBack}
+          backLabel={backLabel}
+          meta={`${currentIndex + 1} / ${total}`}
+          onHome={homeAction}
+        />
         <View style={styles.progressTrack}>
           <View style={[styles.progressFill, { width: `${progress}%` }]} />
         </View>
@@ -249,12 +273,7 @@ function HubPage() {
   if (screen === 'list') {
     return (
       <ScrollView contentContainerStyle={[styles.screen, topPadding]}>
-        <View style={styles.questionHeader}>
-          <TouchableOpacity onPress={goHome}>
-            <Text style={styles.ghost}>홈</Text>
-          </TouchableOpacity>
-          <Text style={styles.muted}>{entries.length}개</Text>
-        </View>
+        <NavBar onBack={goHome} backLabel="홈" meta={`${entries.length}개`} />
         <Text style={styles.title}>전체 테스트</Text>
         <View style={styles.testList}>
           {entries.map((entry) => (
@@ -276,7 +295,6 @@ function HubPage() {
 
   return (
     <ScrollView contentContainerStyle={[styles.screen, topPadding]}>
-      <Text style={styles.eyebrow}>Trait Test Hub</Text>
       <Text style={styles.title}>성향 테스트</Text>
       <Text style={styles.muted}>{entries.length}개의 테스트가 준비되어 있어요.</Text>
       {usingCachedFallback ? <Text style={styles.cacheNotice}>오프라인 저장본을 표시 중이에요.</Text> : null}
@@ -385,6 +403,7 @@ function ResultView({
 
   return (
     <ScrollView contentContainerStyle={[styles.screen, topPadding]}>
+      <NavBar onBack={onHome} backLabel="홈" />
       <Text style={styles.eyebrow}>테스트 결과</Text>
       <View style={[styles.resultIdentity, { backgroundColor: resultTheme.background }]}>
         <Text style={styles.resultEmoji}>{resultTheme.emoji}</Text>
@@ -480,6 +499,37 @@ function PrimaryButton({ label, onPress }: { label: string; onPress: () => void 
     </TouchableOpacity>
   );
 }
+
+// 하위 화면 공용 상단 네비게이션. 좌측은 뒤로, 우측은 진행/개수 메타와 홈 버튼을 둡니다.
+function NavBar({
+  onBack,
+  backLabel,
+  meta,
+  onHome,
+}: {
+  onBack: () => void;
+  backLabel: string;
+  meta?: string;
+  onHome?: () => void;
+}) {
+  return (
+    <View style={styles.navBar}>
+      <TouchableOpacity onPress={onBack} hitSlop={NAV_HIT_SLOP}>
+        <Text style={styles.navBack}>‹ {backLabel}</Text>
+      </TouchableOpacity>
+      <View style={styles.navRight}>
+        {meta ? <Text style={styles.muted}>{meta}</Text> : null}
+        {onHome ? (
+          <TouchableOpacity onPress={onHome} hitSlop={NAV_HIT_SLOP}>
+            <Text style={styles.navHome}>홈</Text>
+          </TouchableOpacity>
+        ) : null}
+      </View>
+    </View>
+  );
+}
+
+const NAV_HIT_SLOP = { top: 10, bottom: 10, left: 10, right: 10 } as const;
 
 function formatScore(value: number): string {
   return value > 0 ? `+${value}` : String(value);
@@ -600,14 +650,26 @@ const styles = StyleSheet.create({
     fontSize: 13,
     color: '#8A93A0',
   },
-  questionHeader: {
+  navBar: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    marginBottom: 4,
   },
-  ghost: {
+  navBack: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#5A6472',
+  },
+  navRight: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 14,
+  },
+  navHome: {
     fontSize: 15,
-    color: '#8A93A0',
+    fontWeight: '600',
+    color: BRAND,
   },
   progressTrack: {
     height: 6,

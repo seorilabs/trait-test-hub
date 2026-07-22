@@ -37,7 +37,15 @@ export function createInterstitialAdPort({
       if (!adGroupId) {
         return Promise.resolve('unconfigured');
       }
-      if (load.isSupported?.() === false || show.isSupported?.() === false) {
+      // isSupported() 자체가 예외를 던질 수 있어 방어적으로 감쌉니다. 예: Toss 호스트 밖
+      // 로컬 dev에서 operationalEnvironment는 "toss"인데 tossAppVersion이 빈 값이면
+      // SDK 내부의 버전 비교가 'Invalid semver' 예외를 던집니다. 지원 여부조차 판별하지
+      // 못하는 환경이면 미지원으로 간주해 결과 화면이 깨지지 않게 합니다.
+      try {
+        if (load.isSupported?.() === false || show.isSupported?.() === false) {
+          return Promise.resolve('unsupported');
+        }
+      } catch {
         return Promise.resolve('unsupported');
       }
 

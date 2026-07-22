@@ -30,6 +30,17 @@ describe('createInterstitialAdPort', () => {
     expect(load.calls).toBe(0);
   });
 
+  it('isSupported()가 예외를 던지면(로컬 dev의 Invalid semver 등) unsupported로 처리한다', async () => {
+    const load = makeAd(() => {});
+    load.isSupported = () => {
+      throw new Error("Invalid semver: ''");
+    };
+    const show = makeAd(() => {});
+    const port = createInterstitialAdPort({ adGroupId: 'g', load, show });
+    await expect(port.showInterstitial()).resolves.toBe('unsupported');
+    expect(load.calls).toBe(0);
+  });
+
   it('loaded 후 impression이 오면 shown을 반환한다', async () => {
     const load = makeAd((p) => p.onEvent({ type: 'loaded' }));
     const show = makeAd((p) => p.onEvent({ type: 'impression' }));
