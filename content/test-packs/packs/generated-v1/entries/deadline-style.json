@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "deadline-style",
+  "metadata": {
+    "summaryKo": "마감이 다가올 때 내가 어떻게 움직이는 사람인지 8문항으로 확인합니다.",
+    "tags": [
+      "deadline",
+      "productivity",
+      "habit"
+    ],
+    "categoryLabelKo": "마감",
+    "tagLabelsKo": {
+      "deadline": "마감",
+      "productivity": "생산성",
+      "habit": "습관"
+    },
+    "estimatedMinutes": "2-3분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-07-21T22:14:06.431Z",
+    "updatedAt": "2026-07-21T22:14:06.431Z"
+  }
+}
