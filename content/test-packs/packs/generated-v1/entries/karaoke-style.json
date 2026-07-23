@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "karaoke-style",
+  "metadata": {
+    "summaryKo": "노래방에서 마이크를 잡는 방식으로 내가 어떤 노래방 스타일인지 10문항으로 알아봅니다.",
+    "tags": [
+      "karaoke",
+      "singing",
+      "friends"
+    ],
+    "categoryLabelKo": "노래방",
+    "tagLabelsKo": {
+      "karaoke": "노래방",
+      "singing": "노래",
+      "friends": "친구"
+    },
+    "estimatedMinutes": "3-5분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-07-23T22:15:29.182Z",
+    "updatedAt": "2026-07-23T22:15:29.182Z"
+  }
+}

@@ -1,0 +1,439 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "test": {
+    "id": "karaoke-style",
+    "version": 1,
+    "status": "published",
+    "titleKo": "노래방 스타일 테스트",
+    "category": "karaoke",
+    "axes": [
+      {
+        "id": "spotlight",
+        "labelKo": "마이크 주도 성향"
+      },
+      {
+        "id": "craft",
+        "labelKo": "노래 완성도·몰입 성향"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q01",
+        "textKo": "노래방에 들어와 첫 곡 차례가 됐을 때 나는?",
+        "options": [
+          {
+            "code": "own-killing-song",
+            "textKo": "아껴둔 내 킬링곡을 넣고 처음부터 제대로 부른다",
+            "descriptionKo": "첫 곡부터 준비한 노래로 확실하게 시작합니다.",
+            "scores": {
+              "spotlight": 2,
+              "craft": 2
+            }
+          },
+          {
+            "code": "hype-anything",
+            "textKo": "일단 아무 신나는 곡이나 넣어 분위기부터 확 띄운다",
+            "descriptionKo": "곡 완성도보다 자리의 텐션을 먼저 끌어올립니다.",
+            "scores": {
+              "spotlight": 2,
+              "craft": -2
+            }
+          },
+          {
+            "code": "let-others-first",
+            "textKo": "다른 사람 먼저 부르게 하고 부를 곡을 고른다",
+            "descriptionKo": "앞에 나서기보다 제대로 부를 한 곡을 고릅니다.",
+            "scores": {
+              "spotlight": -2,
+              "craft": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q02",
+        "textKo": "마이크가 한동안 비어 있을 때 나는?",
+        "options": [
+          {
+            "code": "grab-and-lead",
+            "textKo": "얼른 마이크를 잡고 다음 곡을 이어 부른다",
+            "descriptionKo": "빈 마이크를 놔두지 않고 무대를 이어 갑니다.",
+            "scores": {
+              "spotlight": 2,
+              "craft": 2
+            }
+          },
+          {
+            "code": "quiet-one-song",
+            "textKo": "조용히 신청곡을 넣고 내 차례에 한 곡만 진하게 부른다",
+            "descriptionKo": "나서진 않아도 내 한 곡에는 감정을 담습니다.",
+            "scores": {
+              "spotlight": -2,
+              "craft": 2
+            }
+          },
+          {
+            "code": "cheer-others",
+            "textKo": "부를 사람 없나 살피며 다른 사람을 시킨다",
+            "descriptionKo": "내가 나서기보다 다른 사람이 부르게 돕습니다.",
+            "scores": {
+              "spotlight": -2,
+              "craft": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q03",
+        "textKo": "선곡할 때 가장 먼저 떠오르는 기준은?",
+        "options": [
+          {
+            "code": "signature-set",
+            "textKo": "내가 제일 잘 소화하는 나만의 애창곡",
+            "descriptionKo": "완성도 높게 부를 수 있는 검증된 곡을 고릅니다.",
+            "scores": {
+              "spotlight": 2,
+              "craft": 2
+            }
+          },
+          {
+            "code": "instant-fun",
+            "textKo": "다 같이 소리 지를 수 있는 신나는 떼창곡",
+            "descriptionKo": "잘 부르는 것보다 다 같이 노는 재미를 노립니다.",
+            "scores": {
+              "spotlight": 2,
+              "craft": -2
+            }
+          },
+          {
+            "code": "safe-easy",
+            "textKo": "튀지 않고 무난하게 넘길 수 있는 쉬운 곡",
+            "descriptionKo": "부담 없이 자리에 스며드는 곡을 택합니다.",
+            "scores": {
+              "spotlight": -2,
+              "craft": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q04",
+        "textKo": "다른 사람이 노래하는 동안 나는?",
+        "options": [
+          {
+            "code": "dance-and-shout",
+            "textKo": "일어나서 춤추고 추임새를 넣으며 판을 키운다",
+            "descriptionKo": "무대 밖에서도 몸을 던져 분위기를 키웁니다.",
+            "scores": {
+              "spotlight": 2,
+              "craft": -2
+            }
+          },
+          {
+            "code": "listen-deeply",
+            "textKo": "가만히 들으며 좋은 부분엔 진심으로 감탄한다",
+            "descriptionKo": "노래를 진지하게 감상하고 반응해 줍니다.",
+            "scores": {
+              "spotlight": -2,
+              "craft": 2
+            }
+          },
+          {
+            "code": "tambourine-duty",
+            "textKo": "탬버린을 흔들며 박자를 맞춰 응원한다",
+            "descriptionKo": "앞에 나서지 않고 든든하게 뒤를 받쳐 줍니다.",
+            "scores": {
+              "spotlight": -2,
+              "craft": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q05",
+        "textKo": "고음이나 어려운 부분이 나오면 나는?",
+        "options": [
+          {
+            "code": "nail-it",
+            "textKo": "미리 연습한 대로 정확하게 소화해 낸다",
+            "descriptionKo": "어려운 구간일수록 준비한 실력을 보여 줍니다.",
+            "scores": {
+              "spotlight": 2,
+              "craft": 2
+            }
+          },
+          {
+            "code": "go-for-it",
+            "textKo": "음정은 몰라도 질러 버리며 웃음을 유발한다",
+            "descriptionKo": "정확함보다 그 순간의 재미를 택합니다.",
+            "scores": {
+              "spotlight": 2,
+              "craft": -2
+            }
+          },
+          {
+            "code": "sing-carefully",
+            "textKo": "무리하지 않고 내 음역에서 감정을 살려 부른다",
+            "descriptionKo": "튀지 않아도 곡의 감정을 살려 부릅니다.",
+            "scores": {
+              "spotlight": -2,
+              "craft": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q06",
+        "textKo": "노래방 예약 목록을 다룰 때 나는?",
+        "options": [
+          {
+            "code": "stack-my-list",
+            "textKo": "부를 곡을 여러 개 미리 예약해 순서를 잡는다",
+            "descriptionKo": "내 무대를 미리 설계해 흐름을 주도합니다.",
+            "scores": {
+              "spotlight": 2,
+              "craft": 2
+            }
+          },
+          {
+            "code": "one-meaningful",
+            "textKo": "딱 한 곡, 오늘 부르고 싶은 곡만 신중히 넣는다",
+            "descriptionKo": "많이보다 의미 있는 한 곡에 집중합니다.",
+            "scores": {
+              "spotlight": -2,
+              "craft": 2
+            }
+          },
+          {
+            "code": "fill-the-gaps",
+            "textKo": "빈 자리에만 슬쩍 한 곡 채워 넣는다",
+            "descriptionKo": "흐름을 방해하지 않는 선에서 조용히 참여합니다.",
+            "scores": {
+              "spotlight": -2,
+              "craft": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q07",
+        "textKo": "내 노래가 끝난 직후 나는?",
+        "options": [
+          {
+            "code": "review-my-take",
+            "textKo": "점수와 부른 느낌을 곱씹으며 다음 곡을 준비한다",
+            "descriptionKo": "방금 무대를 되짚으며 완성도를 챙깁니다.",
+            "scores": {
+              "spotlight": 2,
+              "craft": 2
+            }
+          },
+          {
+            "code": "milk-the-moment",
+            "textKo": "점수에 환호하거나 야유하며 한바탕 웃는다",
+            "descriptionKo": "결과마저 웃음거리로 삼아 분위기를 이어 갑니다.",
+            "scores": {
+              "spotlight": 2,
+              "craft": -2
+            }
+          },
+          {
+            "code": "pass-the-mic",
+            "textKo": "바로 마이크를 다음 사람에게 넘긴다",
+            "descriptionKo": "무대를 오래 붙잡지 않고 곧장 넘겨 줍니다.",
+            "scores": {
+              "spotlight": -2,
+              "craft": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q08",
+        "textKo": "친구가 듀엣을 하자고 하면 나는?",
+        "options": [
+          {
+            "code": "over-the-top",
+            "textKo": "과장된 리액션으로 콩트하듯 신나게 부른다",
+            "descriptionKo": "완성도보다 둘이 만드는 웃음에 집중합니다.",
+            "scores": {
+              "spotlight": 2,
+              "craft": -2
+            }
+          },
+          {
+            "code": "harmonize",
+            "textKo": "화음을 맞춰 곡을 제대로 완성하려 한다",
+            "descriptionKo": "장난보다 곡을 함께 잘 살리는 데 집중합니다.",
+            "scores": {
+              "spotlight": -2,
+              "craft": 2
+            }
+          },
+          {
+            "code": "support-partner",
+            "textKo": "친구가 메인을 하게 두고 나는 받쳐 준다",
+            "descriptionKo": "주도권을 넘기고 파트너를 돋보이게 합니다.",
+            "scores": {
+              "spotlight": -2,
+              "craft": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q09",
+        "textKo": "분위기가 축 처졌을 때 나는?",
+        "options": [
+          {
+            "code": "reset-with-hit",
+            "textKo": "확실한 애창곡으로 무대를 다시 장악한다",
+            "descriptionKo": "준비된 곡으로 처진 흐름을 끌어올립니다.",
+            "scores": {
+              "spotlight": 2,
+              "craft": 2
+            }
+          },
+          {
+            "code": "break-the-ice",
+            "textKo": "망가지는 곡을 골라 웃음으로 분위기를 깬다",
+            "descriptionKo": "체면보다 웃음으로 얼어붙은 자리를 풉니다.",
+            "scores": {
+              "spotlight": 2,
+              "craft": -2
+            }
+          },
+          {
+            "code": "gentle-mood",
+            "textKo": "잔잔한 곡으로 차분히 분위기를 데운다",
+            "descriptionKo": "요란하지 않게 감성으로 흐름을 바꿉니다.",
+            "scores": {
+              "spotlight": -2,
+              "craft": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q10",
+        "textKo": "노래방을 나서며 가장 기억에 남는 건?",
+        "options": [
+          {
+            "code": "my-best-stage",
+            "textKo": "내가 제대로 소화한 무대 한 장면",
+            "descriptionKo": "잘 부른 내 무대가 가장 오래 남습니다.",
+            "scores": {
+              "spotlight": 2,
+              "craft": 2
+            }
+          },
+          {
+            "code": "one-emotional",
+            "textKo": "감정이 확 올라왔던 나의 한 곡",
+            "descriptionKo": "완성도보다 마음이 실렸던 순간이 남습니다.",
+            "scores": {
+              "spotlight": -2,
+              "craft": 2
+            }
+          },
+          {
+            "code": "everyone-fun",
+            "textKo": "다 같이 신나게 웃고 떠든 순간",
+            "descriptionKo": "내 노래보다 다 함께한 분위기가 기억에 남습니다.",
+            "scores": {
+              "spotlight": -2,
+              "craft": -2
+            }
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "code": "stage-vocalist",
+        "titleKo": "무대 장악 메인보컬형",
+        "summaryKo": "마이크를 먼저 잡고 준비한 곡을 제대로 소화하며 무대를 이끄는 메인보컬 타입입니다.",
+        "descriptionKo": "무대 장악 메인보컬형에게 노래방은 대충 지나가는 자리가 아니라 준비한 것을 보여 주는 무대입니다. 잘 소화하는 애창곡을 미리 정해 두고, 어려운 구간도 연습한 대로 넘기며, 처진 분위기는 확실한 한 곡으로 다시 끌어올립니다. 마이크를 잡는 걸 주저하지 않으면서도 부르는 곡의 완성도까지 챙기기 때문에, 이 타입이 무대에 서면 자리의 흐름이 또렷하게 살아납니다.",
+        "strengthsKo": [
+          "준비한 애창곡으로 무대를 안정적으로 이끌어 자리의 중심을 잡아 줍니다.",
+          "어려운 구간도 미리 연습해 완성도 높은 노래로 분위기를 끌어올립니다.",
+          "처진 흐름을 확실한 한 곡으로 되살려 자리 전체에 활기를 불어넣습니다."
+        ],
+        "watchoutsKo": [
+          "무대를 주도하다 보면 마이크를 오래 붙잡아 다른 사람 차례가 줄어들 수 있습니다.",
+          "완성도에 신경 쓰다가 함께 편하게 노는 자리의 가벼움을 놓칠 수 있으니 살펴보면 좋습니다."
+        ],
+        "collaborationKo": "함께 부르는 사람들에게는 든든한 메인이지만, 가끔은 마이크를 먼저 건네고 다른 사람의 무대에 크게 호응해 주면 좋습니다. 완성도 높은 무대만큼이나 서로 돌아가며 즐기는 흐름을 챙기면, 당신의 주도력이 자리 전체의 즐거움으로 이어집니다.",
+        "shareIntroKo": "나는 마이크를 잡고 준비한 곡을 제대로 부르는 무대 장악 메인보컬형이에요.",
+        "vector": {
+          "spotlight": 14,
+          "craft": 12
+        }
+      },
+      {
+        "code": "hype-energizer",
+        "titleKo": "텐션 폭발 흥부자형",
+        "summaryKo": "완성도보다 그 순간의 재미로 마이크를 잡고 자리의 텐션을 폭발시키는 흥부자 타입입니다.",
+        "descriptionKo": "텐션 폭발 흥부자형에게 노래방의 목적은 잘 부르는 것이 아니라 다 같이 신나게 노는 것입니다. 음정이 흔들려도 개의치 않고 질러 버리고, 떼창곡과 망가지는 곡으로 웃음을 유발하며, 다른 사람이 부를 때도 일어나 춤추고 추임새를 넣어 판을 키웁니다. 이 타입이 있으면 어색하던 자리도 금세 뜨거워지고, 노래방은 공연장이 아니라 다 같이 뛰노는 놀이터가 됩니다.",
+        "strengthsKo": [
+          "음정에 얽매이지 않고 질러 버리며 얼어붙은 자리를 순식간에 달굽니다.",
+          "떼창곡과 리액션으로 다 함께 노는 재미를 자리 전체에 퍼뜨립니다.",
+          "남이 부를 때도 춤과 추임새로 판을 키워 분위기를 계속 이어 갑니다."
+        ],
+        "watchoutsKo": [
+          "텐션을 끌어올리다 보면 차분히 부르고 싶은 사람의 순간을 덮어 버릴 수 있습니다.",
+          "재미에만 집중하다 정작 내가 제대로 부르고 싶은 곡을 놓칠 수 있으니 살펴보면 좋습니다."
+        ],
+        "collaborationKo": "함께 있는 사람들에게 당신은 분위기를 책임지는 엔진이지만, 가끔은 조용히 감상하고 싶은 사람의 신호도 살펴 주면 좋습니다. 다 같이 뛰는 곡 사이에 잔잔한 곡의 자리도 남겨 두면, 당신의 에너지가 모두에게 더 편한 즐거움이 됩니다.",
+        "shareIntroKo": "나는 재미로 마이크를 잡고 자리의 텐션을 끌어올리는 텐션 폭발 흥부자형이에요.",
+        "vector": {
+          "spotlight": 14,
+          "craft": -12
+        }
+      },
+      {
+        "code": "soul-solo",
+        "titleKo": "감성 몰입 한곡형",
+        "summaryKo": "앞에 나서기보다 내 차례에 한 곡을 골라 감정을 진하게 담아 부르는 몰입 타입입니다.",
+        "descriptionKo": "감성 몰입 한곡형에게 노래방은 무대를 장악하는 자리라기보다 마음을 꺼내 놓는 자리입니다. 마이크를 먼저 잡으려 다투지 않고 다른 사람의 노래를 진지하게 들으며, 정작 내 차례가 오면 오늘 부르고 싶은 한 곡을 골라 음정보다 감정을 살려 부릅니다. 많이 부르기보다 의미 있는 한 곡에 집중하기 때문에, 이 타입의 무대는 조용하지만 오래 기억에 남는 여운을 남깁니다.",
+        "strengthsKo": [
+          "나서지 않아도 내 차례의 한 곡에 감정을 담아 깊은 여운을 남깁니다.",
+          "다른 사람의 노래를 진지하게 들으며 좋은 부분에 진심으로 반응해 줍니다.",
+          "많이보다 의미 있는 한 곡에 집중해 무대의 밀도를 높여 줍니다."
+        ],
+        "watchoutsKo": [
+          "차례를 양보만 하다 보면 정작 부르고 싶은 곡을 못 부르고 지나칠 수 있습니다.",
+          "감정에 깊이 몰입하다 보면 가볍게 노는 자리의 흐름과 어긋날 수 있으니 살펴보면 좋습니다."
+        ],
+        "collaborationKo": "함께 부르는 사람들에게 당신은 진심으로 들어 주는 귀한 청중이지만, 가끔은 먼저 마이크를 잡고 아끼는 곡을 들려주면 좋습니다. 감상하는 만큼 나를 드러내는 순간도 챙기면, 당신의 깊이가 자리 안에서 더 또렷하게 전해집니다.",
+        "shareIntroKo": "나는 내 차례에 한 곡을 골라 감정을 담아 부르는 감성 몰입 한곡형이에요.",
+        "vector": {
+          "spotlight": -14,
+          "craft": 12
+        }
+      },
+      {
+        "code": "mood-supporter",
+        "titleKo": "분위기 서포터형",
+        "summaryKo": "마이크를 주도하지 않아도 응원과 배려로 자리를 편하게 만드는 든든한 서포터 타입입니다.",
+        "descriptionKo": "분위기 서포터형에게 노래방은 내가 돋보이는 자리가 아니라 모두가 편하게 즐기는 자리입니다. 굳이 마이크를 먼저 잡지 않고, 부를 사람이 없으면 다른 사람을 시키며, 노래하는 동안에는 탬버린을 흔들고 박자를 맞춰 든든하게 뒤를 받쳐 줍니다. 완성도나 주목보다 자리의 편안함을 먼저 챙기기 때문에, 이 타입이 있으면 노래를 잘하든 못하든 누구나 부담 없이 즐길 수 있습니다.",
+        "strengthsKo": [
+          "먼저 나서지 않고도 응원과 박자로 자리의 흐름을 든든하게 받쳐 줍니다.",
+          "부를 사람을 챙기고 순서를 배려해 모두가 편하게 참여하도록 돕습니다.",
+          "주목을 바라지 않아 노래 실력과 상관없이 누구나 편안한 자리를 만듭니다."
+        ],
+        "watchoutsKo": [
+          "남을 챙기는 데 집중하다 정작 내가 부르고 싶은 곡을 미루게 될 수 있습니다.",
+          "늘 뒤에서 받쳐 주다 보면 내 무대를 보여 줄 기회를 스스로 놓칠 수 있으니 살펴보면 좋습니다."
+        ],
+        "collaborationKo": "함께 있는 사람들에게 당신은 자리를 편하게 만드는 고마운 존재이지만, 가끔은 응원을 잠시 멈추고 직접 마이크를 잡아 보면 좋습니다. 받쳐 주는 만큼 나를 드러내는 순간도 챙기면, 당신의 배려가 즐거움으로 온전히 돌아옵니다.",
+        "shareIntroKo": "나는 응원과 배려로 자리를 편하게 만드는 분위기 서포터형이에요.",
+        "vector": {
+          "spotlight": -14,
+          "craft": -12
+        }
+      }
+    ]
+  }
+}
