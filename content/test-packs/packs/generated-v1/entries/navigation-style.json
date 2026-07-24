@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "navigation-style",
+  "metadata": {
+    "summaryKo": "낯선 길 앞에서 어떻게 움직이는지로 나의 길 찾기 스타일을 10문항으로 알아봅니다.",
+    "tags": [
+      "navigation",
+      "direction",
+      "daily"
+    ],
+    "categoryLabelKo": "길찾기",
+    "tagLabelsKo": {
+      "navigation": "길찾기",
+      "direction": "방향감각",
+      "daily": "일상"
+    },
+    "estimatedMinutes": "3-5분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-07-24T22:12:58.580Z",
+    "updatedAt": "2026-07-24T22:12:58.580Z"
+  }
+}
