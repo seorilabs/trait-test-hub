@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "photo-taking-style",
+  "metadata": {
+    "summaryKo": "일상 속 순간을 어떻게 사진에 담는지 8문항으로 알아봅니다.",
+    "tags": [
+      "photo",
+      "daily",
+      "hobby",
+      "record"
+    ],
+    "categoryLabelKo": "사진",
+    "tagLabelsKo": {
+      "photo": "사진",
+      "daily": "일상",
+      "hobby": "취미",
+      "record": "기록"
+    },
+    "estimatedMinutes": "3-4분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-07-27T22:20:19.813Z",
+    "updatedAt": "2026-07-27T22:20:19.813Z"
+  }
+}
