@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "workout-style",
+  "metadata": {
+    "summaryKo": "운동을 계획하고 밀어붙이는 방식으로 나의 운동 스타일을 10문항으로 알아봅니다.",
+    "tags": [
+      "fitness",
+      "health",
+      "routine"
+    ],
+    "categoryLabelKo": "운동",
+    "tagLabelsKo": {
+      "fitness": "운동",
+      "health": "건강",
+      "routine": "루틴"
+    },
+    "estimatedMinutes": "3-5분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-07-28T22:17:31.285Z",
+    "updatedAt": "2026-07-28T22:17:31.285Z"
+  }
+}
