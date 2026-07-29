@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "bedtime-style",
+  "metadata": {
+    "summaryKo": "잠들기 전 습관과 마음가짐으로 나의 밤 스타일을 10문항으로 알아봅니다.",
+    "tags": [
+      "routine",
+      "daily",
+      "lifestyle"
+    ],
+    "categoryLabelKo": "일상",
+    "tagLabelsKo": {
+      "routine": "루틴",
+      "daily": "일상",
+      "lifestyle": "라이프스타일"
+    },
+    "estimatedMinutes": "3-5분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-07-29T22:15:53.258Z",
+    "updatedAt": "2026-07-29T22:15:53.258Z"
+  }
+}
