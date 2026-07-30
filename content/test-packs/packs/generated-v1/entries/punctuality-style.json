@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "punctuality-style",
+  "metadata": {
+    "summaryKo": "약속을 앞두고 준비하고 움직이는 방식으로 나의 시간 약속 스타일을 10문항으로 알아봅니다.",
+    "tags": [
+      "punctuality",
+      "daily",
+      "social"
+    ],
+    "categoryLabelKo": "시간 약속",
+    "tagLabelsKo": {
+      "punctuality": "시간 약속",
+      "daily": "일상",
+      "social": "관계"
+    },
+    "estimatedMinutes": "3-5분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-07-30T22:13:37.658Z",
+    "updatedAt": "2026-07-30T22:13:37.658Z"
+  }
+}
