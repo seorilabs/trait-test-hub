@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "outfit-decision-style",
+  "metadata": {
+    "summaryKo": "아침마다 \"오늘 뭐 입지?\" 앞에서 내가 어떤 옷차림 결정러인지 8문항으로 확인합니다.",
+    "tags": [
+      "fashion",
+      "outfit",
+      "daily"
+    ],
+    "categoryLabelKo": "패션",
+    "tagLabelsKo": {
+      "fashion": "패션",
+      "outfit": "옷차림",
+      "daily": "일상"
+    },
+    "estimatedMinutes": "2-3분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-07-31T22:14:55.438Z",
+    "updatedAt": "2026-07-31T22:14:55.438Z"
+  }
+}
