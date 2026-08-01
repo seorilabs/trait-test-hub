@@ -7,6 +7,7 @@ import {
   validateManifest,
   validateTraitTest,
 } from '/packages/product-core/src/index.js';
+import { isWebResultAdEnabled, webMonetizationConfig } from './webMonetization.js';
 
 const state = {
   status: 'loading',
@@ -32,6 +33,7 @@ const state = {
 
 const app = document.querySelector('#app');
 const MANIFEST_URL = '/test-packs/manifest.json';
+const requestedTestId = new URLSearchParams(window.location.search).get('test');
 // firestore REST API로 직접 접근(공개 apiKey). org 정책상 함수 직접 호출이 막혀,
 // 완료 기록은 completions에 write(트리거가 test_stats로 집계)하고, 분포는 test_stats를 공개 read한다.
 const API_KEY = 'AIzaSyAsnTm_vGStpsD7R1Qxop-8FZnFPHrCcmk';
@@ -127,6 +129,13 @@ async function loadManifest() {
     state.manifest = manifest;
     state.entries = entries;
     state.selectedEntry = null;
+    if (requestedTestId) {
+      state.selectedEntry = entries.find((entry) => entry.testId === requestedTestId) ?? null;
+      if (state.selectedEntry) {
+        await startSelectedTest();
+        return;
+      }
+    }
     render();
   } catch (error) {
     state.status = 'error';
@@ -355,6 +364,7 @@ function renderResult() {
         ${strengths}
         ${watchouts}
         ${result.collaborationKo ? `<section class="result-note"><h2>협업 팁</h2><p>${result.collaborationKo}</p></section>` : ''}
+        ${renderWebResultAd()}
         <div class="actions">
           <button class="primary" data-action="restart">다시 하기</button>
           <button class="secondary" data-action="home">홈</button>
@@ -362,6 +372,31 @@ function renderResult() {
       </section>
     </section>
   `;
+  activateWebResultAd();
+}
+
+function renderWebResultAd() {
+  if (!isWebResultAdEnabled()) {
+    return '';
+  }
+  return `<aside class="web-result-ad" aria-label="광고"><ins class="adsbygoogle" style="display:block" data-ad-client="${webMonetizationConfig.adsenseClient}" data-ad-slot="${webMonetizationConfig.resultSlot}" data-ad-format="auto" data-full-width-responsive="true"></ins></aside>`;
+}
+
+function activateWebResultAd() {
+  if (!isWebResultAdEnabled() || !app.querySelector('.adsbygoogle')) {
+    return;
+  }
+  const scriptId = 'adsense-loader';
+  if (!document.getElementById(scriptId)) {
+    const script = document.createElement('script');
+    script.id = scriptId;
+    script.async = true;
+    script.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${webMonetizationConfig.adsenseClient}`;
+    script.crossOrigin = 'anonymous';
+    document.head.append(script);
+  }
+  window.adsbygoogle = window.adsbygoogle || [];
+  window.adsbygoogle.push({});
 }
 
 function renderList(title, items) {

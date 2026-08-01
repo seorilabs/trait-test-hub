@@ -26,6 +26,14 @@ const app = readFileSync('apps/preview/src/app.js', 'utf8');
 if (!app.includes('/packages/product-core/src/index.js')) {
   throw new Error('preview app must import product-core');
 }
+if (!app.includes("new URLSearchParams(window.location.search).get('test')")) {
+  throw new Error('preview must support direct test links from SEO landing pages');
+}
+
+const monetization = readFileSync('apps/preview/src/webMonetization.js', 'utf8');
+if (!monetization.includes("adsenseClient: ''") || !monetization.includes("resultSlot: ''")) {
+  throw new Error('web ads must remain disabled until the configured approval gate is complete');
+}
 
 const { scoreTraitTest, validateManifest, validateTraitTest } = await import('../packages/product-core/src/index.js');
 const manifest = validateManifest(JSON.parse(readFileSync(`${testPackRoot}/manifest.json`, 'utf8')));
