@@ -8,6 +8,7 @@ import {
   validateTraitTest,
 } from '/packages/product-core/src/index.js';
 import { isWebResultAdEnabled, webMonetizationConfig } from './webMonetization.js';
+import { trackWebEvent, WEB_ANALYTICS_EVENTS } from './webAnalytics.js';
 
 const state = {
   status: 'loading',
@@ -540,6 +541,11 @@ app.addEventListener('click', (event) => {
       state.score = scoreTraitTest(state.test, state.answers);
       state.rarityText = '아직 집계 중이에요';
       state.screen = 'result';
+      trackWebEvent(WEB_ANALYTICS_EVENTS.testComplete, {
+        test_id: state.selectedEntry.testId,
+        test_version: state.selectedEntry.version,
+        result_code: state.score.result.code,
+      });
       requestRarity();
     }
   }
@@ -592,6 +598,11 @@ async function startSelectedTest() {
     state.currentIndex = 0;
     state.score = null;
     state.screen = 'question';
+    trackWebEvent(WEB_ANALYTICS_EVENTS.testStart, {
+      test_id: state.selectedEntry.testId,
+      test_version: state.selectedEntry.version,
+      source: requestedTestId === state.selectedEntry.testId ? 'seo_landing' : 'web_home',
+    });
     render();
   } catch (error) {
     state.status = 'error';

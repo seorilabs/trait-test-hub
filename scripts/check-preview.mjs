@@ -11,6 +11,7 @@ buildTestPackOutput({
 const requiredFiles = [
   'apps/preview/index.html',
   'apps/preview/src/app.js',
+  'apps/preview/src/webAnalytics.js',
   'apps/preview/src/styles.css',
   'packages/product-core/src/index.js',
   'packages/product-core/src/dptiCatalog.js',
@@ -25,6 +26,13 @@ for (const file of requiredFiles) {
 const app = readFileSync('apps/preview/src/app.js', 'utf8');
 if (!app.includes('/packages/product-core/src/index.js')) {
   throw new Error('preview app must import product-core');
+}
+const previewHtml = readFileSync('apps/preview/index.html', 'utf8');
+if (!previewHtml.includes('https://www.googletagmanager.com/gtag/js?id=G-SQVNEDQKGY')) {
+  throw new Error('preview must load the configured GA4 tag');
+}
+if (!app.includes('WEB_ANALYTICS_EVENTS.testStart') || !app.includes('WEB_ANALYTICS_EVENTS.testComplete')) {
+  throw new Error('preview must track test funnel start and completion events');
 }
 if (!app.includes("new URLSearchParams(window.location.search).get('test')")) {
   throw new Error('preview must support direct test links from SEO landing pages');

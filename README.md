@@ -90,6 +90,8 @@ pnpm build:pages
 
 배포 산출물에는 테스트별 검색 랜딩(`/tests/<test-id>/`), `sitemap.xml`, `robots.txt`가 포함됩니다. 랜딩의 시작 버튼은 `/?test=<test-id>`로 연결되어 해당 테스트를 바로 시작합니다. 결과 화면에는 AdSense 단일 슬롯 어댑터가 있지만 기본 비활성입니다. AdSense 승인 후에만 `apps/preview/src/webMonetization.js`의 client/slot을 설정하고, 개인정보처리방침·동의 관리 검토를 마쳐 활성화합니다.
 
+웹 GA4 이벤트와 퍼널 파라미터는 [docs/web-analytics.md](docs/web-analytics.md)를 기준으로 합니다.
+
 기여자는 [CONTRIBUTING.md](CONTRIBUTING.md)를 참고해 테스트팩 draft를 제안할 수 있습니다.
 
 ## 출시 타깃
