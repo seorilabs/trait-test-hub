@@ -1,6 +1,7 @@
 import { cpSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { buildTestPackOutput } from './lib/test-pack-output.mjs';
+import { buildSeoPages } from './build-seo-pages.mjs';
 
 const root = process.cwd();
 const distRoot = join(root, 'pages-dist');
@@ -16,12 +17,13 @@ cpSync(join(root, 'packages', 'product-core'), join(distRoot, 'packages', 'produ
 });
 cpSync(join(root, 'public'), join(distRoot, 'public'), { recursive: true });
 rmSync(join(distRoot, 'public', 'test-packs'), { recursive: true, force: true });
-buildTestPackOutput({
+const manifest = buildTestPackOutput({
   root,
   outputRoot: join(distRoot, 'test-packs'),
 });
 cpSync(join(distRoot, 'test-packs'), join(distRoot, 'public', 'test-packs'), { recursive: true });
 cpSync(join(root, 'apps', 'preview', 'index.html'), join(distRoot, 'index.html'));
+buildSeoPages({ outputRoot: distRoot, manifest });
 
 writeFileSync(join(distRoot, 'CNAME'), 'traithub.vzyx.xyz\n');
 writeFileSync(join(distRoot, '.nojekyll'), '');
