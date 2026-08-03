@@ -1,0 +1,454 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "metadata": {
+    "summaryKo": "부엌에 섰을 때 어떻게 요리하는지 10문항으로 알아봅니다.",
+    "tags": [
+      "cooking",
+      "kitchen",
+      "daily"
+    ],
+    "categoryLabelKo": "요리",
+    "tagLabelsKo": {
+      "cooking": "요리",
+      "kitchen": "주방"
+    },
+    "estimatedMinutes": "2-3분",
+    "packTitleKo": "자동 생성 테스트팩"
+  },
+  "test": {
+    "id": "cooking-style",
+    "version": 1,
+    "status": "published",
+    "titleKo": "부엌에서 나는? 요리 스타일 테스트",
+    "category": "cooking",
+    "axes": [
+      {
+        "id": "freedom",
+        "labelKo": "즉흥 요리 선호"
+      },
+      {
+        "id": "zeal",
+        "labelKo": "과정 몰입 선호"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q01",
+        "textKo": "오늘 처음 만들어 보는 요리에 도전할 때 나는?",
+        "options": [
+          {
+            "code": "improv",
+            "textKo": "재료를 보고 감으로 대충 시작한다",
+            "descriptionKo": "정해진 순서보다 그때그때 떠오르는 대로 손이 먼저 움직입니다.",
+            "scores": {
+              "freedom": 2,
+              "zeal": 1
+            }
+          },
+          {
+            "code": "recipe",
+            "textKo": "레시피를 끝까지 읽고 계량부터 맞춘다",
+            "descriptionKo": "시작 전에 순서와 분량을 확인해 두어야 마음이 놓입니다.",
+            "scores": {
+              "freedom": -2,
+              "zeal": 1
+            }
+          },
+          {
+            "code": "quick",
+            "textKo": "가장 빠르고 간단한 방법부터 찾는다",
+            "descriptionKo": "복잡한 과정보다 손이 덜 가는 방법을 먼저 떠올립니다.",
+            "scores": {
+              "freedom": 0,
+              "zeal": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q02",
+        "textKo": "냉장고 문을 열고 뭘 만들지 정할 때 나는?",
+        "options": [
+          {
+            "code": "improv",
+            "textKo": "남은 재료를 조합해 즉석에서 새 메뉴를 짠다",
+            "descriptionKo": "있는 재료를 보며 그 자리에서 새로운 조합을 만들어 냅니다.",
+            "scores": {
+              "freedom": 2,
+              "zeal": 1
+            }
+          },
+          {
+            "code": "recipe",
+            "textKo": "만들 메뉴를 정하고 부족한 재료를 적어 둔다",
+            "descriptionKo": "먼저 메뉴를 정하고 그에 맞는 재료를 갖추는 편입니다.",
+            "scores": {
+              "freedom": -2,
+              "zeal": 1
+            }
+          },
+          {
+            "code": "quick",
+            "textKo": "데우거나 바로 먹을 수 있는 걸 고른다",
+            "descriptionKo": "고민을 줄이고 빨리 먹을 수 있는 쪽을 선택합니다.",
+            "scores": {
+              "freedom": 0,
+              "zeal": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q03",
+        "textKo": "요리하다 간을 맞출 때 나는?",
+        "options": [
+          {
+            "code": "improv",
+            "textKo": "맛을 보면서 그때그때 감으로 조절한다",
+            "descriptionKo": "혀에 닿는 맛을 기준 삼아 자유롭게 양념을 더합니다.",
+            "scores": {
+              "freedom": 2,
+              "zeal": 1
+            }
+          },
+          {
+            "code": "recipe",
+            "textKo": "레시피에 적힌 계량대로 정확히 넣는다",
+            "descriptionKo": "적힌 분량을 지켜야 일정한 맛이 난다고 믿습니다.",
+            "scores": {
+              "freedom": -2,
+              "zeal": 1
+            }
+          },
+          {
+            "code": "quick",
+            "textKo": "만능 양념 하나로 빠르게 끝낸다",
+            "descriptionKo": "여러 양념을 재기보다 익숙한 하나로 간단히 맞춥니다.",
+            "scores": {
+              "freedom": 0,
+              "zeal": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q04",
+        "textKo": "요리할 시간이 빠듯한 저녁, 나는?",
+        "options": [
+          {
+            "code": "improv",
+            "textKo": "있는 재료로 순발력 있게 한 그릇 뚝딱 만든다",
+            "descriptionKo": "시간이 없어도 있는 재료를 굴려 즉석에서 해결합니다.",
+            "scores": {
+              "freedom": 2,
+              "zeal": 1
+            }
+          },
+          {
+            "code": "recipe",
+            "textKo": "시간이 걸려도 레시피대로 차근차근 만든다",
+            "descriptionKo": "급해도 순서를 건너뛰지 않고 제대로 만들려 합니다.",
+            "scores": {
+              "freedom": -2,
+              "zeal": 1
+            }
+          },
+          {
+            "code": "quick",
+            "textKo": "밀키트나 반조리 식품으로 시간을 아낀다",
+            "descriptionKo": "손질된 제품의 힘을 빌려 빠르게 상을 차립니다.",
+            "scores": {
+              "freedom": 0,
+              "zeal": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q05",
+        "textKo": "요리 중에 레시피 재료가 하나 없을 때 나는?",
+        "options": [
+          {
+            "code": "improv",
+            "textKo": "비슷한 다른 재료로 바로 대체해 이어간다",
+            "descriptionKo": "없는 재료에 얽매이지 않고 대체품을 찾아 밀고 갑니다.",
+            "scores": {
+              "freedom": 2,
+              "zeal": 1
+            }
+          },
+          {
+            "code": "recipe",
+            "textKo": "레시피에 맞는 재료를 사러 다녀온다",
+            "descriptionKo": "원래 재료를 갖춰야 제 맛이 난다고 생각합니다.",
+            "scores": {
+              "freedom": -2,
+              "zeal": 1
+            }
+          },
+          {
+            "code": "quick",
+            "textKo": "그 재료를 빼고 간단히 마무리한다",
+            "descriptionKo": "번거로움을 줄이려 없는 재료는 과감히 생략합니다.",
+            "scores": {
+              "freedom": 0,
+              "zeal": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q06",
+        "textKo": "주말에 요리할 계획을 세울 때 나는?",
+        "options": [
+          {
+            "code": "improv",
+            "textKo": "그날 기분과 냉장고 사정에 맞춰 즉흥으로 정한다",
+            "descriptionKo": "미리 정하기보다 당일의 상황과 기분을 따라갑니다.",
+            "scores": {
+              "freedom": 2,
+              "zeal": 1
+            }
+          },
+          {
+            "code": "recipe",
+            "textKo": "만들 메뉴와 레시피를 미리 정해 장을 본다",
+            "descriptionKo": "무엇을 만들지 정하고 계획대로 장을 봐 둡니다.",
+            "scores": {
+              "freedom": -2,
+              "zeal": 1
+            }
+          },
+          {
+            "code": "quick",
+            "textKo": "손이 덜 가는 메뉴 위주로 효율적으로 고른다",
+            "descriptionKo": "품이 적게 드는 메뉴를 골라 부담을 줄입니다.",
+            "scores": {
+              "freedom": 0,
+              "zeal": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q07",
+        "textKo": "새 레시피 영상을 봤을 때 나는?",
+        "options": [
+          {
+            "code": "improv",
+            "textKo": "내 방식대로 재료와 순서를 바꿔 응용한다",
+            "descriptionKo": "본 그대로보다 내 취향에 맞게 바꿔 보고 싶어집니다.",
+            "scores": {
+              "freedom": 2,
+              "zeal": 1
+            }
+          },
+          {
+            "code": "recipe",
+            "textKo": "영상 그대로 재료와 순서를 따라 만든다",
+            "descriptionKo": "만든 사람의 순서를 그대로 지켜야 제대로 배운다고 봅니다.",
+            "scores": {
+              "freedom": -2,
+              "zeal": 1
+            }
+          },
+          {
+            "code": "quick",
+            "textKo": "과정이 짧고 간편한 것만 골라 시도한다",
+            "descriptionKo": "길고 복잡한 레시피는 넘기고 간편한 것만 남깁니다.",
+            "scores": {
+              "freedom": 0,
+              "zeal": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q08",
+        "textKo": "요리가 완성됐을 때 나의 가장 큰 관심은?",
+        "options": [
+          {
+            "code": "improv",
+            "textKo": "새로 시도한 조합이 어떤 맛일지가 궁금하다",
+            "descriptionKo": "실험해 본 조합의 결과를 확인하는 재미가 가장 큽니다.",
+            "scores": {
+              "freedom": 2,
+              "zeal": 1
+            }
+          },
+          {
+            "code": "recipe",
+            "textKo": "레시피처럼 완성도 높게 나왔는지 살핀다",
+            "descriptionKo": "의도한 대로 제대로 완성됐는지를 꼼꼼히 확인합니다.",
+            "scores": {
+              "freedom": -2,
+              "zeal": 1
+            }
+          },
+          {
+            "code": "quick",
+            "textKo": "빨리 차려서 얼른 먹을 수 있는지가 중요하다",
+            "descriptionKo": "완성 그 자체보다 바로 먹고 정리하는 편함을 봅니다.",
+            "scores": {
+              "freedom": 0,
+              "zeal": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q09",
+        "textKo": "요리 도구와 재료를 준비할 때 나는?",
+        "options": [
+          {
+            "code": "improv",
+            "textKo": "필요할 때마다 그때그때 꺼내 쓴다",
+            "descriptionKo": "미리 늘어놓기보다 진행하며 필요한 것을 바로 꺼냅니다.",
+            "scores": {
+              "freedom": 2,
+              "zeal": 1
+            }
+          },
+          {
+            "code": "recipe",
+            "textKo": "쓸 도구와 재료를 미리 늘어놓고 시작한다",
+            "descriptionKo": "필요한 것을 다 갖춰 두어야 순서대로 진행할 수 있습니다.",
+            "scores": {
+              "freedom": -2,
+              "zeal": 1
+            }
+          },
+          {
+            "code": "quick",
+            "textKo": "설거지가 적게 나오도록 최소한만 꺼낸다",
+            "descriptionKo": "뒷정리를 줄이려 꺼내는 도구를 최대한 줄입니다.",
+            "scores": {
+              "freedom": 0,
+              "zeal": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q10",
+        "textKo": "완성한 요리를 그릇에 담아낼 때 나는?",
+        "options": [
+          {
+            "code": "improv",
+            "textKo": "그날 느낌대로 자유롭게 담아 낸다",
+            "descriptionKo": "정해진 모양 없이 그때의 감각대로 자유롭게 올립니다.",
+            "scores": {
+              "freedom": 2,
+              "zeal": 1
+            }
+          },
+          {
+            "code": "recipe",
+            "textKo": "레시피 사진처럼 보기 좋게 정갈하게 담는다",
+            "descriptionKo": "본보기처럼 모양을 갖춰 정갈하게 담아내려 합니다.",
+            "scores": {
+              "freedom": -2,
+              "zeal": 1
+            }
+          },
+          {
+            "code": "quick",
+            "textKo": "담는 그릇을 줄여 간단히 차린다",
+            "descriptionKo": "그릇 수를 줄여 차림과 정리를 간단하게 끝냅니다.",
+            "scores": {
+              "freedom": 0,
+              "zeal": -2
+            }
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "code": "creative-freestyle",
+        "titleKo": "즉흥 창작 셰프형",
+        "summaryKo": "레시피에 얽매이지 않고 감으로 새로운 맛을 만들어 내는 즐기는 요리사 타입입니다.",
+        "descriptionKo": "즉흥 창작 셰프형은 정해진 순서보다 그날의 감과 재료에서 출발합니다. 냉장고 속 재료를 보면 새로운 조합이 먼저 떠오르고, 맛을 보며 자유롭게 간을 맞추는 과정 자체를 즐깁니다. 매번 조금씩 달라지는 결과를 실험처럼 반기고, 요리를 정답 맞히기가 아니라 나만의 창작으로 여깁니다.",
+        "strengthsKo": [
+          "있는 재료만으로도 새로운 메뉴를 척척 만들어 냅니다.",
+          "맛을 보며 즉석에서 조절하는 감각이 뛰어납니다.",
+          "낯선 재료 앞에서도 겁내지 않고 시도합니다."
+        ],
+        "watchoutsKo": [
+          "그때그때 바뀌어 같은 맛을 다시 내기 어려울 때가 있습니다.",
+          "감에 의존하다 분량이 크게 어긋나 실패하기도 합니다."
+        ],
+        "collaborationKo": "함께 요리할 때 당신은 분위기를 살리고 새로운 아이디어를 던지는 역할을 맡습니다. 다만 상대가 정해진 순서를 편해할 수 있으니, 크게 바꾸기 전에 한마디 공유하면 둘 다 즐겁게 요리할 수 있습니다.",
+        "shareIntroKo": "나는 감으로 새 맛을 만들어 내는 즉흥 창작 셰프형이에요.",
+        "vector": {
+          "freedom": 14,
+          "zeal": 8
+        }
+      },
+      {
+        "code": "recipe-master",
+        "titleKo": "레시피 정석 장인형",
+        "summaryKo": "계량과 순서를 지켜 안정적으로 완성도 높은 요리를 만드는 꼼꼼한 타입입니다.",
+        "descriptionKo": "레시피 정석 장인형은 시작 전에 순서와 분량을 확인해 두어야 마음이 놓입니다. 적힌 계량을 지키고 과정을 건너뛰지 않으며, 그렇게 해야 매번 일정하고 완성도 높은 맛이 난다고 믿습니다. 요리를 차근차근 쌓아 올리는 과정으로 여기고, 제대로 만들어 냈을 때 큰 만족을 느낍니다.",
+        "strengthsKo": [
+          "계량과 순서를 지켜 실패가 적고 결과가 일정합니다.",
+          "복잡한 요리도 차근차근 끝까지 완성해 냅니다.",
+          "레시피를 정확히 익혀 다음에도 그대로 재현합니다."
+        ],
+        "watchoutsKo": [
+          "재료가 하나만 빠져도 진행이 막혀 답답해질 수 있습니다.",
+          "정해진 방식을 벗어나는 즉흥 상황에서 스트레스를 받습니다."
+        ],
+        "collaborationKo": "함께 요리하면 당신은 순서를 잡고 완성도를 챙기는 든든한 중심이 됩니다. 다만 상대가 자유롭게 바꿔 보고 싶어 할 수 있으니, 작은 변형은 함께 시도해 보면 요리가 더 즐거워집니다.",
+        "shareIntroKo": "나는 계량과 순서를 지켜 제대로 만드는 레시피 정석 장인형이에요.",
+        "vector": {
+          "freedom": -14,
+          "zeal": 8
+        }
+      },
+      {
+        "code": "fridge-clear",
+        "titleKo": "냉장고 털이 순발력형",
+        "summaryKo": "있는 재료로 빠르게 한 그릇 뚝딱 해결하는 순발력 좋은 실전형 타입입니다.",
+        "descriptionKo": "냉장고 털이 순발력형은 시간과 재료가 넉넉하지 않아도 있는 것으로 빠르게 상황을 정리합니다. 없는 재료는 과감히 빼거나 비슷한 것으로 바꾸고, 완벽한 완성도보다 지금 먹을 수 있는 한 끼를 척척 만들어 냅니다. 남은 재료를 버리지 않고 알뜰하게 굴리는 감각이 뛰어납니다.",
+        "strengthsKo": [
+          "시간이 부족해도 있는 재료로 빠르게 해결합니다.",
+          "남는 재료를 버리지 않고 알뜰하게 활용합니다.",
+          "예상 밖 상황에서도 당황하지 않고 대처합니다."
+        ],
+        "watchoutsKo": [
+          "빠르게 처리하다 맛의 완성도가 들쭉날쭉할 수 있습니다.",
+          "매번 즉흥이라 마음에 든 맛을 다시 내기 어렵습니다."
+        ],
+        "collaborationKo": "함께 요리하면 당신은 부족한 상황을 빠르게 메우는 해결사 역할을 합니다. 다만 상대는 차분히 만들고 싶을 수 있으니, 속도를 맞춰 급한 부분만 먼저 돕는다면 서로 편하게 손발이 맞습니다.",
+        "shareIntroKo": "나는 있는 재료로 뚝딱 해결하는 냉장고 털이 순발력형이에요.",
+        "vector": {
+          "freedom": 10,
+          "zeal": -12
+        }
+      },
+      {
+        "code": "mealkit-saver",
+        "titleKo": "밀키트 실속 효율형",
+        "summaryKo": "손이 덜 가는 방법으로 시간과 품을 아끼며 실속을 챙기는 효율 중심 타입입니다.",
+        "descriptionKo": "밀키트 실속 효율형은 요리에 드는 시간과 품을 줄이는 데 초점을 둡니다. 밀키트나 반조리 식품, 간편한 메뉴를 적극 활용하고, 복잡한 과정보다 빠르게 상을 차리고 정리하는 편함을 중요하게 여깁니다. 무리하지 않고 지속 가능한 방식으로 끼니를 안정적으로 챙기는 실용파입니다.",
+        "strengthsKo": [
+          "시간과 힘을 아껴 부담 없이 끼니를 챙깁니다.",
+          "간편한 방법을 잘 찾아 꾸준히 이어 갑니다.",
+          "무리하지 않아 요리가 스트레스로 남지 않습니다."
+        ],
+        "watchoutsKo": [
+          "간편함에 익숙해져 새로운 시도가 줄어들 수 있습니다.",
+          "완제품에 의존하다 직접 만드는 재미를 놓치기 쉽습니다."
+        ],
+        "collaborationKo": "함께 요리하면 당신은 준비와 뒷정리를 효율적으로 줄여 주는 역할에 강합니다. 다만 상대가 과정을 즐기고 싶어 할 수 있으니, 가끔은 한 가지쯤 직접 만들어 보면 색다른 재미를 함께 나눌 수 있습니다.",
+        "shareIntroKo": "나는 시간과 품을 아껴 실속을 챙기는 밀키트 실속 효율형이에요.",
+        "vector": {
+          "freedom": -10,
+          "zeal": -12
+        }
+      }
+    ]
+  }
+}
