@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "meeting-style",
+  "metadata": {
+    "summaryKo": "회의 자리에서 내가 어떻게 움직이는 사람인지 10문항으로 확인합니다.",
+    "tags": [
+      "meeting",
+      "work",
+      "communication"
+    ],
+    "categoryLabelKo": "회의",
+    "tagLabelsKo": {
+      "meeting": "회의",
+      "work": "업무",
+      "communication": "소통"
+    },
+    "estimatedMinutes": "3-4분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-08-04T22:14:04.306Z",
+    "updatedAt": "2026-08-04T22:14:04.306Z"
+  }
+}
