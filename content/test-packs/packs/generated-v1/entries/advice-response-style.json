@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "advice-response-style",
+  "metadata": {
+    "summaryKo": "친구가 고민을 털어놓을 때 나는 어떻게 반응할까? 8문항으로 나의 리액션 스타일을 확인합니다.",
+    "tags": [
+      "relationship",
+      "friendship",
+      "advice",
+      "daily"
+    ],
+    "categoryLabelKo": "관계",
+    "tagLabelsKo": {
+      "relationship": "관계",
+      "friendship": "우정",
+      "advice": "조언"
+    },
+    "estimatedMinutes": "2-3분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-08-01T22:16:41.134Z",
+    "updatedAt": "2026-08-01T22:16:41.134Z"
+  }
+}

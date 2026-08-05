@@ -1,0 +1,456 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "metadata": {
+    "summaryKo": "친구가 고민을 털어놓을 때 나는 어떻게 반응할까? 8문항으로 나의 리액션 스타일을 확인합니다.",
+    "tags": [
+      "relationship",
+      "friendship",
+      "advice",
+      "daily"
+    ],
+    "categoryLabelKo": "관계",
+    "tagLabelsKo": {
+      "relationship": "관계",
+      "friendship": "우정",
+      "advice": "조언"
+    },
+    "estimatedMinutes": "2-3분",
+    "packTitleKo": "자동 생성 테스트팩"
+  },
+  "test": {
+    "id": "advice-response-style",
+    "version": 1,
+    "status": "published",
+    "titleKo": "친구 고민 들어주는 스타일 테스트",
+    "category": "relationship",
+    "axes": [
+      {
+        "id": "fixing",
+        "labelKo": "해결 지향"
+      },
+      {
+        "id": "expressiveness",
+        "labelKo": "리액션 표현력"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q01",
+        "textKo": "친구가 밤늦게 \"나 요즘 진짜 너무 힘들다\"고 카톡을 보냈다. 첫 반응은?",
+        "options": [
+          {
+            "code": "solve",
+            "textKo": "\"무슨 일인데? 하나씩 말해봐, 같이 방법 찾아보자\"고 상황부터 파악한다",
+            "descriptionKo": "고민을 들으면 먼저 원인을 확인하고 함께 방향을 찾으려 합니다.",
+            "scores": {
+              "fixing": 2,
+              "expressiveness": 1
+            }
+          },
+          {
+            "code": "empathize",
+            "textKo": "\"헐 무슨 일이야ㅠㅠ 얼마나 힘들면\" 하며 같이 속상해한다",
+            "descriptionKo": "상황보다 친구의 감정에 먼저 반응하며 마음을 크게 표현합니다.",
+            "scores": {
+              "fixing": -2,
+              "expressiveness": 1
+            }
+          },
+          {
+            "code": "listen",
+            "textKo": "\"응, 나 여기 있어. 천천히 말해도 돼\"라고 조용히 들을 준비를 한다",
+            "descriptionKo": "재촉하지 않고 친구가 편히 말할 수 있게 곁을 내어 줍니다.",
+            "scores": {
+              "fixing": 0,
+              "expressiveness": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q02",
+        "textKo": "친구가 회사에서 억울하게 혼났다고 털어놓는다. 나는?",
+        "options": [
+          {
+            "code": "solve",
+            "textKo": "\"그건 이렇게 대응하면 돼\" 하며 다음에 쓸 방법을 정리해 준다",
+            "descriptionKo": "다음에 같은 일이 없도록 구체적인 대응책을 짚어 줍니다.",
+            "scores": {
+              "fixing": 2,
+              "expressiveness": 1
+            }
+          },
+          {
+            "code": "empathize",
+            "textKo": "\"진짜 너무하다! 내가 다 화나네\" 하며 같이 흥분한다",
+            "descriptionKo": "친구 편에 서서 함께 화를 내며 감정을 크게 실어 줍니다.",
+            "scores": {
+              "fixing": -2,
+              "expressiveness": 1
+            }
+          },
+          {
+            "code": "listen",
+            "textKo": "말을 끊지 않고 끝까지 들으며 고개를 끄덕인다",
+            "descriptionKo": "판단이나 조언보다 우선 끝까지 들어 주는 쪽을 택합니다.",
+            "scores": {
+              "fixing": 0,
+              "expressiveness": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q03",
+        "textKo": "친구가 연인과 크게 싸웠다고 한다. 나는?",
+        "options": [
+          {
+            "code": "solve",
+            "textKo": "상황을 물어보고 \"이 부분은 이렇게 풀어봐\" 하고 순서를 제안한다",
+            "descriptionKo": "갈등을 어떻게 풀지 단계를 나눠 현실적인 방법을 제시합니다.",
+            "scores": {
+              "fixing": 2,
+              "expressiveness": 1
+            }
+          },
+          {
+            "code": "empathize",
+            "textKo": "\"어떻게 걔가 그래ㅠㅠ\" 하며 친구 편에서 감정을 같이 쏟아낸다",
+            "descriptionKo": "옳고 그름을 따지기 전에 친구 마음에 온전히 이입합니다.",
+            "scores": {
+              "fixing": -2,
+              "expressiveness": 1
+            }
+          },
+          {
+            "code": "listen",
+            "textKo": "판단은 접어두고 친구가 하고 싶은 말을 다 하도록 둔다",
+            "descriptionKo": "섣부른 평가 없이 친구가 스스로 정리할 시간을 줍니다.",
+            "scores": {
+              "fixing": 0,
+              "expressiveness": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q04",
+        "textKo": "친구가 \"나 이거 어떻게 해야 할지 모르겠어\" 하고 선택을 물어온다. 나는?",
+        "options": [
+          {
+            "code": "solve",
+            "textKo": "장단점을 같이 따져 \"나라면 이거\" 하고 구체적으로 짚어 준다",
+            "descriptionKo": "선택지를 비교해 명확한 추천까지 내놓는 편입니다.",
+            "scores": {
+              "fixing": 2,
+              "expressiveness": 1
+            }
+          },
+          {
+            "code": "empathize",
+            "textKo": "\"고민되겠다ㅠㅠ 진짜 어렵겠어\" 하고 마음부터 알아준다",
+            "descriptionKo": "결정을 돕기 전에 고민하는 마음을 먼저 공감해 줍니다.",
+            "scores": {
+              "fixing": -2,
+              "expressiveness": 1
+            }
+          },
+          {
+            "code": "listen",
+            "textKo": "\"너는 어느 쪽으로 마음이 기울어?\" 하고 조용히 되물으며 기다린다",
+            "descriptionKo": "답을 주기보다 친구가 스스로 답을 찾도록 되물어 줍니다.",
+            "scores": {
+              "fixing": 0,
+              "expressiveness": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q05",
+        "textKo": "친구가 눈물을 글썽이며 말을 잇지 못한다. 나는?",
+        "options": [
+          {
+            "code": "solve",
+            "textKo": "물이라도 건네고 \"일단 이것부터 하자\" 하며 상황을 챙긴다",
+            "descriptionKo": "감정이 가라앉도록 지금 할 수 있는 일부터 챙깁니다.",
+            "scores": {
+              "fixing": 2,
+              "expressiveness": 1
+            }
+          },
+          {
+            "code": "empathize",
+            "textKo": "\"울어도 돼ㅠㅠ\" 하며 같이 눈시울이 붉어진다",
+            "descriptionKo": "친구의 감정에 그대로 물들어 함께 눈물을 보입니다.",
+            "scores": {
+              "fixing": -2,
+              "expressiveness": 1
+            }
+          },
+          {
+            "code": "listen",
+            "textKo": "아무 말 없이 곁에 앉아 어깨를 내어 준다",
+            "descriptionKo": "말보다 조용한 곁에 있음으로 안정감을 전합니다.",
+            "scores": {
+              "fixing": 0,
+              "expressiveness": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q06",
+        "textKo": "친구가 같은 고민을 벌써 몇 번째 반복해서 말한다. 나는?",
+        "options": [
+          {
+            "code": "solve",
+            "textKo": "\"이번엔 진짜 이렇게 해보자\" 하고 실행할 방법을 다시 정리해 준다",
+            "descriptionKo": "반복될수록 실제로 움직일 수 있는 방법을 다시 제시합니다.",
+            "scores": {
+              "fixing": 2,
+              "expressiveness": 1
+            }
+          },
+          {
+            "code": "empathize",
+            "textKo": "\"그만큼 답답한 거지ㅠㅠ\" 하며 지치지 않고 맞장구친다",
+            "descriptionKo": "몇 번이든 답답함에 공감하며 감정을 받아 줍니다.",
+            "scores": {
+              "fixing": -2,
+              "expressiveness": 1
+            }
+          },
+          {
+            "code": "listen",
+            "textKo": "몇 번이든 처음 듣는 것처럼 조용히 들어 준다",
+            "descriptionKo": "지겨워하지 않고 매번 새로 들어 주는 쪽을 택합니다.",
+            "scores": {
+              "fixing": 0,
+              "expressiveness": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q07",
+        "textKo": "친구가 SNS에 안 좋은 일이 있는 듯한 글을 올렸다. 나는?",
+        "options": [
+          {
+            "code": "solve",
+            "textKo": "바로 연락해 \"무슨 일 있어? 내가 뭐 도와줄까?\" 하고 상황을 확인한다",
+            "descriptionKo": "먼저 다가가 상황을 파악하고 도울 방법을 찾습니다.",
+            "scores": {
+              "fixing": 2,
+              "expressiveness": 1
+            }
+          },
+          {
+            "code": "empathize",
+            "textKo": "\"너 괜찮아?? 나 지금 너무 걱정돼ㅠㅠ\" 하고 마음을 쏟아 표현한다",
+            "descriptionKo": "걱정되는 마음을 감추지 않고 곧바로 크게 드러냅니다.",
+            "scores": {
+              "fixing": -2,
+              "expressiveness": 1
+            }
+          },
+          {
+            "code": "listen",
+            "textKo": "부담 주지 않게 \"언제든 얘기해, 듣고 있을게\"라고만 남긴다",
+            "descriptionKo": "재촉하지 않고 필요할 때 기댈 수 있게 여지를 둡니다.",
+            "scores": {
+              "fixing": 0,
+              "expressiveness": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q08",
+        "textKo": "친구가 시험이나 면접에서 떨어졌다고 알려온다. 나는?",
+        "options": [
+          {
+            "code": "solve",
+            "textKo": "\"다음엔 이 부분을 이렇게 보완하자\" 하고 다음 계획을 같이 세운다",
+            "descriptionKo": "아쉬움을 딛고 다음을 준비할 방향을 함께 그립니다.",
+            "scores": {
+              "fixing": 2,
+              "expressiveness": 1
+            }
+          },
+          {
+            "code": "empathize",
+            "textKo": "\"아 진짜 속상하겠다ㅠㅠ 얼마나 준비했는데\" 하며 함께 아쉬워한다",
+            "descriptionKo": "노력을 알아주며 실망한 마음에 온전히 공감합니다.",
+            "scores": {
+              "fixing": -2,
+              "expressiveness": 1
+            }
+          },
+          {
+            "code": "listen",
+            "textKo": "\"지금은 아무 말도 안 해도 돼\" 하며 조용히 곁을 지킨다",
+            "descriptionKo": "위로의 말을 서두르지 않고 감정을 추스를 시간을 줍니다.",
+            "scores": {
+              "fixing": 0,
+              "expressiveness": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q09",
+        "textKo": "친구가 \"너한테만 말하는 건데…\" 하고 조심스레 비밀 고민을 꺼낸다. 나는?",
+        "options": [
+          {
+            "code": "solve",
+            "textKo": "\"그럼 이렇게 해보는 건 어때?\" 하고 조심스럽게 방법을 제안한다",
+            "descriptionKo": "믿고 꺼낸 고민인 만큼 신중하게 풀어갈 방법을 함께 찾습니다.",
+            "scores": {
+              "fixing": 2,
+              "expressiveness": 1
+            }
+          },
+          {
+            "code": "empathize",
+            "textKo": "\"얘기해줘서 고마워ㅠㅠ 얼마나 혼자 끙끙 앓았어\" 하며 마음을 감싼다",
+            "descriptionKo": "혼자 감당했을 마음을 알아주며 감정을 먼저 보듬습니다.",
+            "scores": {
+              "fixing": -2,
+              "expressiveness": 1
+            }
+          },
+          {
+            "code": "listen",
+            "textKo": "\"네 얘기 여기서 안 나가, 편하게 말해\" 하고 조용히 들어 준다",
+            "descriptionKo": "안심하고 털어놓을 수 있게 조용히 신뢰를 지켜 줍니다.",
+            "scores": {
+              "fixing": 0,
+              "expressiveness": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q10",
+        "textKo": "친구가 \"나 진짜 다 그만두고 싶어\"라고 지쳐 말한다. 나는?",
+        "options": [
+          {
+            "code": "solve",
+            "textKo": "\"잠깐 쉬면서 뭐부터 줄일 수 있을지 같이 보자\" 하고 현실적인 정리를 돕는다",
+            "descriptionKo": "부담을 덜 수 있게 지금 조정할 수 있는 것부터 함께 정리합니다.",
+            "scores": {
+              "fixing": 2,
+              "expressiveness": 1
+            }
+          },
+          {
+            "code": "empathize",
+            "textKo": "\"얼마나 지쳤으면ㅠㅠ 진짜 고생 많았어\" 하며 마음을 크게 알아준다",
+            "descriptionKo": "그동안의 고생을 알아주며 지친 마음에 깊이 공감합니다.",
+            "scores": {
+              "fixing": -2,
+              "expressiveness": 1
+            }
+          },
+          {
+            "code": "listen",
+            "textKo": "\"지금은 그냥 다 내려놔도 돼\" 하며 말없이 곁을 지킨다",
+            "descriptionKo": "다그치지 않고 잠시 멈춰 쉴 수 있는 여백을 내어 줍니다.",
+            "scores": {
+              "fixing": 0,
+              "expressiveness": -2
+            }
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "code": "solution-coach",
+        "titleKo": "바로 해결 모드 코치형",
+        "summaryKo": "고민을 들으면 원인과 다음 할 일을 같이 찾아 주는, 에너지 넘치는 해결 코치입니다.",
+        "descriptionKo": "바로 해결 모드 코치형은 친구가 고민을 꺼내면 상황을 빠르게 파악하고 함께 방향을 찾는 데 집중합니다. 막막함 속에서 구체적인 다음 걸음을 제시해 주는 사람이라, 곁에 있으면 문제가 한결 작게 느껴집니다. 감정에 오래 머무르기보다 지금 무엇을 바꿀 수 있는지에 마음이 먼저 가 있습니다.",
+        "strengthsKo": [
+          "막막한 상황에서 구체적인 방향과 다음 걸음을 제시합니다.",
+          "문제를 작게 쪼개 정리해 실제로 움직이게 돕습니다.",
+          "고민을 혼자 짊어지지 않도록 함께 뛰어드는 든든함이 있습니다."
+        ],
+        "watchoutsKo": [
+          "위로만 원하는 순간에는 조언이 성급하게 느껴질 수 있습니다.",
+          "감정을 충분히 들어주기 전에 해결로 넘어가기 쉽습니다."
+        ],
+        "collaborationKo": "관계에서 당신은 문제를 함께 풀어 주는 든든한 조력자입니다. 조언을 꺼내기 전에 \"지금 해결책이 필요해, 아니면 그냥 들어줄까?\"라고 한 번 물어보면, 상대가 원하는 방식으로 힘이 되어 줄 수 있습니다.",
+        "shareIntroKo": "나는 고민을 들으면 바로 같이 해결책을 찾는 해결 모드 코치형이에요.",
+        "vector": {
+          "fixing": 14,
+          "expressiveness": 8
+        }
+      },
+      {
+        "code": "calm-analyst",
+        "titleKo": "담백 관점 정리형",
+        "summaryKo": "호들갑 없이 상황을 차분히 정리해 새로운 관점을 건네는 타입입니다.",
+        "descriptionKo": "담백 관점 정리형은 친구의 고민 앞에서 감정에 크게 휩쓸리지 않고 상황을 차분히 들여다봅니다. 과장하거나 서두르지 않고 핵심을 짚어 주기 때문에, 머릿속이 복잡할 때 이야기하면 생각이 한결 정리됩니다. 요란한 위로보다 현실적인 관점 한 줄이 당신의 방식입니다.",
+        "strengthsKo": [
+          "감정에 휩쓸리지 않고 상황을 객관적으로 바라봅니다.",
+          "핵심을 짚어 복잡한 고민을 차분히 정리해 줍니다.",
+          "과장 없는 현실적인 조언으로 신뢰를 줍니다."
+        ],
+        "watchoutsKo": [
+          "담담한 태도가 무심함으로 오해될 수 있습니다.",
+          "상대가 공감을 원할 때 분석이 다소 차갑게 느껴질 수 있습니다."
+        ],
+        "collaborationKo": "냉정한 판단이 필요한 순간 당신은 가장 믿음직한 조언자입니다. 관점을 정리해 주기 전에 \"많이 속상했겠다\" 같은 감정 한마디를 먼저 얹으면, 차분한 조언이 훨씬 따뜻하게 전해집니다.",
+        "shareIntroKo": "나는 호들갑 없이 상황을 차분히 정리해 주는 담백 관점 정리형이에요.",
+        "vector": {
+          "fixing": 10,
+          "expressiveness": -12
+        }
+      },
+      {
+        "code": "hype-empath",
+        "titleKo": "격한 공감 리액션형",
+        "summaryKo": "\"헐 진짜?? 너무했다\" 온몸으로 함께 화내고 함께 울어 주는 감정 리액션 부자입니다.",
+        "descriptionKo": "격한 공감 리액션형은 친구의 일을 마치 내 일처럼 느끼고 감정을 숨김없이 표현합니다. 함께 화내고 함께 아쉬워하는 리액션 덕분에, 친구는 자신이 혼자가 아니라는 걸 곧바로 실감합니다. 해결책보다 \"네 편이야\"라는 마음을 온몸으로 전하는 것이 당신의 강점입니다.",
+        "strengthsKo": [
+          "상대가 혼자가 아니라는 걸 즉시 느끼게 해 줍니다.",
+          "풍부한 감정 표현으로 상대의 마음을 풀어 줍니다.",
+          "언제나 편이 되어 주는 든든함으로 신뢰를 얻습니다."
+        ],
+        "watchoutsKo": [
+          "감정에 같이 휩쓸려 상황이 실제보다 커질 수 있습니다.",
+          "정작 필요한 현실적인 조언은 뒤로 밀리기 쉽습니다."
+        ],
+        "collaborationKo": "위로가 필요한 사람에게 당신은 최고의 존재입니다. 마음껏 공감해 준 뒤 \"이제 우리 어떻게 하면 좋을까?\"라고 한 걸음만 더 얹으면, 따뜻함과 도움을 모두 줄 수 있습니다.",
+        "shareIntroKo": "나는 친구 일에 같이 화내고 같이 울어 주는 격한 공감 리액션형이에요.",
+        "vector": {
+          "fixing": -14,
+          "expressiveness": 8
+        }
+      },
+      {
+        "code": "quiet-anchor",
+        "titleKo": "곁을 지키는 조용한 지지형",
+        "summaryKo": "말을 앞세우지 않고 끝까지 들어주며 조용히 곁을 지키는 타입입니다.",
+        "descriptionKo": "곁을 지키는 조용한 지지형은 요란한 반응 대신 판단 없이 끝까지 들어 주는 사람입니다. 편안한 침묵과 재촉하지 않는 태도가 상대에게 안정감을 주고, 무슨 말을 해도 괜찮은 안전한 자리를 만들어 줍니다. 말수는 적지만 그 곁에 있음 자체가 큰 위로가 됩니다.",
+        "strengthsKo": [
+          "판단하지 않고 상대의 이야기를 끝까지 들어 줍니다.",
+          "편안한 침묵으로 안정감과 안전한 분위기를 만듭니다.",
+          "재촉하지 않고 상대의 속도를 존중해 줍니다."
+        ],
+        "watchoutsKo": [
+          "표현이 적어 무관심으로 보일 수 있습니다.",
+          "상대가 반응을 기다릴 때 답답함을 줄 수 있습니다."
+        ],
+        "collaborationKo": "당신은 조용히 신뢰를 쌓는 안전지대 같은 존재입니다. 가끔은 \"나 네 편이야\"라는 한마디를 소리 내어 표현해 주면, 곁을 지키는 마음이 상대에게 더 또렷이 전해집니다.",
+        "shareIntroKo": "나는 말없이 끝까지 들어주며 곁을 지키는 조용한 지지형이에요.",
+        "vector": {
+          "fixing": -10,
+          "expressiveness": -12
+        }
+      }
+    ]
+  }
+}
