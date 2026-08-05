@@ -1,0 +1,455 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "metadata": {
+    "summaryKo": "아침마다 \"오늘 뭐 입지?\" 앞에서 내가 어떤 옷차림 결정러인지 8문항으로 확인합니다.",
+    "tags": [
+      "fashion",
+      "outfit",
+      "daily"
+    ],
+    "categoryLabelKo": "패션",
+    "tagLabelsKo": {
+      "fashion": "패션",
+      "outfit": "옷차림",
+      "daily": "일상"
+    },
+    "estimatedMinutes": "2-3분",
+    "packTitleKo": "자동 생성 테스트팩"
+  },
+  "test": {
+    "id": "outfit-decision-style",
+    "version": 1,
+    "status": "published",
+    "titleKo": "오늘 뭐 입지? 옷차림 결정 스타일 테스트",
+    "category": "fashion",
+    "axes": [
+      {
+        "id": "planning",
+        "labelKo": "옷차림 미리 준비 선호"
+      },
+      {
+        "id": "expression",
+        "labelKo": "개성 표현 선호"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q01",
+        "textKo": "아침에 눈을 떴을 때, 오늘 뭘 입을지는 언제 정해져 있나요?",
+        "options": [
+          {
+            "code": "decided-last-night",
+            "textKo": "어젯밤에 이미 다 정해뒀다",
+            "descriptionKo": "입을 옷이 정해져 있어야 아침이 편안합니다.",
+            "scores": {
+              "planning": 2,
+              "expression": 0
+            }
+          },
+          {
+            "code": "closet-improv",
+            "textKo": "옷장 앞에서 그날 기분 따라 즉흥으로 정한다",
+            "descriptionKo": "그날의 컨디션에 맞춰 골라야 마음에 듭니다.",
+            "scores": {
+              "planning": -2,
+              "expression": 1
+            }
+          },
+          {
+            "code": "grab-comfy",
+            "textKo": "손에 잡히는 편한 옷을 대충 걸친다",
+            "descriptionKo": "고민 없이 빨리 나가는 게 가장 중요합니다.",
+            "scores": {
+              "planning": -1,
+              "expression": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q02",
+        "textKo": "내 옷장이나 서랍 상태를 한마디로 하면?",
+        "options": [
+          {
+            "code": "set-organized",
+            "textKo": "코디별 세트로 정리돼 바로 꺼내 입는다",
+            "descriptionKo": "조합까지 정리돼 있어야 아침 동선이 짧아집니다.",
+            "scores": {
+              "planning": 2,
+              "expression": 1
+            }
+          },
+          {
+            "code": "weekly-rotation",
+            "textKo": "요일별로 정해진 옷을 돌려 입는 편이다",
+            "descriptionKo": "검증된 옷을 반복하면 실패할 일이 없습니다.",
+            "scores": {
+              "planning": 1,
+              "expression": -2
+            }
+          },
+          {
+            "code": "dig-for-mood",
+            "textKo": "그날 꽂히는 옷을 뒤져서 꺼내 입는다",
+            "descriptionKo": "그날 눈에 들어오는 옷이 곧 정답입니다.",
+            "scores": {
+              "planning": -2,
+              "expression": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q03",
+        "textKo": "새 옷을 살 때 가장 먼저 떠올리는 기준은?",
+        "options": [
+          {
+            "code": "match-preview",
+            "textKo": "가진 옷들과 어떻게 매치될지 미리 그려보고 산다",
+            "descriptionKo": "이미 있는 옷과 조합될 그림이 보여야 지갑을 엽니다.",
+            "scores": {
+              "planning": 2,
+              "expression": 1
+            }
+          },
+          {
+            "code": "safe-basic",
+            "textKo": "어디든 무난하게 어울리는 기본템 위주로 산다",
+            "descriptionKo": "실패 확률 낮은 안전한 아이템이 우선입니다.",
+            "scores": {
+              "planning": 0,
+              "expression": -2
+            }
+          },
+          {
+            "code": "eye-catch",
+            "textKo": "눈에 확 들어오는 개성 있는 아이템에 끌린다",
+            "descriptionKo": "남과 겹치지 않는 포인트 아이템에 마음이 갑니다.",
+            "scores": {
+              "planning": -1,
+              "expression": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q04",
+        "textKo": "중요한 약속을 앞둔 전날 밤, 옷은 어떻게 하나요?",
+        "options": [
+          {
+            "code": "full-set-ready",
+            "textKo": "옷을 꺼내 걸어두고 액세서리까지 맞춰둔다",
+            "descriptionKo": "완성된 모습을 미리 그려둬야 안심이 됩니다.",
+            "scores": {
+              "planning": 2,
+              "expression": 2
+            }
+          },
+          {
+            "code": "safe-preset",
+            "textKo": "실패 없는 무난한 옷으로 미리 정해둔다",
+            "descriptionKo": "중요한 자리일수록 검증된 옷이 답입니다.",
+            "scores": {
+              "planning": 1,
+              "expression": -2
+            }
+          },
+          {
+            "code": "morning-decide",
+            "textKo": "내일 아침 기분 봐서 정하지, 하고 잔다",
+            "descriptionKo": "당일 상태를 봐야 제대로 고를 수 있습니다.",
+            "scores": {
+              "planning": -2,
+              "expression": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "q05",
+        "textKo": "나갈 준비를 마치고 거울 앞에서 마지막으로 확인하는 것은?",
+        "options": [
+          {
+            "code": "check-silhouette",
+            "textKo": "전체 실루엣과 포인트가 살았는지 본다",
+            "descriptionKo": "완성도가 신경 쓰여 디테일까지 점검합니다.",
+            "scores": {
+              "planning": 1,
+              "expression": 2
+            }
+          },
+          {
+            "code": "check-plain",
+            "textKo": "너무 튀지 않고 무난한지 본다",
+            "descriptionKo": "과하지 않게, 눈에 거슬리지 않는지가 기준입니다.",
+            "scores": {
+              "planning": 0,
+              "expression": -2
+            }
+          },
+          {
+            "code": "recheck-feel",
+            "textKo": "필이 안 오면 그 자리에서 다시 갈아입는다",
+            "descriptionKo": "그날의 느낌이 맞아야 문을 나설 수 있습니다.",
+            "scores": {
+              "planning": -2,
+              "expression": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "q06",
+        "textKo": "집을 나서기 직전 날씨가 갑자기 바뀌었다면?",
+        "options": [
+          {
+            "code": "prepped-layers",
+            "textKo": "미리 챙겨둔 겉옷이나 여벌로 이미 대비돼 있다",
+            "descriptionKo": "변수를 예상해 대비해 두는 편입니다.",
+            "scores": {
+              "planning": 2,
+              "expression": 0
+            }
+          },
+          {
+            "code": "restyle-now",
+            "textKo": "그날 아침 코디를 처음부터 새로 짠다",
+            "descriptionKo": "바뀐 상황에 맞춰 다시 조합하는 게 재미있습니다.",
+            "scores": {
+              "planning": -1,
+              "expression": 1
+            }
+          },
+          {
+            "code": "grab-any-outer",
+            "textKo": "있는 겉옷 아무거나 걸치고 만다",
+            "descriptionKo": "일단 춥지만 않으면 되니 빠르게 해결합니다.",
+            "scores": {
+              "planning": -1,
+              "expression": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q07",
+        "textKo": "여행이나 외출용으로 짐을 쌀 때 옷은 어떻게 챙기나요?",
+        "options": [
+          {
+            "code": "daily-coordi",
+            "textKo": "날짜별 코디를 정해서 세트로 담는다",
+            "descriptionKo": "언제 뭘 입을지 정해둬야 짐이 깔끔해집니다.",
+            "scores": {
+              "planning": 2,
+              "expression": 1
+            }
+          },
+          {
+            "code": "pack-all-decide-there",
+            "textKo": "이것저것 다 넣고 현지에서 그날 정한다",
+            "descriptionKo": "선택지를 넉넉히 두고 현장 기분에 맡깁니다.",
+            "scores": {
+              "planning": -2,
+              "expression": 1
+            }
+          },
+          {
+            "code": "wrinkle-free-basic",
+            "textKo": "안 구겨지는 무난한 옷 위주로 담는다",
+            "descriptionKo": "관리 편하고 실패 없는 옷이 여행엔 최고입니다.",
+            "scores": {
+              "planning": 1,
+              "expression": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q08",
+        "textKo": "나에게 옷이란 한마디로 무엇에 가깝나요?",
+        "options": [
+          {
+            "code": "language",
+            "textKo": "나를 표현하는 하나의 언어다",
+            "descriptionKo": "무엇을 입는지가 곧 나를 보여준다고 느낍니다.",
+            "scores": {
+              "planning": 1,
+              "expression": 2
+            }
+          },
+          {
+            "code": "practical-tool",
+            "textKo": "매일을 편하게 굴리는 실용 도구다",
+            "descriptionKo": "잘 굴러가면 그걸로 충분한 생활의 도구입니다.",
+            "scores": {
+              "planning": 1,
+              "expression": -1
+            }
+          },
+          {
+            "code": "morning-chore",
+            "textKo": "아침에 고민 없이 빨리 해치우고 싶은 일이다",
+            "descriptionKo": "결정 자체를 최대한 줄이고 싶은 일과입니다.",
+            "scores": {
+              "planning": -2,
+              "expression": -1
+            }
+          }
+        ]
+      },
+      {
+        "id": "q09",
+        "textKo": "옷을 입고 나왔는데 누군가 \"오늘 좀 다른데?\"라고 하면?",
+        "options": [
+          {
+            "code": "proud-noticed",
+            "textKo": "신경 쓴 걸 알아봐 줘서 뿌듯하다",
+            "descriptionKo": "공들인 포인트를 알아봐 주면 기분이 좋습니다.",
+            "scores": {
+              "planning": 1,
+              "expression": 2
+            }
+          },
+          {
+            "code": "same-as-usual",
+            "textKo": "어제랑 비슷한데? 하고 무덤덤하다",
+            "descriptionKo": "늘 입던 결이라 특별할 게 없다고 느낍니다.",
+            "scores": {
+              "planning": 0,
+              "expression": -2
+            }
+          },
+          {
+            "code": "just-grabbed",
+            "textKo": "그냥 손에 잡힌 거 입었을 뿐이라 멋쩍다",
+            "descriptionKo": "별생각 없이 걸친 거라 반응이 쑥스럽습니다.",
+            "scores": {
+              "planning": -2,
+              "expression": -1
+            }
+          }
+        ]
+      },
+      {
+        "id": "q10",
+        "textKo": "옷을 사러 갈 시간을 따로 낸다면, 매장에서 내 모습은?",
+        "options": [
+          {
+            "code": "list-driven",
+            "textKo": "살 것과 코디를 미리 정리해 목록대로 산다",
+            "descriptionKo": "필요한 조합을 채우러 온 것이라 동선이 분명합니다.",
+            "scores": {
+              "planning": 2,
+              "expression": 1
+            }
+          },
+          {
+            "code": "basic-quick",
+            "textKo": "필요한 기본템만 빠르게 사고 나온다",
+            "descriptionKo": "오래 고민하지 않고 실용적인 것만 챙깁니다.",
+            "scores": {
+              "planning": 1,
+              "expression": -2
+            }
+          },
+          {
+            "code": "spot-impulse",
+            "textKo": "돌아다니다 그날 끌리는 걸 즉흥으로 산다",
+            "descriptionKo": "매장에서 눈에 꽂힌 아이템을 그 자리에서 담습니다.",
+            "scores": {
+              "planning": -2,
+              "expression": 2
+            }
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "code": "night-coordi",
+        "titleKo": "전날 밤 코디 완성형",
+        "summaryKo": "입을 옷을 미리 완성해두고, 디테일까지 맞춰 아침을 여유롭게 시작하는 준비형입니다.",
+        "descriptionKo": "전날 밤 코디 완성형에게 옷차림은 즉흥이 아니라 완성해두는 작업입니다. 자리와 날씨, 그날의 동선을 미리 그려 옷과 소품까지 맞춰두기 때문에, 아침에는 이미 정해진 모습을 입기만 하면 됩니다. 준비된 만큼 완성도가 높아, 어떤 자리에서도 신경 쓴 티가 자연스럽게 납니다.",
+        "strengthsKo": [
+          "자리와 날씨에 맞춰 미리 준비해 어떤 상황에서도 옷차림이 흔들리지 않습니다.",
+          "옷과 소품의 조합까지 맞춰 완성도 높은 인상을 안정적으로 만듭니다.",
+          "아침에 결정을 미리 끝내둬 하루를 여유 있게 시작합니다."
+        ],
+        "watchoutsKo": [
+          "정해둔 코디가 어긋나는 날에는 평소보다 크게 당황할 수 있으니 대안도 하나쯤 두면 좋습니다.",
+          "완성도에 신경 쓰다 준비 시간이 길어질 수 있어, 힘을 빼도 되는 날을 구분하면 편합니다."
+        ],
+        "collaborationKo": "함께 다니는 사람들에게는 자리에 맞는 옷차림을 미리 챙겨주는 든든한 사람입니다. 다만 상대가 편하게 입고 싶어 하는 날에는 완성도 기준을 잠시 내려놓고 맞춰주면, 준비성이 부담이 아니라 배려로 전해집니다.",
+        "shareIntroKo": "나는 전날 밤에 옷과 소품까지 맞춰두는 전날 밤 코디 완성형이에요.",
+        "vector": {
+          "planning": 12,
+          "expression": 11
+        }
+      },
+      {
+        "code": "uniform-rotation",
+        "titleKo": "믿음직한 유니폼형",
+        "summaryKo": "검증된 옷을 정해두고 돌려 입으며, 실패 없이 빠르게 하루를 시작하는 효율형입니다.",
+        "descriptionKo": "믿음직한 유니폼형은 옷차림에서 불확실성을 걷어내는 데 능합니다. 어떤 옷이 나에게 무난하고 어디든 어울리는지 이미 알고 있어, 정해진 옷들을 돌려 입으며 고민할 시간을 아낍니다. 새로움보다 확실한 안정감을 고르는 것은 무심함이 아니라, 매일의 에너지를 더 중요한 곳에 쓰려는 이 유형만의 전략입니다.",
+        "strengthsKo": [
+          "검증된 옷으로 실패 없이 무난하고 단정한 인상을 꾸준히 유지합니다.",
+          "옷 고르는 시간을 줄여 아침 에너지를 다른 일에 씁니다.",
+          "상황이 급해도 흔들리지 않는 안정적인 기본기를 갖추고 있습니다."
+        ],
+        "watchoutsKo": [
+          "같은 조합이 오래 이어지면 옷차림의 즐거움 자체가 무뎌질 수 있습니다.",
+          "평소와 다른 자리에서는 정해둔 옷이 안 맞을 수 있어, 특별한 날 하나쯤 변화를 시도해도 좋습니다."
+        ],
+        "collaborationKo": "함께 다니는 사람들에게는 어떤 자리에도 무난하게 어울리는 안정적인 동행입니다. 가끔 상대가 새로운 스타일을 권할 때 한 번쯤 따라가 보면, 안전한 기본에 신선함이 더해져 옷차림의 폭이 넓어집니다.",
+        "shareIntroKo": "나는 검증된 옷을 돌려 입으며 실패 없이 시작하는 믿음직한 유니폼형이에요.",
+        "vector": {
+          "planning": 10,
+          "expression": -12
+        }
+      },
+      {
+        "code": "mood-select",
+        "titleKo": "아침 기분 셀렉터형",
+        "summaryKo": "그날의 기분과 필을 읽어 즉흥으로 골라내며, 감각적인 조합을 만들어 내는 표현형입니다.",
+        "descriptionKo": "아침 기분 셀렉터형은 옷을 머리로 정하기보다 그날의 감각으로 고릅니다. 날씨, 기분, 문득 꽂힌 아이템 같은 신호에 민감하고, 그 느낌이 올 때까지는 서두르지 않습니다. 정해진 규칙보다 그날의 조합을 즐기기 때문에, 필이 맞은 날의 옷차림은 누구보다 개성 있고 생기가 넘칩니다.",
+        "strengthsKo": [
+          "그날의 컨디션과 기분에 가장 잘 맞는 조합을 찾아내는 감각이 뛰어납니다.",
+          "정해진 틀에 얽매이지 않아 신선하고 개성 있는 옷차림을 자주 만듭니다.",
+          "상황이 바뀌어도 그 자리에서 유연하게 새로 조합해 냅니다."
+        ],
+        "watchoutsKo": [
+          "필이 안 오는 날에는 결정이 늦어져 아침 시간이 촉박해질 수 있습니다.",
+          "그날의 기분에 크게 좌우돼, 중요한 자리에서는 미리 하나쯤 정해두면 안심입니다."
+        ],
+        "collaborationKo": "함께 다니는 사람들에게는 분위기에 생기를 더하는 감각적인 동행입니다. 약속 시간이 빠듯한 날에는 후보를 두세 개로 좁혀두면, 개성도 살리고 상대를 기다리게 하지 않아 감각과 속도를 모두 지킬 수 있습니다.",
+        "shareIntroKo": "나는 그날의 필을 읽어 즉흥으로 골라내는 아침 기분 셀렉터형이에요.",
+        "vector": {
+          "planning": -11,
+          "expression": 10
+        }
+      },
+      {
+        "code": "comfort-grab",
+        "titleKo": "편함 최우선 그랩형",
+        "summaryKo": "고민을 최소로 줄이고 편한 옷을 빠르게 걸쳐, 아침의 결정 피로 없이 나서는 실용형입니다.",
+        "descriptionKo": "편함 최우선 그랩형에게 옷차림의 핵심은 편안함과 속도입니다. 아침의 결정거리를 늘리고 싶지 않아, 손에 잡히는 편한 옷을 빠르게 걸치고 문을 나섭니다. 대충 입는다는 말은 무신경이 아니라, 옷에 쓸 에너지를 아껴 하루의 다른 부분에 집중하려는 이 유형만의 우선순위입니다.",
+        "strengthsKo": [
+          "옷 고민에 시간을 거의 쓰지 않아 아침이 늘 빠르고 가볍습니다.",
+          "편안함을 우선해 몸과 마음이 지치지 않는 하루를 만듭니다.",
+          "옷차림에 크게 얽매이지 않아 어떤 상황에도 부담 없이 움직입니다."
+        ],
+        "watchoutsKo": [
+          "편함만 좇다 보면 격식이 필요한 자리에서 준비가 부족해 보일 수 있습니다.",
+          "늘 비슷하게 편한 옷만 입으면, 신경 쓰고 싶은 날에도 마땅한 옷이 없을 수 있습니다."
+        ],
+        "collaborationKo": "함께 다니는 사람들에게는 격식 없이 편하게 어울리는 부담 없는 동행입니다. 중요한 자리가 있는 날에는 편한 옷 중에서도 단정한 한 벌을 미리 정해두면, 편안함을 지키면서도 자리에 맞는 인상을 만들 수 있습니다.",
+        "shareIntroKo": "나는 편한 옷을 빠르게 걸치고 나서는 편함 최우선 그랩형이에요.",
+        "vector": {
+          "planning": -10,
+          "expression": -12
+        }
+      }
+    ]
+  }
+}
