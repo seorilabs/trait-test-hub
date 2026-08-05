@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "first-meeting-style",
+  "metadata": {
+    "summaryKo": "처음 만난 사람 앞에서 어떻게 행동하는지 10문항으로 알아보는 첫 만남 스타일 테스트입니다.",
+    "tags": [
+      "social",
+      "firstmeet",
+      "daily"
+    ],
+    "categoryLabelKo": "관계",
+    "tagLabelsKo": {
+      "social": "관계",
+      "firstmeet": "첫만남",
+      "daily": "일상"
+    },
+    "estimatedMinutes": "2-3분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-08-05T22:13:53.956Z",
+    "updatedAt": "2026-08-05T22:13:53.956Z"
+  }
+}
