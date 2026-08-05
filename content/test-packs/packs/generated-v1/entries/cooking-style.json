@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "cooking-style",
+  "metadata": {
+    "summaryKo": "부엌에 섰을 때 어떻게 요리하는지 10문항으로 알아봅니다.",
+    "tags": [
+      "cooking",
+      "kitchen",
+      "daily"
+    ],
+    "categoryLabelKo": "요리",
+    "tagLabelsKo": {
+      "cooking": "요리",
+      "kitchen": "주방"
+    },
+    "estimatedMinutes": "2-3분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-08-03T22:15:03.128Z",
+    "updatedAt": "2026-08-03T22:15:03.128Z"
+  }
+}
