@@ -1,0 +1,457 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "metadata": {
+    "summaryKo": "밥상 앞에서 무엇부터 먹고 무엇을 아껴 두는지 8문항으로 알아보는 식사 순서 스타일 테스트입니다.",
+    "tags": [
+      "food",
+      "meal",
+      "daily",
+      "habit"
+    ],
+    "categoryLabelKo": "음식",
+    "tagLabelsKo": {
+      "food": "음식",
+      "meal": "식사",
+      "daily": "일상",
+      "habit": "습관"
+    },
+    "estimatedMinutes": "2-3분",
+    "packTitleKo": "자동 생성 테스트팩"
+  },
+  "test": {
+    "id": "meal-eating-style",
+    "version": 1,
+    "status": "published",
+    "titleKo": "밥 먹을 때 나는? 식사 순서 스타일 테스트",
+    "category": "food",
+    "axes": [
+      {
+        "id": "saving",
+        "labelKo": "아껴 먹기 선호"
+      },
+      {
+        "id": "planning",
+        "labelKo": "계획적 배분 선호"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q01",
+        "textKo": "반찬이 쫙 깔린 밥상에서 첫 젓가락은 어디로?",
+        "options": [
+          {
+            "code": "save",
+            "textKo": "제일 좋아하는 반찬은 아껴 두고 다른 것부터 먹는다",
+            "descriptionKo": "가장 좋아하는 건 마지막을 위해 남겨 두고 나머지부터 손을 댑니다.",
+            "scores": {
+              "saving": 2,
+              "planning": 1
+            }
+          },
+          {
+            "code": "first",
+            "textKo": "제일 좋아하는 반찬부터 바로 집는다",
+            "descriptionKo": "좋아하는 것으로 기분 좋게 식사를 시작합니다.",
+            "scores": {
+              "saving": -2,
+              "planning": 1
+            }
+          },
+          {
+            "code": "flow",
+            "textKo": "순서 없이 그때그때 손 가는 대로 집는다",
+            "descriptionKo": "정해 두지 않고 그 순간 끌리는 반찬을 집습니다.",
+            "scores": {
+              "saving": 0,
+              "planning": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q02",
+        "textKo": "뷔페에서 접시에 음식을 담을 때 나는?",
+        "options": [
+          {
+            "code": "save",
+            "textKo": "제일 좋아하는 건 나중 접시로 아껴 두고 먼저 다른 걸 담는다",
+            "descriptionKo": "좋아하는 메뉴는 뒤 순번으로 미뤄 두고 다른 것부터 담습니다.",
+            "scores": {
+              "saving": 2,
+              "planning": 1
+            }
+          },
+          {
+            "code": "first",
+            "textKo": "제일 좋아하는 것부터 접시에 가득 담는다",
+            "descriptionKo": "가장 먹고 싶은 메뉴를 먼저 넉넉히 담습니다.",
+            "scores": {
+              "saving": -2,
+              "planning": 1
+            }
+          },
+          {
+            "code": "flow",
+            "textKo": "동선 따라 눈에 띄는 대로 담는다",
+            "descriptionKo": "순서를 따지지 않고 지나가며 끌리는 걸 담습니다.",
+            "scores": {
+              "saving": 0,
+              "planning": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q03",
+        "textKo": "밥과 반찬을 먹는 순서를 정할 때 나는?",
+        "options": [
+          {
+            "code": "save",
+            "textKo": "좋아하는 반찬은 마지막 밥술까지 남겨 둔다",
+            "descriptionKo": "제일 좋아하는 반찬으로 식사를 마무리하려고 아껴 둡니다.",
+            "scores": {
+              "saving": 2,
+              "planning": 1
+            }
+          },
+          {
+            "code": "first",
+            "textKo": "좋아하는 반찬으로 밥을 시작한다",
+            "descriptionKo": "첫술부터 좋아하는 반찬을 곁들여 먹습니다.",
+            "scores": {
+              "saving": -2,
+              "planning": 1
+            }
+          },
+          {
+            "code": "flow",
+            "textKo": "정해진 순서 없이 그날 기분대로 먹는다",
+            "descriptionKo": "순서를 미리 정하지 않고 그때 입맛을 따릅니다.",
+            "scores": {
+              "saving": 0,
+              "planning": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q04",
+        "textKo": "치킨이나 피자처럼 여러 조각이 있을 때 나는?",
+        "options": [
+          {
+            "code": "save",
+            "textKo": "제일 맛있어 보이는 조각은 마지막을 위해 남긴다",
+            "descriptionKo": "가장 좋은 조각을 끝까지 아껴 두고 나머지부터 먹습니다.",
+            "scores": {
+              "saving": 2,
+              "planning": 1
+            }
+          },
+          {
+            "code": "first",
+            "textKo": "제일 맛있어 보이는 조각부터 집는다",
+            "descriptionKo": "가장 끌리는 조각을 가장 먼저 맛봅니다.",
+            "scores": {
+              "saving": -2,
+              "planning": 1
+            }
+          },
+          {
+            "code": "flow",
+            "textKo": "가까이 있는 조각부터 아무거나 집는다",
+            "descriptionKo": "조각을 고르지 않고 손 닿는 대로 집어 먹습니다.",
+            "scores": {
+              "saving": 0,
+              "planning": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q05",
+        "textKo": "메인 요리와 후식이 함께 나왔을 때 나는?",
+        "options": [
+          {
+            "code": "save",
+            "textKo": "메인을 다 먹고 제일 좋아하는 후식을 맨 끝에 즐긴다",
+            "descriptionKo": "가장 좋아하는 후식을 식사의 마지막 즐거움으로 남겨 둡니다.",
+            "scores": {
+              "saving": 2,
+              "planning": 1
+            }
+          },
+          {
+            "code": "first",
+            "textKo": "좋아하는 후식부터 한입 맛보고 시작한다",
+            "descriptionKo": "기다리지 않고 좋아하는 후식을 먼저 맛봅니다.",
+            "scores": {
+              "saving": -2,
+              "planning": 1
+            }
+          },
+          {
+            "code": "flow",
+            "textKo": "끌리면 중간중간 후식도 집어 먹는다",
+            "descriptionKo": "메인과 후식을 순서 없이 오가며 먹습니다.",
+            "scores": {
+              "saving": 0,
+              "planning": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q06",
+        "textKo": "덮밥이나 도시락처럼 한 그릇 음식을 먹을 때 나는?",
+        "options": [
+          {
+            "code": "save",
+            "textKo": "제일 좋아하는 토핑은 아껴 뒀다 마지막에 먹는다",
+            "descriptionKo": "가장 좋아하는 토핑을 끝까지 남겨 마무리로 즐깁니다.",
+            "scores": {
+              "saving": 2,
+              "planning": 1
+            }
+          },
+          {
+            "code": "first",
+            "textKo": "제일 좋아하는 토핑부터 먹어 치운다",
+            "descriptionKo": "가장 좋아하는 토핑을 먼저 골라 먹습니다.",
+            "scores": {
+              "saving": -2,
+              "planning": 1
+            }
+          },
+          {
+            "code": "flow",
+            "textKo": "순서 없이 그냥 섞어 가며 먹는다",
+            "descriptionKo": "토핑과 밥을 순서 없이 섞어 한번에 먹습니다.",
+            "scores": {
+              "saving": 0,
+              "planning": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q07",
+        "textKo": "식사가 거의 끝나 마지막 한 입이 남았을 때 나는?",
+        "options": [
+          {
+            "code": "save",
+            "textKo": "제일 좋아하는 걸로 마무리하려고 일부러 남겨 뒀다",
+            "descriptionKo": "가장 좋아하는 한 입을 끝맛으로 남겨 두고 즐깁니다.",
+            "scores": {
+              "saving": 2,
+              "planning": 1
+            }
+          },
+          {
+            "code": "first",
+            "textKo": "좋아하는 건 이미 먹어서 남는 대로 마무리한다",
+            "descriptionKo": "좋아하는 건 앞서 먹었기에 남은 것으로 끝냅니다.",
+            "scores": {
+              "saving": -2,
+              "planning": 1
+            }
+          },
+          {
+            "code": "flow",
+            "textKo": "배부르면 남기든 말든 그냥 멈춘다",
+            "descriptionKo": "마지막 한 입을 계획하지 않고 배부르면 멈춥니다.",
+            "scores": {
+              "saving": 0,
+              "planning": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q08",
+        "textKo": "처음 보는 음식이 여러 개 나왔을 때 나는?",
+        "options": [
+          {
+            "code": "save",
+            "textKo": "제일 기대되는 건 아껴 두고 다른 것부터 천천히 맛본다",
+            "descriptionKo": "가장 기대되는 음식을 마지막까지 아껴 두고 나머지부터 봅니다.",
+            "scores": {
+              "saving": 2,
+              "planning": 1
+            }
+          },
+          {
+            "code": "first",
+            "textKo": "제일 기대되는 것부터 바로 맛본다",
+            "descriptionKo": "가장 궁금하고 기대되는 음식을 먼저 먹어 봅니다.",
+            "scores": {
+              "saving": -2,
+              "planning": 1
+            }
+          },
+          {
+            "code": "flow",
+            "textKo": "순서 상관없이 그냥 끌리는 것부터 먹는다",
+            "descriptionKo": "기대치를 따지지 않고 그 순간 끌리는 것부터 먹습니다.",
+            "scores": {
+              "saving": 0,
+              "planning": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q09",
+        "textKo": "국이나 찌개에 좋아하는 건더기가 들어 있을 때 나는?",
+        "options": [
+          {
+            "code": "save",
+            "textKo": "좋아하는 건더기는 마지막까지 아껴 두고 국물부터 먹는다",
+            "descriptionKo": "가장 좋아하는 건더기를 끝까지 남겨 마무리로 건집니다.",
+            "scores": {
+              "saving": 2,
+              "planning": 1
+            }
+          },
+          {
+            "code": "first",
+            "textKo": "좋아하는 건더기부터 얼른 건져 먹는다",
+            "descriptionKo": "가장 좋아하는 건더기를 먼저 골라 건져 먹습니다.",
+            "scores": {
+              "saving": -2,
+              "planning": 1
+            }
+          },
+          {
+            "code": "flow",
+            "textKo": "순서 없이 국물과 건더기를 그냥 떠먹는다",
+            "descriptionKo": "건더기를 따로 챙기지 않고 뜨는 대로 먹습니다.",
+            "scores": {
+              "saving": 0,
+              "planning": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q10",
+        "textKo": "여럿이 나눠 먹는 전골이나 모둠 요리에서 나는?",
+        "options": [
+          {
+            "code": "save",
+            "textKo": "내가 좋아하는 건 눈치껏 아껴 뒀다 마지막에 챙긴다",
+            "descriptionKo": "좋아하는 부위를 남겨 두었다가 끝 무렵에 즐깁니다.",
+            "scores": {
+              "saving": 2,
+              "planning": 1
+            }
+          },
+          {
+            "code": "first",
+            "textKo": "좋아하는 것부터 먼저 챙겨 내 접시에 담는다",
+            "descriptionKo": "가장 좋아하는 부위를 먼저 확보해 먹습니다.",
+            "scores": {
+              "saving": -2,
+              "planning": 1
+            }
+          },
+          {
+            "code": "flow",
+            "textKo": "따지지 않고 그때그때 끌리는 대로 집는다",
+            "descriptionKo": "순서를 정하지 않고 그 순간 손이 가는 대로 집습니다.",
+            "scores": {
+              "saving": 0,
+              "planning": -2
+            }
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "code": "last-bite-designer",
+        "titleKo": "마지막 한입 설계형",
+        "summaryKo": "좋아하는 건 아껴 두고 전체 순서를 그려, 최고의 한입으로 식사를 마무리하는 타입입니다.",
+        "descriptionKo": "마지막 한입 설계형은 밥상 앞에서 무엇을 언제 먹을지 머릿속으로 순서를 그립니다. 제일 좋아하는 반찬은 마지막까지 아껴 두었다가, 식사의 절정을 스스로 만들어 즐깁니다. 지금의 한 입보다 전체 흐름의 완성도를 중요하게 여기고, 기대감을 관리하며 먹는 과정을 하나의 작은 계획처럼 다룹니다.",
+        "strengthsKo": [
+          "전체 식사의 흐름을 그려 두고 순서대로 즐길 줄 압니다.",
+          "좋아하는 것을 아껴 두며 끝까지 기대감을 스스로 관리합니다.",
+          "마지막까지 만족도가 유지되도록 마무리를 설계합니다."
+        ],
+        "watchoutsKo": [
+          "계획한 순서대로 되지 않으면 아쉬움이 오래 남을 수 있습니다.",
+          "아껴 두다 배가 불러 정작 좋아하는 걸 못 즐길 때가 있습니다."
+        ],
+        "collaborationKo": "여럿이 함께 먹을 때 당신은 순서와 균형을 챙겨 자리를 매끄럽게 이끕니다. 다만 남이 아껴 둔 음식을 무심코 집을 수도 있으니, 나눠 먹는 자리에서는 각자 남겨 둔 몫을 가볍게 확인해 주면 서로 편안합니다.",
+        "shareIntroKo": "나는 제일 좋아하는 걸 아껴 뒀다가 마지막 한입으로 즐기는 마지막 한입 설계형이에요.",
+        "vector": {
+          "saving": 14,
+          "planning": 8
+        }
+      },
+      {
+        "code": "balanced-planner",
+        "titleKo": "골고루 안배형",
+        "summaryKo": "좋아하는 것부터 시작하되 밥과 반찬을 고르게 오가며 균형 있게 먹는 타입입니다.",
+        "descriptionKo": "골고루 안배형은 좋아하는 반찬으로 기분 좋게 식사를 시작하지만, 한쪽만 먹어 치우지 않고 밥과 여러 반찬을 고르게 오갑니다. 어느 하나가 먼저 동나 마지막이 심심해지는 걸 좋아하지 않아, 접시 전체의 균형을 은근히 맞춰 갑니다. 즐거움과 효율을 함께 챙기는 실용적인 식사 스타일입니다.",
+        "strengthsKo": [
+          "좋아하는 것과 나머지를 고르게 오가며 균형을 맞춥니다.",
+          "한쪽으로 치우치지 않아 끝까지 골고루 즐길 줄 압니다.",
+          "무엇을 얼마나 먹을지 감각적으로 잘 배분합니다."
+        ],
+        "watchoutsKo": [
+          "균형을 맞추다 정작 제일 좋아하는 걸 충분히 못 즐길 수 있습니다.",
+          "함께 먹을 때 남의 속도에 맞추느라 자기 페이스를 놓치기 쉽습니다."
+        ],
+        "collaborationKo": "함께 먹는 자리에서 당신은 반찬이 한쪽으로 쏠리지 않게 챙기는 든든한 역할을 합니다. 다만 모두가 같은 속도로 먹는 건 아니니, 남은 음식을 나눌 때 상대의 취향을 한 번 물어보면 배분이 더 매끄러워집니다.",
+        "shareIntroKo": "나는 좋아하는 것부터 먹되 끝까지 골고루 챙기는 골고루 안배형이에요.",
+        "vector": {
+          "saving": -14,
+          "planning": 8
+        }
+      },
+      {
+        "code": "savoring-freestyle",
+        "titleKo": "설렘 아끼는 자유형",
+        "summaryKo": "정해진 순서 없이 즉흥적으로 먹지만, 제일 좋아하는 건 본능적으로 마지막에 아끼는 타입입니다.",
+        "descriptionKo": "설렘 아끼는 자유형은 밥상 앞에서 딱히 순서를 정하지 않고 그때그때 손이 가는 대로 즐깁니다. 그러면서도 제일 좋아하는 한 가지만큼은 자연스럽게 마지막까지 남겨 두는데, 계획이라기보다 아껴 두고 싶은 마음에 가깝습니다. 자유로운 흐름 속에서 마지막의 설렘을 챙기는 균형 잡힌 식사파입니다.",
+        "strengthsKo": [
+          "순서에 얽매이지 않고 그 순간의 입맛을 편하게 따라갑니다.",
+          "좋아하는 것은 아껴 두어 마지막 즐거움을 남길 줄 압니다.",
+          "정해진 규칙 없이도 자기만의 리듬으로 식사를 즐깁니다."
+        ],
+        "watchoutsKo": [
+          "순서를 정하지 않아 아껴 둔 음식이 식거나 놓칠 수 있습니다.",
+          "즉흥적으로 먹다 배가 차 마지막을 못 즐길 때가 있습니다."
+        ],
+        "collaborationKo": "함께 먹을 때 당신은 분위기를 편안하게 풀어 주는 자유로운 식사 메이트입니다. 다만 순서를 정해 나눠 먹는 자리라면, 아껴 둔 음식이 무엇인지 미리 말해 두면 오해 없이 즐겁게 나눌 수 있습니다.",
+        "shareIntroKo": "나는 끌리는 대로 먹으면서도 제일 좋아하는 건 마지막에 아끼는 설렘 아끼는 자유형이에요.",
+        "vector": {
+          "saving": 10,
+          "planning": -12
+        }
+      },
+      {
+        "code": "instinct-diver",
+        "titleKo": "끌리는 대로 직진형",
+        "summaryKo": "제일 맛있어 보이는 것부터 바로, 순서 없이 끌리는 대로 즐기는 솔직한 식사 타입입니다.",
+        "descriptionKo": "끌리는 대로 직진형은 밥상을 마주하면 제일 맛있어 보이는 것부터 망설임 없이 집습니다. 아껴 두거나 순서를 계산하기보다 지금 먹고 싶은 걸 바로 먹는 즐거움을 가장 크게 칩니다. 솔직하고 결정이 빠르며, 식사를 복잡하게 만들지 않고 순간의 만족에 충실한 스타일입니다.",
+        "strengthsKo": [
+          "먹고 싶은 걸 바로 골라 결정이 빠르고 시원합니다.",
+          "순간의 즐거움에 충실해 식사를 온전히 만끽합니다.",
+          "복잡한 규칙 없이 솔직하게 자기 입맛을 따릅니다."
+        ],
+        "watchoutsKo": [
+          "좋아하는 걸 먼저 먹어 식사 마지막이 심심해질 수 있습니다.",
+          "빠르게 집다 보면 골고루 챙기지 못하고 치우칠 때가 있습니다."
+        ],
+        "collaborationKo": "함께 먹는 자리에서 당신은 망설임 없이 메뉴를 정해 분위기를 시원하게 이끕니다. 다만 좋아하는 걸 빨리 집는 편이라, 나눠 먹는 음식은 상대 몫을 한 번 살펴 두면 모두가 기분 좋게 즐길 수 있습니다.",
+        "shareIntroKo": "나는 제일 맛있어 보이는 것부터 바로 집는 끌리는 대로 직진형이에요.",
+        "vector": {
+          "saving": -10,
+          "planning": -12
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "meal-eating-style",
+  "metadata": {
+    "summaryKo": "밥상 앞에서 무엇부터 먹고 무엇을 아껴 두는지 8문항으로 알아보는 식사 순서 스타일 테스트입니다.",
+    "tags": [
+      "food",
+      "meal",
+      "daily",
+      "habit"
+    ],
+    "categoryLabelKo": "음식",
+    "tagLabelsKo": {
+      "food": "음식",
+      "meal": "식사",
+      "daily": "일상",
+      "habit": "습관"
+    },
+    "estimatedMinutes": "2-3분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-08-02T22:16:47.876Z",
+    "updatedAt": "2026-08-02T22:16:47.876Z"
+  }
+}
