@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "waiting-style",
+  "metadata": {
+    "summaryKo": "무언가를 기다릴 때 내 마음과 행동이 어떻게 움직이는지 10문항으로 확인합니다.",
+    "tags": [
+      "waiting",
+      "patience",
+      "daily"
+    ],
+    "categoryLabelKo": "대기",
+    "tagLabelsKo": {
+      "waiting": "기다림",
+      "patience": "인내",
+      "daily": "일상"
+    },
+    "estimatedMinutes": "2-3분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-08-06T22:17:10.261Z",
+    "updatedAt": "2026-08-06T22:17:10.261Z"
+  }
+}
