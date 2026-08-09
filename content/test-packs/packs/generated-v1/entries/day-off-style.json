@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "day-off-style",
+  "metadata": {
+    "summaryKo": "모처럼 생긴 쉬는 날, 나는 밖으로 나가는지 집에 머무는지, 계획대로인지 즉흥인지 10문항으로 확인합니다.",
+    "tags": [
+      "rest",
+      "recharge",
+      "daily"
+    ],
+    "categoryLabelKo": "휴식",
+    "tagLabelsKo": {
+      "rest": "휴식",
+      "recharge": "재충전",
+      "daily": "일상"
+    },
+    "estimatedMinutes": "2-3분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-08-09T22:17:16.046Z",
+    "updatedAt": "2026-08-09T22:17:16.046Z"
+  }
+}
