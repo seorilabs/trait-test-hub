@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "refusal-style",
+  "metadata": {
+    "summaryKo": "부탁을 받았을 때 어떻게 거절하는지 10문항으로 알아봅니다.",
+    "tags": [
+      "social",
+      "communication",
+      "daily"
+    ],
+    "categoryLabelKo": "관계",
+    "tagLabelsKo": {
+      "social": "관계",
+      "communication": "소통",
+      "daily": "일상"
+    },
+    "estimatedMinutes": "2-3분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-08-10T22:17:44.804Z",
+    "updatedAt": "2026-08-10T22:17:44.804Z"
+  }
+}
