@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "plan-making-style",
+  "metadata": {
+    "summaryKo": "친구들과 약속을 잡을 때 내가 어떤 역할을 하는 사람인지 10문항으로 확인합니다.",
+    "tags": [
+      "appointment",
+      "friends",
+      "planning"
+    ],
+    "categoryLabelKo": "약속",
+    "tagLabelsKo": {
+      "appointment": "약속",
+      "friends": "친구",
+      "planning": "계획"
+    },
+    "estimatedMinutes": "2-3분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-08-08T22:16:00.658Z",
+    "updatedAt": "2026-08-08T22:16:00.658Z"
+  }
+}
