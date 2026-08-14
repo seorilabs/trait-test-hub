@@ -1,0 +1,439 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "test": {
+    "id": "browser-tab-style",
+    "version": 1,
+    "status": "published",
+    "titleKo": "브라우저 탭 관리 스타일 테스트",
+    "category": "digital",
+    "axes": [
+      {
+        "id": "pruning",
+        "labelKo": "탭 즉시 닫기 성향"
+      },
+      {
+        "id": "structuring",
+        "labelKo": "탭 사전 구조화 성향"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q01",
+        "textKo": "브라우저를 켰더니 위쪽에 탭이 빽빽하게 차 있을 때?",
+        "options": [
+          {
+            "code": "close-and-file",
+            "textKo": "필요 없는 탭은 바로 닫고, 남길 건 북마크로 옮겨 정리한다",
+            "descriptionKo": "비우는 김에 남길 것의 자리를 정해 다시 어수선해지지 않게 합니다.",
+            "scores": {
+              "pruning": 2,
+              "structuring": 1
+            }
+          },
+          {
+            "code": "quick-cull",
+            "textKo": "일단 안 쓰는 탭부터 빠르게 닫아 개수만 줄인다",
+            "descriptionKo": "정리 규칙보다 화면에서 탭 수가 줄어드는 게 먼저입니다.",
+            "scores": {
+              "pruning": 2,
+              "structuring": -1
+            }
+          },
+          {
+            "code": "leave-as-is",
+            "textKo": "그대로 두고 하던 일을 계속한다",
+            "descriptionKo": "탭이 많아도 크게 개의치 않고 흐름을 이어갑니다.",
+            "scores": {
+              "pruning": -2,
+              "structuring": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "q02",
+        "textKo": "검색하다 관련 링크를 자꾸 새 탭으로 열게 될 때?",
+        "options": [
+          {
+            "code": "group-first",
+            "textKo": "주제별로 탭 그룹을 미리 만들어 열리는 대로 분류한다",
+            "descriptionKo": "열기 전에 담을 칸을 정해 두고 그 안에 차곡차곡 넣습니다.",
+            "scores": {
+              "pruning": 1,
+              "structuring": 2
+            }
+          },
+          {
+            "code": "keep-but-tag",
+            "textKo": "닫지는 않고 나중에 볼 수 있게 그룹이나 저장만 해둔다",
+            "descriptionKo": "탭은 남겨두되 나중에 찾을 표식은 확실히 걸어둡니다.",
+            "scores": {
+              "pruning": -1,
+              "structuring": 2
+            }
+          },
+          {
+            "code": "just-open",
+            "textKo": "정리 없이 그냥 계속 새 탭으로 띄운다",
+            "descriptionKo": "일단 열어두고 분류는 따로 신경 쓰지 않습니다.",
+            "scores": {
+              "pruning": 0,
+              "structuring": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q03",
+        "textKo": "나중에 봐야지 하고 열어둔 기사·영상 탭이 쌓였을 때?",
+        "options": [
+          {
+            "code": "save-then-close",
+            "textKo": "지금 볼 것만 남기고 나머지는 읽기목록에 저장한 뒤 닫는다",
+            "descriptionKo": "볼 것과 미룰 것을 갈라, 미룰 건 저장으로 옮겨 화면을 비웁니다.",
+            "scores": {
+              "pruning": 2,
+              "structuring": 1
+            }
+          },
+          {
+            "code": "clear-out",
+            "textKo": "다 못 볼 것 같으면 미련 없이 한 번에 닫아버린다",
+            "descriptionKo": "쌓인 걸 붙들기보다 깨끗이 비우는 쪽이 편합니다.",
+            "scores": {
+              "pruning": 2,
+              "structuring": -1
+            }
+          },
+          {
+            "code": "someday-keep",
+            "textKo": "언젠간 보겠지 하고 계속 열어둔다",
+            "descriptionKo": "지금 안 봐도 열려 있으면 언젠가 볼 거라 생각합니다.",
+            "scores": {
+              "pruning": -2,
+              "structuring": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "q04",
+        "textKo": "다 읽었거나 작업이 끝난 탭을 마주하면?",
+        "options": [
+          {
+            "code": "archive-done",
+            "textKo": "끝난 탭은 정해둔 폴더나 북마크로 보내고 정돈한다",
+            "descriptionKo": "끝난 자료도 다시 찾을 수 있게 제자리로 보내 둡니다.",
+            "scores": {
+              "pruning": 1,
+              "structuring": 2
+            }
+          },
+          {
+            "code": "done-group",
+            "textKo": "닫진 않아도 '완료' 그룹으로 몰아 표시만 해둔다",
+            "descriptionKo": "탭은 남기되 끝난 것과 진행 중인 것은 확실히 구분합니다.",
+            "scores": {
+              "pruning": -1,
+              "structuring": 2
+            }
+          },
+          {
+            "code": "keep-open",
+            "textKo": "따로 표시 안 하고 그냥 열린 채로 둔다",
+            "descriptionKo": "끝났는지 여부와 상관없이 열어둔 상태 그대로 둡니다.",
+            "scores": {
+              "pruning": 0,
+              "structuring": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q05",
+        "textKo": "자주 가는 사이트를 다시 방문할 때?",
+        "options": [
+          {
+            "code": "bookmark-reuse",
+            "textKo": "쓸 때만 열고 끝나면 닫으며, 자주 가는 곳은 북마크로 관리한다",
+            "descriptionKo": "필요할 때 열고 닫되, 반복해 가는 곳은 자리를 정해 둡니다.",
+            "scores": {
+              "pruning": 2,
+              "structuring": 1
+            }
+          },
+          {
+            "code": "search-again",
+            "textKo": "매번 새로 검색해 열고 다 보면 바로 닫는다",
+            "descriptionKo": "따로 저장하지 않고 그때그때 검색으로 찾아 들어갑니다.",
+            "scores": {
+              "pruning": 2,
+              "structuring": -1
+            }
+          },
+          {
+            "code": "always-open",
+            "textKo": "한 번 연 탭은 닫지 않고 계속 열어둔 채 오간다",
+            "descriptionKo": "자주 가는 곳은 아예 탭으로 늘 띄워두고 왔다 갔다 합니다.",
+            "scores": {
+              "pruning": -2,
+              "structuring": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "q06",
+        "textKo": "브라우저를 껐다 켜면 이전 탭을 어떻게 하나요?",
+        "options": [
+          {
+            "code": "session-save",
+            "textKo": "필요한 세션만 미리 저장해 두고 복원할 것만 골라 연다",
+            "descriptionKo": "다시 열 것을 미리 갈무리해 두고 필요한 것만 되살립니다.",
+            "scores": {
+              "pruning": 1,
+              "structuring": 2
+            }
+          },
+          {
+            "code": "restore-grouped",
+            "textKo": "'이전 탭 복원'으로 전부 되살리되 그룹은 유지한다",
+            "descriptionKo": "탭을 다 되살리더라도 묶어둔 구조는 그대로 지킵니다.",
+            "scores": {
+              "pruning": -1,
+              "structuring": 2
+            }
+          },
+          {
+            "code": "whatever-restores",
+            "textKo": "복원되면 되는 대로, 안 되면 마는 대로 둔다",
+            "descriptionKo": "이전 탭이 살아나든 사라지든 크게 개의치 않습니다.",
+            "scores": {
+              "pruning": 0,
+              "structuring": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q07",
+        "textKo": "창(윈도우)이 여러 개로 늘어나기 시작하면?",
+        "options": [
+          {
+            "code": "close-and-sort",
+            "textKo": "필요 없는 창은 닫고 남길 창은 용도별로 정리한다",
+            "descriptionKo": "창을 줄이면서 남는 창은 쓰임에 맞게 갈라 둡니다.",
+            "scores": {
+              "pruning": 2,
+              "structuring": 1
+            }
+          },
+          {
+            "code": "collapse-all",
+            "textKo": "창이 많아지면 헷갈려서 일단 통째로 닫아 정리한다",
+            "descriptionKo": "창이 늘면 복잡해져서 한 번에 닫아 리셋합니다.",
+            "scores": {
+              "pruning": 2,
+              "structuring": -1
+            }
+          },
+          {
+            "code": "spread-out",
+            "textKo": "창이 몇 개든 신경 쓰지 않고 그냥 늘려 쓴다",
+            "descriptionKo": "창 개수에 얽매이지 않고 필요한 만큼 벌려 씁니다.",
+            "scores": {
+              "pruning": -2,
+              "structuring": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "q08",
+        "textKo": "탭이 너무 많아 제목이 안 보일 만큼 좁아지면?",
+        "options": [
+          {
+            "code": "restructure",
+            "textKo": "탭 그룹이나 세로 탭 기능으로 구조부터 다시 잡는다",
+            "descriptionKo": "좁아진 탭을 기능을 써서 보기 좋게 다시 배치합니다.",
+            "scores": {
+              "pruning": 1,
+              "structuring": 2
+            }
+          },
+          {
+            "code": "fold-group",
+            "textKo": "안 닫는 대신 그룹으로 접어 화면만 정리한다",
+            "descriptionKo": "탭은 그대로 두되 묶어서 접어 자리를 확보합니다.",
+            "scores": {
+              "pruning": -1,
+              "structuring": 2
+            }
+          },
+          {
+            "code": "endure-it",
+            "textKo": "좁아져도 그러려니 하고 계속 쓴다",
+            "descriptionKo": "제목이 안 보여도 크게 불편해하지 않고 씁니다.",
+            "scores": {
+              "pruning": 0,
+              "structuring": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q09",
+        "textKo": "쇼핑하다 상품 비교 탭을 여러 개 띄웠을 때?",
+        "options": [
+          {
+            "code": "keep-one",
+            "textKo": "결정하면 고른 것만 남기고 비교하던 탭은 정리해 닫는다",
+            "descriptionKo": "고르고 나면 후보들을 정리해 화면을 깔끔히 남깁니다.",
+            "scores": {
+              "pruning": 2,
+              "structuring": 1
+            }
+          },
+          {
+            "code": "close-compares",
+            "textKo": "고르고 나면 비교 탭은 미련 없이 전부 닫는다",
+            "descriptionKo": "결정이 끝난 비교 탭은 곧바로 싹 닫아버립니다.",
+            "scores": {
+              "pruning": 2,
+              "structuring": -1
+            }
+          },
+          {
+            "code": "keep-compares",
+            "textKo": "결정한 뒤에도 비교 탭을 그냥 열어둔다",
+            "descriptionKo": "혹시 몰라 골랐던 후보 탭을 계속 남겨 둡니다.",
+            "scores": {
+              "pruning": -2,
+              "structuring": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "q10",
+        "textKo": "하루를 마치며 브라우저를 대하는 태도는?",
+        "options": [
+          {
+            "code": "setup-tomorrow",
+            "textKo": "내일 이어서 할 것들을 그룹·북마크로 정리해 세팅해 둔다",
+            "descriptionKo": "다음 날의 나를 위해 이어 할 일을 자리 잡아 둡니다.",
+            "scores": {
+              "pruning": 1,
+              "structuring": 2
+            }
+          },
+          {
+            "code": "bundle-only",
+            "textKo": "닫진 않아도 열린 탭을 주제별로 묶어만 둔다",
+            "descriptionKo": "탭은 남기되 뒤섞이지 않게 주제끼리 묶어 둡니다.",
+            "scores": {
+              "pruning": -1,
+              "structuring": 2
+            }
+          },
+          {
+            "code": "leave-open",
+            "textKo": "정리 없이 열린 그대로 두고 브라우저를 끈다",
+            "descriptionKo": "따로 손대지 않고 열린 상태 그대로 하루를 마칩니다.",
+            "scores": {
+              "pruning": 0,
+              "structuring": -2
+            }
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "code": "order-librarian",
+        "titleKo": "완벽 정돈 사서형",
+        "summaryKo": "안 쓰는 탭은 바로 닫고 남길 건 제자리에 보관해, 늘 정돈된 탭 바를 유지하는 사서 타입입니다.",
+        "descriptionKo": "완벽 정돈 사서형에게 탭은 그때그때 비우면서 남길 것의 자리까지 정해 두는 대상입니다. 필요 없는 탭은 바로 닫고, 자주 쓰는 곳은 북마크나 그룹으로 옮겨 다시 어수선해지지 않게 관리합니다. 탭 바가 깔끔하게 정리돼 있을 때 가장 집중이 잘 되고, 필요한 자료를 찾느라 헤매는 일도 크게 줄어듭니다.",
+        "strengthsKo": [
+          "안 쓰는 탭을 즉시 정리하면서 남길 것의 자리까지 정해 화면을 깨끗하게 유지합니다.",
+          "북마크와 그룹을 미리 잡아둬 필요한 자료를 빠르게 다시 찾아냅니다.",
+          "정돈된 작업 환경을 만들어 집중이 필요한 순간에 산만함을 스스로 줄입니다."
+        ],
+        "watchoutsKo": [
+          "모든 탭을 완벽히 정리하려다 정작 하려던 일보다 정리에 시간을 더 쓸 수 있습니다.",
+          "분류 규칙을 너무 촘촘히 세우면 잠깐 열어보는 것조차 부담스러워질 수 있습니다."
+        ],
+        "collaborationKo": "함께 일하는 사람에게는 자료를 어떤 기준으로 북마크하고 그룹으로 묶는지 미리 공유해 두면 좋습니다. 사서형의 정리 노하우는 팀이 링크를 찾는 시간을 크게 줄여주니, 나만의 규칙으로만 두지 말고 가끔 나눠 주면 모두가 편해집니다.",
+        "shareIntroKo": "나는 안 쓰는 탭은 바로 닫고 남길 건 제자리에 보관하는 완벽 정돈 사서형이에요.",
+        "vector": {
+          "pruning": 14,
+          "structuring": 14
+        }
+      },
+      {
+        "code": "reflex-closer",
+        "titleKo": "즉시 비우기 반사신경형",
+        "summaryKo": "안 쓰는 탭은 보이는 즉시 닫아 개수를 줄이지만, 따로 저장해 두기보다 그때그때 비우는 타입입니다.",
+        "descriptionKo": "즉시 비우기 반사신경형은 탭이 늘어나는 걸 견디기 어려워하고, 안 쓰겠다 싶으면 바로 닫아 화면을 비웁니다. 다만 북마크나 그룹으로 미리 챙겨두기보다는, 필요하면 그때 다시 검색해 여는 쪽이 편합니다. 덕분에 탭 바는 늘 깔끔하지만, 닫은 걸 다시 찾을 때는 처음부터 검색을 시작하기도 합니다.",
+        "strengthsKo": [
+          "안 쓰는 탭을 빠르게 닫아 탭 바를 항상 가볍고 깔끔하게 유지합니다.",
+          "복잡한 저장 규칙 없이도 그때그때 상황에 맞춰 유연하게 정리합니다.",
+          "화면이 어수선해지기 전에 미리 비워 부담이 쌓이지 않게 합니다."
+        ],
+        "watchoutsKo": [
+          "저장해 두지 않고 닫아버려 나중에 그 링크를 다시 찾느라 시간을 쓸 수 있습니다.",
+          "비우는 데 집중하다 아직 필요한 탭까지 성급히 닫아버릴 위험이 있습니다."
+        ],
+        "collaborationKo": "함께 일하는 사람에게는 반응이 빠른 편이라 자료 정리 요청에 든든한 상대입니다. 다만 중요한 링크는 닫기 전에 공용 문서나 북마크에 한 번 남겨두면, 빠른 정리와 자료 보존을 함께 지킬 수 있습니다.",
+        "shareIntroKo": "나는 안 쓰는 탭은 보이는 즉시 닫아 비우는 즉시 비우기 반사신경형이에요.",
+        "vector": {
+          "pruning": 14,
+          "structuring": -14
+        }
+      },
+      {
+        "code": "tab-curator",
+        "titleKo": "탭 컬렉터 큐레이터형",
+        "summaryKo": "탭을 굳이 닫지는 않지만 그룹과 북마크로 갈래를 잡아, 많은 탭을 체계 속에서 다루는 타입입니다.",
+        "descriptionKo": "탭 컬렉터 큐레이터형은 탭을 즉시 비우는 데는 크게 얽매이지 않지만, 어떤 탭을 어디에 둘지는 스스로 정하고 싶어 합니다. 열어둔 탭이 많아도 주제별 그룹이나 저장으로 갈래를 잡아, 필요할 때 바로 찾을 수 있게 관리합니다. 덕분에 탭이 쌓여 있어도 뒤섞이지 않고, 모아둔 자료가 곧 자신만의 자료실이 됩니다.",
+        "strengthsKo": [
+          "많은 탭을 열어두면서도 그룹과 저장으로 갈래를 잡아 뒤섞이지 않게 합니다.",
+          "필요한 자료를 닫아버리지 않아 맥락을 놓치지 않고 이어서 작업합니다.",
+          "자신에게 맞는 분류 체계를 만들어 오래 유지하는 뚝심이 있습니다."
+        ],
+        "watchoutsKo": [
+          "닫지 않고 모으기만 하다 보면 탭과 그룹이 지나치게 불어날 수 있습니다.",
+          "분류에 공을 들이는 사이 정작 그 탭을 열어볼 시간은 뒤로 밀릴 수 있습니다."
+        ],
+        "collaborationKo": "함께 일하는 사람에게는 모아둔 자료의 그룹 기준을 알려주면 서로 참고하기 좋습니다. 큐레이터형은 자료를 잘 쌓아두는 편이라, 어떤 그룹에 무엇이 있는지 가끔 정리해 공유하면 팀의 공용 자료실처럼 쓸 수 있습니다.",
+        "shareIntroKo": "나는 탭을 닫지 않고 그룹과 북마크로 갈래를 잡는 탭 컬렉터 큐레이터형이에요.",
+        "vector": {
+          "pruning": -14,
+          "structuring": 14
+        }
+      },
+      {
+        "code": "tab-nomad",
+        "titleKo": "무한 탭 유목민형",
+        "summaryKo": "탭은 오는 대로 열어두고 따로 정리하지 않으며, 필요할 때 그 안에서 찾아 쓰는 자유로운 타입입니다.",
+        "descriptionKo": "무한 탭 유목민형에게 탭은 굳이 관리할 대상이 아닙니다. 탭이 아무리 쌓여도 크게 신경 쓰지 않고, 그룹이나 북마크로 나누지도 않으며, 필요한 건 그때그때 열린 탭들 사이에서 찾아 씁니다. 정리에 손을 뺏기지 않아 하던 일의 흐름을 지키고, 열어둔 탭들이 지금 무엇을 하고 있는지 보여주는 흔적이 되기도 합니다.",
+        "strengthsKo": [
+          "정리에 얽매이지 않아 하던 작업의 흐름과 집중을 잘 지킵니다.",
+          "탭이 쌓여도 스트레스를 받지 않는 단단한 여유가 있습니다.",
+          "열어둔 탭 자체가 진행 상황을 보여줘 하던 맥락으로 금방 돌아옵니다."
+        ],
+        "watchoutsKo": [
+          "탭이 너무 많아지면 원하는 걸 찾는 데 오히려 시간이 더 걸릴 수 있습니다.",
+          "정리 없이 쌓이다 브라우저가 무거워지거나 중요한 탭을 잃을 수 있습니다."
+        ],
+        "collaborationKo": "함께 일하는 사람에게는 자료가 열린 탭 속에 흩어져 있을 수 있다고 미리 알려두면 좋습니다. 정말 공유해야 할 링크는 열어두는 대신 공용 문서에 한 번 옮겨두면, 유목민형의 자유로움과 팀의 편의를 함께 지킬 수 있습니다.",
+        "shareIntroKo": "나는 탭은 오는 대로 열어두고 필요할 때 그 안에서 찾아 쓰는 무한 탭 유목민형이에요.",
+        "vector": {
+          "pruning": -14,
+          "structuring": -14
+        }
+      }
+    ]
+  }
+}

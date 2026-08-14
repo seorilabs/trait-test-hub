@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "browser-tab-style",
+  "metadata": {
+    "summaryKo": "화면을 가득 채운 브라우저 탭 앞에서 내가 어떤 탭 관리자인지 10문항으로 확인합니다.",
+    "tags": [
+      "digital",
+      "browser",
+      "habit"
+    ],
+    "categoryLabelKo": "디지털",
+    "tagLabelsKo": {
+      "digital": "디지털",
+      "browser": "브라우저",
+      "habit": "습관"
+    },
+    "estimatedMinutes": "2-3분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-08-12T22:17:39.432Z",
+    "updatedAt": "2026-08-12T22:17:39.432Z"
+  }
+}
