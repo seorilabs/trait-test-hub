@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "reading-style",
+  "metadata": {
+    "summaryKo": "책을 펼쳤을 때 내가 어떤 독서러인지 10문항으로 확인하는 가벼운 취향 테스트입니다.",
+    "tags": [
+      "reading",
+      "hobby",
+      "habit"
+    ],
+    "categoryLabelKo": "독서",
+    "tagLabelsKo": {
+      "reading": "독서",
+      "hobby": "취미",
+      "habit": "습관"
+    },
+    "estimatedMinutes": "2-3분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-08-11T22:19:00.754Z",
+    "updatedAt": "2026-08-11T22:19:00.754Z"
+  }
+}
