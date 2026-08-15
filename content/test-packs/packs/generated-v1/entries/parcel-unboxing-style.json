@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "parcel-unboxing-style",
+  "metadata": {
+    "summaryKo": "택배가 도착했을 때 내가 어떤 개봉러인지 10문항으로 확인합니다.",
+    "tags": [
+      "delivery",
+      "daily",
+      "habit"
+    ],
+    "categoryLabelKo": "택배",
+    "tagLabelsKo": {
+      "delivery": "택배",
+      "daily": "일상",
+      "habit": "습관"
+    },
+    "estimatedMinutes": "2-3분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-08-14T22:14:00.165Z",
+    "updatedAt": "2026-08-14T22:14:00.165Z"
+  }
+}

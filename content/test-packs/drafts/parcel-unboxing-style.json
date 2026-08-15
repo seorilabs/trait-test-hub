@@ -1,0 +1,455 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "metadata": {
+    "summaryKo": "택배가 도착했을 때 내가 어떤 개봉러인지 10문항으로 확인합니다.",
+    "tags": [
+      "delivery",
+      "daily",
+      "habit"
+    ],
+    "categoryLabelKo": "택배",
+    "tagLabelsKo": {
+      "delivery": "택배",
+      "daily": "일상",
+      "habit": "습관"
+    },
+    "estimatedMinutes": "2-3분",
+    "packTitleKo": "자동 생성 테스트팩"
+  },
+  "test": {
+    "id": "parcel-unboxing-style",
+    "version": 1,
+    "status": "published",
+    "titleKo": "택배 오면 나는? 택배 개봉 스타일 테스트",
+    "category": "delivery",
+    "axes": [
+      {
+        "id": "immediacy",
+        "labelKo": "도착 즉시 개봉 성향"
+      },
+      {
+        "id": "ritual",
+        "labelKo": "포장 꼼꼼 확인·보관 성향"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q01",
+        "textKo": "택배 배송 완료 알림이 떴을 때 나는?",
+        "options": [
+          {
+            "code": "rush-and-check",
+            "textKo": "바로 달려가 가져오고, 뭐가 왔나 운송장까지 확인한다",
+            "descriptionKo": "도착 소식에 바로 움직이고 무엇이 왔는지 꼼꼼히 확인합니다.",
+            "scores": {
+              "immediacy": 2,
+              "ritual": 1
+            }
+          },
+          {
+            "code": "grab-and-rip",
+            "textKo": "일단 빨리 가져와서 그 자리에서 쭉 뜯어본다",
+            "descriptionKo": "기다릴 것 없이 가져오자마자 바로 뜯어 확인합니다.",
+            "scores": {
+              "immediacy": 2,
+              "ritual": -1
+            }
+          },
+          {
+            "code": "fetch-later",
+            "textKo": "급할 것 없으니 이따 시간 날 때 가져온다",
+            "descriptionKo": "당장 급하지 않으면 여유 있을 때 챙기러 갑니다.",
+            "scores": {
+              "immediacy": -2,
+              "ritual": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "q02",
+        "textKo": "가져온 상자를 열기 전에 나는?",
+        "options": [
+          {
+            "code": "careful-cut",
+            "textKo": "테이프 자국까지 살피며 조심스럽게 칼집을 낸다",
+            "descriptionKo": "내용물이 상하지 않게 여는 방법부터 신경 씁니다.",
+            "scores": {
+              "immediacy": 1,
+              "ritual": 2
+            }
+          },
+          {
+            "code": "prep-then-open",
+            "textKo": "천천히 자리를 잡고 도구를 챙겨 반듯하게 연다",
+            "descriptionKo": "서두르지 않고 준비를 갖춘 뒤 깔끔하게 엽니다.",
+            "scores": {
+              "immediacy": -1,
+              "ritual": 2
+            }
+          },
+          {
+            "code": "hand-tear",
+            "textKo": "손으로 대충 뜯어서 빠르게 연다",
+            "descriptionKo": "여는 방식엔 크게 신경 쓰지 않고 바로 뜯습니다.",
+            "scores": {
+              "immediacy": 0,
+              "ritual": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q03",
+        "textKo": "상자를 열자마자 나는?",
+        "options": [
+          {
+            "code": "peel-and-inspect",
+            "textKo": "완충재부터 조심히 걷어내며 내용물을 확인한다",
+            "descriptionKo": "포장을 하나씩 살피며 내용물 상태를 확인합니다.",
+            "scores": {
+              "immediacy": 2,
+              "ritual": 1
+            }
+          },
+          {
+            "code": "yank-contents",
+            "textKo": "완충재를 헤집고 내용물부터 쏙 꺼낸다",
+            "descriptionKo": "포장은 제쳐두고 물건부터 바로 꺼내 봅니다.",
+            "scores": {
+              "immediacy": 2,
+              "ritual": -1
+            }
+          },
+          {
+            "code": "open-and-pause",
+            "textKo": "열어만 두고 다른 일 하다 나중에 마저 본다",
+            "descriptionKo": "일단 열어두고 급한 일부터 처리한 뒤 돌아옵니다.",
+            "scores": {
+              "immediacy": -2,
+              "ritual": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "q04",
+        "textKo": "안에 든 뽁뽁이와 포장지는?",
+        "options": [
+          {
+            "code": "save-neatly",
+            "textKo": "터뜨리지 않게 잘 펴서 재활용하려고 모아둔다",
+            "descriptionKo": "다음에 쓸 수 있게 포장재를 상하지 않게 보관합니다.",
+            "scores": {
+              "immediacy": 1,
+              "ritual": 2
+            }
+          },
+          {
+            "code": "fold-and-stash",
+            "textKo": "차곡차곡 접어 서랍에 따로 챙겨둔다",
+            "descriptionKo": "언젠가 쓸 일이 있다고 보고 정리해 보관합니다.",
+            "scores": {
+              "immediacy": -1,
+              "ritual": 2
+            }
+          },
+          {
+            "code": "toss-out",
+            "textKo": "바로 뭉쳐서 쓰레기통에 던져 넣는다",
+            "descriptionKo": "쓸 일이 없다고 보고 곧장 버립니다.",
+            "scores": {
+              "immediacy": 0,
+              "ritual": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q05",
+        "textKo": "새로 산 제품의 설명서와 보증서는?",
+        "options": [
+          {
+            "code": "read-and-file",
+            "textKo": "받자마자 펼쳐 읽고 보증서는 잘 챙겨둔다",
+            "descriptionKo": "사용 전에 설명서를 읽고 보증서를 따로 보관합니다.",
+            "scores": {
+              "immediacy": 2,
+              "ritual": 1
+            }
+          },
+          {
+            "code": "skip-manual",
+            "textKo": "설명서는 제쳐두고 바로 켜서 써본다",
+            "descriptionKo": "일단 작동시켜 보고 필요할 때만 설명서를 봅니다.",
+            "scores": {
+              "immediacy": 2,
+              "ritual": -1
+            }
+          },
+          {
+            "code": "look-up-later",
+            "textKo": "당장 안 급하니 나중에 필요하면 찾아본다",
+            "descriptionKo": "지금은 두었다가 문제가 생기면 그때 확인합니다.",
+            "scores": {
+              "immediacy": -2,
+              "ritual": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "q06",
+        "textKo": "다 뜯은 택배 상자는?",
+        "options": [
+          {
+            "code": "flatten-recycle",
+            "textKo": "테이프 떼고 반듯하게 접어 분리배출함에 둔다",
+            "descriptionKo": "재활용하기 좋게 손질해 정해진 자리에 둡니다.",
+            "scores": {
+              "immediacy": 1,
+              "ritual": 2
+            }
+          },
+          {
+            "code": "keep-for-reuse",
+            "textKo": "튼튼하면 보관용으로 한쪽에 개어 쌓아둔다",
+            "descriptionKo": "다시 쓸 수 있는 상자는 모아 보관합니다.",
+            "scores": {
+              "immediacy": -1,
+              "ritual": 2
+            }
+          },
+          {
+            "code": "dump-at-door",
+            "textKo": "대충 접어 현관에 두고 나갈 때 버린다",
+            "descriptionKo": "크게 신경 쓰지 않고 생각날 때 내다 버립니다.",
+            "scores": {
+              "immediacy": 0,
+              "ritual": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q07",
+        "textKo": "옷이나 신발을 주문했는데 도착하면?",
+        "options": [
+          {
+            "code": "try-and-examine",
+            "textKo": "바로 입어보고 택은 떼기 전 상태를 꼼꼼히 본다",
+            "descriptionKo": "도착하자마자 착용해 보며 상태를 세세히 살핍니다.",
+            "scores": {
+              "immediacy": 2,
+              "ritual": 1
+            }
+          },
+          {
+            "code": "try-and-clear",
+            "textKo": "바로 뜯어 입어보고 포장은 그 자리에서 치운다",
+            "descriptionKo": "얼른 확인하고 포장은 바로 정리해 버립니다.",
+            "scores": {
+              "immediacy": 2,
+              "ritual": -1
+            }
+          },
+          {
+            "code": "open-someday",
+            "textKo": "며칠 두었다가 마음 내킬 때 열어본다",
+            "descriptionKo": "급하지 않아 여유가 생기면 그때 확인합니다.",
+            "scores": {
+              "immediacy": -2,
+              "ritual": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "q08",
+        "textKo": "여러 택배가 한꺼번에 도착했을 때?",
+        "options": [
+          {
+            "code": "sort-then-open",
+            "textKo": "송장 보고 순서를 정해 하나씩 정리하며 연다",
+            "descriptionKo": "무엇부터 열지 정하고 차례로 꼼꼼히 처리합니다.",
+            "scores": {
+              "immediacy": 1,
+              "ritual": 2
+            }
+          },
+          {
+            "code": "unhurried-tidy",
+            "textKo": "바쁘면 미뤘다가 여유 있을 때 하나씩 정돈하며 연다",
+            "descriptionKo": "서두르지 않고 정리하듯 하나씩 열어 나갑니다.",
+            "scores": {
+              "immediacy": -1,
+              "ritual": 2
+            }
+          },
+          {
+            "code": "rip-all-at-once",
+            "textKo": "닥치는 대로 다 뜯고 포장은 한데 몰아 버린다",
+            "descriptionKo": "순서 없이 열고 포장은 한 번에 치웁니다.",
+            "scores": {
+              "immediacy": 0,
+              "ritual": -2
+            }
+          }
+        ]
+      },
+      {
+        "id": "q09",
+        "textKo": "물건에 하자가 없는지 확인은?",
+        "options": [
+          {
+            "code": "full-checkup",
+            "textKo": "받자마자 구석구석 살펴 이상 없나 바로 점검한다",
+            "descriptionKo": "도착 직후 꼼꼼히 살펴 문제를 미리 확인합니다.",
+            "scores": {
+              "immediacy": 2,
+              "ritual": 1
+            }
+          },
+          {
+            "code": "quick-glance",
+            "textKo": "겉만 슥 보고 문제없어 보이면 바로 쓴다",
+            "descriptionKo": "빠르게 훑고 큰 이상 없으면 곧장 사용합니다.",
+            "scores": {
+              "immediacy": 2,
+              "ritual": -1
+            }
+          },
+          {
+            "code": "notice-in-use",
+            "textKo": "일단 두었다가 쓸 때 문제 있으면 알게 된다",
+            "descriptionKo": "따로 점검하지 않고 사용하다 알아채는 편입니다.",
+            "scores": {
+              "immediacy": -2,
+              "ritual": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "q10",
+        "textKo": "언박싱 순간을 대하는 마음은?",
+        "options": [
+          {
+            "code": "savor-slowly",
+            "textKo": "설레는 순간이라 하나하나 음미하듯 천천히 연다",
+            "descriptionKo": "여는 과정 자체를 즐기며 정성 들여 확인합니다.",
+            "scores": {
+              "immediacy": 1,
+              "ritual": 2
+            }
+          },
+          {
+            "code": "reserve-joy",
+            "textKo": "기대는 아껴뒀다가 여유 있는 날 제대로 즐긴다",
+            "descriptionKo": "좋은 순간을 위해 여유가 있을 때 천천히 엽니다.",
+            "scores": {
+              "immediacy": -1,
+              "ritual": 2
+            }
+          },
+          {
+            "code": "no-big-deal",
+            "textKo": "그냥 물건 하나 왔을 뿐, 특별할 것 없이 연다",
+            "descriptionKo": "언박싱에 큰 의미를 두지 않고 담담하게 엽니다.",
+            "scores": {
+              "immediacy": 0,
+              "ritual": -2
+            }
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "code": "ceremony-opener",
+        "titleKo": "현관 개봉 세리머니형",
+        "summaryKo": "택배가 오면 곧장 달려가고, 여는 과정 하나하나를 정성껏 즐기는 개봉 세리머니 타입입니다.",
+        "descriptionKo": "현관 개봉 세리머니형에게 택배는 도착하는 순간부터 하나의 이벤트입니다. 알림이 뜨면 바로 가져와 무엇이 왔는지 확인하고, 완충재를 조심히 걷어내며 설명서와 보증서까지 챙깁니다. 여는 속도보다 여는 과정 자체를 즐겨, 포장을 벗기는 순간의 설렘을 온전히 누리는 편입니다. 덕분에 하자나 오배송도 초반에 잘 잡아냅니다.",
+        "strengthsKo": [
+          "도착 즉시 확인해 오배송이나 하자를 빠르게 발견합니다.",
+          "설명서와 보증서를 잘 챙겨 나중에 문제가 생겨도 대응이 수월합니다.",
+          "개봉 과정을 즐길 줄 알아 소소한 일상에서도 기쁨을 크게 느낍니다."
+        ],
+        "watchoutsKo": [
+          "매번 정성껏 열다 보면 바쁜 날에는 시간이 예상보다 오래 걸릴 수 있습니다.",
+          "기대가 큰 만큼 물건이 마음에 들지 않을 때 실망도 크게 다가올 수 있습니다."
+        ],
+        "collaborationKo": "함께 사는 사람이나 동료에게는 택배가 오면 바로 알려주는 든든한 확인 담당이 되어줍니다. 다만 개봉에 정성을 들이는 편이니, 공용 물건은 어디까지 확인하고 어떻게 보관할지 미리 한마디 맞춰두면 서로 편합니다.",
+        "shareIntroKo": "나는 택배가 오면 바로 달려가 하나하나 음미하며 여는 현관 개봉 세리머니형이에요.",
+        "vector": {
+          "immediacy": 14,
+          "ritual": 14
+        }
+      },
+      {
+        "code": "speed-unboxer",
+        "titleKo": "속전속결 언박싱형",
+        "summaryKo": "도착하면 바로 뜯어 내용물부터 확인하고, 포장은 곧장 치워버리는 속전속결 타입입니다.",
+        "descriptionKo": "속전속결 언박싱형은 택배가 오면 기다리는 법이 없습니다. 가져오자마자 그 자리에서 쭉 뜯고, 완충재를 헤집어 물건부터 꺼내 봅니다. 설명서는 제쳐두고 일단 써보며, 다 본 포장은 바로 뭉쳐 치웁니다. 궁금증을 빨리 해소하고 주변을 깔끔하게 비우는 데서 시원함을 느끼는 편입니다.",
+        "strengthsKo": [
+          "망설임 없이 바로 확인해 필요한 물건을 곧장 사용합니다.",
+          "포장을 미루지 않고 바로 치워 집 안이 어질러지지 않습니다.",
+          "복잡한 절차 없이 핵심만 빠르게 처리하는 실행력이 있습니다."
+        ],
+        "watchoutsKo": [
+          "급하게 뜯다가 설명서나 보증서, 사은품을 함께 버릴 수 있습니다.",
+          "겉만 보고 넘겨 초반에 하자나 오배송을 놓칠 위험이 있습니다."
+        ],
+        "collaborationKo": "함께 일하거나 사는 사람에게는 일 처리가 빠른 든든한 실행 담당이 됩니다. 다만 포장을 바로 버리는 편이니, 교환·반품 가능성이 있는 물건은 상자를 잠시 남겨두자고 미리 정해두면 아쉬운 상황을 줄일 수 있습니다.",
+        "shareIntroKo": "나는 도착하면 바로 뜯고 포장은 곧장 치우는 속전속결 언박싱형이에요.",
+        "vector": {
+          "immediacy": 14,
+          "ritual": -14
+        }
+      },
+      {
+        "code": "slow-keeper",
+        "titleKo": "느긋한 정독 보관형",
+        "summaryKo": "서두르지 않고 여유 있을 때 열되, 열 때는 설명서와 포장까지 꼼꼼히 챙기는 타입입니다.",
+        "descriptionKo": "느긋한 정독 보관형은 택배가 와도 당장 뜯지 않습니다. 급할 것 없으니 여유가 생길 때 자리를 잡고, 도구를 챙겨 반듯하게 엽니다. 대신 열 때는 완충재를 잘 펴서 모아두고, 설명서를 읽고, 상자도 보관용으로 챙기는 등 하나하나 정성 들여 정리합니다. 서두르지 않아도 놓치는 것이 적습니다.",
+        "strengthsKo": [
+          "서두르지 않아 여는 과정에서 실수나 파손이 적습니다.",
+          "포장재와 상자를 잘 보관해 교환·재사용이 필요할 때 든든합니다.",
+          "설명서를 차분히 읽어 제품을 오래 제대로 쓰는 편입니다."
+        ],
+        "watchoutsKo": [
+          "여는 걸 미루다 확인이 늦어 반품 기한을 놓칠 수 있습니다.",
+          "보관하는 상자와 포장재가 쌓이면 공간이 좁아질 수 있습니다."
+        ],
+        "collaborationKo": "함께 사는 사람에게는 물건을 신중하게 다루는 믿음직한 보관 담당이 됩니다. 다만 개봉이 느릴 수 있으니, 급히 확인해야 할 공용 택배는 미리 말해두면 서로의 속도 차이로 생기는 답답함을 줄일 수 있습니다.",
+        "shareIntroKo": "나는 여유 있을 때 열되 설명서와 포장까지 챙기는 느긋한 정독 보관형이에요.",
+        "vector": {
+          "immediacy": -14,
+          "ritual": 14
+        }
+      },
+      {
+        "code": "easygoing-piler",
+        "titleKo": "마이페이스 방치형",
+        "summaryKo": "택배가 와도 서두르지 않고, 열 때도 포장에 크게 신경 쓰지 않는 마이페이스 타입입니다.",
+        "descriptionKo": "마이페이스 방치형에게 택배는 급히 처리할 일이 아닙니다. 도착해도 며칠 그대로 두었다가 마음이 내킬 때 손으로 대충 뜯고, 포장은 한데 몰아 버립니다. 설명서도 굳이 챙기지 않고 쓰다가 문제가 생기면 그때 확인합니다. 물건 하나에 일희일비하지 않는 담담함과 자기 페이스가 가장 큰 특징입니다.",
+        "strengthsKo": [
+          "택배 하나에 휘둘리지 않아 자기 페이스를 잘 지킵니다.",
+          "사소한 개봉 절차에 얽매이지 않아 부담 없이 넘어갑니다.",
+          "포장이나 상자에 미련이 없어 물건을 단출하게 유지합니다."
+        ],
+        "watchoutsKo": [
+          "개봉이 늦어 하자나 오배송을 반품 기한 안에 못 잡을 수 있습니다.",
+          "포장을 바로 버려 교환이나 보증이 필요할 때 곤란해질 수 있습니다."
+        ],
+        "collaborationKo": "함께 사는 사람에게는 택배가 쌓여도 태평한 편이라, 공용 물건은 언제까지 확인할지 가볍게 정해두면 좋습니다. 방치형도 급한 택배 몇 개는 바로 챙기기로 하면 여유로움과 책임감을 함께 지킬 수 있습니다.",
+        "shareIntroKo": "나는 택배가 와도 느긋하고 포장에 미련 없는 마이페이스 방치형이에요.",
+        "vector": {
+          "immediacy": -14,
+          "ritual": -14
+        }
+      }
+    ]
+  }
+}
