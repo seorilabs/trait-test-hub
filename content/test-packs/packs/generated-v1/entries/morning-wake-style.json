@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "morning-wake-style",
+  "metadata": {
+    "summaryKo": "알람이 울린 뒤 일어나고 준비하는 습관으로 나의 아침 기상 스타일을 10문항으로 알아봅니다.",
+    "tags": [
+      "morning",
+      "routine",
+      "daily"
+    ],
+    "categoryLabelKo": "아침",
+    "tagLabelsKo": {
+      "morning": "아침",
+      "routine": "루틴",
+      "daily": "일상"
+    },
+    "estimatedMinutes": "3-5분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-08-15T22:15:59.066Z",
+    "updatedAt": "2026-08-15T22:15:59.066Z"
+  }
+}
