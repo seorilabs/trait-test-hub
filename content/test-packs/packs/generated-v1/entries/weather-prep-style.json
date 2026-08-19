@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "weather-prep-style",
+  "metadata": {
+    "summaryKo": "날씨를 미리 확인하고 우산·겉옷을 챙기는 습관으로 나의 날씨 대비 스타일을 10문항으로 알아봅니다.",
+    "tags": [
+      "weather",
+      "preparation",
+      "daily"
+    ],
+    "categoryLabelKo": "날씨 대비",
+    "tagLabelsKo": {
+      "weather": "날씨",
+      "preparation": "대비",
+      "daily": "일상"
+    },
+    "estimatedMinutes": "3-5분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-08-18T22:14:07.902Z",
+    "updatedAt": "2026-08-18T22:14:07.902Z"
+  }
+}
