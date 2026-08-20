@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "movie-theater-style",
+  "metadata": {
+    "summaryKo": "예매와 준비, 상영관에서의 몰입 방식으로 나의 영화 관람 스타일을 10문항으로 알아봅니다.",
+    "tags": [
+      "cinema",
+      "movie",
+      "leisure"
+    ],
+    "categoryLabelKo": "영화관",
+    "tagLabelsKo": {
+      "cinema": "영화관",
+      "movie": "영화",
+      "leisure": "여가"
+    },
+    "estimatedMinutes": "3-5분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-08-20T22:12:35.496Z",
+    "updatedAt": "2026-08-20T22:12:35.496Z"
+  }
+}
