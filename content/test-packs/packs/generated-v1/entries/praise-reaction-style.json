@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "praise-reaction-style",
+  "metadata": {
+    "summaryKo": "칭찬을 받았을 때 있는 그대로 받아들이는지, 반응을 겉으로 드러내는지로 나의 칭찬 반응 스타일을 10문항으로 알아봅니다.",
+    "tags": [
+      "reaction",
+      "social",
+      "daily"
+    ],
+    "categoryLabelKo": "칭찬 반응",
+    "tagLabelsKo": {
+      "reaction": "반응",
+      "social": "관계",
+      "daily": "일상"
+    },
+    "estimatedMinutes": "3-5분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-08-21T22:13:18.361Z",
+    "updatedAt": "2026-08-21T22:13:18.361Z"
+  }
+}
