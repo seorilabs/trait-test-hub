@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "dishwashing-style",
+  "metadata": {
+    "summaryKo": "밥 먹고 난 그릇을 언제, 얼마나 꼼꼼히 처리하는지로 나의 설거지 스타일을 10문항으로 알아봅니다.",
+    "tags": [
+      "chore",
+      "cleanup",
+      "daily"
+    ],
+    "categoryLabelKo": "집안일",
+    "tagLabelsKo": {
+      "chore": "집안일",
+      "cleanup": "뒷정리",
+      "daily": "일상"
+    },
+    "estimatedMinutes": "3-5분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-08-22T22:12:05.183Z",
+    "updatedAt": "2026-08-22T22:12:05.183Z"
+  }
+}
