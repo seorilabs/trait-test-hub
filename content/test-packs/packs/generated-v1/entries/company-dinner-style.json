@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "company-dinner-style",
+  "metadata": {
+    "summaryKo": "회식 자리에서 얼마나 분위기를 이끄는지(사교 에너지)와 언제까지 함께하는지(참여 지속)로 나의 회식 스타일을 10문항으로 알아봅니다.",
+    "tags": [
+      "company-dinner",
+      "social",
+      "daily"
+    ],
+    "categoryLabelKo": "회식",
+    "tagLabelsKo": {
+      "company-dinner": "회식",
+      "social": "관계",
+      "daily": "일상"
+    },
+    "estimatedMinutes": "3-5분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-08-23T22:15:24.636Z",
+    "updatedAt": "2026-08-23T22:15:24.636Z"
+  }
+}
