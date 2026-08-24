@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "coffee-order-style",
+  "metadata": {
+    "summaryKo": "늘 같은 메뉴를 고르는지 새로운 메뉴에 도전하는지(메뉴 탐험)와 기본 그대로 마시는지 나만의 옵션으로 바꾸는지(주문 커스텀)로 나의 커피 주문 스타일을 10문항으로 알아봅니다.",
+    "tags": [
+      "cafe-order",
+      "daily",
+      "taste"
+    ],
+    "categoryLabelKo": "카페",
+    "tagLabelsKo": {
+      "cafe-order": "카페 주문",
+      "daily": "일상",
+      "taste": "취향"
+    },
+    "estimatedMinutes": "3-5분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-08-24T22:16:53.841Z",
+    "updatedAt": "2026-08-24T22:16:53.841Z"
+  }
+}
