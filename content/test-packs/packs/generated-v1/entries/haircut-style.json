@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "haircut-style",
+  "metadata": {
+    "summaryKo": "머리를 확 바꾸는지 늘 하던 대로 유지하는지(변화 도전)와 스타일을 내가 세세히 정하는지 디자이너에게 맡기는지(결정 주도)로 나의 헤어 변신 스타일을 10문항으로 알아봅니다.",
+    "tags": [
+      "haircut",
+      "daily",
+      "beauty"
+    ],
+    "categoryLabelKo": "헤어",
+    "tagLabelsKo": {
+      "haircut": "헤어살롱",
+      "daily": "일상",
+      "beauty": "뷰티"
+    },
+    "estimatedMinutes": "3-5분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-08-25T22:17:17.119Z",
+    "updatedAt": "2026-08-25T22:17:17.119Z"
+  }
+}
