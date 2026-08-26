@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "mistake-reaction-style",
+  "metadata": {
+    "summaryKo": "실수를 알아챈 순간 바로 수습하는지 천천히 신중하게 보는지(즉각 수습)와 주변에 알려 함께 처리하는지 혼자 조용히 정리하는지(공개 공유)로 나의 실수 대처 스타일을 10문항으로 알아봅니다.",
+    "tags": [
+      "mistake",
+      "daily",
+      "reflection"
+    ],
+    "categoryLabelKo": "실수 대처",
+    "tagLabelsKo": {
+      "mistake": "실수 대처",
+      "daily": "일상",
+      "reflection": "자기 점검"
+    },
+    "estimatedMinutes": "3-5분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-08-26T22:17:00.450Z",
+    "updatedAt": "2026-08-26T22:17:00.450Z"
+  }
+}
