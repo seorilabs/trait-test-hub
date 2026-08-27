@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "acquaintance-encounter-style",
+  "metadata": {
+    "summaryKo": "길이나 매장에서 아는 사람을 우연히 마주쳤을 때 먼저 다가가 아는 척하는지(먼저 아는 척)와 그 자리에서 대화를 길게 이어가는지 짧게 마무리하는지(대화 이어가기)로 나의 지인 마주침 스타일을 10문항으로 알아봅니다.",
+    "tags": [
+      "encounter",
+      "social",
+      "daily"
+    ],
+    "categoryLabelKo": "지인 마주침",
+    "tagLabelsKo": {
+      "encounter": "지인 마주침",
+      "social": "관계",
+      "daily": "일상"
+    },
+    "estimatedMinutes": "3-5분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-08-27T22:16:32.064Z",
+    "updatedAt": "2026-08-27T22:16:32.064Z"
+  }
+}
