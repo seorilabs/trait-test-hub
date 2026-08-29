@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "gaming-style",
+  "metadata": {
+    "summaryKo": "게임을 켰을 때 이기려고 승부에 몰입하는지(승부 몰입)와 팀·친구와 어울려 함께 플레이하는지 혼자 파고드는지(함께 플레이)로 나의 게임 플레이 스타일을 10문항으로 알아봅니다.",
+    "tags": [
+      "gaming",
+      "entertainment",
+      "hobby"
+    ],
+    "categoryLabelKo": "게임 플레이",
+    "tagLabelsKo": {
+      "gaming": "게임 플레이",
+      "entertainment": "엔터테인먼트",
+      "hobby": "취미"
+    },
+    "estimatedMinutes": "3-5분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-08-29T22:12:04.119Z",
+    "updatedAt": "2026-08-29T22:12:04.119Z"
+  }
+}
