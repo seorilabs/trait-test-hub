@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "spicy-food-style",
+  "metadata": {
+    "summaryKo": "매운맛에 얼마나 뛰어드는지(도전 성향)와 매운 걸 얼마나 묵묵히 참는지(버티는 성향)로 나의 매운 음식 도전 스타일을 10문항으로 알아봅니다.",
+    "tags": [
+      "spice",
+      "food",
+      "challenge"
+    ],
+    "categoryLabelKo": "매운맛",
+    "tagLabelsKo": {
+      "spice": "매운맛",
+      "food": "음식",
+      "challenge": "도전"
+    },
+    "estimatedMinutes": "3-5분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-08-28T22:14:45.209Z",
+    "updatedAt": "2026-08-28T22:14:45.209Z"
+  }
+}
