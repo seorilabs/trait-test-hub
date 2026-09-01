@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "buffet-strategy-style",
+  "metadata": {
+    "summaryKo": "접시를 들면 종류를 골고루 도는지 최애만 집중하는지(구성 다양성)와 순서를 계획해 페이스를 조절하는지 즉흥적으로 담는지(공략 방식)로 나의 뷔페 공략 스타일을 10문항으로 알아봅니다.",
+    "tags": [
+      "buffet",
+      "food",
+      "daily"
+    ],
+    "categoryLabelKo": "뷔페",
+    "tagLabelsKo": {
+      "buffet": "뷔페",
+      "food": "음식",
+      "daily": "일상"
+    },
+    "estimatedMinutes": "3-5분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-08-31T22:12:55.942Z",
+    "updatedAt": "2026-08-31T22:12:55.942Z"
+  }
+}
