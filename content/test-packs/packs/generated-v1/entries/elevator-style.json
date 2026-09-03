@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "generated-v1",
+  "testId": "elevator-style",
+  "metadata": {
+    "summaryKo": "엘리베이터를 타고 내릴 때의 작은 습관으로 나의 엘리베이터 이용 스타일을 10문항으로 알아봅니다.",
+    "tags": [
+      "elevator",
+      "social",
+      "daily"
+    ],
+    "categoryLabelKo": "엘리베이터",
+    "tagLabelsKo": {
+      "elevator": "엘리베이터",
+      "social": "관계",
+      "daily": "일상"
+    },
+    "estimatedMinutes": "3-5분",
+    "packTitleKo": "자동 생성 테스트팩",
+    "publishedAt": "2026-08-30T22:13:40.268Z",
+    "updatedAt": "2026-08-30T22:13:40.268Z"
+  }
+}
