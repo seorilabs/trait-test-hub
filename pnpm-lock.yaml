@@ -22,6 +22,9 @@ importers:
       '@granite-js/react-native':
         specifier: 1.0.33
         version: 1.0.33(patch_hash=c92b811d5813d1f6404e3b19ad8bc94e646e42b3b513e0067cb0007d68cbd9ba)(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)(@granite-js/native@1.0.33(@babel/runtime@7.28.4)(react-native@0.84.0(@babel/core@7.28.5)(@react-native-community/cli@11.3.7(@babel/core@7.28.5))(@types/react@19.2.0)(react@19.2.3))(react@19.2.3))(@swc/helpers@0.5.17)(@types/node@22.20.0)(@types/react@19.2.0)(brick-module@0.5.1(react-native@0.84.0(@babel/core@7.28.5)(@react-native-community/cli@11.3.7(@babel/core@7.28.5))(@types/react@19.2.0)(react@19.2.3))(react@19.2.3))(jiti@2.7.0)(react-native@0.84.0(@babel/core@7.28.5)(@react-native-community/cli@11.3.7(@babel/core@7.28.5))(@types/react@19.2.0)(react@19.2.3))(react@19.2.3)(typescript@5.9.3)(yaml@2.9.0)
+      '@seorilabs/platform-sdk':
+        specifier: 0.5.0
+        version: 0.5.0
       '@toss/tds-react-native':
         specifier: ^2.0.3
         version: 2.0.3(8aabf50eac5dd7f7004a3a395486b3a2)
@@ -2499,6 +2502,10 @@ packages:
     engines: {node: '>= 10'}
     hasBin: true
 
+  '@seorilabs/platform-sdk@0.5.0':
+    resolution: {integrity: sha512-Ujf0q59jXoKbLn2/yDkpJXL8jwomZSkqN8ru4zxtBM53j847MjIvbr1pQ70MhDc5hUCEYQCsIiSnEf0brEBzUw==}
+    engines: {node: '>=20'}
+
   '@shopify/flash-list@1.6.2':
     resolution: {integrity: sha512-8wcri0z/6Skv9y0bDOOVERMEoi+51saNSAMMRXmImJKgWb/jSI1FJeUSlzrw+RLUlgKndwcwVlqFvPuX5xpq8g==}
     peerDependencies:
@@ -3801,6 +3808,7 @@ packages:
   eslint@9.39.4:
     resolution: {integrity: sha512-XoMjdBOwe/esVgEvLmNsD3IRHkm7fbKIUGvrleloJXUZgDHig2IPWNniv+GwjyJXzuNqVjlr5+4yVUZjycJwfQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
     peerDependencies:
       jiti: '*'
@@ -9844,6 +9852,8 @@ snapshots:
       - encoding
       - supports-color
 
+  '@seorilabs/platform-sdk@0.5.0': {}
+
   '@shopify/flash-list@1.6.2(@babel/runtime@7.28.4)(react-native@0.84.0(@babel/core@7.28.5)(@react-native-community/cli@11.3.7(@babel/core@7.28.5))(@types/react@19.2.0)(react@19.2.3))(react@19.2.3)':
     dependencies:
       '@babel/runtime': 7.28.4
@@ -11075,7 +11085,7 @@ snapshots:
 
   deprecated-react-native-prop-types@4.1.0:
     dependencies:
-      '@react-native/normalize-colors': 0.72.0
+      '@react-native/normalize-colors': 0.84.0
       invariant: 2.2.4
       prop-types: 15.8.1
 
@@ -12661,7 +12671,7 @@ snapshots:
       '@babel/register': 7.29.7(@babel/core@7.28.5)
       babel-core: 7.0.0-bridge.0(@babel/core@7.28.5)
       chalk: 4.1.2
-      flow-parser: 0.206.0
+      flow-parser: 0.323.0
       graceful-fs: 4.2.11
       micromatch: 4.0.8
       neo-async: 2.6.2
@@ -13042,7 +13052,7 @@ snapshots:
       connect: 3.7.0
       debug: 2.6.9
       node-fetch: 2.7.0
-      ws: 7.5.11
+      ws: 7.5.13
       yargs: 17.7.3
     transitivePeerDependencies:
       - bufferutil
@@ -13298,7 +13308,7 @@ snapshots:
     dependencies:
       '@babel/core': 7.28.5
       '@babel/generator': 7.29.7
-      '@babel/parser': 7.28.5
+      '@babel/parser': 7.29.7
       '@babel/types': 7.28.5
       babel-preset-fbjs: 3.4.0(@babel/core@7.28.5)
       metro: 0.76.8
