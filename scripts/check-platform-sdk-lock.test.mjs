@@ -92,6 +92,24 @@ test('SDK 선언 package의 조상에 다른 lockfile이 있으면 실패한다'
   assert.match(result.problems[0], /package-lock\.json: SDK를 선언한 package의 조상 디렉터리에/);
 });
 
+test('조상이 아닌 곳의 별도 pnpm lockfile도 판정에 영향을 주지 않는다', () => {
+  // 독립 하위 프로젝트가 pnpm으로 전환해 자기 lockfile을 두어도 SDK 선언 경로의
+  // packageManagerFor 판정에는 영향이 없다. 검사기가 그보다 엄격하면 멀쩡한
+  // 저장소가 막힌다.
+  const result = checkPlatformSdkLock(fixture({
+    extraFiles: {'firebase/functions/pnpm-lock.yaml': "lockfileVersion: '9.0'\n"},
+  }));
+  assert.deepEqual(result.problems, []);
+});
+
+test('SDK 선언 package의 조상에 별도 pnpm lockfile이 있으면 실패한다', () => {
+  const result = checkPlatformSdkLock(fixture({
+    extraFiles: {'apps/pnpm-lock.yaml': "lockfileVersion: '9.0'\n"},
+  }));
+  assert.equal(result.problems.length, 1);
+  assert.match(result.problems[0], /apps\/pnpm-lock\.yaml: SDK를 선언한 package의 조상 디렉터리에/);
+});
+
 test('조상이 아닌 곳의 lockfile은 판정에 영향을 주지 않는다', () => {
   // Backoffice repository-discovery의 packageManagerFor는 후보 디렉터리에서 위로
   // 올라가며 첫 신호에서 멈추고 저장소 전체를 훑지 않는다. 검사기가 그보다 엄격하면

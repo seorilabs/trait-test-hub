@@ -171,8 +171,13 @@ export function checkPlatformSdkLock(root, approvedVersion = APPROVED_SDK_VERSIO
   if (!pnpmLocks.includes('pnpm-lock.yaml')) {
     problems.push('pnpm-lock.yaml: 루트 lockfile이 없다.');
   }
-  for (const path of pnpmLocks.filter((path) => path !== 'pnpm-lock.yaml')) {
-    problems.push(`${path}: workspace lockfile은 루트 pnpm-lock.yaml 하나만 커밋한다.`);
+  // foreign lockfile과 같은 이유로 조상 범위로 한정한다. 독립 하위 프로젝트가
+  // 자기 pnpm workspace를 갖는 것은 discovery 판정에 영향을 주지 않는다.
+  const nestedPnpmLocks = pnpmLocks
+    .filter((path) => path !== 'pnpm-lock.yaml')
+    .filter((path) => ancestorDirectories.has(path.slice(0, -'/pnpm-lock.yaml'.length)));
+  for (const path of nestedPnpmLocks) {
+    problems.push(`${path}: SDK를 선언한 package의 조상 디렉터리에 별도 pnpm lockfile이 있다. 루트 하나만 두어야 importer 해석이 갈리지 않는다.`);
   }
 
   let rootPackage = null;
