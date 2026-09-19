@@ -1,5 +1,5 @@
 # GitHub Pages 배포 전용 워크플로우.
-# 정적 품질 체크(pnpm check)는 static-checks.yml(org 재사용 caller)로 분리했고,
+# 정적 품질 체크(pnpm check)는 static-checks.yml로 분리했고,
 # 여기서는 Pages 빌드 + 배포만 수행한다. org에 RN web-Pages 재사용 워크플로우가 없어 인라인 잡을 유지한다.
 # public repo이므로 빌드/배포 모두 self-hosted(ARC)가 아닌 ubuntu-latest로 라우팅한다.
 name: Deploy GitHub Pages
