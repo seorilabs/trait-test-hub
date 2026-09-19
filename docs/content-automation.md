@@ -152,7 +152,7 @@ flowchart LR
 | 항목 | 값 |
 |---|---|
 | cron | `0 22 * * *` (UTC) = 매일 07:00 KST |
-| model | 환경 기본값 (루틴에 고정하지 않음) |
+| model | `claude-opus-5` (루틴에 고정) |
 | repo | `https://github.com/seorilabs/trait-test-hub` (origin/main 체크아웃) |
 | 세션 | 매 회차 새 세션 (`create_new_session_on_fire: true`) |
 | 알림 | push 알림 on |
