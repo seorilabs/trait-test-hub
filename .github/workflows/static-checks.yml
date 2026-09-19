@@ -25,7 +25,7 @@ jobs:
     secrets: inherit
     with:
       # public repo → ubuntu, private면 ARC. ARC self-hosted는 public PR 경로에 노출하지 않는다.
-      runs_on: ${{ github.event.repository.private && 'seorilabs-rpi-arm64' || 'ubuntu-latest' }}
+      runs_on: ${{ github.event.repository.private && 'seorilabs-x64' || 'ubuntu-latest' }}
       node_version: "24"
       package_manager: "pnpm"
       pnpm_version: "11.3.0"
