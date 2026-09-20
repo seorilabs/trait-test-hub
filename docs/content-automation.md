@@ -142,18 +142,23 @@ flowchart LR
 
 ### 현재 상태
 
-- 루틴은 **생성돼 있으나 비활성(`enabled: false`)** 입니다. 앱 재론칭 시점에 켭니다.
-- 루틴 ID: `trig_01R8SXasenv6NhWAMZB8g2hH` — 관리: https://claude.ai/code/routines/trig_01R8SXasenv6NhWAMZB8g2hH
+- 루틴은 **활성(`enabled: true`)** 입니다.
+- 루틴 ID: `trig_01JPv2DgdTTjJYVEhLDUfpur` — 관리: https://claude.ai/code/routines/trig_01JPv2DgdTTjJYVEhLDUfpur
+
+이전 루틴 `trig_01R8SXasenv6NhWAMZB8g2hH`은 삭제돼 사라졌습니다. 마지막 자동 생성 PR은 2026-08-31의 #69(뷔페 공략 스타일)이고, 그 뒤로 생성이 멈춰 있었습니다. 같은 설정으로 루틴을 새로 만들어 복구했으므로 **루틴 ID가 바뀌었습니다.** 예전 ID로 토글하려 하면 not-found가 납니다.
 
 ### 루틴 설정
 
 | 항목 | 값 |
 |---|---|
 | cron | `0 22 * * *` (UTC) = 매일 07:00 KST |
-| model | `claude-opus-4-8` |
+| model | `claude-opus-5` (루틴에 고정) |
 | repo | `https://github.com/seorilabs/trait-test-hub` (origin/main 체크아웃) |
-| allowed_tools | Bash, Read, Write, Edit, Glob, Grep |
+| 세션 | 매 회차 새 세션 (`create_new_session_on_fire: true`) |
+| 알림 | push 알림 on |
 | 프롬프트 | `docs/prompts/new-test-pack-pr.md` 절차를 따르도록 지시 (self-contained) |
+
+루틴 세션에는 MCP 커넥터(`mcp__*`)가 붙지 않습니다. GitHub 작업은 Bash의 `gh` CLI로 합니다.
 
 ### 켜기 전 선결 조건
 

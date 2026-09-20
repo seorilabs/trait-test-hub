@@ -52,7 +52,6 @@ pnpm --dir apps/ait bundle:core  # product-core를 src/vendor로 번들 (dev/bui
 
 ## Release blockers (출시 전 확정)
 
-- `granite.config.ts`의 `brand.icon`: 현재 placehold.co 임시 URL → AppsInToss 콘솔 업로드 HTTPS URL로 교체.
 - 결과 통계 조작 방지: `completions` create가 현재 형식만 검증 → 출시 전 App Check(firestore enforcement) 또는 rate-limit 보강(`docs/stats.md`).
 - 콘텐츠 origin 운영 정책: 현재 GitHub Pages custom domain을 사용하며, 트래픽/수익화 확대 전 Firebase Hosting 또는 전용 CDN 이전 검토.
 - AppsInToss 콘솔 등록: 카테고리, 등록 이미지(logo 600×600, thumbnail, 세로 스크린샷 3장), 고객센터 연락처.
