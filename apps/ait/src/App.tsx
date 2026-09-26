@@ -17,6 +17,7 @@ import { createAitInterstitialPort } from './lib/ads/aitInterstitialPort';
 import { resolveInterstitialAdGroupId } from './lib/ads/adConfig';
 import { createAitSharePort } from './lib/share/aitSharePort';
 import { getStats, recordCompletion } from './lib/statsRepository';
+import { graniteEvent } from '@apps-in-toss/web-framework';
 import { pickDailyEntry, pickRandomEntry } from './lib/testSelection';
 
 // 공개 테스트팩은 GitHub Pages custom domain(HTTPS)에서 받아옵니다.
@@ -200,22 +201,28 @@ export function App() {
   }, []);
 
   // 호스트 뒤로가기를 내부 화면 전환에 연결.
-  // 홈이 아닌 화면에서만 핸들러를 등록하면 프레임워크가 뒤로가기를
-  // 가로채 이 콜백을 실행하고, 홈에서는 등록하지 않아 뒤로가기가 앱을
-  // 정상 종료합니다. 문항은 이전 문항/진입 화면으로, 목록·결과는 홈으로.
+  // 홈이 아닌 화면에서만 구독하면 호스트가 뒤로가기를 가로채 이 콜백을 실행하고,
+  // 홈에서는 구독이 없어 호스트 기본 동작(앱 종료)으로 흘러갑니다.
+  // SDK 3.x의 graniteEvent.addEventListener('backEvent', ...)가 정식 API.
+  // ('toss:back' 커스텀 이벤트는 존재하지 않아 사용하면 백버튼이 무시되어
+  //  호스트가 곧장 WebView를 닫아버립니다.)
   useEffect(() => {
     if (screen === 'home') return;
-    const handler = () => {
-      if (screen === 'question') {
-        goBack();
-      } else {
-        goHome();
-      }
-    };
-    // AIT 호스트 뒤로가기 이벤트는 'toss:back' 커스텀 이벤트로 노출됩니다.
-    // (호스트가 없는 로컬 dev 환경에서는 호출되지 않습니다.)
-    window.addEventListener('toss:back', handler);
-    return () => window.removeEventListener('toss:back', handler);
+    const unsubscribe = graniteEvent.addEventListener('backEvent', {
+      onEvent: () => {
+        if (screen === 'question') {
+          goBack();
+        } else {
+          goHome();
+        }
+      },
+      onError: (error) => {
+        // 구독 자체는 실패하지 않지만, 안전을 위해 콘솔에 남긴다.
+        // 호스트가 없는 로컬 dev 환경에서는 호출되지 않는다.
+        console.warn('apps/ait: backEvent listener error', error);
+      },
+    });
+    return unsubscribe;
   }, [screen, goBack, goHome]);
 
   if (status === 'loading') {
