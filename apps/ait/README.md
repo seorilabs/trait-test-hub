@@ -1,48 +1,87 @@
 # apps/ait
 
-AppsInToss용 Granite React Native target입니다. (`@granite-js/react-native` + `@apps-in-toss/framework` + `@toss/tds-react-native`)
+AppsInToss용 **WebView SDK 3.x** 타깃입니다. (`@apps-in-toss/web-framework` + `@toss/tds-mobile-ait` + `@toss/tds-mobile` + Vite)
 
-성향 테스트 허브의 AppsInToss 미니앱으로, `packages/product-core`의 채점/검증 로직을 재사용해 홈 → 질문 → 결과 흐름을 제공합니다.
+성향 테스트 허브의 AppsInToss 미니앱으로, `packages/product-core`의 채점/검증/필터 로직을 재사용해 홈(카테고리 칩 + 섹션 묶기) → 질문 → 결과 흐름을 제공합니다.
+
+## SDK 트랙 선택 근거
+
+릴리즈 노트(2026-08-03 3.0.1, 2026-09-21 3.5.0)와 [SDK 3.x 마이그레이션 가이드](https://developers-apps-in-toss.toss.im/documentation/integration/sdk-3.x.md)에 따르면 SDK 3.x는 **WebView 트랙 전용**이고, React Native 트랙은 별도 2.x 라인(현재 2.10.10)을 유지합니다. 트레잇 테스트 허브는 AIT 단일 출시 타깃이므로 RN 트랙의 네이티브 이점을 활용할 필요가 적고, WebView 트랙의 안정성·도구(AIT Devtools)·콘솔 origin 분리를 선택했습니다.
 
 ## 명령
 
 ```bash
-pnpm --dir apps/ait dev          # Metro 개발 서버 (샌드박스앱 연결)
-pnpm --dir apps/ait build        # .ait 패키지 빌드
+pnpm --dir apps/ait dev          # Vite 개발 서버 (AIT Devtools로 로컬 브라우저에서 즉시 테스트)
+pnpm --dir apps/ait build        # .ait 패키지 빌드 (vite build && ait build)
 pnpm --dir apps/ait deploy       # AppsInToss 배포 (콘솔 토큰 필요)
 pnpm --dir apps/ait check        # lint + typecheck + test
-pnpm --dir apps/ait bundle:core  # product-core를 src/vendor로 번들 (dev/build/typecheck가 자동 선행)
+pnpm --dir apps/ait lint         # eslint
+pnpm --dir apps/ait typecheck    # tsc --noEmit
+pnpm --dir apps/ait test         # vitest run
 ```
 
 앱 진입: `intoss://trait-test-hub/`
 
-## product-core 통합 (vendoring)
+## 디렉터리
 
-`packages/product-core`(`@seorilabs/trait-test-core`)를 **패키지 의존성으로 직접 쓰지 않고** `bundle:core`로 `src/vendor/product-core.{js,d.ts}`에 번들해 사용합니다. 화면은 `../vendor/product-core.js`를 import합니다.
+```
+apps/ait/
+├── apps-in-toss.config.ts       # SDK 3.x 설정 (brand.primaryColor, webView, webBundleDir)
+├── index.html                   # Vite entry HTML
+├── vite.config.ts               # Vite + AIT Devtools 플러그인 + product-core 별칭
+├── public/                      # 등록용 정적 자산 (logo, thumbnail, screenshots)
+└── src/
+    ├── main.tsx                 # AppsInToss.registerApp + TDSProvider + App 마운트
+    ├── App.tsx                  # 화면 상태 머신(home/list/question/result) + 뒤로가기 가드
+    ├── pages/
+    │   ├── Home.tsx             # 카테고리 칩 + 오늘의 테스트 + 카테고리 섹션 + 랜덤/목록
+    │   ├── List.tsx             # 전체 목록 + 카테고리 칩 필터
+    │   ├── Question.tsx         # 문항 화면 + 진행 바 + 뒤로/홈 네비
+    │   └── Result.tsx           # 결과 화면 + 광고 + 공유 + 통계 + 비슷한 테스트 추천
+    └── lib/
+        ├── ads/                 # interstitialPort(순수 코어) + aitInterstitialPort(SDK 어댑터) + adConfig
+        ├── analytics/           # analyticsPort + aitAnalyticsPort
+        ├── share/               # sharePort + aitSharePort
+        ├── contentRepository.ts # GitHub Pages manifest + Storage 캐시
+        ├── statsRepository.ts   # firestore REST 직접 호출 (CORS origin 등록 필요)
+        ├── storageAdapter.ts    # AIT Storage → ContentStorage 통일 어댑터
+        └── testSelection.ts     # 데일리/랜덤 선택 (KST 기준)
+```
 
-이유:
+## product-core 통합
 
-- AppsInToss 빌드의 `collect-package-version` 플러그인이 `package.json`의 workspace 의존성(`@seorilabs/trait-test-core`) 경로를 `.pnpm` 패턴에서 추출하지 못해 `ait build`가 실패합니다.
-- 상대경로로 monorepo 밖 소스를 직접 import하면 `granite dev`(Metro)가 루트까지 스캔하다 haste 충돌을 일으킵니다.
-- 번들 사본을 프로젝트 안(`src/vendor/`)에 두면 두 문제를 모두 피하고 dev/build가 함께 동작합니다.
+`packages/product-core`(`@seorilabs/trait-test-core`)는 워크스페이스 패키지(`workspace:*`)로 직접 import합니다. WebView(Vite)는 `pnpm` 워크스페이스 패키지의 `exports`/`types` 필드를 그대로 해석하므로 RN 시절의 esbuild 번들링(`bundle:core`, `src/vendor/`)이 필요 없습니다. TypeScript 경로는 `tsconfig.json`의 `paths`로 안정화합니다.
 
-`src/vendor/`는 생성물이라 `.gitignore` 처리하며, `dev`/`build`/`typecheck`가 매번 `bundle:core`로 최신화합니다. 타입의 진실 소스는 `packages/product-core/src/index.d.ts`입니다.
+```ts
+import {
+  type ManifestEntry,
+  type TraitTest,
+  scoreTraitTest,
+  filterManifestEntries,
+  sortManifestEntries,
+} from '@seorilabs/trait-test-core';
+```
 
-## granite 1.0.33 패치
+## 홈 카테고리화
 
-`@granite-js/react-native@1.0.33`은 `use-back-event` 배럴에서 `useBackEventContext` re-export를 누락해, 이를 top-level import하는 `@apps-in-toss/framework`·`@toss/tds-react-native` 빌드가 깨집니다. 루트 `patches/@granite-js__react-native@1.0.33.patch`로 배럴 한 줄을 보정합니다(upstream 수정 시 제거).
+- 칩 데이터 소스: `Manifest.filters.categories[]`(manifest 메타의 `work`, `routine` 등). 메타가 없으면 등장한 카테고리를 동적으로 만듭니다.
+- 칩 선택 상태: `Storage`(`trait-test-hub:active-category` 키)에 저장해 다음 진입 시 복원.
+- 카테고리 섹션: `filterManifestEntries(entries, { category })` + `sortManifestEntries(entries, 'featured')`. 한 화면에 모든 카테고리 섹션이 펼쳐지며, "전체" 칩은 모든 섹션을 노출하고, 특정 칩 선택 시 해당 섹션만 강조.
+- 결과 화면: 같은 카테고리 내 다른 published 테스트를 `pickSimilarTests`로 모아 "비슷한 테스트 더 보기" 카드를 최대 3개 노출.
 
-## 로컬 dev 주의
+## 뒤로가기
 
-`granite dev`(Metro) 실행 전 루트 `pages-dist/`가 남아 있으면 `apps/ait` 복사본과 패키지 name이 겹쳐 `Duplicated files or mocks` haste 충돌이 납니다. dev 전에 `rm -rf pages-dist`로 정리하세요(`pages-dist`는 `build:pages` 산출물이며 gitignore 대상). dev 서버 종료는 `lsof -ti:8081 | xargs kill`로 확실히 정리합니다(좀비 서버가 8081을 점유하면 EADDRINUSE).
+- `AppsInToss.registerApp`이 호스트 뒤로가기를 가로채는 표준 패턴을 사용합니다.
+- 단일 라우트 + 내부 상태 머신 구조이므로, 홈이 아닐 때 `window`의 `toss:back` 커스텀 이벤트를 구독해 화면별 분기(이전 문항/진입 화면 또는 홈)로 라우팅하고, 홈에서는 구독을 해제해 뒤로가기가 앱을 정상 종료하도록 둡니다.
+- AIT 호스트가 없는 로컬 브라우저(AIT Devtools)에서는 `toss:back` 이벤트가 발생하지 않으므로 dev 환경에서 호스트 동작에 의존하는 회귀를 막습니다.
 
 ## 결과 통계 ("나와 같은 성향")
 
-결과 화면에서 같은 결과 유형의 희소성을 보여줍니다. `src/lib/statsRepository.ts`가 firestore REST API로 직접 접근합니다 — 완료는 `completions`에 write(서버 트리거가 `test_stats`로 집계), 분포는 `test_stats`를 공개 read. org 정책상 Cloud Function 직접 호출이 막혀 있고, firebase Web SDK firestore는 Node `crypto` 의존으로 Metro 번들에서 깨지므로 **REST(fetch)** 로 우회합니다. 표시 정책·집계 흐름은 `docs/stats.md` 참고.
+`src/lib/statsRepository.ts`가 firestore REST API로 직접 접근합니다 — 완료는 `completions`에 write(서버 트리거가 `test_stats`로 집계), 분포는 `test_stats`를 공개 read. org 정책상 Cloud Function 직접 호출이 막혀 있고, firebase Web SDK firestore는 Node `crypto` 의존으로 번들에서 깨지므로 **REST(fetch)** 로 우회합니다. 표시 정책·집계 흐름은 `docs/stats.md` 참고.
 
 ## 테스트팩 로컬 캐시
 
-공개 테스트팩은 `https://traithub.vzyx.xyz/test-packs/manifest.json`에서 가져옵니다. 현재 origin은 GitHub Pages이며, 앱은 AppsInToss `Storage`에 마지막으로 검증된 manifest와 `testId@version`별 테스트 JSON을 저장합니다.
+공개 테스트팩은 `https://traithub.vzyx.xyz/test-packs/manifest.json`에서 가져옵니다. 현재 origin은 GitHub Pages이며, 앱은 AppsInToss `Storage`(storageAdapter를 통해)에 마지막으로 검증된 manifest와 `testId@version`별 테스트 JSON을 저장합니다.
 
 - 시작 시 캐시를 먼저 표시하고 원격 manifest를 백그라운드 갱신합니다.
 - 원격 갱신에 실패하면 마지막 정상 캐시를 계속 사용합니다.
@@ -52,13 +91,14 @@ pnpm --dir apps/ait bundle:core  # product-core를 src/vendor로 번들 (dev/bui
 
 ## Release blockers (출시 전 확정)
 
-- 결과 통계 조작 방지: `completions` create가 현재 형식만 검증 → 출시 전 App Check(firestore enforcement) 또는 rate-limit 보강(`docs/stats.md`).
-- 콘텐츠 origin 운영 정책: 현재 GitHub Pages custom domain을 사용하며, 트래픽/수익화 확대 전 Firebase Hosting 또는 전용 CDN 이전 검토.
-- AppsInToss 콘솔 등록: 카테고리, 등록 이미지(logo 600×600, thumbnail, 세로 스크린샷 3장), 고객센터 연락처.
-- TDS 컴포넌트 적용: 현재 화면은 RN 기본 컴포넌트 + `TDSProvider` 래핑. 심사 정합을 위해 핵심 UI를 TDS 컴포넌트로 전환 검토.
+- **콘솔 CORS origin 등록** — SDK 3.x는 `https://<appName>.apps.tossmini.com`(프로덕션)과 `https://<appName>.private-apps.tossmini.com`(콘솔 QR 테스트)을 새 origin으로 사용합니다(릴리즈 노트 2026-08-25). 두 origin 모두 콘솔과 Firestore API 키의 HTTP 리퍼러 허용 목록에 추가해야 statsRepository 호출이 통과합니다.
+- **결과 통계 조작 방지** — `completions` create가 형식만 검증하므로 App Check(firestore enforcement) 또는 rate-limit 보강(`docs/stats.md`).
+- **콘텐츠 origin 운영 정책** — 현재 GitHub Pages custom domain을 사용하며, 트래픽/수익화 확대 전 Firebase Hosting 또는 전용 CDN 이전 검토.
+- **TDS 컴포넌트 정합** — 현재 화면은 plain DOM + 토스 브랜드 컬러(`#2F6F68`) 유지. 심사 정합성을 위해 핵심 UI를 TDS 컴포넌트로 전환하는 것은 후속 작업.
 
 ## 경계
 
-- `packages/product-core`를 번들해 테스트/채점 로직 재사용 (platform SDK 비의존).
-- `@toss/tds-react-native`의 `TDSProvider`로 래핑, safe area는 `react-native-safe-area-context`(Granite 버전 5.6.2 고정).
+- `packages/product-core`를 워크스페이스 패키지로 import(SDK 비의존).
+- `@toss/tds-mobile-ait`의 `TDSProvider`로 래핑. SafeArea는 TDS Provider가 자체 처리.
 - 관리자/검수 UI는 Toss runtime에 노출하지 않음.
+- 프레임워크 import는 각 어댑터(`lib/ads|analytics|share/storageAdapter`)에만 두어 port는 테스트 가능하게 유지.

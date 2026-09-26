@@ -1,4 +1,4 @@
-import type { ResultDistribution } from '../vendor/product-core.js';
+import type { ResultDistribution } from '@seorilabs/trait-test-core';
 
 // org 정책상 Cloud Function 직접 호출이 막혀, firestore REST API로 직접 접근한다.
 // (firebase Web SDK의 firestore는 Node 'crypto'에 의존해 RN Metro 번들에서 깨지므로 REST로 우회)

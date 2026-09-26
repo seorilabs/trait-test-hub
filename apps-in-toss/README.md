@@ -14,5 +14,6 @@ AppsInToss 등록/출시 metadata와 asset을 이 폴더에서 관리합니다.
 
 - 테스트팩은 GitHub Pages(`traithub.vzyx.xyz`)에서 제공하고 AIT `Storage`에 마지막 정상 manifest와 테스트 JSON을 캐시함. 트래픽/수익화 확대 전 Firebase Hosting 또는 전용 CDN 이전 검토
 - 결과 통계 조작 방지: App Check(firestore enforcement) 또는 rate-limit 보강 (`docs/stats.md`)
-- TDS 컴포넌트 적용: 핵심 UI를 `@toss/tds-react-native` 컴포넌트로 전환 검토
+- TDS 컴포넌트 적용: 핵심 UI를 `@toss/tds-mobile` 컴포넌트로 전환 검토 (v1.1은 plain DOM 유지)
 - `.ait` build와 sandbox QA, Firebase/App Check/Remote Config runtime 호환성 확인
+- **SDK 3.x 콘솔 origin 등록**: `https://<appName>.apps.tossmini.com`(프로덕션), `https://<appName>.private-apps.tossmini.com`(콘솔 QR 테스트)을 콘솔 origin 허용 목록과 Firestore API 키의 HTTP 리퍼러 허용 목록에 추가

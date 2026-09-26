@@ -1,4 +1,4 @@
-import { getTossShareLink, share } from '@apps-in-toss/framework';
+import { getTossShareLink, share } from '@apps-in-toss/web-framework';
 import {
   type ShareOutcome,
   type ShareResultPayload,

@@ -1,4 +1,5 @@
-import type { ManifestEntry } from '../vendor/product-core.js';
+import { describe, expect, it } from 'vitest';
+import type { ManifestEntry } from '@seorilabs/trait-test-core';
 import { dayIndexKst, pickDailyEntry, pickRandomEntry } from './testSelection';
 
 function entry(testId: string): ManifestEntry {

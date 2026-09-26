@@ -5,7 +5,7 @@ const artifact = artifactIndex === -1 ? 'target artifact' : process.argv[artifac
 
 const labels = {
   mobile: 'Google Play/App Store React Native target',
-  ait: 'AppsInToss Granite React Native target',
+  ait: 'AppsInToss WebView SDK 3.x target',
 };
 
 console.log(`${labels[target] ?? target}: scaffold 확정 전 placeholder 상태입니다.`);

@@ -1,4 +1,4 @@
-import type { ManifestEntry } from '../vendor/product-core.js';
+import type { ManifestEntry } from '@seorilabs/trait-test-core';
 
 const KST_OFFSET_MS = 9 * 60 * 60 * 1000;
 const DAY_MS = 86_400_000;

@@ -15,8 +15,24 @@ export interface ManifestEntry {
   path: string;
 }
 
+export interface ManifestCategory {
+  id: string;
+  labelKo: string;
+}
+
+export interface ManifestSortOption {
+  id: string;
+  labelKo: string;
+}
+
+export interface ManifestFilters {
+  categories?: ManifestCategory[];
+  sortOptions?: ManifestSortOption[];
+}
+
 export interface Manifest {
   tests: ManifestEntry[];
+  filters?: ManifestFilters;
 }
 
 export interface QuestionOption {
