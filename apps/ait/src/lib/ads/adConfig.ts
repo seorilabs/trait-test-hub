@@ -1,4 +1,4 @@
-import * as AitFramework from '@apps-in-toss/framework';
+import * as AitFramework from '@apps-in-toss/web-framework';
 
 // 정책상 실 광고 ID는 프로덕션(토스)에서만 노출해야 하고, 개발/샌드박스에서 실 ID로 테스트하면
 // 정책 위반으로 간주될 수 있습니다. 그래서 운영 환경이 'toss'일 때만 라이브 ID를 쓰고,

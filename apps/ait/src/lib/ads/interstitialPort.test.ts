@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { type AdFn, createInterstitialAdPort } from './interstitialPort';
 
 // onEvent/onError로 SDK 이벤트를 흉내 냅니다. (Granite jest 프리셋이 fake timer를 켜므로

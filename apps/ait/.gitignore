@@ -12,12 +12,10 @@ yarn-error.log
 !.yarn/versions
 
 .env
-.granite
-.swc
 .DS_Store
 
-# product-core 번들 산출물 (pnpm bundle:core가 생성)
-src/vendor/
+# Vite 캐시
+.vite/
 
 # AppsInToss 빌드 패키지
 *.ait

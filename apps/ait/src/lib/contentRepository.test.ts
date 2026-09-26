@@ -1,3 +1,4 @@
+import { describe, expect, it, vi } from 'vitest';
 import { createContentRepository, type ContentFetch, type ContentStorage } from './contentRepository';
 
 class MemoryStorage implements ContentStorage {
@@ -64,27 +65,31 @@ function jsonResponse(body: unknown, status = 200) {
   });
 }
 
+function asContentFetch(fn: ReturnType<typeof vi.fn>): ContentFetch {
+  return fn as unknown as ContentFetch;
+}
+
 describe('contentRepository', () => {
   it('검증된 manifest를 저장하고 네트워크 없이 다시 읽는다', async () => {
     const storage = new MemoryStorage();
-    const fetchImpl = jest.fn<ReturnType<ContentFetch>, Parameters<ContentFetch>>(() => jsonResponse(manifest));
-    const repository = createContentRepository({ storage, origin: 'https://example.com', fetchImpl });
+    const fetchFn = vi.fn(() => jsonResponse(manifest));
+    const repository = createContentRepository({ storage, origin: 'https://example.com', fetchImpl: asContentFetch(fetchFn) });
 
     await expect(repository.fetchManifest()).resolves.toMatchObject({ tests: [entry] });
     await expect(repository.readCachedManifest()).resolves.toMatchObject({ tests: [entry] });
-    expect(fetchImpl).toHaveBeenCalledTimes(1);
+    expect(fetchFn).toHaveBeenCalledTimes(1);
   });
 
   it('버전별 테스트 JSON을 선저장하고 캐시에서 실행한다', async () => {
     const storage = new MemoryStorage();
-    const fetchImpl = jest.fn<ReturnType<ContentFetch>, Parameters<ContentFetch>>(() => jsonResponse(testPayload));
-    const repository = createContentRepository({ storage, origin: 'https://example.com', fetchImpl });
+    const fetchFn = vi.fn(() => jsonResponse(testPayload));
+    const repository = createContentRepository({ storage, origin: 'https://example.com', fetchImpl: asContentFetch(fetchFn) });
 
     await repository.prefetchTests([entry]);
-    fetchImpl.mockClear();
+    fetchFn.mockClear();
 
     await expect(repository.loadTest(entry)).resolves.toMatchObject({ id: entry.testId, version: entry.version });
-    expect(fetchImpl).not.toHaveBeenCalled();
+    expect(fetchFn).not.toHaveBeenCalled();
   });
 
   it('manifest와 일치하지 않는 테스트는 캐시하지 않는다', async () => {
@@ -93,8 +98,8 @@ describe('contentRepository', () => {
       ...testPayload,
       test: { ...testPayload.test, version: 3 },
     };
-    const fetchImpl = jest.fn<ReturnType<ContentFetch>, Parameters<ContentFetch>>(() => jsonResponse(mismatched));
-    const repository = createContentRepository({ storage, origin: 'https://example.com', fetchImpl });
+    const fetchFn = vi.fn(() => jsonResponse(mismatched));
+    const repository = createContentRepository({ storage, origin: 'https://example.com', fetchImpl: asContentFetch(fetchFn) });
 
     await expect(repository.loadTest(entry)).rejects.toThrow('manifest와 테스트 버전이 일치하지 않습니다');
     expect([...storage.values.keys()].some((key) => key.includes('offline-style@2'))).toBe(false);
@@ -102,8 +107,8 @@ describe('contentRepository', () => {
 
   it('외부 URL이나 임의 경로를 테스트 데이터로 요청하지 않는다', async () => {
     const storage = new MemoryStorage();
-    const fetchImpl = jest.fn<ReturnType<ContentFetch>, Parameters<ContentFetch>>(() => jsonResponse(testPayload));
-    const repository = createContentRepository({ storage, origin: 'https://example.com', fetchImpl });
+    const fetchFn = vi.fn(() => jsonResponse(testPayload));
+    const repository = createContentRepository({ storage, origin: 'https://example.com', fetchImpl: asContentFetch(fetchFn) });
 
     await expect(repository.loadTest({ ...entry, path: 'https://evil.example/test.json' })).rejects.toThrow(
       '허용되지 않은 테스트 데이터 경로',
@@ -111,6 +116,6 @@ describe('contentRepository', () => {
     await expect(repository.loadTest({ ...entry, path: '/test-packs/../secret.json' })).rejects.toThrow(
       '허용되지 않은 테스트 데이터 경로',
     );
-    expect(fetchImpl).not.toHaveBeenCalled();
+    expect(fetchFn).not.toHaveBeenCalled();
   });
 });

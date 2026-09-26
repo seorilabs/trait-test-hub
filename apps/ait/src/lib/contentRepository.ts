@@ -4,7 +4,7 @@ import {
   type TraitTest,
   validateManifest,
   validateTraitTest,
-} from '../vendor/product-core.js';
+} from '@seorilabs/trait-test-core';
 
 const CACHE_NAMESPACE = 'trait-test-hub:content:v1';
 const MANIFEST_CACHE_KEY = `${CACHE_NAMESPACE}:manifest`;
