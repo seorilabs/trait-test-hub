@@ -13,6 +13,9 @@ importers:
       '@apps-in-toss/web-framework':
         specifier: ^3.5.0
         version: 3.5.0(typanion@3.14.0)(typescript@5.9.3)
+      '@seorilabs/platform-sdk':
+        specifier: 0.5.0
+        version: 0.5.0
       '@seorilabs/trait-test-core':
         specifier: workspace:*
         version: link:../../packages/product-core
@@ -722,6 +725,10 @@ packages:
     resolution: {integrity: sha512-BfzEnDJOt9T8M989/lA37EcJgat01wLRnoi5dQf3QzOH7jzpqTAzdDbVfRljVr5r+jzKqpbHeyOfAaXxAd0PAA==}
     cpu: [x64]
     os: [win32]
+
+  '@seorilabs/platform-sdk@0.5.0':
+    resolution: {integrity: sha512-Ujf0q59jXoKbLn2/yDkpJXL8jwomZSkqN8ru4zxtBM53j847MjIvbr1pQ70MhDc5hUCEYQCsIiSnEf0brEBzUw==}
+    engines: {node: '>=20'}
 
   '@toss/tds-colors@0.1.0':
     resolution: {integrity: sha512-NVV6vpcqobw8NBD7EKFS+muvmiyDsUItzzko9ib2RufU2DywlSb4A/4EyBO9EFV/Ff28ODrWySIuS6MjzDpiPw==}
@@ -2889,6 +2896,8 @@ snapshots:
 
   '@rollup/rollup-win32-x64-msvc@4.62.2':
     optional: true
+
+  '@seorilabs/platform-sdk@0.5.0': {}
 
   '@toss/tds-colors@0.1.0': {}
 
