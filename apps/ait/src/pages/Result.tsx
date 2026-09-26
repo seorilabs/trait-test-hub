@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import {
   computeResultRarity,
   filterManifestEntries,
@@ -63,19 +63,22 @@ export function Result({
   const result = score.result;
   const [rarityText, setRarityText] = useState<string>('아직 집계 중이에요');
   const [shareState, setShareState] = useState<'idle' | 'sharing' | 'failed'>('idle');
-  const adShownRef = useRef(false);
+  // 광고는 결과 화면 진입 시 자동으로 띄우지 않고 "비슷한 테스트 추천" CTA 탭으로만 노출한다.
+  // 추천 카드 자체는 광고 시청 후에만 펼쳐진다 → CTA와 광고 노출 타이밍이 항상 일치.
+  const [adState, setAdState] = useState<'idle' | 'showing' | 'done'>('idle');
 
-  // 결과 화면 진입 시 전면 광고를 딱 한 번 노출합니다.
-  useEffect(() => {
-    if (adShownRef.current) return;
-    adShownRef.current = true;
+  const onWatchAd = useCallback(async () => {
+    if (adState !== 'idle') return;
+    setAdState('showing');
     try {
       const port = interstitialAdPortFactory({ adGroupId: resolveAdGroupId() });
-      void port.showInterstitial();
+      await port.showInterstitial();
     } catch {
-      // 광고 실패는 결과 화면을 막지 않는다.
+      // 광고 실패/미지원 환경은 CTA만 통과시켜 추천 카드를 노출한다.
+    } finally {
+      setAdState('done');
     }
-  }, [interstitialAdPortFactory, resolveAdGroupId]);
+  }, [adState, interstitialAdPortFactory, resolveAdGroupId]);
 
   const onShare = async () => {
     setShareState('sharing');
@@ -167,20 +170,38 @@ export function Result({
       ) : null}
 
       {similarTests.length > 0 ? (
-        <Section title="비슷한 테스트 더 보기">
-          <ul style={similarListStyle}>
-            {similarTests.map((entry) => (
-              <li key={entry.testId}>
-                <button type="button" style={similarCardStyle} onClick={() => onStartSimilar(entry)}>
-                  <span style={similarCardMetaStyle}>
-                    {entry.questionCount}문항 · {entry.estimatedMinutes}
-                  </span>
-                  <span style={similarCardTitleStyle}>{entry.titleKo}</span>
-                </button>
-              </li>
-            ))}
-          </ul>
-        </Section>
+        adState === 'done' ? (
+          <Section title="비슷한 테스트 더 보기">
+            <ul style={similarListStyle}>
+              {similarTests.map((entry) => (
+                <li key={entry.testId}>
+                  <button type="button" style={similarCardStyle} onClick={() => onStartSimilar(entry)}>
+                    <span style={similarCardMetaStyle}>
+                      {entry.questionCount}문항 · {entry.estimatedMinutes}
+                    </span>
+                    <span style={similarCardTitleStyle}>{entry.titleKo}</span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </Section>
+        ) : (
+          <section style={ctaSectionStyle} aria-label="광고 후 추천 안내">
+            <h3 style={ctaTitleStyle}>비슷한 성향 테스트 추천</h3>
+            <p style={ctaDescStyle}>
+              같은 카테고리의 다른 테스트 {similarTests.length}개를 추천해 드려요. 짧은 광고 후
+              바로 보여드릴게요.
+            </p>
+            <button
+              type="button"
+              style={ctaButtonStyle}
+              onClick={() => void onWatchAd()}
+              disabled={adState === 'showing'}
+            >
+              {adState === 'showing' ? '광고 준비 중…' : '▶ 광고 보고 추천 테스트 보기'}
+            </button>
+          </section>
+        )
       ) : null}
 
       <button type="button" style={primaryButtonStyle} onClick={onShare}>
@@ -459,4 +480,40 @@ const similarCardTitleStyle = {
   fontWeight: 600,
   color: '#1b1d1f',
   lineHeight: 1.35,
+};
+
+const ctaSectionStyle = {
+  display: 'flex',
+  flexDirection: 'column' as const,
+  gap: 10,
+  padding: 20,
+  borderRadius: 16,
+  border: `1px dashed ${BRAND}`,
+  backgroundColor: '#F4F8F7',
+};
+
+const ctaTitleStyle = {
+  margin: 0,
+  fontSize: 16,
+  fontWeight: 600,
+  color: '#1b1d1f',
+};
+
+const ctaDescStyle = {
+  margin: 0,
+  fontSize: 14,
+  color: '#3f4750',
+  lineHeight: 1.55,
+};
+
+const ctaButtonStyle = {
+  marginTop: 4,
+  padding: '14px 18px',
+  backgroundColor: BRAND,
+  color: '#ffffff',
+  border: 'none',
+  borderRadius: 14,
+  fontSize: 15,
+  fontWeight: 700,
+  cursor: 'pointer',
 };
